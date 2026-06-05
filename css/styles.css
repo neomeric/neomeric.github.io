@@ -1,0 +1,426 @@
+/* Custom styles */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+@keyframes gradient-x {
+  0% {
+    background-size: 100% 100%;
+  }
+  50% {
+    background-size: 200% 100%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+/* Animation classes */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.animate-gradient-x {
+  animation: gradient-x 15s ease infinite;
+  background-size: 200% auto;
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Focus styles */
+input:focus,
+textarea:focus {
+  outline: none;
+  ring-color: rgba(var(--color-primary), 0.5);
+  ring-offset-color: rgba(var(--color-primary), 0.2);
+}
+
+/* Backdrop blur support */
+@supports (backdrop-filter: blur(12px)) {
+  .backdrop-blur-md {
+    backdrop-filter: blur(12px);
+  }
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass {
+  background: rgba(17, 24, 39, 0.7);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Grid pattern background */
+.bg-grid-pattern {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.dark .bg-grid-pattern {
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+}
+
+/* Counter animation */
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.animate-count {
+  --target: 7;
+  animation: counter 2s forwards;
+  counter-reset: num var(--num);
+}
+
+.animate-count::before {
+  content: counter(num);
+}
+
+/* Default plus symbol */
+.animate-count::after {
+  content: "+";
+}
+
+/* Override for percentage values */
+.animate-count[data-symbol="%"]::after {
+  content: "%";
+}
+
+@keyframes counter {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: var(--target);
+  }
+}
+
+/* Mobile menu styles will be added here if needed */
+.faq-button[aria-expanded="true"] .faq-icon {
+  transform: rotate(180deg);
+}
+
+/* ───────────────────────────────────────────────────────────────────────
+   Design system utilities — extracted from the agency homepage so any
+   inner page can adopt the same hero / section-header / button patterns
+   without duplicating CSS. Depends on css/neomeric-tokens.css being
+   loaded first (defines --gradient-brand, --primary-700, --accent-500,
+   --bg-muted, --border, --text, --text-muted, --font-display, etc.).
+   ─────────────────────────────────────────────────────────────────── */
+
+/* Container — same max-width + horizontal rhythm as agency homepage */
+.nm-container {
+  width: min(1200px, 100% - 48px);
+  margin-inline: auto;
+}
+@media (max-width: 720px) {
+  .nm-container { width: min(1200px, 100% - 32px); }
+}
+
+/* Eyebrow + green dot — used at the top of every section header */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--primary-700);
+  margin: 0 0 8px;
+}
+.dark .eyebrow { color: var(--primary-300); }
+.eyebrow .dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent-500);
+  box-shadow: 0 0 0 4px var(--accent-100);
+  flex-shrink: 0;
+}
+
+/* Brand-gradient text accent — only used inside hero headlines */
+.grad-text {
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Section-header pattern (non-hero sections):
+   eyebrow + dot, dark Syne H2, optional muted second clause, tight sub */
+.nm-section-header {
+  max-width: 720px;
+  margin-bottom: 48px;
+}
+.nm-section-headline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  margin: 14px 0 18px;
+  text-wrap: balance;
+  color: var(--text);
+}
+.nm-section-headline .muted { color: var(--text-muted); }
+.nm-section-sub {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 60ch;
+  margin: 0;
+}
+
+/* Buttons — gradient (primary CTA), ghost (secondary), and dark-pill primary */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 12px 22px; font-size: 14px; font-weight: 600;
+  border-radius: 9999px; border: 0; cursor: pointer;
+  font-family: inherit; line-height: 1; text-decoration: none;
+  transition: transform 200ms ease, box-shadow 200ms ease, background-position 300ms ease;
+}
+.btn .arrow { transition: transform 200ms ease; }
+.btn:hover .arrow { transform: translateX(2px); }
+
+.btn-primary {
+  background: var(--gray-900); color: white;
+}
+.btn-primary:hover {
+  background: var(--gray-800);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+.dark .btn-primary { background: white; color: var(--gray-900); }
+.dark .btn-primary:hover { background: #f3f4f6; box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+}
+.btn-ghost:hover {
+  border-color: var(--text);
+  transform: translateY(-1px);
+}
+
+.btn-gradient {
+  background: var(--gradient-brand); color: white;
+  background-size: 200% 100%;
+  box-shadow: 0 8px 24px rgba(0, 123, 255, 0.22);
+}
+.btn-gradient:hover {
+  background-position: right center;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 32px rgba(0, 123, 255, 0.32);
+}
+
+/* ── Feature / trust card — surface tile with brand-tinted icon ──────── */
+.nm-trust-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px; padding: 28px;
+  transition: transform 280ms, box-shadow 280ms;
+}
+.nm-trust-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 48px -16px rgba(15, 23, 42, 0.12);
+}
+.nm-trust-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; border-radius: 12px; margin-bottom: 20px;
+  background: var(--accent-50); color: var(--accent-700);
+}
+.nm-trust-title {
+  font-family: var(--font-display); font-weight: 700; font-size: 18px;
+  margin: 0 0 8px; letter-spacing: -0.015em; color: var(--text);
+}
+.nm-trust-body {
+  font-size: 14.5px; line-height: 1.6; color: var(--text-muted);
+  margin: 0;
+}
+
+/* ── Challenge card — extends .nm-trust-card with a tag + checklist ──── */
+.ch-card { display: flex; flex-direction: column; gap: 18px; }
+.ch-card .ch-tag {
+  font-family: var(--font-mono, ui-monospace, SFMono-Regular, monospace);
+  font-size: 12px; font-weight: 600; letter-spacing: 0.06em;
+  color: var(--secondary-700);
+}
+.dark .ch-card .ch-tag { color: var(--secondary-300); }
+.ch-card .ch-need { padding-top: 18px; border-top: 1px solid var(--border); }
+.ch-card .ch-need-label {
+  font-family: var(--font-display); font-weight: 700; font-size: 13px;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--text); margin: 0 0 14px;
+}
+.ch-card .ch-need-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
+.ch-card .ch-need-item { display: flex; align-items: flex-start; gap: 12px; }
+.ch-card .ch-need-check {
+  flex-shrink: 0; width: 18px; height: 18px; border-radius: 50%;
+  background: var(--accent-100); color: var(--accent-700);
+  display: inline-flex; align-items: center; justify-content: center;
+  margin-top: 2px;
+}
+.ch-card .ch-need-text { font-size: 14px; line-height: 1.55; color: var(--text); }
+.ch-card .ch-need-text strong { font-weight: 600; color: var(--text); }
+.ch-card .ch-need-text span { color: var(--text-muted); }
+
+/* ── Process rail — agency homepage #process pattern (5 nodes) ─────── */
+.pr-rail-bg { position: absolute; top: 18px; left: 0; right: 0; height: 2px; background: var(--border); }
+.pr-rail-fg { position: absolute; top: 18px; left: 0; height: 2px; width: 100%; background: var(--gradient-brand); }
+.pr-step { padding-top: 44px; position: relative; }
+.pr-node {
+  position: absolute; top: 10px; left: 0;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--bg); border: 2px solid var(--secondary-500);
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.pr-node-inner { width: 8px; height: 8px; border-radius: 50%; background: var(--gradient-brand); }
+.pr-step:last-child .pr-node { border-color: var(--accent-500); }
+.pr-num {
+  font-family: var(--font-mono, ui-monospace, SFMono-Regular, monospace);
+  font-size: 12px; color: var(--secondary-700);
+  margin-bottom: 8px; font-weight: 600; letter-spacing: 0.05em;
+}
+.dark .pr-num { color: var(--secondary-300); }
+.pr-title {
+  font-family: var(--font-display); font-weight: 700; font-size: 19px;
+  margin: 0 0 8px; letter-spacing: -0.02em; color: var(--text);
+}
+.pr-body { font-size: 14.5px; line-height: 1.6; color: var(--text-muted); margin: 0; max-width: 30ch; }
+
+/* ── Case-study tile — agency homepage `#cases` pattern ────────────────── */
+.nm-case {
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 32px; border-radius: 24px; color: white;
+  text-decoration: none;
+  transition: transform 320ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 320ms;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+  min-height: 320px;
+}
+.nm-case:hover { transform: translateY(-3px); box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.5); }
+.nm-case .case-overlay { position: absolute; inset: 0; pointer-events: none; }
+.nm-case .case-ring {
+  position: absolute; top: 24px; right: 24px; width: 80px; height: 80px;
+  border: 1px solid currentColor; border-radius: 50%;
+  opacity: 0.27;
+}
+.nm-case .case-dot {
+  position: absolute; top: 60px; right: 60px; width: 40px; height: 40px;
+  background: currentColor; border-radius: 50%; opacity: 0.13;
+}
+.nm-case-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 10px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  border-radius: 9999px; font-size: 11px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  align-self: flex-start;
+  margin-bottom: 14px;
+}
+.nm-case-h {
+  font-family: var(--font-display); font-weight: 700;
+  letter-spacing: -0.02em; line-height: 1.2;
+  font-size: 26px; margin: 0 0 22px; max-width: 22ch;
+  color: white;
+}
+.nm-case-foot {
+  display: flex; align-items: baseline; gap: 14px;
+  padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, 0.15);
+  flex-wrap: wrap;
+}
+.nm-case-metric {
+  font-family: var(--font-display); font-weight: 700;
+  letter-spacing: -0.025em; line-height: 1;
+  font-size: 44px;
+}
+.nm-case-metric-label { font-size: 12px; opacity: 0.7; }
+.nm-case-link {
+  margin-left: auto; display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; font-weight: 500; color: rgba(255, 255, 255, 0.85);
+}
+.nm-case:hover .nm-case-link svg { transform: translate(2px, -2px); }
+.nm-case-link svg { transition: transform 200ms; }

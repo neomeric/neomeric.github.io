@@ -1,0 +1,2229 @@
+<!DOCTYPE html>
+<html lang="en-AU" class="scroll-smooth">
+
+<head>
+  <meta name="robots" content="noindex, nofollow">
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NHDLXJCG');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Australian-made AI employees that do the real work — answer your website and phone, book jobs, capture leads, handle staff questions — grounded in your own knowledge, with no hallucinations. Hosted in Sydney; your data never leaves Australia. Set an objective, score every conversation, and manage them like staff. Live in 60 minutes.">
+    <link rel="canonical" href="https://neomindhub.com/au/">
+    <!-- hreflang cluster — shared across /, /au/, /es/ -->
+    <link rel="alternate" hreflang="en" href="https://neomindhub.com/" />
+    <link rel="alternate" hreflang="en-au" href="https://neomindhub.com/au/" />
+    <link rel="alternate" hreflang="es" href="https://neomindhub.com/es/" />
+    <link rel="alternate" hreflang="x-default" href="https://neomindhub.com/" />
+    <meta property="og:title" content="NeoMind — Australian-made AI employees you can manage and measure">
+    <meta property="og:description" content="A team of AI employees that take real actions, answer from your own knowledge, and are scored against objectives you set. Hosted in Sydney — your data never leaves Australia. Grounded, cited, no hallucinations. Live in 60 minutes.">
+    <meta property="og:url" content="https://neomindhub.com/au/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://neomindhub.com/images/logo1.png">
+    <meta property="og:site_name" content="NeoMind">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NeoMind — Australian-made AI employees you can manage and measure">
+    <meta name="twitter:description" content="A team of AI employees that take real actions, answer from your own knowledge, and are scored against objectives you set. Hosted in Sydney — your data never leaves Australia. Grounded, cited, no hallucinations. Live in 60 minutes.">
+    <meta name="twitter:image" content="https://neomindhub.com/images/logo1.png">
+    <title>NeoMind — Australian-made AI employees you can manage and measure</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/neomeric-tokens.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Match agency homepage font set exactly: Kanit (body) + Syne (display).
+         Outfit was previously loaded but unused; dropped. -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Locale data must load synchronously before any component connectedCallback runs -->
+    <script src="/js/locales.js"></script>
+    <script>window.NM_LOCALE = "au";</script>
+    <script src="/components/navbar-section.js" type="module"></script>
+    <script src="/components/footer-section.js" type="module"></script>
+    <style>
+        /* Typography — match agency homepage exactly.
+           Body: Kanit (var(--font-sans)), 400 weight, 1.55 line-height.
+           Headings: Syne (var(--font-display)), 700, -0.025em tracking. */
+        body {
+            font-family: var(--font-sans);
+            font-weight: 400;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        h1, h2, h3, h4, .font-display, .display {
+            font-family: var(--font-display);
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+        .gradient-blur {
+            background: radial-gradient(circle at top right, rgba(156, 125, 185, 0.15), transparent 50%),
+                radial-gradient(circle at bottom left, rgba(0, 209, 178, 0.15), transparent 50%);
+        }
+        .tab-btn { transition: all 0.2s ease; }
+        .tab-btn.active { border-color: #9C7DB9; color: #9C7DB9; }
+        .tab-icon {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 28px; height: 28px; border-radius: 8px;
+            flex-shrink: 0;
+            transition: transform 200ms ease;
+        }
+        .tab-btn.active .tab-icon { transform: scale(1.05); }
+        .tab-panel { animation: fadeIn 0.3s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+        @media (max-width: 768px) {
+            .tab-bar { overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+            .tab-bar::-webkit-scrollbar { display: none; }
+            .tab-btn { scroll-snap-align: start; flex-shrink: 0; }
+        }
+        .lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .lift:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08); }
+
+        .chat-surface {
+            min-height: 360px; max-height: 460px;
+            overflow-y: auto; padding: 1.25rem;
+            display: flex; flex-direction: column; gap: 0.75rem;
+            background: #fafafa;
+        }
+        .dark .chat-surface { background: #0f1623; }
+        .msg {
+            display: flex; gap: 0.6rem; align-items: flex-end;
+            opacity: 0; transform: translateY(6px);
+            animation: bubbleIn .3s forwards;
+        }
+        @keyframes bubbleIn { to { opacity: 1; transform: translateY(0); } }
+        .msg.user { flex-direction: row-reverse; }
+        .msg .avatar {
+            width: 28px; height: 28px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 13px; font-weight: 600; flex-shrink: 0;
+            background: #e5e7eb; color: #374151;
+        }
+        .dark .msg .avatar { background: #1f2937; color: #d1d5db; }
+        .msg.user .avatar { background: linear-gradient(135deg, #9C7DB9, #007BFF); color: white; }
+        .msg.bot.simon .avatar { background: linear-gradient(135deg, #9C7DB9, #007BFF); color: white; }
+        .msg.bot.maeve  .avatar { background: linear-gradient(135deg, #9C7DB9, #00D1B2); color: white; }
+        .msg.bot.hugo  .avatar { background: linear-gradient(135deg, #007BFF, #00D1B2); color: white; }
+        .bubble {
+            padding: 0.65rem 0.9rem; border-radius: 14px;
+            max-width: 80%; line-height: 1.45; font-size: 0.92rem;
+            color: #1f2937; background: white; border: 1px solid rgba(0,0,0,0.06);
+            white-space: pre-wrap; word-wrap: break-word;
+        }
+        .dark .bubble { background: #1f2937; color: #e5e7eb; border-color: rgba(255,255,255,0.06); }
+        .msg.user .bubble {
+            background: linear-gradient(90deg, #9C7DB9, #007BFF);
+            color: white; border: none;
+        }
+        .typing { display: inline-flex; gap: 4px; padding: 4px 0; }
+        .typing span {
+            width: 6px; height: 6px; border-radius: 50%; background: #9C7DB9;
+            animation: typingDot 1.2s infinite ease-in-out;
+        }
+        .typing span:nth-child(2) { animation-delay: .15s; }
+        .typing span:nth-child(3) { animation-delay: .3s; }
+        @keyframes typingDot {
+            0%, 60%, 100% { opacity: .3; transform: translateY(0); }
+            30% { opacity: 1; transform: translateY(-3px); }
+        }
+
+        /* Old monthly/annual toggle styles removed — pricing now uses team-picker */
+
+        .suggest-btn {
+            font-size: 0.78rem; padding: 0.4rem 0.85rem;
+            border-radius: 999px;
+            background: rgba(156, 125, 185, 0.08);
+            color: #7C4CA1;
+            border: 1px solid rgba(156, 125, 185, 0.2);
+            cursor: pointer; transition: all 0.15s ease;
+        }
+        .suggest-btn:hover { background: rgba(156, 125, 185, 0.15); border-color: #9C7DB9; }
+        .dark .suggest-btn { background: rgba(156, 125, 185, 0.15); color: #C3B6D0; border-color: rgba(156, 125, 185, 0.3); }
+
+        /* ── Slack-style preview (Hugo panel) ───────────────────────────── */
+        .slack-surface { background: #f8fafc; padding: 1.25rem; }
+        .dark .slack-surface { background: #0f1623; }
+        .slack-channel-tag {
+            font-size: 0.72rem; text-transform: uppercase;
+            letter-spacing: 0.05em; color: #64748b;
+            padding-bottom: 0.5rem; border-bottom: 1px solid #e2e8f0;
+            margin-bottom: 0.85rem;
+        }
+        .dark .slack-channel-tag { color: #94a3b8; border-color: #1f2937; }
+        .slack-msg { display: flex; gap: 0.65rem; align-items: flex-start; padding: 0.6rem 0; }
+        .slack-msg + .slack-msg { border-top: 1px solid rgba(0,0,0,0.04); }
+        .dark .slack-msg + .slack-msg { border-top-color: rgba(255,255,255,0.04); }
+        .slack-avatar {
+            width: 32px; height: 32px; border-radius: 6px;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 12px; font-weight: 600;
+            flex-shrink: 0;
+        }
+        .slack-meta { display: flex; align-items: baseline; gap: 0.5rem; font-size: 0.85rem; }
+        .slack-name { font-weight: 600; color: #0f172a; }
+        .dark .slack-name { color: #f1f5f9; }
+        .slack-time { font-size: 0.72rem; color: #94a3b8; }
+        .slack-app-tag {
+            display: inline-block;
+            font-size: 0.62rem; font-weight: 600;
+            padding: 0.05rem 0.35rem; border-radius: 3px;
+            background: rgba(156, 125, 185, 0.12); color: #7C4CA1;
+            text-transform: uppercase; letter-spacing: 0.04em;
+        }
+        .dark .slack-app-tag { background: rgba(156, 125, 185, 0.2); color: #C3B6D0; }
+        .slack-body { font-size: 0.88rem; line-height: 1.5; color: #334155; margin-top: 0.15rem; }
+        .dark .slack-body { color: #cbd5e1; }
+        .slack-source {
+            display: inline-flex; align-items: center; gap: 0.3rem;
+            margin-top: 0.4rem; font-size: 0.72rem;
+            color: #9C7DB9; text-decoration: none;
+        }
+        .slack-source:hover { text-decoration: underline; }
+        .hugo-banner {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0.75rem 1.25rem;
+            background: rgba(16, 185, 129, 0.08);
+            border-bottom: 1px solid rgba(16, 185, 129, 0.15);
+            font-size: 0.82rem; color: #065f46;
+        }
+        .dark .hugo-banner { background: rgba(16, 185, 129, 0.12); color: #6ee7b7; border-color: rgba(16, 185, 129, 0.25); }
+        .hugo-banner-pulse {
+            display: inline-block; width: 8px; height: 8px;
+            border-radius: 50%; background: #10b981; margin-right: 0.5rem;
+            box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+            animation: sagePulse 2s infinite;
+        }
+        @keyframes sagePulse {
+            0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+            70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .msg, .tab-panel { animation: none !important; opacity: 1 !important; transform: none !important; }
+        }
+
+        /* ── Maeve live voice demo ────────────────────────────────────── */
+        .maeve-cta-screen {
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(156,125,185,0.04), rgba(0,209,178,0.04));
+        }
+        .dark .maeve-cta-screen { background: linear-gradient(180deg, rgba(156,125,185,0.1), rgba(0,209,178,0.06)); }
+
+        .maeve-modal {
+            position: fixed; inset: 0;
+            background: rgba(15,23,42,0.65);
+            backdrop-filter: blur(6px);
+            z-index: 200;
+            align-items: center; justify-content: center;
+            padding: 1rem;
+        }
+        .maeve-modal-card {
+            background: white; border-radius: 1rem;
+            max-width: 28rem; width: 100%;
+            padding: 2rem;
+            box-shadow: 0 24px 48px rgba(0,0,0,0.25);
+        }
+        .dark .maeve-modal-card { background: #1f2937; color: #f1f5f9; }
+        .maeve-input {
+            width: 100%; padding: 0.7rem 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #e2e8f0;
+            background: #fafafa;
+            color: #0f172a;
+            font-size: 0.95rem;
+        }
+        .maeve-input:focus { outline: none; border-color: #9C7DB9; box-shadow: 0 0 0 3px rgba(156,125,185,0.15); }
+        .dark .maeve-input { background: #0f172a; color: #f1f5f9; border-color: #334155; }
+
+        .maeve-stage {
+            display: flex; flex-direction: column;
+            min-height: 360px; max-height: 460px;
+            background: #fafafa;
+        }
+        .dark .maeve-stage { background: #0f1623; }
+
+        .maeve-stage-header {
+            padding: 0.85rem 1.25rem;
+            display: flex; align-items: center; justify-content: space-between;
+            background: rgba(16,185,129,0.08);
+            border-bottom: 1px solid rgba(16,185,129,0.18);
+            font-size: 0.85rem; color: #065f46;
+        }
+        .dark .maeve-stage-header { background: rgba(16,185,129,0.12); color: #6ee7b7; border-color: rgba(16,185,129,0.25); }
+        .maeve-stage-pulse {
+            display: inline-block; width: 8px; height: 8px;
+            border-radius: 50%; background: #10b981; margin-right: 0.5rem;
+            box-shadow: 0 0 0 0 rgba(16,185,129,0.4);
+            animation: sagePulse 2s infinite;
+        }
+
+        /* Connecting overlay — shown while WS opens + Maeve says hello.
+           Concentric expanding rings around a phone glyph. Hides when
+           first audio chunk arrives (handled in echo-voice.js). */
+        .maeve-connect-overlay {
+            position: absolute; inset: 0;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(248,247,252,0.98));
+            backdrop-filter: blur(2px);
+            z-index: 5;
+            transition: opacity .35s ease;
+        }
+        .dark .maeve-connect-overlay { background: linear-gradient(180deg, rgba(15,22,35,0.96), rgba(15,22,35,0.98)); }
+        .maeve-connect-overlay.hidden { opacity: 0; pointer-events: none; }
+        .maeve-connect-rings {
+            position: relative;
+            width: 96px; height: 96px;
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 1.25rem;
+        }
+        .maeve-connect-rings::before,
+        .maeve-connect-rings::after {
+            content: ''; position: absolute; inset: 0;
+            border-radius: 50%;
+            border: 2px solid #9C7DB9;
+            opacity: 0;
+            animation: maeveRing 2s ease-out infinite;
+        }
+        .maeve-connect-rings::after { animation-delay: 1s; }
+        .maeve-connect-glyph {
+            position: relative; width: 56px; height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #9C7DB9, #007BFF);
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 24px;
+            box-shadow: 0 8px 24px rgba(156,125,185,0.4);
+        }
+        @keyframes maeveRing {
+            0%   { transform: scale(0.6); opacity: 0.7; }
+            100% { transform: scale(1.6); opacity: 0; }
+        }
+        .maeve-connect-status {
+            font-family: var(--font-display);
+            font-size: 1.1rem; font-weight: 600;
+            letter-spacing: -0.025em;
+            color: #1f2937; margin-bottom: 0.35rem;
+        }
+        .dark .maeve-connect-status { color: #f1f5f9; }
+        .maeve-connect-sub {
+            font-size: 0.85rem; color: #6b7280;
+        }
+        .dark .maeve-connect-sub { color: #9ca3af; }
+
+        /* Countdown warning — kicks in when ≤10 s remain */
+        .maeve-stage-header.warning {
+            background: rgba(245,158,11,0.12);
+            color: #92400e;
+            border-color: rgba(245,158,11,0.25);
+        }
+        .dark .maeve-stage-header.warning { color: #fbbf24; }
+        .maeve-stage-header.warning .maeve-stage-pulse { background: #f59e0b; box-shadow: 0 0 0 0 rgba(245,158,11,0.4); }
+
+        .maeve-transcript {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1rem 1.25rem;
+            display: flex; flex-direction: column; gap: 0.6rem;
+        }
+        .maeve-turn {
+            display: flex; gap: 0.55rem; align-items: flex-end;
+            opacity: 0; transform: translateY(6px);
+            animation: bubbleIn .3s forwards;
+        }
+        .maeve-turn.caller { flex-direction: row-reverse; }
+        .maeve-av {
+            width: 26px; height: 26px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 12px; font-weight: 700; flex-shrink: 0;
+            background: #e5e7eb; color: #374151;
+        }
+        .dark .maeve-av { background: #1f2937; color: #d1d5db; }
+        .maeve-turn.caller .maeve-av { background: linear-gradient(135deg,#9C7DB9,#007BFF); color: white; }
+        .maeve-turn.maeve .maeve-av { background: linear-gradient(135deg,#9C7DB9,#00D1B2); color: white; }
+        .maeve-bub {
+            padding: 0.55rem 0.85rem; border-radius: 12px;
+            max-width: 78%; line-height: 1.45; font-size: 0.9rem;
+            background: white; color: #1f2937; border: 1px solid rgba(0,0,0,0.06);
+        }
+        .dark .maeve-bub { background: #1f2937; color: #e5e7eb; border-color: rgba(255,255,255,0.06); }
+        .maeve-turn.caller .maeve-bub { background: linear-gradient(90deg,#9C7DB9,#007BFF); color: white; border: none; }
+
+        .maeve-end-screen {
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            background: rgba(156,125,185,0.04);
+        }
+        .dark .maeve-end-screen { background: rgba(156,125,185,0.1); }
+
+        /* ── Hero v3: agency-homepage NeoMind-callout pattern, hoisted to be the page hero ── */
+        .nm-container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+        @media (max-width: 640px) { .nm-container { padding: 0 20px; } }
+
+        .eyebrow {
+            display: inline-flex; align-items: center; gap: 8px;
+            font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+            color: var(--primary-700);
+        }
+        .dark .eyebrow { color: var(--primary-300); }
+        .eyebrow .dot {
+            width: 6px; height: 6px; border-radius: 50%;
+            background: var(--accent-500); box-shadow: 0 0 0 4px var(--accent-100);
+            flex-shrink: 0;
+        }
+        .dark .eyebrow .dot { box-shadow: 0 0 0 4px rgba(0,209,178,0.18); }
+        .grad-text { background: var(--gradient-brand); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            padding: 14px 24px; border-radius: 9999px;
+            font-family: var(--font-sans); font-weight: 500; font-size: 15px; letter-spacing: -0.005em;
+            transition: all 220ms cubic-bezier(0.4, 0, 0.2, 1);
+            white-space: nowrap; cursor: pointer; border: 0; text-decoration: none;
+        }
+        .btn .arrow { transition: transform 220ms cubic-bezier(0.4, 0, 0.2, 1); }
+        .btn:hover .arrow { transform: translateX(3px); }
+        .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border-strong); }
+        .btn-ghost:hover { border-color: var(--text); transform: translateY(-1px); }
+        .btn-gradient { background: var(--gradient-brand); color: white; background-size: 200% 100%; box-shadow: 0 8px 24px rgba(0,123,255,0.22); }
+        .btn-gradient:hover { background-position: right center; transform: translateY(-1px); box-shadow: 0 12px 32px rgba(0,123,255,0.32); }
+
+        .nm-hero-section {
+            padding: 96px 0 64px;
+            background: var(--bg-muted);
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        @media (max-width: 768px) { .nm-hero-section { padding: 72px 0 48px; } }
+
+        .nm-mind-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        @media (max-width: 1100px) { .nm-mind-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .nm-mind-grid { grid-template-columns: 1fr; } }
+
+        .nm-mind-card {
+            display: block; padding: 28px;
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 24px;
+            transition: all 280ms cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative; overflow: hidden;
+            box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset;
+            text-decoration: none;
+        }
+        .nm-mind-card:hover { transform: translateY(-3px); box-shadow: 0 22px 48px -16px rgba(15,23,42,0.18); }
+        .nm-mind-card .mind-glow {
+            position: absolute; top: 0; right: 0; width: 200px; height: 200px;
+            opacity: 0.5; transition: opacity 280ms; pointer-events: none;
+        }
+        .nm-mind-card:hover .mind-glow { opacity: 1; }
+        .nm-mind-icon {
+            position: relative;
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 48px; height: 48px; border-radius: 14px; margin-bottom: 28px;
+        }
+        .nm-mind-name {
+            font-family: var(--font-display); font-weight: 700; font-size: 26px;
+            letter-spacing: -0.02em; margin: 0; color: var(--text);
+        }
+        .nm-mind-role { font-size: 13px; color: var(--text-subtle); font-weight: 500; }
+        .nm-mind-blurb { font-size: 14.5px; line-height: 1.55; color: var(--text-muted); margin: 0 0 24px; position: relative; }
+        .nm-mind-foot {
+            position: relative; display: flex; flex-direction: column; gap: 16px;
+            align-items: flex-start;
+            padding-top: 20px; border-top: 1px solid var(--border);
+        }
+        .nm-mind-metric {
+            font-family: var(--font-display); font-weight: 700; font-size: 30px;
+            letter-spacing: -0.02em; line-height: 1;
+        }
+        .nm-mind-metric-label { font-size: 12px; color: var(--text-subtle); margin-top: 4px; max-width: 20ch; }
+        .nm-mind-cta {
+            display: inline-flex; align-items: center; gap: 6px;
+            font-size: 13px; font-weight: 600;
+            padding: 8px 14px; border-radius: 9999px;
+            background: var(--bg-muted); color: var(--text);
+            transition: all 220ms;
+        }
+        .nm-mind-card:hover .nm-mind-cta[data-mind="simon"] { background: var(--secondary-500); color: white; }
+        .nm-mind-card:hover .nm-mind-cta[data-mind="maeve"] { background: var(--accent-500); color: white; }
+        .nm-mind-card:hover .nm-mind-cta[data-mind="hugo"] { background: var(--primary-500); color: white; }
+        .nm-mind-card:hover .nm-mind-cta[data-mind="custom"] { background: var(--accent-500); color: white; }
+
+        /* ── Reusable section-header pattern (NON-hero sections).
+              Mirrors agency homepage `#paths` exactly (lines 941-952).
+              Hero is the only place gradient text accents may appear. ── */
+        .nm-section-header {
+            max-width: 720px;
+            margin-bottom: 56px;
+        }
+        .nm-section-headline {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: clamp(32px, 4vw, 52px);
+            line-height: 1.05;
+            letter-spacing: -0.025em;
+            margin: 14px 0 18px;
+            text-wrap: balance;
+            color: var(--text);
+        }
+        /* Optional muted second-clause treatment when the headline is split
+           across two ideas, e.g. "Statement.<br>Follow-up." */
+        .nm-section-headline .muted { color: var(--text-muted); }
+        .nm-section-sub {
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--text-muted);
+            max-width: 60ch;
+            margin: 0;
+        }
+
+        /* ── CTA band (mirrors agency homepage `.nm-cta-band` lines 520-525) ── */
+        .nm-cta-band {
+            position: relative; overflow: hidden;
+            padding: 72px 64px; border-radius: 36px; color: white;
+            background: linear-gradient(135deg, #9C7DB9 0%, #007BFF 50%, #00D1B2 100%);
+        }
+        @media (max-width: 640px) { .nm-cta-band { padding: 48px 28px; border-radius: 28px; } }
+
+        /* ── Process rail (mirrors agency homepage `#process` lines 426-447) ── */
+        .nm-process-rail-bg {
+            position: absolute; top: 18px; left: 0; right: 0; height: 2px;
+            background: var(--border);
+        }
+        .nm-process-rail-fg {
+            position: absolute; top: 18px; left: 0; height: 2px; width: 100%;
+            background: var(--gradient-brand);
+        }
+        .nm-process-step { padding-top: 44px; position: relative; }
+        .nm-process-node {
+            position: absolute; top: 10px; left: 0;
+            width: 16px; height: 16px; border-radius: 50%;
+            background: var(--bg); border: 2px solid var(--secondary-500);
+            display: inline-flex; align-items: center; justify-content: center;
+        }
+        .nm-process-node-inner { width: 8px; height: 8px; border-radius: 50%; background: var(--gradient-brand); }
+        .nm-process-step:last-child .nm-process-node { border-color: var(--accent-500); }
+        .nm-process-num {
+            font-family: var(--font-mono); font-size: 12px;
+            color: var(--secondary-700); margin-bottom: 6px;
+            font-weight: 600; letter-spacing: 0.05em;
+        }
+        .dark .nm-process-num { color: var(--secondary-300); }
+        .nm-process-title {
+            font-family: var(--font-display); font-weight: 700; font-size: 20px;
+            margin: 0 0 8px; letter-spacing: -0.02em; color: var(--text);
+        }
+        .nm-process-body { font-size: 14.5px; line-height: 1.6; color: var(--text-muted); margin: 0; max-width: 34ch; }
+        @media (max-width: 900px) {
+            .nm-process-grid { grid-template-columns: 1fr 1fr !important; }
+        }
+        @media (max-width: 600px) {
+            .nm-process-grid { grid-template-columns: 1fr !important; }
+            .nm-process-rail-bg, .nm-process-rail-fg { display: none; }
+        }
+
+        /* ── Trust card (sovereignty section) — mirrors agency feature-card style ── */
+        .nm-trust-card {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 24px; padding: 28px;
+            transition: transform 280ms, box-shadow 280ms;
+        }
+        .nm-trust-card:hover { transform: translateY(-3px); box-shadow: 0 22px 48px -16px rgba(15,23,42,0.12); }
+        .nm-trust-icon {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 44px; height: 44px; border-radius: 12px; margin-bottom: 20px;
+            background: var(--accent-50); color: var(--accent-700);
+        }
+        .nm-trust-title {
+            font-family: var(--font-display); font-weight: 700; font-size: 18px;
+            margin: 0 0 8px; letter-spacing: -0.015em; color: var(--text);
+        }
+        .nm-trust-body { font-size: 14.5px; line-height: 1.6; color: var(--text-muted); margin: 0; }
+
+        /* ── FAQ accordion (mirrors agency `.nm-faq-*` lines 489-514) ── */
+        .nm-faq-list { max-width: 800px; margin: 0; padding: 0; list-style: none; }
+        .nm-faq-item { border-bottom: 1px solid var(--border); }
+        .nm-faq-q {
+            display: flex; align-items: center; justify-content: space-between; gap: 16px;
+            width: 100%; padding: 24px 0; cursor: pointer;
+            background: transparent; border: 0; text-align: left;
+        }
+        .nm-faq-q-text {
+            font-family: var(--font-display); font-weight: 600; font-size: 18px;
+            color: var(--text); line-height: 1.4; flex: 1; letter-spacing: -0.015em;
+        }
+        .nm-faq-toggle {
+            width: 32px; height: 32px; border-radius: 50%;
+            border: 1px solid var(--border-strong);
+            display: inline-flex; align-items: center; justify-content: center;
+            color: var(--text); flex-shrink: 0;
+            transition: all 220ms;
+        }
+        .nm-faq-item.open .nm-faq-toggle {
+            background: var(--gray-900); color: white; border-color: var(--gray-900);
+            transform: rotate(45deg);
+        }
+        .dark .nm-faq-item.open .nm-faq-toggle { background: white; color: var(--gray-900); border-color: white; }
+        .nm-faq-a {
+            max-height: 0; overflow: hidden;
+            transition: max-height 280ms ease;
+        }
+        .nm-faq-item.open .nm-faq-a { max-height: 520px; }
+        .nm-faq-a p {
+            margin: 0 0 24px; font-size: 16px; line-height: 1.6;
+            color: var(--text-muted); max-width: 70ch;
+        }
+    </style>
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Neomeric Pty Ltd",
+      "url": "https://neomindhub.com/",
+      "foundingDate": "2015",
+      "brand": { "@type": "Brand", "name": "NeoMind" },
+      "sameAs": ["https://www.linkedin.com/company/neomindhub"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "NeoMind",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "url": "https://neomindhub.com/au/",
+      "description": "Australian-made measurable AI employees that take real actions, answer from your own knowledge with citations and no hallucinations, and are scored against objectives and KPIs you set. Hosted in Sydney — your data never leaves Australia."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is NeoMind?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A platform of measurable AI employees that work from your own knowledge — they answer your website and phone, handle internal questions, take real actions like booking and lead capture, and are scored against objectives and KPIs you set." }
+        },
+        {
+          "@type": "Question",
+          "name": "How is this different from a chatbot or ChatGPT?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It's grounded in your business (cited, no hallucinations), it takes real actions instead of only replying, and you can measure each employee with objectives, KPIs and scorecards." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I measure how well the AI is doing?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes — every employee has weighted KPIs scored on each conversation by an AI judge, rolled into a scorecard." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can it do more than answer questions?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes — book appointments, capture and route leads, escalate to a human, and update your CRM via webhook." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I add more than three employees?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes — start with Simon, Maeve and Hugo, or configure custom AI employees with their own persona, skills and access." }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is my data hosted?",
+          "acceptedAnswer": { "@type": "Answer", "text": "In Sydney, on Azure Australia East — your data never leaves Australia, and we're aligned with the Privacy Act 1988. US and EU regions are rolling out for international teams. Your data is never used to train shared models." }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast can I go live?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Around 60 minutes for the website employee; same-day to wire the phone." }
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300 text-gray-900 dark:text-white">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHDLXJCG" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <a href="#main"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-gray-900 focus:rounded-lg focus:shadow-lg">Skip to content</a>
+
+    <navbar-section data-locale="au"></navbar-section>
+
+    <main id="main">
+        <!-- HERO -->
+        <!-- ════════════ 1. HERO ════════════ (lifted verbatim from neomeric.com homepage) -->
+        <section id="hero" class="nm-hero">
+            <div class="nm-hero-blobs" aria-hidden="true">
+                <div class="nm-hero-blob" style="background: var(--primary-300); width: 520px; height: 520px; top: -80px; left: -160px; opacity: 0.35; animation: nm-blob 9s ease-in-out infinite;"></div>
+                <div class="nm-hero-blob" style="background: var(--secondary-300); width: 560px; height: 560px; top: 120px; right: -200px; opacity: 0.4; animation: nm-blob 11s ease-in-out infinite reverse;"></div>
+                <div class="nm-hero-blob" style="background: var(--accent-300); width: 460px; height: 460px; bottom: -200px; left: 32%; opacity: 0.3; animation: nm-blob 13s ease-in-out infinite;"></div>
+            </div>
+
+            <div class="nm-container">
+                <div class="nm-hero-grid">
+                    <!-- LEFT -->
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 28px; flex-wrap: wrap;">
+                            <span class="nm-live-badge">
+                                <span class="nm-live-dot"></span>
+                                <span>Live in 60 minutes</span>
+                            </span>
+                            <span class="grad-text" style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600;">Australian-made · a digital workforce you can manage</span>
+                        </div>
+
+                        <h1 class="nm-hero-h1">
+                            Australian-made AI employees
+                            <br class="nm-hide-sm" />
+                            you can manage and measure.
+                        </h1>
+
+                        <p class="nm-hero-lead">
+                            NeoMind gives you a team of AI employees that do the real work &mdash; answer your website and phone, book jobs, capture leads, handle staff questions &mdash; all grounded in your own knowledge, with no hallucinations. Hosted in Sydney, so your data never leaves Australia. Give each one an objective, score its performance on every conversation, and run it like staff.
+                        </p>
+
+                        <div class="nm-hero-ctas">
+                            <a href="https://app.neomindhub.com/signup" class="btn btn-primary" data-cta="hero-start-trial">
+                                Start free trial
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="#demo" class="btn btn-ghost" data-cta="hero-see-it-work">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right: 6px;"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                See it work
+                            </a>
+                        </div>
+
+                        <div class="nm-hero-proof">
+                            <span class="nm-hero-proof-item">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                                No credit card
+                            </span>
+                            <span class="nm-divider" aria-hidden="true"></span>
+                            <span class="nm-hero-proof-item">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                                Grounded, cited answers
+                            </span>
+                            <span class="nm-divider" aria-hidden="true"></span>
+                            <span class="nm-hero-proof-item">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                Hosted in Sydney — data never leaves Australia
+                            </span>
+                            <span class="nm-divider" aria-hidden="true"></span>
+                            <span class="nm-hero-proof-item">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9"/><polyline points="3 4 3 10 9 10"/></svg>
+                                14-day money-back
+                            </span>
+                        </div>
+                    </div>
+                    <!-- [screenshot: real dashboard — roster + scorecard] — hero visual should be a real dashboard shot (roster + a scorecard), not the live-demo panel below. Live panel retained as interactive proof until the screenshot is supplied. -->
+
+
+                    <!-- RIGHT: live panel with all 3 panels rendered statically -->
+                    <div class="nm-hero-right">
+                        <div class="nm-live-panel" id="nm-live-panel">
+                            <div class="nm-live-panel-ambient" aria-hidden="true"></div>
+                            <div class="nm-live-card">
+                                <div class="nm-live-tabs" role="tablist">
+                                    <button class="nm-live-tab" role="tab" aria-selected="true" data-tab="simon" type="button">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/></svg>
+                                        <span><strong>Simon</strong><span class="sub">Web</span></span>
+                                    </button>
+                                    <button class="nm-live-tab" role="tab" aria-selected="false" data-tab="maeve" type="button">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                        <span><strong>Maeve</strong><span class="sub">Voice</span></span>
+                                    </button>
+                                    <button class="nm-live-tab" role="tab" aria-selected="false" data-tab="hugo" type="button">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                        <span><strong>Hugo</strong><span class="sub">Team</span></span>
+                                    </button>
+                                </div>
+
+                                <div class="nm-live-stage">
+                                    <!-- SIMON PANEL -->
+                                    <div class="nm-live-panel-content" data-panel="simon">
+                                        <div class="nm-chat">
+                                            <div class="nm-chat-header">
+                                                <div style="width: 32px; height: 32px; border-radius: 10px; background: linear-gradient(135deg, var(--primary-500), var(--secondary-500)); color: white; display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; font-size: 14px;">S</div>
+                                                <div style="flex: 1;">
+                                                    <div style="font-size: 13px; font-weight: 600; color: var(--text);">Simon &middot; sunbeam-plumbing.com.au</div>
+                                                    <div style="font-size: 11px; color: var(--text-subtle);">Replying as your team &middot; trained on your docs</div>
+                                                </div>
+                                                <span style="font-size: 10px; padding: 3px 8px; background: var(--accent-50); color: var(--accent-700); border-radius: 9999px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;">Online</span>
+                                            </div>
+                                            <div class="nm-bubble user" data-delay="200">Hi &mdash; looking for a quote to fit a new kitchen tap.</div>
+                                            <div class="nm-bubble agent" data-delay="1100">Happy to help. We fit most weekdays + Saturdays. What suburb are you in?</div>
+                                            <div class="nm-bubble user" data-delay="2400">Brunswick East.</div>
+                                            <div class="nm-bubble agent" data-delay="3500">We service that area. Want me to grab a few details and book an installer?</div>
+                                            <div class="nm-typing" data-typing-until="3500"><span></span><span></span><span></span></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- MAEVE PANEL -->
+                                    <div class="nm-live-panel-content" data-panel="maeve" hidden>
+                                        <div style="padding: 20px 16px;">
+                                            <div style="text-align: center; margin-bottom: 12px;">
+                                                <div style="font-size: 11px; color: var(--text-subtle); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 4px;">Inbound &middot; 03:14</div>
+                                                <div class="mono" style="font-size: 20px; font-weight: 600; color: var(--text);">+61 4&middot;&middot; &middot;&middot;&middot; 281</div>
+                                            </div>
+                                            <div class="nm-wave" id="nm-wave"></div>
+                                            <div style="display: grid; gap: 10px; font-size: 13.5px; padding: 0 4px;">
+                                                <div style="display: flex; gap: 10px; align-items: flex-start;">
+                                                    <span style="flex-shrink: 0; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 7px; border-radius: 6px; background: var(--bg-muted); color: var(--text-subtle); min-width: 56px; text-align: center;">Caller</span>
+                                                    <span style="color: var(--text); line-height: 1.45; flex: 1;">Hi &mdash; calling about a quote for fitting. Are you open Saturdays?</span>
+                                                </div>
+                                                <div style="display: flex; gap: 10px; align-items: flex-start;">
+                                                    <span style="flex-shrink: 0; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 7px; border-radius: 6px; background: var(--secondary-50); color: var(--secondary-700); min-width: 56px; text-align: center;">Maeve</span>
+                                                    <span style="color: var(--text); line-height: 1.45; flex: 1;">We are &mdash; 9 to 2. I can grab a few details and get our installer to ring you back with timing. What suburb are you in?</span>
+                                                </div>
+                                                <div style="display: flex; gap: 10px; align-items: flex-start;">
+                                                    <span style="flex-shrink: 0; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 7px; border-radius: 6px; background: var(--bg-muted); color: var(--text-subtle); min-width: 56px; text-align: center;">Caller</span>
+                                                    <span style="color: var(--text); line-height: 1.45; flex: 1;">Brunswick East.</span>
+                                                </div>
+                                                <div style="display: flex; gap: 10px; align-items: flex-start;">
+                                                    <span style="flex-shrink: 0; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 7px; border-radius: 6px; background: var(--secondary-50); color: var(--secondary-700); min-width: 56px; text-align: center;">Maeve</span>
+                                                    <span style="color: var(--text); line-height: 1.45; flex: 1;">Got it. Booked Sat 10:30 with Liam &mdash; confirmation SMS coming through now.</span>
+                                                </div>
+                                            </div>
+                                            <div style="margin-top: 14px; padding: 10px 14px; background: var(--accent-50); color: var(--accent-700); border-radius: 10px; display: flex; align-items: center; gap: 10px; font-size: 12.5px; font-weight: 600;">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+                                                <span>Booked &middot; Sat 10:30 &middot; CRM updated &middot; SMS sent</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- HUGO PANEL -->
+                                    <div class="nm-live-panel-content" data-panel="hugo" hidden>
+                                        <div style="padding: 14px 14px 12px;">
+                                            <div style="display: flex; align-items: center; gap: 10px; padding: 0 4px 12px; margin-bottom: 10px; border-bottom: 1px solid var(--border);">
+                                                <div style="width: 24px; height: 24px; border-radius: 6px; background: linear-gradient(135deg, #4A154B, #ECB22E); color: white; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px;">#</div>
+                                                <div style="font-size: 13px; font-weight: 600; color: var(--text);">#people-help</div>
+                                                <span style="margin-left: auto; font-size: 11px; color: var(--text-subtle);">14 today</span>
+                                            </div>
+                                            <div style="display: flex; flex-direction: column; gap: 14px; font-size: 13.5px;">
+                                                <div style="display: flex; gap: 10px;">
+                                                    <div style="flex-shrink: 0; width: 28px; height: 28px; border-radius: 6px; background: var(--gray-200); color: var(--gray-600); display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; font-size: 12px;">T</div>
+                                                    <div style="flex: 1;">
+                                                        <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 2px;">
+                                                            <span style="font-weight: 700; color: var(--text); font-size: 13.5px;">Tom B.</span>
+                                                            <span style="font-size: 11px; color: var(--text-subtle);">9:14</span>
+                                                        </div>
+                                                        <div style="color: var(--text); line-height: 1.45;">How many days of carer&rsquo;s leave can I take this quarter?</div>
+                                                    </div>
+                                                </div>
+                                                <div style="display: flex; gap: 10px;">
+                                                    <div style="flex-shrink: 0; width: 28px; height: 28px; border-radius: 6px; background: linear-gradient(135deg, var(--secondary-500), var(--accent-500)); color: white; display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; font-size: 12px;">H</div>
+                                                    <div style="flex: 1;">
+                                                        <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 2px;">
+                                                            <span style="font-weight: 700; color: var(--text); font-size: 13.5px;">Hugo</span>
+                                                            <span style="font-size: 10px; padding: 1px 6px; background: var(--secondary-50); color: var(--secondary-700); border-radius: 4px; font-weight: 600; letter-spacing: 0.04em;">APP</span>
+                                                            <span style="font-size: 11px; color: var(--text-subtle);">9:14</span>
+                                                        </div>
+                                                        <div style="color: var(--text); line-height: 1.45;">10 days remain in your FY26 entitlement (10 used). Carer&rsquo;s leave needs a same-day notification to your manager &mdash; I&rsquo;ll draft one if you tell me when.</div>
+                                                        <div style="margin-top: 8px; display: flex; gap: 6px; flex-wrap: wrap;">
+                                                            <span style="font-size: 11px; padding: 3px 8px; background: var(--bg-muted); color: var(--text-muted); border: 1px solid var(--border); border-radius: 6px; font-weight: 500;">HR Handbook &sect;4.2</span>
+                                                            <span style="font-size: 11px; padding: 3px 8px; background: var(--bg-muted); color: var(--text-muted); border: 1px solid var(--border); border-radius: 6px; font-weight: 500;">Workday &middot; YTD</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display: flex; gap: 10px;">
+                                                    <div style="flex-shrink: 0; width: 28px; height: 28px; border-radius: 6px; background: var(--gray-200); color: var(--gray-600); display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; font-size: 12px;">T</div>
+                                                    <div style="flex: 1;">
+                                                        <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 2px;">
+                                                            <span style="font-weight: 700; color: var(--text); font-size: 13.5px;">Tom B.</span>
+                                                            <span style="font-size: 11px; color: var(--text-subtle);">9:15</span>
+                                                        </div>
+                                                        <div style="color: var(--text); line-height: 1.45;">From tomorrow, two days.</div>
+                                                    </div>
+                                                </div>
+                                                <div style="display: flex; gap: 10px;">
+                                                    <div style="flex-shrink: 0; width: 28px; height: 28px; border-radius: 6px; background: linear-gradient(135deg, var(--secondary-500), var(--accent-500)); color: white; display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; font-size: 12px;">H</div>
+                                                    <div style="flex: 1;">
+                                                        <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 2px;">
+                                                            <span style="font-weight: 700; color: var(--text); font-size: 13.5px;">Hugo</span>
+                                                            <span style="font-size: 10px; padding: 1px 6px; background: var(--secondary-50); color: var(--secondary-700); border-radius: 4px; font-weight: 600; letter-spacing: 0.04em;">APP</span>
+                                                            <span style="font-size: 11px; color: var(--text-subtle);">9:15</span>
+                                                        </div>
+                                                        <div style="color: var(--text); line-height: 1.45;">Drafted to <strong>Sarah M.</strong> &mdash; request submitted, leave logged. Anything else?</div>
+                                                        <div style="margin-top: 8px; display: inline-flex; align-items: center; gap: 8px; padding: 5px 10px; background: var(--accent-50); color: var(--accent-700); border-radius: 8px; font-size: 12px; font-weight: 600;">
+                                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+                                                            <span>Approved by Sarah &middot; 9:16</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="nm-live-foot">
+                                    <span style="display:inline-flex;align-items:center;gap:8px;">
+                                        <span class="nm-live-dot"></span>
+                                        <span><strong>One brain</strong> &middot; trained on your business</span>
+                                    </span>
+                                    <span class="mono" style="font-size: 11px; letter-spacing: 0.05em;">v2.4 &middot; Sydney · Australia East</span>
+                                </div>
+                            </div>
+
+                            <div class="nm-floating-chip top">
+                                <div class="chip-icon" style="background: var(--accent-50); color: var(--accent-700);">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+                                </div>
+                                <div>
+                                    <div class="chip-title">Live in 60 min</div>
+                                    <div class="chip-sub">Grounded &amp; cited</div>
+                                </div>
+                            </div>
+                            <div class="nm-floating-chip bot">
+                                <div class="chip-icon" style="background: var(--primary-50); color: var(--primary-700);">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                                </div>
+                                <div>
+                                    <div class="chip-title">Hosted in Sydney</div>
+                                    <div class="chip-sub">Data never leaves Australia</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hero CSS lifted from neomeric.com homepage for pixel parity -->
+        <style>
+            .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 24px; border-radius: 9999px; font-family: var(--font-sans); font-weight: 500; font-size: 15px; letter-spacing: -0.005em; transition: all 220ms cubic-bezier(0.4, 0, 0.2, 1); white-space: nowrap; cursor: pointer; border: 0; text-decoration: none; }
+            .btn .arrow { transition: transform 220ms cubic-bezier(0.4, 0, 0.2, 1); }
+            .btn:hover .arrow { transform: translateX(3px); }
+            .btn-primary { background: var(--gray-900); color: white; }
+            .dark .btn-primary { background: white; color: var(--gray-900); }
+            .btn-primary:hover { background: var(--gray-800); transform: translateY(-1px); box-shadow: 0 10px 28px rgba(0,0,0,0.18); }
+            .dark .btn-primary:hover { background: #f3f4f6; box-shadow: 0 10px 28px rgba(0,0,0,0.4); }
+            .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border-strong); }
+            .btn-ghost:hover { border-color: var(--text); transform: translateY(-1px); }
+            .mono { font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, monospace); }
+
+            @keyframes nm-blob { 0%, 100% { transform: translate(0, 0) scale(1); } 33% { transform: translate(20px, -30px) scale(1.06); } 66% { transform: translate(-25px, 15px) scale(0.96); } }
+            @keyframes nm-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+            @keyframes nm-pulse-ring { 0% { transform: scale(0.95); opacity: 0.6; } 70%, 100% { transform: scale(1.6); opacity: 0; } }
+            @keyframes nm-fade-in-up { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+            @keyframes nm-typing-dot { 0%, 60%, 100% { transform: translateY(0); opacity: 0.4; } 30% { transform: translateY(-4px); opacity: 1; } }
+            @media (prefers-reduced-motion: reduce) { * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; } }
+
+            /* HERO */
+            .nm-hero { padding: 64px 0 96px; overflow: hidden; position: relative; }
+            .nm-hero-blobs { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+            .nm-hero-blob { position: absolute; border-radius: 50%; filter: blur(90px); mix-blend-mode: multiply; }
+            .dark .nm-hero-blob { mix-blend-mode: screen; opacity: 0.5 !important; }
+            .nm-hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.1fr 1fr; gap: 72px; align-items: center; padding-top: 32px; }
+            @media (max-width: 980px) {
+                .nm-hero-grid { grid-template-columns: 1fr; gap: 56px; }
+                .nm-hero-right { order: -1; max-width: 480px; margin: 0 auto; width: 100%; }
+                .nm-hide-sm { display: none; }
+            }
+            .nm-live-badge { display: inline-flex; align-items: center; gap: 8px; padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 9999px; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); box-shadow: 0 1px 2px rgba(15,23,42,0.04); }
+            .nm-live-dot { position: relative; display: inline-block; width: 7px; height: 7px; }
+            .nm-live-dot::before, .nm-live-dot::after { content: ''; position: absolute; inset: 0; border-radius: 50%; background: var(--success, #10b981); }
+            .nm-live-dot::before { opacity: 0.5; animation: nm-pulse-ring 2s cubic-bezier(0,0,0.2,1) infinite; }
+            .nm-hero-h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(44px, 5.6vw, 76px); line-height: 1.02; letter-spacing: -0.025em; margin: 0 0 28px; text-wrap: balance; color: var(--text); }
+            .nm-hero-lead { font-size: 19px; line-height: 1.6; color: var(--text-muted); margin: 0 0 36px; max-width: 52ch; font-weight: 400; }
+            .nm-hero-lead strong { color: var(--text); font-weight: 600; }
+            .nm-hero-ctas { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 28px; }
+            .nm-hero-proof { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; font-size: 13px; color: var(--text-subtle); font-weight: 500; }
+            .nm-hero-proof-item { display: inline-flex; align-items: center; gap: 8px; }
+            .nm-hero-proof .nm-divider { width: 1px; height: 12px; background: var(--border-strong); }
+
+            /* Hero live panel */
+            .nm-live-panel { position: relative; }
+            .nm-live-panel-ambient { position: absolute; inset: -60px; border-radius: 40px; z-index: 0; background: radial-gradient(60% 60% at 70% 30%, rgba(0,209,178,0.16), transparent 70%), radial-gradient(50% 60% at 20% 80%, rgba(0,123,255,0.18), transparent 70%); filter: blur(20px); }
+            .nm-live-card { position: relative; z-index: 1; background: var(--surface); border: 1px solid var(--border); border-radius: 28px; padding: 14px; box-shadow: 0 30px 80px -20px rgba(15,23,42,0.18), 0 8px 24px -8px rgba(15,23,42,0.08); }
+            .dark .nm-live-card { box-shadow: 0 30px 80px -20px rgba(0,0,0,0.5), 0 8px 24px -8px rgba(0,0,0,0.3); }
+            .nm-live-tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; padding: 4px; background: var(--bg-muted); border-radius: 14px; margin-bottom: 14px; }
+            .nm-live-tab { display: flex; align-items: center; justify-content: center; gap: 7px; padding: 9px 8px; border-radius: 10px; font-size: 13px; font-weight: 500; color: var(--text-muted); background: transparent; transition: all 200ms; border: 0; cursor: pointer; font-family: var(--font-sans); }
+            .nm-live-tab[aria-selected="true"] { color: var(--text); background: var(--surface); box-shadow: 0 1px 3px rgba(15,23,42,0.06), 0 0 0 1px var(--border); }
+            .nm-live-tab strong { font-weight: 600; }
+            .nm-live-tab .sub { color: var(--text-subtle); margin-left: 6px; font-size: 12px; }
+            .nm-live-stage { position: relative; min-height: 360px; }
+            .nm-live-panel-content { animation: nm-fade-in-up 320ms ease-out; }
+            .nm-live-panel-content[hidden] { display: none; }
+            .nm-live-foot { margin-top: 14px; padding: 10px 14px; display: flex; align-items: center; justify-content: space-between; background: var(--bg-muted); border-radius: 12px; font-size: 12px; color: var(--text-muted); }
+            .nm-live-foot strong { color: var(--text); font-weight: 600; }
+            .nm-floating-chip { position: absolute; z-index: 2; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 10px 14px; box-shadow: 0 12px 28px -8px rgba(15,23,42,0.2); display: flex; align-items: center; gap: 10px; }
+            .nm-floating-chip .chip-icon { width: 28px; height: 28px; border-radius: 9px; display: inline-flex; align-items: center; justify-content: center; }
+            .nm-floating-chip .chip-title { font-size: 12px; font-weight: 600; color: var(--text); }
+            .nm-floating-chip .chip-sub { font-size: 11px; color: var(--text-muted); }
+            .nm-floating-chip.top { top: -18px; right: -22px; animation: nm-float 4s ease-in-out infinite; }
+            .nm-floating-chip.bot { bottom: -14px; left: -22px; animation: nm-float 5s ease-in-out infinite reverse; }
+            @media (max-width: 540px) {
+                .nm-floating-chip.top { right: -8px; }
+                .nm-floating-chip.bot { left: -8px; }
+            }
+
+            /* Simon chat bubbles */
+            .nm-chat { padding: 16px 14px; display: flex; flex-direction: column; gap: 10px; }
+            .nm-chat-header { display: flex; align-items: center; gap: 10px; padding: 4px 4px 12px; border-bottom: 1px solid var(--border); margin-bottom: 6px; }
+            .nm-bubble { max-width: 82%; padding: 9px 13px; border-radius: 14px; font-size: 13.5px; line-height: 1.45; opacity: 0; transform: translateY(8px); transition: opacity 280ms ease, transform 280ms ease; }
+            .nm-bubble.shown { opacity: 1; transform: translateY(0); }
+            .nm-bubble.user { align-self: flex-start; background: var(--bg-muted); color: var(--text); border-top-left-radius: 4px; }
+            .nm-bubble.agent { align-self: flex-end; background: var(--gray-900); color: white; border-top-right-radius: 4px; }
+            .dark .nm-bubble.agent { background: var(--accent-700); }
+            .nm-typing { align-self: flex-end; display: inline-flex; gap: 4px; padding: 10px 14px; background: var(--gray-900); border-radius: 14px; border-top-right-radius: 4px; }
+            .nm-typing span { width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,0.7); animation: nm-typing-dot 1.2s ease-in-out infinite; }
+            .nm-typing span:nth-child(2) { animation-delay: 0.15s; }
+            .nm-typing span:nth-child(3) { animation-delay: 0.3s; }
+
+            /* Maeve waveform */
+            .nm-wave { display: flex; align-items: center; justify-content: center; gap: 3px; height: 64px; margin: 8px auto 16px; }
+            .nm-wave span { width: 4px; border-radius: 4px; transition: height 80ms linear; background: var(--secondary-500); }
+        </style>
+
+        <!-- LIVE DEMO — interactive Simon chat (real API), Maeve 3-min voice demo, Hugo Slack preview -->
+        <section id="demo" class="py-24">
+            <div class="nm-container">
+                <div class="nm-section-header">
+                    <span class="eyebrow"><span class="dot"></span> See a NeoMind employee answer, grounded in real docs</span>
+                    <h2 class="nm-section-headline">
+                        Don't take our word for it.<br />
+                        <span class="muted">Ask one yourself.</span>
+                    </h2>
+                    <p class="nm-section-sub">
+                        Simon is the real thing &mdash; trained on this very site, answering live, no hallucinations. Maeve and Hugo run on sample businesses so you can hear how each employee works.
+                    </p>
+                </div>
+
+                <div role="tablist" aria-label="AI teammate demos" class="tab-bar flex gap-2 mb-6 border-b border-gray-200 dark:border-gray-700">
+                    <button role="tab" aria-selected="true" data-tab="simon" class="tab-btn active flex items-center gap-2 px-4 py-3 border-b-2 border-primary text-primary font-medium">
+                        <span class="tab-icon" style="background: var(--secondary-50); color: var(--secondary-700);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/></svg>
+                        </span>
+                        <span>Simon</span>
+                        <span class="hidden sm:inline text-xs text-gray-500 dark:text-gray-400 font-normal ml-1">— live</span>
+                    </button>
+                    <button role="tab" aria-selected="false" data-tab="maeve" class="tab-btn flex items-center gap-2 px-4 py-3 border-b-2 border-transparent text-gray-500 dark:text-gray-400 hover:text-primary font-medium">
+                        <span class="tab-icon" style="background: var(--accent-50); color: var(--accent-700);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </span>
+                        <span>Maeve</span>
+                        <span class="hidden sm:inline text-xs text-gray-500 dark:text-gray-400 font-normal ml-1">— live · 90s</span>
+                    </button>
+                    <button role="tab" aria-selected="false" data-tab="hugo" class="tab-btn flex items-center gap-2 px-4 py-3 border-b-2 border-transparent text-gray-500 dark:text-gray-400 hover:text-primary font-medium">
+                        <span class="tab-icon" style="background: var(--primary-50); color: var(--primary-700);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </span>
+                        <span>Hugo</span>
+                        <span class="hidden sm:inline text-xs text-gray-500 dark:text-gray-400 font-normal ml-1">— demo on request</span>
+                    </button>
+                </div>
+
+                <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-800 max-w-3xl">
+                    <div class="p-5 text-white" style="background: var(--gradient-brand);">
+                        <div class="text-xs uppercase tracking-wide opacity-80" id="panel-eyebrow">Live · trained on neomeric.com</div>
+                        <div class="text-lg font-semibold" id="panel-title">Ask Simon anything about NeoMind</div>
+                    </div>
+
+                    <!-- Simon panel (live API) -->
+                    <div data-panel="simon" class="tab-panel">
+                        <div class="chat-surface" id="chat-simon"></div>
+                        <div class="border-t border-gray-100 dark:border-gray-800 p-3 flex gap-2 bg-white dark:bg-gray-900">
+                            <input id="input-simon" type="text" placeholder="Ask Simon — e.g. how much does NeoMind cost?"
+                                class="flex-1 px-4 py-2.5 rounded-full bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-primary text-sm" />
+                            <button data-send="simon" class="btn btn-gradient" style="padding: 10px 20px; font-size: 14px;">Send</button>
+                        </div>
+                        <div class="px-4 pb-3 flex flex-wrap gap-2">
+                            <button class="suggest-btn" data-mind="simon">How much does NeoMind cost?</button>
+                            <button class="suggest-btn" data-mind="simon">What's the difference between the employees?</button>
+                            <button class="suggest-btn" data-mind="simon">Where is my data stored?</button>
+                        </div>
+                    </div>
+
+                    <!-- Maeve panel (LIVE — 3-minute browser voice demo) -->
+                    <div data-panel="maeve" class="tab-panel hidden">
+                        <div id="maeve-cta" class="maeve-cta-screen">
+                            <div class="text-5xl mb-4">📞</div>
+                            <h3 class="text-xl font-display font-semibold text-gray-900 dark:text-white mb-2">Talk to Maeve for 3 minutes</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 max-w-md mx-auto">
+                                Maeve is a real, natural-sounding voice agent, running on this site's Brain.
+                                Allow microphone access and speak naturally.
+                            </p>
+                            <button id="maeve-start" type="button" class="btn btn-gradient">
+                                <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 14a3 3 0 003-3V5a3 3 0 00-6 0v6a3 3 0 003 3z"/><path d="M19 11a1 1 0 10-2 0 5 5 0 01-10 0 1 1 0 10-2 0 7 7 0 006 6.92V20H8a1 1 0 100 2h8a1 1 0 100-2h-3v-2.08A7 7 0 0019 11z"/></svg>
+                                Start 3-minute demo
+                            </button>
+                            <p class="text-xs text-gray-500 dark:text-gray-500 mt-4">No download · works in Chrome, Edge, Safari · Email captured to schedule a longer demo</p>
+                        </div>
+
+                        <div id="maeve-stage" class="hidden" style="position: relative;">
+                            <div id="maeve-connect-overlay" class="maeve-connect-overlay">
+                                <div class="maeve-connect-rings">
+                                    <div class="maeve-connect-glyph">📞</div>
+                                </div>
+                                <div class="maeve-connect-status" id="maeve-connect-status">Setting up your call…</div>
+                                <div class="maeve-connect-sub" id="maeve-connect-sub">This usually takes a few seconds</div>
+                            </div>
+                            <div class="maeve-stage-header" id="maeve-stage-header">
+                                <span><span class="maeve-stage-pulse"></span><strong>Live</strong> · <span id="maeve-status">Connecting…</span></span>
+                                <span class="text-xs font-medium uppercase tracking-wide" id="maeve-timer">90s</span>
+                            </div>
+                            <div class="maeve-stage" style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <div id="maeve-transcript" class="maeve-transcript"></div>
+                            </div>
+                            <div class="p-4 bg-white dark:bg-gray-900 flex justify-between items-center text-sm">
+                                <span class="text-gray-500 dark:text-gray-400 hidden sm:inline">Speak naturally — Maeve is listening</span>
+                                <button id="maeve-stop" type="button"
+                                    class="inline-flex items-center px-4 py-2 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 rounded-full text-sm font-medium hover:bg-red-100 transition-all">
+                                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M6 6h12v12H6z"/></svg>
+                                    End call
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="maeve-end" class="maeve-end-screen hidden">
+                            <div class="text-5xl mb-4">✓</div>
+                            <h3 class="text-xl font-display font-semibold text-gray-900 dark:text-white mb-2">That's a wrap.</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 max-w-md mx-auto">
+                                That was the real Maeve, on the real NeoMind brain. Imagine her trained on
+                                <strong>your</strong> business — your scripts, your calendar, your CRM.
+                            </p>
+                            <div class="flex flex-wrap gap-3 justify-center">
+                                <a href="https://app.neomindhub.com/signup?agent=maeve" class="btn btn-gradient" data-contact-cta data-contact-path="NeoMind" data-contact-source="neomindhub-maeve-after">
+                                    Start your free trial
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                </a>
+                                <button id="maeve-retry" type="button"
+                                    class="inline-flex items-center px-5 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-primary text-gray-800 dark:text-white rounded-full text-sm font-medium transition-all">
+                                    Run another 90s
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hugo panel (read-only Slack preview · live demo on request) -->
+                    <div data-panel="hugo" class="tab-panel hidden">
+                        <div class="hugo-banner">
+                            <span><span class="hugo-banner-pulse"></span><strong>Hugo runs on your real handbook.</strong> Slack-style preview shown — Slack &amp; Teams native coming soon. At launch, Hugo answers in your Member dashboard.</span>
+                            <span class="text-xs font-medium uppercase tracking-wide hidden sm:inline">Demo on request</span>
+                        </div>
+
+                        <div class="slack-surface">
+                            <div class="slack-channel-tag">#hr-questions · 247 members</div>
+
+                            <div class="slack-msg">
+                                <div class="slack-avatar" style="background:#fbbf24">JC</div>
+                                <div class="flex-1">
+                                    <div class="slack-meta"><span class="slack-name">Jess C.</span><span class="slack-time">10:42 AM</span></div>
+                                    <div class="slack-body">how many days of annual leave do I get? trying to plan a trip in september</div>
+                                </div>
+                            </div>
+
+                            <div class="slack-msg" style="padding-left: 2.5rem;">
+                                <div class="slack-avatar" style="background:linear-gradient(135deg,#007BFF,#00D1B2)">H</div>
+                                <div class="flex-1">
+                                    <div class="slack-meta"><span class="slack-name">Hugo</span><span class="slack-app-tag">App</span><span class="slack-time">10:42 AM</span></div>
+                                    <div class="slack-body">You get <strong>20 days</strong> of paid annual leave per year (pro-rated for part-time), on top of public holidays. Leave accrues at <strong>1.67 days/month</strong>, and you can carry up to 10 days into next year.</div>
+                                    <a class="slack-source" href="#" onclick="event.preventDefault()">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                                        Source: Employee Handbook §4.2 — Annual Leave
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="slack-msg">
+                                <div class="slack-avatar" style="background:#a78bfa">MR</div>
+                                <div class="flex-1">
+                                    <div class="slack-meta"><span class="slack-name">Marco R.</span><span class="slack-time">11:15 AM</span></div>
+                                    <div class="slack-body">@Hugo what's the WFH policy these days?</div>
+                                </div>
+                            </div>
+
+                            <div class="slack-msg" style="padding-left: 2.5rem;">
+                                <div class="slack-avatar" style="background:linear-gradient(135deg,#007BFF,#00D1B2)">H</div>
+                                <div class="flex-1">
+                                    <div class="slack-meta"><span class="slack-name">Hugo</span><span class="slack-app-tag">App</span><span class="slack-time">11:15 AM</span></div>
+                                    <div class="slack-body">Up to <strong>3 days/week</strong> WFH with manager approval. Minimum <strong>2 days in-office</strong> per week. WFH days agreed with your manager 1 week ahead.</div>
+                                    <a class="slack-source" href="#" onclick="event.preventDefault()">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                                        Source: Employee Handbook §6.1 — Hybrid Working
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="slack-msg">
+                                <div class="slack-avatar" style="background:#34d399">PT</div>
+                                <div class="flex-1">
+                                    <div class="slack-meta"><span class="slack-name">Priya T.</span><span class="slack-time">2:08 PM</span></div>
+                                    <div class="slack-body">@Hugo I bought a flight for a client visit — how do I claim it back?</div>
+                                </div>
+                            </div>
+
+                            <div class="slack-msg" style="padding-left: 2.5rem;">
+                                <div class="slack-avatar" style="background:linear-gradient(135deg,#007BFF,#00D1B2)">H</div>
+                                <div class="flex-1">
+                                    <div class="slack-meta"><span class="slack-name">Hugo</span><span class="slack-app-tag">App</span><span class="slack-time">2:08 PM</span></div>
+                                    <div class="slack-body">Submit through <strong>HR Portal → Expense Claims</strong>. Attach the receipt, pick category <em>Travel · Client</em>. Claims under $500 auto-route to your manager; above goes to Finance. Paid on the next payroll cycle.</div>
+                                    <a class="slack-source" href="#" onclick="event.preventDefault()">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                                        Source: Finance SOP §3 — Expense Reimbursement
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-gray-100 dark:border-gray-800 p-5 bg-white dark:bg-gray-900 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div class="text-sm text-gray-600 dark:text-gray-400">
+                                Want Hugo to read <strong>your</strong> handbook and answer <strong>your</strong> team in your Member dashboard? (Slack &amp; Teams native coming soon.)
+                            </div>
+                            <a href="https://app.neomindhub.com/signup?agent=hugo" class="inline-flex items-center px-5 py-2.5 bg-gradient-to-r from-secondary to-accent text-white rounded-full text-sm font-medium hover:shadow-lg transition-all whitespace-nowrap" data-contact-cta data-contact-path="NeoMind" data-contact-source="neomindhub-hugo">
+                                Start a free trial
+                                <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════════ 2. ONE-LINE PROBLEM ════════════ -->
+        <section id="problem" class="py-20" style="background: var(--bg-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+            <div class="nm-container" style="max-width: 920px; text-align: center;">
+                <span class="eyebrow" style="justify-content: center;"><span class="dot"></span> Chatbot vs. employee</span>
+                <h2 class="nm-section-headline" style="margin: 14px auto 18px; max-width: 22ch;">
+                    A chatbot answers. An AI&nbsp;employee gets the job done &mdash; <span class="muted">and tells you how it&rsquo;s performing.</span>
+                </h2>
+                <p class="nm-section-sub" style="margin: 0 auto; max-width: 60ch;">
+                    Most &ldquo;AI&rdquo; you can buy is a bot that replies and hopes. NeoMind employees take real actions, work from your real knowledge, and are measured against objectives you set &mdash; so you&rsquo;re managing a team, not babysitting a script.
+                </p>
+            </div>
+        </section>
+
+        <!-- ════════════ 3. PILLAR 1 — MEASURABLE (the headline differentiator) ════════════ -->
+        <section id="measurable" class="py-24" style="background: var(--bg);">
+            <div class="nm-container">
+                <div class="nm-measure-grid">
+                    <div class="nm-measure-copy">
+                        <span class="eyebrow"><span class="dot"></span> Pillar 1 &middot; Measurable</span>
+                        <h2 class="nm-section-headline" style="margin-top: 14px;">
+                            Set the objective. Score the work.<br />
+                            <span class="muted">Manage like a team.</span>
+                        </h2>
+                        <p class="nm-section-sub" style="max-width: 50ch; margin-bottom: 28px;">
+                            Every NeoMind employee carries a business objective that steers how it works. Weighted KPIs are scored on every single conversation by an AI judge, and roll up into a scorecard you can actually read. For the first time, &ldquo;is the AI doing a good job?&rdquo; has a number.
+                        </p>
+                        <ul class="nm-measure-list">
+                            <li>
+                                <span class="nm-measure-tick" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>
+                                <span><strong>Objectives</strong> &mdash; each employee works toward a goal you set (book more jobs, resolve more queries, qualify better leads).</span>
+                            </li>
+                            <li>
+                                <span class="nm-measure-tick" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>
+                                <span><strong>KPIs, scored per conversation</strong> &mdash; weighted, judged automatically, no manual review.</span>
+                            </li>
+                            <li>
+                                <span class="nm-measure-tick" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>
+                                <span><strong>Scorecards &amp; reporting</strong> &mdash; see how your team is performing this week, by employee.</span>
+                            </li>
+                            <li>
+                                <span class="nm-measure-tick" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>
+                                <span><strong>Improve on evidence</strong> &mdash; every weak answer and &ldquo;I don&rsquo;t know&rdquo; is visible, so you fix the gap once.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Scorecard mock — designed proxy until a real screenshot is supplied -->
+                    <div class="nm-scorecard-frame">
+                        <!-- [screenshot: scorecard] — replace this designed mock with a real dashboard scorecard export. -->
+                        <div class="nm-scorecard">
+                            <div class="nm-scorecard-head">
+                                <div>
+                                    <div class="nm-scorecard-eyebrow">Employee scorecard &middot; this week</div>
+                                    <div class="nm-scorecard-name">Simon &middot; Website</div>
+                                </div>
+                                <div class="nm-scorecard-grade">
+                                    <span class="nm-scorecard-grade-num">86</span>
+                                    <span class="nm-scorecard-grade-lab">/ 100</span>
+                                </div>
+                            </div>
+                            <div class="nm-scorecard-obj">
+                                <span class="nm-scorecard-obj-lab">Objective</span>
+                                <span class="nm-scorecard-obj-val">Qualify &amp; capture more high-intent leads</span>
+                            </div>
+                            <div class="nm-kpi-rows">
+                                <div class="nm-kpi-row">
+                                    <span class="nm-kpi-name">Lead capture rate</span>
+                                    <span class="nm-kpi-track"><span class="nm-kpi-fill" style="--w: 91%;"></span></span>
+                                    <span class="nm-kpi-val">91</span>
+                                </div>
+                                <div class="nm-kpi-row">
+                                    <span class="nm-kpi-name">Grounded / cited</span>
+                                    <span class="nm-kpi-track"><span class="nm-kpi-fill" style="--w: 98%;"></span></span>
+                                    <span class="nm-kpi-val">98</span>
+                                </div>
+                                <div class="nm-kpi-row">
+                                    <span class="nm-kpi-name">Resolution without staff</span>
+                                    <span class="nm-kpi-track"><span class="nm-kpi-fill" style="--w: 79%;"></span></span>
+                                    <span class="nm-kpi-val">79</span>
+                                </div>
+                                <div class="nm-kpi-row">
+                                    <span class="nm-kpi-name">Tone &amp; brand fit</span>
+                                    <span class="nm-kpi-track"><span class="nm-kpi-fill" style="--w: 88%;"></span></span>
+                                    <span class="nm-kpi-val">88</span>
+                                </div>
+                            </div>
+                            <div class="nm-scorecard-foot">
+                                <span class="nm-live-dot"></span>
+                                <span>Judged automatically on <strong>1,284</strong> conversations this week</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .nm-measure-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 64px; align-items: center; }
+            @media (max-width: 980px) { .nm-measure-grid { grid-template-columns: 1fr; gap: 48px; } }
+            .nm-measure-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 18px; }
+            .nm-measure-list li { display: flex; gap: 14px; align-items: flex-start; font-size: 15.5px; line-height: 1.55; color: var(--text-muted); }
+            .nm-measure-list li strong { color: var(--text); font-weight: 600; }
+            .nm-measure-tick { flex-shrink: 0; width: 26px; height: 26px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; margin-top: 1px; background: var(--accent-50); color: var(--accent-700); }
+            .dark .nm-measure-tick { background: rgba(0,209,178,0.16); color: var(--accent-300, #5eead4); }
+
+            .nm-scorecard-frame { position: relative; }
+            .nm-scorecard-frame::before { content: ""; position: absolute; inset: -48px -36px; z-index: 0; background: radial-gradient(60% 60% at 70% 25%, rgba(0,209,178,0.16), transparent 70%), radial-gradient(55% 60% at 20% 85%, rgba(0,123,255,0.18), transparent 70%); filter: blur(18px); }
+            .nm-scorecard { position: relative; z-index: 1; background: var(--surface); border: 1px solid var(--border); border-radius: 22px; padding: 24px; box-shadow: 0 28px 70px -22px rgba(15,23,42,0.22), 0 8px 22px -10px rgba(15,23,42,0.08); }
+            .dark .nm-scorecard { box-shadow: 0 28px 70px -22px rgba(0,0,0,0.55); }
+            .nm-scorecard-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding-bottom: 18px; border-bottom: 1px solid var(--border); }
+            .nm-scorecard-eyebrow { font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--text-subtle); margin-bottom: 6px; }
+            .nm-scorecard-name { font-family: var(--font-display); font-weight: 700; font-size: 19px; letter-spacing: -0.015em; color: var(--text); }
+            .nm-scorecard-grade { display: flex; align-items: baseline; gap: 3px; }
+            .nm-scorecard-grade-num { font-family: var(--font-display); font-weight: 800; font-size: 40px; line-height: 1; letter-spacing: -0.03em; background: linear-gradient(135deg, var(--secondary-500), var(--accent-500)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+            .nm-scorecard-grade-lab { font-size: 13px; font-weight: 600; color: var(--text-subtle); }
+            .nm-scorecard-obj { display: flex; flex-direction: column; gap: 4px; margin: 18px 0; padding: 14px 16px; background: var(--bg-muted); border-radius: 12px; }
+            .nm-scorecard-obj-lab { font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; color: var(--text-subtle); }
+            .nm-scorecard-obj-val { font-size: 14px; font-weight: 500; color: var(--text); }
+            .nm-kpi-rows { display: flex; flex-direction: column; gap: 14px; }
+            .nm-kpi-row { display: grid; grid-template-columns: 11ch 1fr 3ch; gap: 12px; align-items: center; }
+            .nm-kpi-name { font-size: 13px; color: var(--text-muted); }
+            .nm-kpi-track { height: 8px; border-radius: 999px; background: var(--bg-muted); overflow: hidden; }
+            .nm-kpi-fill { display: block; height: 100%; width: var(--w); border-radius: 999px; background: linear-gradient(90deg, var(--secondary-500), var(--accent-500)); transform: scaleX(0); transform-origin: left center; transition: transform 900ms cubic-bezier(0.16, 1, 0.3, 1); }
+            .nm-scorecard.reveal .nm-kpi-fill { transform: scaleX(1); }
+            .nm-scorecard.reveal .nm-kpi-row:nth-child(1) .nm-kpi-fill { transition-delay: 80ms; }
+            .nm-scorecard.reveal .nm-kpi-row:nth-child(2) .nm-kpi-fill { transition-delay: 200ms; }
+            .nm-scorecard.reveal .nm-kpi-row:nth-child(3) .nm-kpi-fill { transition-delay: 320ms; }
+            .nm-scorecard.reveal .nm-kpi-row:nth-child(4) .nm-kpi-fill { transition-delay: 440ms; }
+            .nm-kpi-val { font-size: 13px; font-weight: 700; color: var(--text); text-align: right; font-family: var(--font-display); }
+            @media (prefers-reduced-motion: reduce) { .nm-kpi-fill { transform: scaleX(1); transition: none; } }
+            .nm-scorecard-foot { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 10px; font-size: 12.5px; color: var(--text-muted); }
+            .nm-scorecard-foot strong { color: var(--text); font-weight: 600; }
+        </style>
+        <script>
+            // Reveal the scorecard KPI bars once, when the card scrolls into view.
+            (function () {
+                var card = document.querySelector('#measurable .nm-scorecard');
+                if (!card) return;
+                if (!('IntersectionObserver' in window)) { card.classList.add('reveal'); return; }
+                var io = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) {
+                        if (e.isIntersecting) { card.classList.add('reveal'); io.disconnect(); }
+                    });
+                }, { threshold: 0.35 });
+                io.observe(card);
+            })();
+        </script>
+
+        <!-- ════════════ 4. PILLAR 2 — TAKES REAL ACTION ════════════ -->
+        <section id="actions" class="py-24" style="background: var(--bg-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+            <div class="nm-container">
+                <div class="nm-section-header">
+                    <span class="eyebrow"><span class="dot"></span> Pillar 2 &middot; Takes real action</span>
+                    <h2 class="nm-section-headline">
+                        They don&rsquo;t just reply.<br />
+                        <span class="muted">They do the work.</span>
+                    </h2>
+                    <p class="nm-section-sub">
+                        NeoMind employees complete the task end to end &mdash; as real, durable actions, not just chat.
+                    </p>
+                </div>
+
+                <div class="nm-action-grid">
+                    <div class="nm-action-card">
+                        <div class="nm-action-icon" style="background: var(--secondary-50); color: var(--secondary-700);">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M9 16l2 2 4-4"/></svg>
+                        </div>
+                        <h3 class="nm-action-title">Book</h3>
+                        <p class="nm-action-body">Appointments straight into your calendar &mdash; with the right slot, confirmed.</p>
+                    </div>
+                    <div class="nm-action-card">
+                        <div class="nm-action-icon" style="background: var(--accent-50); color: var(--accent-700);">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
+                        </div>
+                        <h3 class="nm-action-title">Capture &amp; route</h3>
+                        <p class="nm-action-body">Leads captured and routed to the right person, with context attached.</p>
+                    </div>
+                    <div class="nm-action-card">
+                        <div class="nm-action-icon" style="background: var(--primary-50); color: var(--primary-700);">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+                        </div>
+                        <h3 class="nm-action-title">Escalate</h3>
+                        <p class="nm-action-body">Genuine priorities handed to a human by your rules, never missed.</p>
+                    </div>
+                    <div class="nm-action-card">
+                        <div class="nm-action-icon" style="background: var(--secondary-50); color: var(--secondary-700);">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><polyline points="21 3 21 9 15 9"/></svg>
+                        </div>
+                        <h3 class="nm-action-title">Update your systems</h3>
+                        <p class="nm-action-body">Push to your CRM and tools via webhook &mdash; the record lands where you work.</p>
+                    </div>
+                </div>
+
+                <div class="nm-honesty-line">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    <p>Your employees do the routine work. The judgment calls &mdash; and anything binding &mdash; stay with your team. <strong>NeoMind never signs or commits on your behalf.</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .nm-action-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+            @media (max-width: 1024px) { .nm-action-grid { grid-template-columns: repeat(2, 1fr); } }
+            @media (max-width: 560px) { .nm-action-grid { grid-template-columns: 1fr; } }
+            .nm-action-card { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 26px 24px; transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; }
+            .nm-action-card:hover { transform: translateY(-3px); box-shadow: 0 16px 32px rgba(15,23,42,0.08); border-color: var(--border-strong); }
+            .nm-action-icon { width: 46px; height: 46px; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+            .nm-action-title { font-family: var(--font-display); font-weight: 700; font-size: 18px; letter-spacing: -0.015em; color: var(--text); margin: 0 0 8px; }
+            .nm-action-body { font-size: 13.5px; line-height: 1.55; color: var(--text-muted); margin: 0; }
+            .nm-honesty-line { margin-top: 40px; display: flex; gap: 14px; align-items: flex-start; max-width: 760px; padding: 20px 24px; background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent-500); border-radius: 14px; }
+            .nm-honesty-line svg { flex-shrink: 0; margin-top: 2px; color: var(--accent-700); }
+            .nm-honesty-line p { margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--text-muted); }
+            .nm-honesty-line strong { color: var(--text); font-weight: 600; }
+        </style>
+
+        <!-- ════════════ 5. ROSTER — start with three, build the team you need ════════════ -->
+        <section id="roster" class="py-24" style="padding: 96px 0; background: var(--bg);">
+            <div class="nm-container">
+                <div class="nm-section-header">
+                    <span class="eyebrow"><span class="dot"></span> Meet the roster</span>
+                    <h2 class="nm-section-headline">
+                        Start with three.<br />
+                        <span class="muted">Build the team you need.</span>
+                    </h2>
+                    <p class="nm-section-sub">
+                        Simon, Maeve and Hugo are ready out of the box. Need more? Configure custom AI employees &mdash; each with its own persona, skills, and access policy.
+                    </p>
+                </div>
+
+
+                <!-- Three Minds — equal-column grid -->
+                <div class="nm-mind-grid">
+                    <a href="https://app.neomindhub.com/signup?agent=simon" class="nm-mind-card" data-cta="mind-simon">
+                        <div class="mind-glow" style="background: radial-gradient(circle at top right, rgba(0,123,255,0.18), transparent 60%);"></div>
+                        <div class="nm-mind-icon" style="background: var(--secondary-50); color: var(--secondary-700);">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/></svg>
+                        </div>
+                        <div style="position: relative; display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px;">
+                            <h3 class="nm-mind-name">Simon</h3>
+                            <span class="nm-mind-role">· Website</span>
+                        </div>
+                        <p class="nm-mind-blurb">Answers buyer questions, qualifies and captures leads on every page &mdash; grounded in your site, FAQs and PDFs.</p>
+                        <div class="nm-mind-foot">
+                            <div class="nm-mind-skills">
+                                <span class="nm-mind-skill">Answer</span>
+                                <span class="nm-mind-skill">Qualify</span>
+                                <span class="nm-mind-skill">Capture leads</span>
+                            </div>
+                            <span class="nm-mind-cta" data-mind="simon">
+                                Try Simon
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+                            </span>
+                        </div>
+                    </a>
+
+                    <a href="https://app.neomindhub.com/signup?agent=maeve" class="nm-mind-card" data-cta="mind-maeve">
+                        <div class="mind-glow" style="background: radial-gradient(circle at top right, rgba(0,209,178,0.18), transparent 60%);"></div>
+                        <div class="nm-mind-icon" style="background: var(--accent-50); color: var(--accent-700);">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div style="position: relative; display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px;">
+                            <h3 class="nm-mind-name">Maeve</h3>
+                            <span class="nm-mind-role">· Phone</span>
+                        </div>
+                        <p class="nm-mind-blurb">Answers your business line 24/7 &mdash; books, qualifies, and routes urgent calls to your on-call staff.</p>
+                        <div class="nm-mind-foot">
+                            <div class="nm-mind-skills">
+                                <span class="nm-mind-skill">Answer 24/7</span>
+                                <span class="nm-mind-skill">Book</span>
+                                <span class="nm-mind-skill">Route</span>
+                            </div>
+                            <span class="nm-mind-cta" data-mind="maeve">
+                                Try Maeve
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+                            </span>
+                        </div>
+                    </a>
+
+                    <a href="https://app.neomindhub.com/signup?agent=hugo" class="nm-mind-card" data-cta="mind-hugo">
+                        <div class="mind-glow" style="background: radial-gradient(circle at top right, rgba(156,125,185,0.18), transparent 60%);"></div>
+                        <div class="nm-mind-icon" style="background: var(--primary-50); color: var(--primary-700);">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <div style="position: relative; display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px;">
+                            <h3 class="nm-mind-name">Hugo</h3>
+                            <span class="nm-mind-role">· Internal</span>
+                        </div>
+                        <p class="nm-mind-blurb">Answers staff questions on leave, expenses and policy &mdash; straight from your real handbook. Slack &amp; Teams native coming soon.</p>
+                        <div class="nm-mind-foot">
+                            <div class="nm-mind-skills">
+                                <span class="nm-mind-skill">Leave</span>
+                                <span class="nm-mind-skill">Expenses</span>
+                                <span class="nm-mind-skill">Policy</span>
+                            </div>
+                            <span class="nm-mind-cta" data-mind="hugo">
+                                Try Hugo
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+                            </span>
+                        </div>
+                    </a>
+
+                    <a href="https://app.neomindhub.com/signup" class="nm-mind-card nm-mind-card--custom" data-cta="mind-custom">
+                        <div class="mind-glow" style="background: radial-gradient(circle at top right, rgba(0,209,178,0.16), transparent 60%);"></div>
+                        <div class="nm-mind-icon nm-mind-icon--dashed">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                        </div>
+                        <div style="position: relative; display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px;">
+                            <h3 class="nm-mind-name">Custom employees</h3>
+                        </div>
+                        <p class="nm-mind-blurb">Define a role, give it skills and a knowledge scope, set what it can access. It&rsquo;s your roster, not a fixed three.</p>
+                        <div class="nm-mind-foot">
+                            <div class="nm-mind-skills">
+                                <span class="nm-mind-skill">Persona</span>
+                                <span class="nm-mind-skill">Skills</span>
+                                <span class="nm-mind-skill">Access policy</span>
+                            </div>
+                            <span class="nm-mind-cta" data-mind="custom">
+                                Configure one
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+
+                <style>
+                    .nm-mind-skills { display: flex; flex-wrap: wrap; gap: 6px; }
+                    .nm-mind-skill { font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 999px; background: var(--bg-muted); color: var(--text-muted); border: 1px solid var(--border); }
+                    .nm-mind-card--custom { border-style: dashed; background: var(--bg); }
+                    .nm-mind-card--custom:hover { border-color: var(--accent-500); border-style: solid; }
+                    .nm-mind-icon--dashed { background: transparent; color: var(--accent-700); border: 1.5px dashed var(--border-strong); transition: border-color 220ms, color 220ms; }
+                    .nm-mind-card--custom:hover .nm-mind-icon--dashed { border-color: var(--accent-500); border-style: solid; }
+                    .dark .nm-mind-icon--dashed { color: var(--accent-300, #5eead4); }
+                </style>
+
+                <!-- Roster footnote — capability signals only, no fake stats -->
+                <p style="text-align: center; margin-top: 48px; font-size: 14px; color: var(--text-subtle);">
+                    One Brain feeds every employee &mdash; teach it once, the whole roster knows.
+                    <a href="https://app.neomindhub.com/signup" style="color: var(--secondary-700); font-weight: 600; text-decoration: none;">Start a free trial</a>
+                    and add employees as you grow.
+                </p>
+            </div>
+        </section>
+
+        <!-- THE BRAIN -->
+        <section id="brain" class="py-24" style="background: var(--bg-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+            <div class="nm-container">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="eyebrow"><span class="dot"></span> Pillar 3 &middot; One Brain</span>
+                        <h2 class="nm-section-headline">
+                            One Brain.<br />
+                            <span class="muted">Every employee draws from it.</span>
+                        </h2>
+                        <p class="nm-section-sub" style="margin-bottom: 24px;">
+                            Upload your documents, crawl your site, and every AI employee answers from one grounded source of truth &mdash; cited back to the document, re-indexed as your business changes. Change a price once; every employee knows it within seconds. The more you feed the Brain, the smarter your whole team gets.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3"><svg class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-gray-700 dark:text-gray-300"><strong>Upload anything</strong> &mdash; PDFs, Word, web pages, Notion, SOPs, FAQs.</span></li>
+                            <li class="flex items-start gap-3"><svg class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-gray-700 dark:text-gray-300"><strong>Cited answers, every time</strong> &mdash; every reply traces back to its source document.</span></li>
+                            <li class="flex items-start gap-3"><svg class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-gray-700 dark:text-gray-300"><strong>Live re-index</strong> &mdash; schedule re-crawls so answers stay current.</span></li>
+                            <li class="flex items-start gap-3"><svg class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-gray-700 dark:text-gray-300"><strong>No hallucinations</strong> &mdash; it refuses when it doesn&rsquo;t know.</span></li>
+                        </ul>
+                    </div>
+                    <div class="relative">
+                        <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-xl border border-gray-100 dark:border-gray-700">
+                            <div class="text-xs uppercase tracking-wide text-primary mb-4 font-medium">What your Brain knows</div>
+                            <div class="grid grid-cols-2 gap-3 text-sm">
+                                <div class="bg-primary/10 dark:bg-primary/20 rounded-xl p-4">
+                                    <div class="font-semibold text-gray-900 dark:text-white">Website</div>
+                                    <div class="text-xs text-gray-600 dark:text-gray-400 mt-1">42 pages indexed</div>
+                                </div>
+                                <div class="bg-secondary/10 dark:bg-secondary/20 rounded-xl p-4">
+                                    <div class="font-semibold text-gray-900 dark:text-white">Handbook</div>
+                                    <div class="text-xs text-gray-600 dark:text-gray-400 mt-1">128 sections</div>
+                                </div>
+                                <div class="bg-accent/10 dark:bg-accent/20 rounded-xl p-4">
+                                    <div class="font-semibold text-gray-900 dark:text-white">FAQ docs</div>
+                                    <div class="text-xs text-gray-600 dark:text-gray-400 mt-1">87 Q&amp;A pairs</div>
+                                </div>
+                                <div class="bg-gray-100 dark:bg-gray-800 rounded-xl p-4">
+                                    <div class="font-semibold text-gray-900 dark:text-white">SOPs</div>
+                                    <div class="text-xs text-gray-600 dark:text-gray-400 mt-1">23 procedures</div>
+                                </div>
+                            </div>
+                            <div class="mt-6 flex items-center gap-2 text-xs text-gray-600 dark:text-gray-400">
+                                <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                                Last sync: 2 minutes ago · 1,247 chunks · every employee in sync
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════════ 7. INTEGRATIONS ════════════ -->
+        <section id="integrations" class="py-24" style="background: var(--bg);">
+            <div class="nm-container">
+                <div class="nm-section-header">
+                    <span class="eyebrow"><span class="dot"></span> Pillar 4 &middot; Integrations</span>
+                    <h2 class="nm-section-headline">
+                        Plugs into the stack<br />
+                        <span class="muted">you already run.</span>
+                    </h2>
+                    <p class="nm-section-sub">
+                        Connect NeoMind to your tools so actions land where your business lives.
+                    </p>
+                </div>
+
+                <div class="nm-integ-cols">
+                    <div class="nm-integ-col">
+                        <div class="nm-integ-col-head">
+                            <span class="nm-integ-status nm-integ-status--live"><span class="nm-live-dot"></span> Live now</span>
+                        </div>
+                        <ul class="nm-integ-list">
+                            <li>
+                                <span class="nm-integ-icon" style="background: var(--secondary-50); color: var(--secondary-700);">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                                </span>
+                                <span class="nm-integ-text"><strong>Calendar</strong><span>Book appointments straight into your booking calendar.</span></span>
+                            </li>
+                            <li>
+                                <span class="nm-integ-icon" style="background: var(--accent-50); color: var(--accent-700);">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                                </span>
+                                <span class="nm-integ-text"><strong>Webhooks (HMAC-signed)</strong><span>Push leads and events to your CRM and systems, securely.</span></span>
+                            </li>
+                            <li>
+                                <span class="nm-integ-icon" style="background: var(--primary-50); color: var(--primary-700);">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+                                </span>
+                                <span class="nm-integ-text"><strong>Email handover</strong><span>Hand a conversation to your team by email, with full context.</span></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="nm-integ-col nm-integ-col--soon">
+                        <div class="nm-integ-col-head">
+                            <span class="nm-integ-status nm-integ-status--soon">Coming soon</span>
+                        </div>
+                        <ul class="nm-integ-list">
+                            <li>
+                                <span class="nm-integ-icon nm-integ-icon--soon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg>
+                                </span>
+                                <span class="nm-integ-text"><strong>Slack</strong><span>Hugo answering staff questions natively in your workspace.</span></span>
+                            </li>
+                            <li>
+                                <span class="nm-integ-icon nm-integ-icon--soon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M8 5v14M3 12h5"/></svg>
+                                </span>
+                                <span class="nm-integ-text"><strong>Microsoft Teams</strong><span>Native Hugo for teams that live in Microsoft 365.</span></span>
+                            </li>
+                        </ul>
+                        <p class="nm-integ-note">We label what&rsquo;s shipped honestly. These two are in build, not live yet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .nm-integ-cols { display: grid; grid-template-columns: 1.1fr 1fr; gap: 24px; align-items: start; }
+            @media (max-width: 860px) { .nm-integ-cols { grid-template-columns: 1fr; } }
+            .nm-integ-col { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 28px; }
+            .nm-integ-col--soon { background: var(--bg-muted); border-style: dashed; }
+            .nm-integ-col-head { margin-bottom: 22px; }
+            .nm-integ-status { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; }
+            .nm-integ-status--live { background: var(--accent-50); color: var(--accent-700); }
+            .dark .nm-integ-status--live { background: rgba(0,209,178,0.14); color: var(--accent-300, #5eead4); }
+            .nm-integ-status--soon { background: transparent; color: var(--text-subtle); border: 1px solid var(--border-strong); }
+            .nm-integ-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 16px; }
+            .nm-integ-list li { display: flex; gap: 14px; align-items: flex-start; }
+            .nm-integ-icon { flex-shrink: 0; width: 42px; height: 42px; border-radius: 11px; display: inline-flex; align-items: center; justify-content: center; }
+            .nm-integ-icon--soon { background: var(--surface); color: var(--text-subtle); border: 1px solid var(--border); }
+            .nm-integ-text { display: flex; flex-direction: column; gap: 3px; }
+            .nm-integ-text strong { font-size: 15px; font-weight: 600; color: var(--text); }
+            .nm-integ-text span { font-size: 13.5px; line-height: 1.5; color: var(--text-muted); }
+            .nm-integ-note { margin: 22px 0 0; font-size: 12.5px; color: var(--text-subtle); line-height: 1.5; }
+        </style>
+
+        <!-- ════════════ 8. WHY NOT CHATGPT / GENERIC BOT — comparison table ════════════ -->
+        <section id="compare" class="py-24" style="background: var(--bg-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+            <div class="nm-container">
+                <div class="nm-section-header">
+                    <span class="eyebrow"><span class="dot"></span> The honest contrast</span>
+                    <h2 class="nm-section-headline">
+                        Why not just use ChatGPT<br />
+                        <span class="muted">or a generic chatbot?</span>
+                    </h2>
+                    <p class="nm-section-sub">
+                        Both can hold a conversation. Only one knows your business, does the work, and proves it.
+                    </p>
+                </div>
+
+                <div class="nm-compare-wrap">
+                    <table class="nm-compare" aria-label="NeoMind AI employees compared with a generic chatbot or ChatGPT">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="nm-compare-rowhead"><span class="nm-compare-hidelabel">Capability</span></th>
+                                <th scope="col">Generic chatbot / ChatGPT</th>
+                                <th scope="col" class="nm-compare-us">NeoMind AI employees</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Knows your business</th>
+                                <td class="nm-compare-gen"><span class="nm-compare-dash" aria-hidden="true"></span>Pasted context at best</td>
+                                <td class="nm-compare-us"><span class="nm-compare-tick" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Grounded in your Brain, cited</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Makes things up</th>
+                                <td class="nm-compare-gen"><span class="nm-compare-dash" aria-hidden="true"></span>Often</td>
+                                <td class="nm-compare-us"><span class="nm-compare-tick" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Refuses when it doesn&rsquo;t know</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Does the work</th>
+                                <td class="nm-compare-gen"><span class="nm-compare-dash" aria-hidden="true"></span>Replies only</td>
+                                <td class="nm-compare-us"><span class="nm-compare-tick" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Books, captures, escalates, updates CRM</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Can you measure it</th>
+                                <td class="nm-compare-gen"><span class="nm-compare-dash" aria-hidden="true"></span>No</td>
+                                <td class="nm-compare-us"><span class="nm-compare-tick" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Objectives + KPIs + scorecards per employee</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Connects to your stack</th>
+                                <td class="nm-compare-gen"><span class="nm-compare-dash" aria-hidden="true"></span>No</td>
+                                <td class="nm-compare-us"><span class="nm-compare-tick" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Webhooks, calendar, CRM</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Data residency</th>
+                                <td class="nm-compare-gen"><span class="nm-compare-dash" aria-hidden="true"></span>US-centric</td>
+                                <td class="nm-compare-us"><span class="nm-compare-tick" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Hosted in Sydney — stays in Australia</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .nm-compare-wrap { max-width: 920px; margin: 0 auto; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 18px; }
+            .nm-compare { width: 100%; border-collapse: separate; border-spacing: 0; min-width: 620px; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; font-size: 14.5px; }
+            .nm-compare thead th { text-align: left; padding: 18px 22px; font-family: var(--font-display); font-weight: 700; font-size: 14px; letter-spacing: -0.01em; color: var(--text-muted); background: var(--bg-muted); border-bottom: 1px solid var(--border); vertical-align: bottom; }
+            .nm-compare thead th.nm-compare-us { color: var(--text); }
+            .nm-compare-hidelabel { color: var(--text-subtle); font-weight: 600; }
+            .nm-compare tbody th { text-align: left; padding: 16px 22px; font-weight: 600; color: var(--text); width: 34%; border-bottom: 1px solid var(--border); vertical-align: top; }
+            .nm-compare tbody td { padding: 16px 22px; color: var(--text-muted); border-bottom: 1px solid var(--border); vertical-align: top; }
+            .nm-compare tbody tr:last-child th, .nm-compare tbody tr:last-child td { border-bottom: 0; }
+            .nm-compare td.nm-compare-us, .nm-compare th.nm-compare-us { background: linear-gradient(180deg, rgba(0,209,178,0.06), rgba(0,123,255,0.05)); color: var(--text); font-weight: 500; }
+            .dark .nm-compare td.nm-compare-us, .dark .nm-compare th.nm-compare-us { background: linear-gradient(180deg, rgba(0,209,178,0.1), rgba(0,123,255,0.08)); }
+            .nm-compare-tick { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 5px; margin-right: 9px; vertical-align: -3px; background: var(--accent-500); color: white; }
+            .nm-compare thead th.nm-compare-us { border-left: 1px solid var(--accent-200, rgba(0,209,178,0.28)); border-right: 1px solid var(--accent-200, rgba(0,209,178,0.28)); }
+            .nm-compare tbody td.nm-compare-us { border-left: 1px solid var(--accent-200, rgba(0,209,178,0.28)); border-right: 1px solid var(--accent-200, rgba(0,209,178,0.28)); }
+            .nm-compare td.nm-compare-gen { color: var(--text-subtle); }
+            .nm-compare-dash { display: inline-block; width: 10px; height: 2px; border-radius: 2px; margin-right: 11px; vertical-align: 4px; background: var(--border-strong); }
+        </style>
+
+        <!-- HOW IT WORKS — agency `#process` rail+nodes pattern -->
+        <section id="how" class="py-24" style="background: var(--bg);">
+            <div class="nm-container">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: flex-start;" class="nm-how-head">
+                    <div>
+                        <span class="eyebrow"><span class="dot"></span> Live in 60 minutes</span>
+                        <h2 class="nm-section-headline" style="margin-top: 14px; margin-bottom: 0;">
+                            Hire your first AI employee<br />
+                            <span class="muted">in an hour.</span>
+                        </h2>
+                    </div>
+                    <div>
+                        <p class="nm-section-sub" style="font-size: 17px; line-height: 1.65; max-width: 50ch;">
+                            Most tools take weeks to scope, train, and deploy. NeoMind ships in four short steps &mdash; your knowledge, your objective, your brand, live by the end of the hour.
+                        </p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 80px; position: relative;">
+                    <div class="nm-process-rail-bg" aria-hidden="true"></div>
+                    <div class="nm-process-rail-fg" aria-hidden="true"></div>
+                    <div class="nm-process-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; position: relative;">
+                        <div class="nm-process-step">
+                            <div class="nm-process-node"><span class="nm-process-node-inner"></span></div>
+                            <div class="nm-process-num">01 · Upload</div>
+                            <h4 class="nm-process-title">Upload your docs</h4>
+                            <p class="nm-process-body">Your website URL, PDFs, handbooks, FAQs. We chunk and embed them automatically &mdash; no schema work.</p>
+                        </div>
+                        <div class="nm-process-step">
+                            <div class="nm-process-node"><span class="nm-process-node-inner"></span></div>
+                            <div class="nm-process-num">02 · Set</div>
+                            <h4 class="nm-process-title">Set the objective &amp; tone</h4>
+                            <p class="nm-process-body">Give the employee a goal to work toward, pick its voice, and set your escalation rules.</p>
+                        </div>
+                        <div class="nm-process-step">
+                            <div class="nm-process-node"><span class="nm-process-node-inner"></span></div>
+                            <div class="nm-process-num">03 · Connect</div>
+                            <h4 class="nm-process-title">Embed / connect</h4>
+                            <p class="nm-process-body">Simon embeds with one line of code. Maeve wires telephony same-day. Connect your calendar, webhooks and email.</p>
+                        </div>
+                        <div class="nm-process-step">
+                            <div class="nm-process-node"><span class="nm-process-node-inner"></span></div>
+                            <div class="nm-process-num">04 · Measure</div>
+                            <h4 class="nm-process-title">Watch the scorecard &amp; refine</h4>
+                            <p class="nm-process-body">Read real conversations, watch the KPIs, expand the Brain. Improvements land across every employee instantly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOVEREIGNTY -->
+        <section id="security" class="py-24" style="background: var(--bg-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+            <div class="nm-container">
+                <div class="nm-section-header">
+                    <span class="eyebrow"><span class="dot"></span> Trust &amp; security</span>
+                    <h2 class="nm-section-headline">
+                        Grounded, private, and<br />
+                        <span class="muted">hosted in Australia.</span>
+                    </h2>
+                    <p class="nm-section-sub">
+                        Hosted in Sydney on Azure Australia East &mdash; your data never leaves Australia. Your knowledge and conversations are yours, read for retrieval, never used to train shared models. Encrypted in transit and at rest, Privacy Act 1988 aligned.
+                    </p>
+                </div>
+                <!-- [add 2FA/SSO/uptime once shipped] — do NOT claim 2FA, SSO or an uptime SLA until they ship per the go-live programme. -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="nm-trust-card">
+                        <div class="nm-trust-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M2 12h20"/></svg>
+                        </div>
+                        <h3 class="nm-trust-title">Hosted in Sydney &mdash; data stays onshore</h3>
+                        <p class="nm-trust-body"><strong>Hosted in Sydney (Azure Australia East). Your data never leaves Australia. Privacy Act 1988 aligned.</strong> US and EU regions are rolling out for international teams.</p>
+                    </div>
+                    <div class="nm-trust-card">
+                        <div class="nm-trust-icon" style="background: var(--primary-50); color: var(--primary-700);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                        </div>
+                        <h3 class="nm-trust-title">Never trained on your data</h3>
+                        <p class="nm-trust-body">Retrieval only &mdash; your knowledge base is read to answer, never used to train shared models. Conversations belong to you.</p>
+                    </div>
+                    <div class="nm-trust-card">
+                        <div class="nm-trust-icon" style="background: var(--accent-50); color: var(--accent-700);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                        </div>
+                        <h3 class="nm-trust-title">Grounded &amp; cited</h3>
+                        <p class="nm-trust-body">Every answer traces to a source document. When the answer isn&rsquo;t in your knowledge, the employee refuses to invent one.</p>
+                    </div>
+                    <div class="nm-trust-card">
+                        <div class="nm-trust-icon" style="background: var(--secondary-50); color: var(--secondary-700);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                        </div>
+                        <h3 class="nm-trust-title">Security</h3>
+                        <p class="nm-trust-body">TLS 1.3 in transit, encryption at rest, credentials in Key Vault. Additional security controls available on request — contact us.</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 40px; font-size: 13px; color: var(--text-subtle);">
+                    Built by Neomeric, an Australian AI company, since 2015.
+                </p>
+            </div>
+        </section>
+
+        <!-- ════════════ 11. PRICING — STUB (model TBD; no Solo/Duo/Squad, no real numbers) ════════════ -->
+        <section id="pricing" class="py-24" style="background: var(--bg);">
+            <div class="nm-container">
+                <div class="nm-section-header">
+                    <span class="eyebrow"><span class="dot"></span> Pricing</span>
+                    <h2 class="nm-section-headline">
+                        Simple pricing,<br />
+                        <span class="muted">per AI employee.</span>
+                    </h2>
+                </div>
+
+                <div class="nm-price-stub" aria-label="Pricing — coming soon">
+                    <div class="nm-price-stub-glow" aria-hidden="true"></div>
+                    <div class="nm-price-stub-inner">
+                        <span class="nm-price-stub-tag">Pricing</span>
+                        <div class="nm-price-stub-amount">
+                            <span class="nm-price-stub-from">from</span>
+                            <span class="nm-price-stub-num">$XX</span>
+                            <span class="nm-price-stub-per">AUD / mo &middot; per AI employee</span>
+                        </div>
+                        <p class="nm-price-stub-sub">14-day money-back. No credit card to start. Add employees as your team grows.</p>
+                        <!-- [pricing model TBD — Haseeb to confirm. Per-employee / usage tiers under design. No Solo/Duo/Squad. Currency: USD on / (intl), EUR on /es/, AUD on /au/.] -->
+                        <a href="https://app.neomindhub.com/signup" class="btn btn-primary" data-cta="pricing-start-trial" style="margin-top: 8px;">
+                            Start free trial
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .nm-price-stub { position: relative; max-width: 620px; margin: 0 auto; }
+            .nm-price-stub-glow { position: absolute; inset: -40px; z-index: 0; background: radial-gradient(60% 70% at 50% 0%, rgba(0,123,255,0.16), transparent 70%), radial-gradient(60% 70% at 50% 100%, rgba(0,209,178,0.14), transparent 70%); filter: blur(20px); }
+            .nm-price-stub-inner { position: relative; z-index: 1; text-align: center; background: var(--surface); border: 1px solid var(--border); border-radius: 24px; padding: 44px 36px; box-shadow: 0 28px 70px -24px rgba(15,23,42,0.2), 0 8px 22px -10px rgba(15,23,42,0.08); }
+            .dark .nm-price-stub-inner { box-shadow: 0 28px 70px -24px rgba(0,0,0,0.5); }
+            .nm-price-stub-tag { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-subtle); padding: 5px 12px; border: 1px solid var(--border); border-radius: 999px; margin-bottom: 24px; }
+            .nm-price-stub-amount { display: flex; flex-direction: column; align-items: center; gap: 4px; margin-bottom: 18px; }
+            .nm-price-stub-from { font-size: 14px; font-weight: 500; color: var(--text-subtle); }
+            .nm-price-stub-num { font-family: var(--font-display); font-weight: 800; font-size: clamp(56px, 9vw, 76px); line-height: 1; letter-spacing: -0.03em; background: linear-gradient(135deg, var(--primary-500), var(--secondary-500), var(--accent-500)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+            .nm-price-stub-per { font-size: 14px; font-weight: 500; color: var(--text-muted); }
+            .nm-price-stub-sub { font-size: 14.5px; line-height: 1.6; color: var(--text-muted); max-width: 42ch; margin: 0 auto 28px; }
+        </style>
+
+        <!-- FAQ — agency `.nm-faq-*` accordion pattern, 2-col layout -->
+        <section id="faq" class="py-24" style="background: var(--bg-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+            <div class="nm-container" style="display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px;" id="nm-faq-grid">
+                <div>
+                    <span class="eyebrow"><span class="dot"></span> FAQ</span>
+                    <h2 class="nm-section-headline" style="font-size: clamp(28px, 3.4vw, 44px); margin: 14px 0 18px;">
+                        Questions buyers<br />
+                        <span class="muted">actually ask.</span>
+                    </h2>
+                    <p style="font-size: 16px; color: var(--text-muted); line-height: 1.6; margin: 0 0 24px; max-width: 38ch;">
+                        Can't find yours? A 15-minute call usually clears it up — no slide deck, no sales script.
+                    </p>
+                    <a href="https://app.neomindhub.com/signup" class="btn btn-gradient" style="padding: 12px 22px; font-size: 14px;" data-cta="faq-start-trial">
+                        Start free trial
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div id="nm-faq-list" class="nm-faq-list">
+                    <div class="nm-faq-item open">
+                        <button class="nm-faq-q" aria-expanded="true" type="button">
+                            <span class="nm-faq-q-text">What is NeoMind?</span>
+                            <span class="nm-faq-toggle">+</span>
+                        </button>
+                        <div class="nm-faq-a">
+                            <p>A platform of measurable AI employees that work from your own knowledge &mdash; they answer your website and phone, handle internal questions, take real actions like booking and lead capture, and are scored against objectives and KPIs you set.</p>
+                        </div>
+                    </div>
+                    <div class="nm-faq-item">
+                        <button class="nm-faq-q" aria-expanded="false" type="button">
+                            <span class="nm-faq-q-text">How is this different from a chatbot or ChatGPT?</span>
+                            <span class="nm-faq-toggle">+</span>
+                        </button>
+                        <div class="nm-faq-a">
+                            <p>It&rsquo;s grounded in your business (cited, no hallucinations), it takes real actions instead of only replying, and you can measure each employee with objectives, KPIs and scorecards.</p>
+                        </div>
+                    </div>
+                    <div class="nm-faq-item">
+                        <button class="nm-faq-q" aria-expanded="false" type="button">
+                            <span class="nm-faq-q-text">Can I measure how well the AI is doing?</span>
+                            <span class="nm-faq-toggle">+</span>
+                        </button>
+                        <div class="nm-faq-a">
+                            <p>Yes &mdash; every employee has weighted KPIs scored on each conversation by an AI judge, rolled into a scorecard.</p>
+                        </div>
+                    </div>
+                    <div class="nm-faq-item">
+                        <button class="nm-faq-q" aria-expanded="false" type="button">
+                            <span class="nm-faq-q-text">Can it do more than answer questions?</span>
+                            <span class="nm-faq-toggle">+</span>
+                        </button>
+                        <div class="nm-faq-a">
+                            <p>Yes &mdash; book appointments, capture and route leads, escalate to a human, and update your CRM via webhook.</p>
+                        </div>
+                    </div>
+                    <div class="nm-faq-item">
+                        <button class="nm-faq-q" aria-expanded="false" type="button">
+                            <span class="nm-faq-q-text">Can I add more than three employees?</span>
+                            <span class="nm-faq-toggle">+</span>
+                        </button>
+                        <div class="nm-faq-a">
+                            <p>Yes &mdash; start with Simon, Maeve and Hugo, or configure custom AI employees with their own persona, skills and access.</p>
+                        </div>
+                    </div>
+                    <div class="nm-faq-item">
+                        <button class="nm-faq-q" aria-expanded="false" type="button">
+                            <span class="nm-faq-q-text">Where is my data hosted?</span>
+                            <span class="nm-faq-toggle">+</span>
+                        </button>
+                        <div class="nm-faq-a">
+                            <p>In Sydney, on Azure Australia East &mdash; your data never leaves Australia, and we&rsquo;re aligned with the Privacy Act 1988. US and EU regions are rolling out for international teams. Your data is never used to train shared models.</p>
+                        </div>
+                    </div>
+                    <div class="nm-faq-item">
+                        <button class="nm-faq-q" aria-expanded="false" type="button">
+                            <span class="nm-faq-q-text">How fast can I go live?</span>
+                            <span class="nm-faq-toggle">+</span>
+                        </button>
+                        <div class="nm-faq-a">
+                            <p>Around 60 minutes for the website employee; same-day to wire the phone.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                (function () {
+                    document.querySelectorAll('#nm-faq-list .nm-faq-q').forEach(function (btn) {
+                        btn.addEventListener('click', function () {
+                            var item = btn.closest('.nm-faq-item');
+                            var open = item.classList.toggle('open');
+                            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                        });
+                    });
+                })();
+            </script>
+            <style>
+                @media (max-width: 900px) {
+                    #nm-faq-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+                }
+            </style>
+        </section>
+
+        <!-- CTA — gradient band centrepiece, mirrors agency homepage #cta -->
+        <section id="contact" style="background: var(--bg); padding: 96px 0;">
+            <div class="nm-container">
+                <div class="nm-cta-band">
+                    <div aria-hidden="true" style="position: absolute; inset: 0; background: radial-gradient(60% 80% at 30% 30%, rgba(255,255,255,0.18), transparent 60%);"></div>
+                    <div aria-hidden="true" style="position: absolute; top: -100px; right: -100px; width: 360px; height: 360px; border-radius: 50%; background: rgba(255,255,255,0.06);"></div>
+                    <div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; gap: 48px; flex-wrap: wrap;">
+                        <div style="max-width: 36ch;">
+                            <span style="display: inline-block; padding: 5px 12px; background: rgba(255,255,255,0.18); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 9999px; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 20px;">Get started</span>
+                            <h2 style="font-family: var(--font-display); font-weight: 700; font-size: clamp(36px, 4.6vw, 60px); line-height: 1.05; letter-spacing: -0.025em; margin: 0 0 18px; text-wrap: balance;">
+                                Build a team that works, and proves it.
+                            </h2>
+                            <p style="font-size: 18px; line-height: 1.55; opacity: 0.92; margin: 0; max-width: 46ch;">
+                                Hire your first AI employee, grounded in your own knowledge. Live in under 60 minutes &mdash; no credit card to start, 14-day money-back.
+                            </p>
+                        </div>
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                            <a href="https://app.neomindhub.com/signup" class="btn" style="background: white; color: var(--gray-900); padding: 16px 28px; font-size: 15px;" data-cta="final-signup">
+                                Start free trial
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="https://neomeric.com/contact?subject=NeoMind%3A%20Book%20a%20demo&amp;source=neomind-final-cta" class="btn" style="background: rgba(255,255,255,0.12); color: white; border: 1px solid rgba(255,255,255,0.28); padding: 16px 28px; font-size: 15px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);" data-cta="final-book-demo">
+                                Book a 15-min demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer-section data-locale="au"></footer-section>
+
+    <button id="darkModeToggle" type="button" aria-label="Toggle dark mode"
+        class="fixed bottom-6 right-6 p-3 bg-gray-800 dark:bg-white rounded-full shadow-lg z-50 hover:scale-105 transition-transform">
+        <svg class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+        </svg>
+    </button>
+
+    <!-- Maeve demo: lead-capture modal -->
+    <div id="maeve-modal" class="maeve-modal hidden" role="dialog" aria-modal="true" aria-labelledby="maeve-modal-title">
+        <div class="maeve-modal-card">
+            <div class="text-3xl mb-3">📞</div>
+            <h3 id="maeve-modal-title" class="text-xl font-display font-semibold text-gray-900 dark:text-white mb-2">Before you talk to Maeve</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-5">
+                Maeve will greet you by name. We'll only use your details if you ask for a follow-up.
+            </p>
+            <form id="maeve-form" class="space-y-4">
+                <div>
+                    <label for="maeve-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your name</label>
+                    <input id="maeve-name" type="text" required minlength="2" maxlength="120" autocomplete="name" class="maeve-input" placeholder="First name (or full name)">
+                </div>
+                <div>
+                    <label for="maeve-email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Work email</label>
+                    <input id="maeve-email" type="email" required autocomplete="email" class="maeve-input" placeholder="you@yourcompany.com">
+                </div>
+                <div>
+                    <label for="maeve-business" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your business <span class="text-gray-400 font-normal">(optional)</span></label>
+                    <input id="maeve-business" type="text" maxlength="120" autocomplete="organization" class="maeve-input" placeholder="Your company or skip">
+                </div>
+                <div id="maeve-error" class="hidden text-sm text-red-600 dark:text-red-400"></div>
+                <div class="flex gap-3 pt-2">
+                    <button id="maeve-cancel" type="button"
+                        class="flex-1 px-4 py-2.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-medium hover:bg-gray-200 transition-all">Cancel</button>
+                    <button type="submit"
+                        class="flex-1 px-4 py-2.5 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-medium hover:shadow-lg transition-all">Start 3-minute demo</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/app.js?v=20260520a"></script>
+    <script src="/js/echo-voice.js?v=20260520a" defer></script>
+
+    <!-- Video modal — opened by [data-cta="hero-watch-video"] -->
+    <div id="nm-video-modal" class="nm-video-modal" hidden role="dialog" aria-modal="true" aria-label="NeoMind video">
+        <div class="nm-video-modal-inner">
+            <button type="button" class="nm-video-close" aria-label="Close video">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            <video controls playsinline preload="metadata" poster="">
+                <source src="/assets/neomind.mp4" type="video/mp4">
+                Your browser doesn&rsquo;t support HTML5 video.
+            </video>
+        </div>
+    </div>
+    <style>
+        .nm-video-modal { position: fixed; inset: 0; z-index: 100; background: rgba(15,23,42,0.78); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; padding: 24px; }
+        .nm-video-modal[hidden] { display: none; }
+        .nm-video-modal-inner { position: relative; width: min(960px, 100%); background: #000; border-radius: 16px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.5); }
+        .nm-video-modal-inner video { display: block; width: 100%; height: auto; }
+        .nm-video-close { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; border-radius: 999px; background: rgba(255,255,255,0.16); color: white; border: 0; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(8px); transition: background 0.18s ease; }
+        .nm-video-close:hover { background: rgba(255,255,255,0.28); }
+    </style>
+
+    <!-- Maeve waveform bars (28 spans) -->
+    <script>
+    (function () {
+        var wave = document.getElementById('nm-wave');
+        if (wave) {
+            for (var i = 0; i < 28; i++) {
+                var s = document.createElement('span');
+                s.style.height = '20px';
+                wave.appendChild(s);
+            }
+        }
+    })();
+    </script>
+
+    <!-- Hero interactive behaviours — lifted from neomeric.com homepage -->
+    <script>
+    (function () {
+        'use strict';
+
+        var tabBtns = document.querySelectorAll('.nm-live-tab');
+        var panels = document.querySelectorAll('.nm-live-panel-content');
+        var active = 'simon';
+        var rotateTimer = null;
+        var hovering = false;
+        var simonAnimTimers = [];
+
+        function showPanel(id) {
+            active = id;
+            tabBtns.forEach(function (b) { b.setAttribute('aria-selected', b.dataset.tab === id ? 'true' : 'false'); });
+            panels.forEach(function (p) { if (p.dataset.panel === id) p.removeAttribute('hidden'); else p.setAttribute('hidden', ''); });
+            if (id === 'simon') startSimonAnim();
+            else stopSimonAnim();
+        }
+
+        function startSimonAnim() {
+            stopSimonAnim();
+            var bubbles = document.querySelectorAll('[data-panel="simon"] .nm-bubble');
+            bubbles.forEach(function (b) { b.classList.remove('shown'); });
+            var typing = document.querySelector('[data-panel="simon"] .nm-typing');
+            if (typing) typing.style.display = '';
+            bubbles.forEach(function (b) {
+                var delay = parseInt(b.dataset.delay || '0', 10);
+                simonAnimTimers.push(setTimeout(function () { b.classList.add('shown'); }, delay));
+            });
+            simonAnimTimers.push(setTimeout(function () {
+                if (typing) typing.style.display = 'none';
+            }, 3500));
+        }
+        function stopSimonAnim() {
+            simonAnimTimers.forEach(function (t) { clearTimeout(t); });
+            simonAnimTimers = [];
+        }
+
+        function startRotation() {
+            stopRotation();
+            rotateTimer = setInterval(function () {
+                if (hovering) return;
+                var order = ['simon', 'maeve', 'hugo'];
+                var i = order.indexOf(active);
+                showPanel(order[(i + 1) % order.length]);
+            }, 7000);
+        }
+        function stopRotation() { if (rotateTimer) clearInterval(rotateTimer); rotateTimer = null; }
+
+        tabBtns.forEach(function (b) {
+            b.addEventListener('click', function () { showPanel(b.dataset.tab); startRotation(); });
+        });
+        var heroPanel = document.getElementById('nm-live-panel');
+        if (heroPanel) {
+            heroPanel.addEventListener('mouseenter', function () { hovering = true; });
+            heroPanel.addEventListener('mouseleave', function () { hovering = false; });
+        }
+        showPanel('simon');
+        startRotation();
+
+        var wave = document.getElementById('nm-wave');
+        if (wave) {
+            var bars = wave.querySelectorAll('span');
+            var pulse = 0;
+            setInterval(function () {
+                if (active !== 'maeve') return;
+                pulse += 1;
+                bars.forEach(function (s, i) {
+                    var v = Math.abs(Math.sin((i + pulse * 0.6) * 0.42)) * 0.7 + 0.18;
+                    s.style.height = (v * 56) + 'px';
+                    s.style.background = i < bars.length / 2
+                        ? 'color-mix(in oklab, var(--secondary-500) ' + (60 + v * 40) + '%, var(--accent-500))'
+                        : 'color-mix(in oklab, var(--accent-500) ' + (60 + v * 40) + '%, var(--secondary-500))';
+                });
+            }, 80);
+        }
+
+        document.querySelectorAll('.nm-faq-item').forEach(function (item) {
+            var btn = item.querySelector('.nm-faq-q');
+            if (!btn) return;
+            btn.addEventListener('click', function () {
+                var willOpen = !item.classList.contains('open');
+                document.querySelectorAll('.nm-faq-item').forEach(function (i) {
+                    i.classList.remove('open');
+                    var b = i.querySelector('.nm-faq-q'); if (b) b.setAttribute('aria-expanded', 'false');
+                });
+                if (willOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+            });
+        });
+
+        // Watch-video CTA opens the inline modal
+        document.querySelectorAll('[data-cta="hero-watch-video"]').forEach(function (a) {
+            a.addEventListener('click', function (e) {
+                var modal = document.getElementById('nm-video-modal');
+                if (!modal) return;
+                e.preventDefault();
+                modal.removeAttribute('hidden');
+                var v = modal.querySelector('video');
+                if (v) { try { v.play(); } catch (_) {} }
+            });
+        });
+        var videoModal = document.getElementById('nm-video-modal');
+        if (videoModal) {
+            var closeBtn = videoModal.querySelector('.nm-video-close');
+            function closeModal() {
+                videoModal.setAttribute('hidden', '');
+                var v = videoModal.querySelector('video');
+                if (v) { try { v.pause(); v.currentTime = 0; } catch (_) {} }
+            }
+            if (closeBtn) closeBtn.addEventListener('click', closeModal);
+            videoModal.addEventListener('click', function (e) {
+                if (e.target === videoModal) closeModal();
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && !videoModal.hasAttribute('hidden')) closeModal();
+            });
+        }
+    })();
+    </script>
+    <!-- Geo-redirect banner — deferred so it runs after DOM is fully parsed -->
+    <script src="/js/geo-redirect.js" defer></script>
+</body>
+
+</html>

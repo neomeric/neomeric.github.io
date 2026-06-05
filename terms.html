@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NHDLXJCG');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="NeoMind Terms of Service — trial mechanics, Maeve voice consent, fair-use thresholds, data retention windows. Plain-English Australian terms.">
+    <link rel="canonical" href="https://neomeric.com/neomind/terms.html">
+    <meta property="og:title" content="Terms of Service — NeoMind | Neomeric">
+    <meta property="og:description" content="Plain-English NeoMind terms covering trial mechanics, Maeve voice consent, fair-use, data retention and 30-day change-of-terms notice.">
+    <meta property="og:url" content="https://neomeric.com/neomind/terms.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://neomeric.com/images/og-default.png">
+    <meta property="og:site_name" content="Neomeric">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Terms of Service — NeoMind | Neomeric">
+    <meta name="twitter:description" content="Plain-English NeoMind terms covering trial mechanics, Maeve voice consent, fair-use, data retention and 30-day change-of-terms notice.">
+    <meta name="twitter:image" content="https://neomeric.com/images/og-default.png">
+    <title>Terms of Service — NeoMind | Neomeric</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./css/tailwind.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/neomeric-tokens.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="./components/navbar-section.js" type="module"></script>
+    <script src="./components/footer-section.js" type="module"></script>
+    <style>
+        /* Match NeoMind site typography exactly: Kanit body / Syne display. */
+        body {
+            font-family: var(--font-sans);
+            font-weight: 400;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        h1, h2, h3, h4, .font-display, .display {
+            font-family: var(--font-display);
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+        .gradient-blur {
+            background: radial-gradient(circle at top right, rgba(156, 125, 185, 0.15), transparent 50%),
+                radial-gradient(circle at bottom left, rgba(0, 209, 178, 0.15), transparent 50%);
+        }
+
+        /* Page header — same shape as fair-use hero, lighter copy block. */
+        .doc-hero {
+            padding: 96px 0 56px;
+            background: var(--bg-muted);
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        @media (max-width: 768px) { .doc-hero { padding: 72px 0 40px; } }
+
+        /* Article body container — single-column, generous reading measure. */
+        .doc-article { padding: 56px 0 96px; }
+        .doc-prose {
+            max-width: 760px;
+            margin-inline: auto;
+            color: var(--text);
+        }
+        .doc-prose p {
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--text-muted);
+            margin: 0 0 18px;
+        }
+        .doc-prose p strong { color: var(--text); font-weight: 600; }
+        .doc-prose h2 {
+            font-size: clamp(24px, 2.4vw, 30px);
+            line-height: 1.2;
+            color: var(--text);
+            margin: 48px 0 14px;
+        }
+        .doc-prose h3 {
+            font-size: 18px;
+            line-height: 1.3;
+            color: var(--text);
+            margin: 24px 0 8px;
+            letter-spacing: -0.015em;
+        }
+        .doc-prose ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 18px;
+        }
+        .doc-prose ul li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            font-size: 17px;
+            line-height: 1.65;
+            color: var(--text-muted);
+        }
+        .doc-prose ul li::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 11px;
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--accent-500);
+            box-shadow: 0 0 0 4px var(--accent-100);
+        }
+        .dark .doc-prose ul li::before { box-shadow: 0 0 0 4px rgba(0, 209, 178, 0.18); }
+        .doc-prose a {
+            color: var(--secondary-700);
+            text-decoration: underline;
+            text-decoration-color: rgba(0, 73, 153, 0.35);
+            text-underline-offset: 3px;
+        }
+        .dark .doc-prose a { color: var(--secondary-300); }
+
+        /* Trial-mechanics card grid — Free / Plus side by side. */
+        .doc-trial-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin: 24px 0 14px;
+        }
+        @media (max-width: 720px) { .doc-trial-grid { grid-template-columns: 1fr; } }
+        .doc-trial {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 24px;
+        }
+        .dark .doc-trial { background: var(--gray-800); border-color: rgba(255,255,255,0.06); }
+        .doc-trial-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+        }
+        .doc-trial-tag .dot { width: 8px; height: 8px; border-radius: 50%; }
+        .doc-trial.free .doc-trial-tag { color: var(--accent-700); }
+        .doc-trial.free .doc-trial-tag .dot { background: var(--accent-500); box-shadow: 0 0 0 4px var(--accent-100); }
+        .doc-trial.plus .doc-trial-tag { color: var(--primary-700); }
+        .doc-trial.plus .doc-trial-tag .dot { background: var(--primary-500); box-shadow: 0 0 0 4px var(--primary-100); }
+        .doc-trial h3 { margin: 0 0 8px; font-size: 19px; line-height: 1.25; }
+        .doc-trial-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin: 6px 0 12px;
+        }
+        .doc-trial-stat {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .doc-trial-stat .num {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 18px;
+            color: var(--text);
+            letter-spacing: -0.01em;
+        }
+        .doc-trial-stat .lbl {
+            font-size: 12px;
+            color: var(--text-subtle);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .doc-trial p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .dark .doc-trial p { color: var(--gray-300); }
+
+        /* Retention table — same shape as fair-use threshold table. */
+        .doc-table-wrap {
+            margin: 28px 0 14px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            background: var(--surface);
+        }
+        .dark .doc-table-wrap { background: var(--gray-800); border-color: rgba(255,255,255,0.08); }
+        .doc-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px;
+        }
+        .doc-table thead th {
+            text-align: left;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: var(--primary-700);
+            padding: 16px 20px;
+            background: var(--primary-50);
+            border-bottom: 1px solid var(--border);
+        }
+        .dark .doc-table thead th { background: rgba(156, 125, 185, 0.12); color: var(--primary-300); border-color: rgba(255,255,255,0.06); }
+        .doc-table tbody td {
+            padding: 16px 20px;
+            color: var(--text);
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+            line-height: 1.55;
+        }
+        .dark .doc-table tbody td { border-color: rgba(255,255,255,0.06); color: var(--gray-100); }
+        .doc-table tbody tr:last-child td { border-bottom: none; }
+        .doc-tier {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: -0.01em;
+        }
+        .doc-tier .role {
+            display: block;
+            font-family: var(--font-sans);
+            font-weight: 400;
+            font-size: 13px;
+            color: var(--text-muted);
+            letter-spacing: 0;
+            margin-top: 2px;
+        }
+        .doc-num {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 17px;
+            color: var(--text);
+        }
+        .doc-num .unit {
+            display: block;
+            font-family: var(--font-sans);
+            font-weight: 400;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+        .doc-table-caption {
+            font-size: 13px;
+            line-height: 1.5;
+            color: var(--text-subtle);
+            margin: 0 0 28px;
+        }
+        @media (max-width: 640px) {
+            .doc-table { font-size: 14px; }
+            .doc-table thead th, .doc-table tbody td { padding: 12px 14px; }
+        }
+
+        /* Reassurance callout — pulled-out commitment line. */
+        .doc-callout {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            margin: 32px 0 8px;
+            padding: 22px 24px;
+            background: linear-gradient(135deg, rgba(156, 125, 185, 0.06), rgba(0, 209, 178, 0.06));
+            border: 1px solid rgba(156, 125, 185, 0.18);
+            border-radius: 20px;
+        }
+        .dark .doc-callout {
+            background: linear-gradient(135deg, rgba(156, 125, 185, 0.12), rgba(0, 209, 178, 0.10));
+            border-color: rgba(156, 125, 185, 0.3);
+        }
+        .doc-callout-icon {
+            flex-shrink: 0;
+            width: 36px; height: 36px;
+            border-radius: 10px;
+            background: white;
+            color: var(--primary-700);
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+        }
+        .dark .doc-callout-icon { background: var(--gray-900); color: var(--primary-300); }
+        .doc-callout-body { flex: 1; }
+        .doc-callout-body strong {
+            display: block;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+        .doc-callout-body p {
+            font-size: 15px !important;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin: 0 !important;
+        }
+
+        /* Section anchor TOC — sticky on the side at desktop, inline at mobile. */
+        .doc-toc {
+            position: sticky;
+            top: 96px;
+            font-size: 13px;
+            line-height: 1.55;
+        }
+        .doc-toc h4 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-subtle);
+            margin: 0 0 10px;
+        }
+        .doc-toc ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            counter-reset: toc;
+        }
+        .doc-toc ol li {
+            counter-increment: toc;
+            padding-left: 22px;
+            position: relative;
+            margin-bottom: 6px;
+        }
+        .doc-toc ol li::before {
+            content: counter(toc, decimal-leading-zero);
+            position: absolute;
+            left: 0; top: 1px;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 11px;
+            color: var(--primary-500);
+            letter-spacing: 0.04em;
+        }
+        .doc-toc a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+        .doc-toc a:hover { color: var(--primary-700); text-decoration: underline; }
+        .dark .doc-toc a:hover { color: var(--primary-300); }
+
+        .doc-layout {
+            display: grid;
+            grid-template-columns: 220px minmax(0, 1fr);
+            gap: 56px;
+            align-items: start;
+        }
+        @media (max-width: 960px) {
+            .doc-layout { grid-template-columns: 1fr; gap: 24px; }
+            .doc-toc { position: static; }
+        }
+
+        .doc-meta {
+            margin-top: 56px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            font-size: 13px;
+            color: var(--text-subtle);
+        }
+
+        /* Definitions list — short term/definition pairs. */
+        .doc-defs {
+            margin: 8px 0 18px;
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 8px 24px;
+        }
+        @media (max-width: 640px) {
+            .doc-defs { grid-template-columns: 1fr; gap: 2px 0; }
+            .doc-defs dt { margin-top: 12px; }
+        }
+        .doc-defs dt {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .doc-defs dd {
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300 text-gray-900 dark:text-white">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHDLXJCG" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <a href="#main"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-gray-900 focus:rounded-lg focus:shadow-lg">Skip to content</a>
+
+    <navbar-section></navbar-section>
+
+    <main id="main">
+        <!-- HEADER -->
+        <section class="doc-hero gradient-blur pt-32">
+            <div class="nm-container">
+                <div style="max-width: 760px;">
+                    <span class="eyebrow"><span class="dot"></span> NeoMind · Terms</span>
+                    <h1 style="font-family: var(--font-display); font-weight: 700; font-size: clamp(36px, 4.6vw, 56px); line-height: 1.05; letter-spacing: -0.025em; margin: 14px 0 18px; text-wrap: balance; color: var(--text);">
+                        Terms of <span class="grad-text">Service</span>
+                    </h1>
+                    <p style="font-size: 19px; line-height: 1.55; color: var(--text-muted); max-width: 60ch; margin: 0;">
+                        These are the terms that apply when you use NeoMind &mdash; Simon, Hugo and Maeve. We&rsquo;ve written them in plain English. The big things to know are at the top: how the trials work, how Maeve handles voice calls, what counts as fair-use, and how long we keep your data.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ARTICLE -->
+        <section class="doc-article">
+            <div class="nm-container">
+                <div class="doc-layout">
+                    <aside class="doc-toc" aria-label="On this page">
+                        <h4>On this page</h4>
+                        <ol>
+                            <li><a href="#parties">Who these terms are between</a></li>
+                            <li><a href="#trials">Trial mechanics</a></li>
+                            <li><a href="#maeve-voice">Maeve voice calls and consent</a></li>
+                            <li><a href="#maeve-billing">How Maeve calls are billed</a></li>
+                            <li><a href="#fair-use">Fair use</a></li>
+                            <li><a href="#retention">Data retention</a></li>
+                            <li><a href="#availability">Service availability</a></li>
+                            <li><a href="#payment">Payment and cancellation</a></li>
+                            <li><a href="#changes">Changes to these terms</a></li>
+                            <li><a href="#liability">Liability and disclaimers</a></li>
+                            <li><a href="#governing-law">Governing law</a></li>
+                            <li><a href="#contact">Questions</a></li>
+                        </ol>
+                    </aside>
+
+                    <article class="doc-prose">
+
+                        <h2 id="parties">Who these terms are between</h2>
+                        <p>
+                            NeoMind is operated by <strong>Neomeric Pty Ltd</strong>, an Australian company. In these terms, &ldquo;we,&rdquo; &ldquo;us&rdquo; and &ldquo;Neomeric&rdquo; mean Neomeric Pty Ltd. &ldquo;You&rdquo; and &ldquo;your&rdquo; mean the business that signs up for a NeoMind plan, and any staff or end-users you authorise to use it on your behalf.
+                        </p>
+                        <p>
+                            By creating an account, starting a trial, or activating an agent, you agree to these terms.
+                        </p>
+
+                        <h2 id="trials">Trial mechanics</h2>
+                        <p>
+                            We offer two trials so you can see whether NeoMind suits your business before you commit. Both end automatically &mdash; we don&rsquo;t convert a trial into a paid plan, and we don&rsquo;t charge you a cent without an explicit upgrade from you.
+                        </p>
+
+                        <div class="doc-trial-grid">
+                            <div class="doc-trial free">
+                                <div class="doc-trial-tag"><span class="dot"></span> Free Trial</div>
+                                <h3>7 days, 100 units, no card</h3>
+                                <div class="doc-trial-stats">
+                                    <div class="doc-trial-stat"><span class="num">7 days</span><span class="lbl">Window</span></div>
+                                    <div class="doc-trial-stat"><span class="num">100 units</span><span class="lbl">Quota</span></div>
+                                    <div class="doc-trial-stat"><span class="num">No card</span><span class="lbl">Payment</span></div>
+                                </div>
+                                <p>
+                                    No payment details required to start. The trial ends automatically on whichever comes first &mdash; the seventh day or the hundredth unit. There is no auto-conversion and no surprise charge.
+                                </p>
+                            </div>
+                            <div class="doc-trial plus">
+                                <div class="doc-trial-tag"><span class="dot"></span> Trial Plus</div>
+                                <h3>14 days, 300 units, $0 hold</h3>
+                                <div class="doc-trial-stats">
+                                    <div class="doc-trial-stat"><span class="num">14 days</span><span class="lbl">Window</span></div>
+                                    <div class="doc-trial-stat"><span class="num">300 units</span><span class="lbl">Quota</span></div>
+                                    <div class="doc-trial-stat"><span class="num">$0 hold</span><span class="lbl">Payment</span></div>
+                                </div>
+                                <p>
+                                    A card is required to verify the account, but we only place a $0 authorisation hold &mdash; no charge is taken. Trial Plus also ends automatically at 14 days or 300 units, whichever comes first. No surprise charges.
+                                </p>
+                            </div>
+                        </div>
+
+                        <p>
+                            A &ldquo;unit&rdquo; means: one Simon chat, one Hugo staff query, or one Maeve call (counted as described under <a href="#maeve-billing">Maeve billing</a>). When the trial ends, your agents pause and you&rsquo;re prompted to choose a paid plan to keep going. Anything we&rsquo;ve already indexed for you (your sources, settings, brand) stays in your account so you can pick up where you left off.
+                        </p>
+
+                        <h2 id="maeve-voice">Maeve voice calls and consent</h2>
+                        <p>
+                            Maeve answers your business phone using an AI voice. Under Australian privacy and consumer law, callers are entitled to know they are speaking with an AI agent, and to know if their phone number is being recorded. We build that disclosure into every call.
+                        </p>
+                        <h3>What every caller hears at the start</h3>
+                        <p>
+                            At the very start of every call, before Maeve takes any input, the caller hears a short announcement that says the conversation is being handled by an AI agent on behalf of your business. This announcement runs on every call. It is not configurable per tenant &mdash; it is a baseline disclosure that protects both your callers and you.
+                        </p>
+                        <h3>Caller phone-number storage requires consent</h3>
+                        <p>
+                            We do not store a caller&rsquo;s phone number unless they have been told it will be stored and have indicated consent during the call. If a caller declines, Maeve still handles the call &mdash; we just don&rsquo;t persist the number against the conversation record. The consent prompt is announced at call start as part of the AI disclosure.
+                        </p>
+                        <p>
+                            You can review the exact wording of these announcements in your dashboard under Maeve &rsaquo; Voice consent. The wording can be tuned for tone, but the AI disclosure and consent gate themselves cannot be removed.
+                        </p>
+
+                        <h2 id="maeve-billing">How Maeve calls are billed</h2>
+                        <p>
+                            Maeve calls are metered in minutes. We make two transparency commitments:
+                        </p>
+                        <ul>
+                            <li>One Maeve call averages around <strong>two minutes</strong> across all our customers. Wherever the marketing site or your invoice mentions &ldquo;calls,&rdquo; assume that mapping.</li>
+                            <li>Inside a single call we round <strong>per second to whole minutes</strong> for billing &mdash; so a 1-minute-12-second call bills as 2 minutes, not 1. We don&rsquo;t round up to the nearest 5 minutes or any other inflated block.</li>
+                        </ul>
+                        <p>
+                            Your dashboard shows actual seconds-used and minutes-billed for every call, so you can reconcile the two at any time. Included minute pools and overage rates are listed on the <a href="index.html#pricing">pricing page</a>.
+                        </p>
+
+                        <h2 id="fair-use">Fair use</h2>
+                        <p>
+                            Simon and Hugo plans are described as &ldquo;unlimited (fair-use).&rdquo; That phrase is honest, not euphemistic. We publish the actual thresholds, what happens at each one, and our commitment never to silently disconnect you. The full policy lives on a separate page so the numbers are easy to find later.
+                        </p>
+                        <p>
+                            <strong>Read the <a href="fair-use.html">Fair Use Policy</a> &rarr;</strong>
+                        </p>
+                        <p>
+                            Two thresholds apply per agent: a soft alert (a friendly email) and a hard threshold (our customer-success team gets in touch within one business day). The hard threshold is <strong>never an auto-cutoff</strong>. We do not throttle, deprioritise or disconnect agents when you cross it &mdash; we have a conversation. Maeve runs on a metered minute pool with no fair-use cap; she is governed instead by the per-minute overage rate published on the pricing page.
+                        </p>
+
+                        <h2 id="retention">Data retention</h2>
+                        <p>
+                            How long we keep full transcripts depends on your plan. Aggregate metadata (counts, timestamps, costs &mdash; the data the reporting dashboard runs on) is kept indefinitely so trends keep working over time, but the literal text of conversations and any escalation snapshots are deleted on the schedule below.
+                        </p>
+
+                        <div class="doc-table-wrap">
+                            <table class="doc-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Plan</th>
+                                        <th scope="col">Transcript retention</th>
+                                        <th scope="col">Aggregate metadata</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><div class="doc-tier">Solo<span class="role">One agent</span></div></td>
+                                        <td><div class="doc-num">30 days<span class="unit">rolling</span></div></td>
+                                        <td><div class="doc-num">Indefinite<span class="unit">for reporting</span></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="doc-tier">Duo<span class="role">Two agents</span></div></td>
+                                        <td><div class="doc-num">90 days<span class="unit">rolling</span></div></td>
+                                        <td><div class="doc-num">Indefinite<span class="unit">for reporting</span></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="doc-tier">Squad<span class="role">All three agents</span></div></td>
+                                        <td><div class="doc-num">180 days<span class="unit">rolling</span></div></td>
+                                        <td><div class="doc-num">Indefinite<span class="unit">for reporting</span></div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="doc-table-caption">
+                            Transcripts include conversation turns and escalation snapshots. They are hard-deleted from our database after the retention window for your plan; we do not move them to cold storage. If you cancel your plan, your aggregate metadata is anonymised within 30 days unless you ask for full account deletion (see the <a href="privacy.html">Privacy Policy</a>).
+                        </p>
+
+                        <h2 id="availability">Service availability</h2>
+                        <p>
+                            NeoMind is hosted on Microsoft Azure, in the <strong>australiaeast</strong> region (Sydney). We aim for 99.5 per cent monthly uptime across the agents and the dashboard. Planned maintenance is announced in advance through the dashboard. We don&rsquo;t currently publish a credit-based SLA on standard plans &mdash; if you need one, talk to us about an enterprise arrangement.
+                        </p>
+
+                        <h2 id="payment">Payment and cancellation</h2>
+                        <ul>
+                            <li>Plans are billed monthly or annually in advance, in Australian dollars, plus GST where applicable.</li>
+                            <li>You can cancel at any time from the dashboard. Cancellation takes effect at the end of your current billing period &mdash; we don&rsquo;t pro-rate refunds, but we don&rsquo;t lock you in either.</li>
+                            <li>Failed payments trigger an email and a 7-day grace window before your agents pause. Your data is preserved through the grace window.</li>
+                            <li>Maeve overage is billed in arrears at the next billing cycle, at the per-minute rate published on the pricing page.</li>
+                        </ul>
+
+                        <h2 id="changes">Changes to these terms</h2>
+                        <div class="doc-callout">
+                            <div class="doc-callout-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 8v4l3 2"/>
+                                    <circle cx="12" cy="12" r="9"/>
+                                </svg>
+                            </div>
+                            <div class="doc-callout-body">
+                                <strong>30-day notice. Current-term grandfathering.</strong>
+                                <p>If we change these terms, we&rsquo;ll email every existing customer at least 30 days before the change takes effect. The terms in force on the day you start your current billing term will apply for the rest of that term &mdash; we won&rsquo;t change the deal under you mid-cycle. New terms apply from your next renewal.</p>
+                            </div>
+                        </div>
+                        <p>
+                            Minor edits that don&rsquo;t change your rights or obligations (typos, clarifications, broken-link fixes) may be made without notice. The version you&rsquo;re reading is dated at the bottom of the page.
+                        </p>
+
+                        <h2 id="liability">Liability and disclaimers</h2>
+                        <p>
+                            We do our best to make Simon, Hugo and Maeve accurate and reliable, but they are AI agents and they will sometimes get things wrong. You are responsible for the sources you give them, for reviewing the answers your agents give to customers and staff, and for any actions taken on the basis of those answers.
+                        </p>
+                        <p>
+                            Nothing in these terms excludes any guarantee under the <strong>Australian Consumer Law</strong> that cannot lawfully be excluded. Where a guarantee can be limited, our liability is limited to the resupply of the service or the cost of having the service resupplied.
+                        </p>
+
+                        <h2 id="governing-law">Governing law</h2>
+                        <p>
+                            These terms are governed by the laws of New South Wales, Australia. Disputes are dealt with in the courts of New South Wales, except where the Australian Consumer Law gives you a different choice.
+                        </p>
+
+                        <h2 id="contact">Questions</h2>
+                        <p>
+                            If anything here is unclear, <a href="index.html#contact" data-contact-cta>get in touch</a> &mdash; we&rsquo;d rather have the conversation upfront than after a misunderstanding.
+                        </p>
+
+                        <p class="doc-meta">
+                            These Terms of Service form part of your agreement with Neomeric Pty Ltd. The Fair Use Policy and the <a href="privacy.html">Privacy Policy</a> are incorporated by reference. Last updated 7 May 2026.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shared contact dialog — message + book-a-call paths.
+         Any element with [data-contact-cta] in this page opens it. -->
+    <contact-modal></contact-modal>
+
+    <footer-section></footer-section>
+
+    <button id="darkModeToggle" type="button" aria-label="Toggle dark mode"
+        class="fixed bottom-6 right-6 p-3 bg-gray-800 dark:bg-white rounded-full shadow-lg z-50 hover:scale-105 transition-transform">
+        <svg class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+        </svg>
+    </button>
+
+    <script src="/neomind/js/app.js"></script>
+</body>
+
+</html>

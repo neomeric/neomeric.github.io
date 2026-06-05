@@ -1,0 +1,270 @@
+/* ============================================================
+   NEOMERIC DESIGN SYSTEM — colors_and_type.css
+   Source of truth for color tokens, typography, and core motion.
+   Mirrors tailwind.config.js + src/input.css from neomeric/neo-web.
+   ============================================================ */
+
+/* --- Fonts ------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Kanit:wght@300;400;500;600;700&display=swap");
+
+/* --- Tokens ------------------------------------------------ */
+:root {
+  /* ---------- Brand color ramps ---------- */
+  /* Primary — Purple (signature, used sparingly for tagline + accents) */
+  --primary-50:  #f5f3f7;
+  --primary-100: #ebe7ef;
+  --primary-200: #d7cfe0;
+  --primary-300: #c3b6d0;
+  --primary-400: #af9ec1;
+  --primary-500: #9C7DB9;   /* DEFAULT */
+  --primary-600: #8c64ad;
+  --primary-700: #7c4ca1;
+  --primary-800: #6c3495;
+  --primary-900: #5c1c89;
+  --primary-950: #4c047d;
+  --primary:     var(--primary-500);
+
+  /* Secondary — Blue (CTAs, links, infrastructure feel) */
+  --secondary-50:  #e6f2ff;
+  --secondary-100: #cce5ff;
+  --secondary-200: #99caff;
+  --secondary-300: #66b0ff;
+  --secondary-400: #3395ff;
+  --secondary-500: #007BFF;  /* DEFAULT */
+  --secondary-600: #0062cc;
+  --secondary-700: #004999;
+  --secondary-800: #003166;
+  --secondary-900: #001833;
+  --secondary-950: #000e1a;
+  --secondary:     var(--secondary-500);
+
+  /* Accent — Teal (energy, positive states, gradient endpoint) */
+  --accent-50:  #e6faf7;
+  --accent-100: #ccf5ef;
+  --accent-200: #99ebdf;
+  --accent-300: #66e0cf;
+  --accent-400: #33d6bf;
+  --accent-500: #00D1B2;     /* DEFAULT */
+  --accent-600: #00a78e;
+  --accent-700: #007d6a;
+  --accent-800: #005347;
+  --accent-900: #002a23;
+  --accent-950: #001512;
+  --accent:     var(--accent-500);
+
+  /* Neutrals (Tailwind gray scale, used everywhere for surfaces + text) */
+  --gray-50:  #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+  --gray-950: #0a0f1c;
+
+  /* Semantic surface + text (light mode) */
+  --bg:           #ffffff;
+  --bg-muted:     var(--gray-50);
+  --bg-subtle:    var(--gray-100);
+  --surface:      #ffffff;
+  --surface-alt:  var(--gray-50);
+  --text:         var(--gray-800);
+  --text-muted:   var(--gray-600);
+  --text-subtle:  var(--gray-500);
+  --text-inverse: #ffffff;
+  --border:       var(--gray-200);
+  --border-strong:var(--gray-300);
+
+  /* Status */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger:  #ef4444;
+  --info:    var(--secondary-500);
+
+  /* ---------- Signature gradients ---------- */
+  /* The wordmark gradient: blue -> teal */
+  --gradient-brand:    linear-gradient(135deg, var(--secondary-500) 0%, var(--accent-500) 100%);
+  /* The "AI Simplified" sub-tagline gradient: purple -> teal */
+  --gradient-tagline:  linear-gradient(90deg,  var(--primary-500)   0%, var(--accent-500)   100%);
+  /* Hero ambient — used for halos and big background washes */
+  --gradient-hero:     linear-gradient(135deg, var(--primary-500)   0%, var(--secondary-500) 50%, var(--accent-500) 100%);
+  /* Soft surface gradient for cards */
+  --gradient-surface:  linear-gradient(180deg, #ffffff 0%, var(--gray-50) 100%);
+
+  /* ---------- Typography ---------- */
+  --font-display: "Syne", system-ui, sans-serif;   /* Headings */
+  --font-sans:    "Kanit", system-ui, sans-serif;  /* Body */
+  --font-mono:    ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Type scale (rem) — purpose-driven, not just sizes */
+  --text-xs:    0.75rem;    /* 12px — eyebrows, micro-labels */
+  --text-sm:    0.875rem;   /* 14px — captions, fine print */
+  --text-base:  1rem;       /* 16px — body */
+  --text-lg:    1.125rem;   /* 18px — lead paragraph */
+  --text-xl:    1.25rem;    /* 20px — small heading / large body */
+  --text-2xl:   1.5rem;     /* 24px — H4 */
+  --text-3xl:   1.875rem;   /* 30px — H3 */
+  --text-4xl:   2.25rem;    /* 36px — H2 */
+  --text-5xl:   3rem;       /* 48px — H1 */
+  --text-6xl:   3.75rem;    /* 60px — Display */
+  --text-7xl:   4.5rem;     /* 72px — Hero display */
+
+  --leading-tight:   1.15;
+  --leading-snug:    1.3;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.65;
+
+  --tracking-tight:  -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.05em;
+  --tracking-eyebrow:0.18em;  /* used on uppercase eyebrow labels */
+
+  /* ---------- Spacing scale (4-pt) ---------- */
+  --space-0:  0;
+  --space-1:  0.25rem;   /* 4  */
+  --space-2:  0.5rem;    /* 8  */
+  --space-3:  0.75rem;   /* 12 */
+  --space-4:  1rem;      /* 16 */
+  --space-5:  1.25rem;   /* 20 */
+  --space-6:  1.5rem;    /* 24 */
+  --space-8:  2rem;      /* 32 */
+  --space-10: 2.5rem;    /* 40 */
+  --space-12: 3rem;      /* 48 */
+  --space-16: 4rem;      /* 64 */
+  --space-20: 5rem;      /* 80 */
+  --space-24: 6rem;      /* 96 */
+  --space-32: 8rem;      /* 128 */
+
+  /* ---------- Radii ---------- */
+  --radius-sm:   0.375rem;   /* 6  — chips, inline tags */
+  --radius-md:   0.5rem;     /* 8  — inputs */
+  --radius-lg:   0.75rem;    /* 12 — small cards */
+  --radius-xl:   1rem;       /* 16 — cards */
+  --radius-2xl:  1.5rem;     /* 24 — feature cards */
+  --radius-3xl:  2rem;       /* 32 — hero panels */
+  --radius-pill: 9999px;     /* CTA buttons (signature shape) */
+
+  /* ---------- Shadows ---------- */
+  --shadow-xs:  0 1px 2px rgba(17, 24, 39, 0.04);
+  --shadow-sm:  0 1px 3px rgba(17, 24, 39, 0.06), 0 1px 2px rgba(17, 24, 39, 0.04);
+  --shadow-md:  0 4px 12px rgba(17, 24, 39, 0.08);
+  --shadow-lg:  0 12px 28px rgba(17, 24, 39, 0.10);
+  --shadow-xl:  0 24px 48px rgba(17, 24, 39, 0.14);
+  --shadow-glow-primary:   0 10px 40px -10px rgba(156, 125, 185, 0.55);
+  --shadow-glow-secondary: 0 10px 40px -10px rgba(0, 123, 255, 0.45);
+  --shadow-glow-accent:    0 10px 40px -10px rgba(0, 209, 178, 0.45);
+
+  /* ---------- Motion ---------- */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-emphasized: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --duration-fast:  150ms;
+  --duration-base:  300ms;
+  --duration-slow:  600ms;
+
+  /* ---------- Layout ---------- */
+  --container-max: 1280px;
+  --content-max:   72ch;
+}
+
+/* --- Dark mode overrides ---------------------------------- */
+.dark, [data-theme="dark"] {
+  --bg:           var(--gray-900);
+  --bg-muted:     #0f1626;
+  --bg-subtle:    var(--gray-800);
+  --surface:      var(--gray-800);
+  --surface-alt:  #1a2233;
+  --text:         #e5e7eb;
+  --text-muted:   #9ca3af;
+  --text-subtle:  #6b7280;
+  --text-inverse: var(--gray-900);
+  --border:       rgba(255, 255, 255, 0.08);
+  --border-strong:rgba(255, 255, 255, 0.16);
+  --gradient-surface: linear-gradient(180deg, var(--gray-800) 0%, var(--gray-900) 100%);
+}
+
+/* --- Base typography utilities --------------------------- */
+.font-display { font-family: var(--font-display); }
+.font-sans    { font-family: var(--font-sans); }
+
+.text-gradient-brand {
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.text-gradient-tagline {
+  background: var(--gradient-tagline);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.text-gradient-hero {
+  background: var(--gradient-hero);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Eyebrow label — uppercase, tracked, used above headlines */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--primary-700);
+}
+
+/* Display headline — Syne, very tight */
+.headline-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 5vw, var(--text-7xl));
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text);
+  text-wrap: balance;
+}
+
+/* Section headline */
+.headline-section {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.875rem, 3.5vw, var(--text-5xl));
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text);
+  text-wrap: balance;
+}
+
+.body-lg {
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--text-muted);
+  text-wrap: pretty;
+}
+
+/* --- Signature animations (from neo-web/styles.css) ----- */
+@keyframes nm-blob {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(30px, -50px) scale(1.1); }
+  66%  { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes nm-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+@keyframes nm-gradient-x {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-blob    { animation: nm-blob 7s ease-in-out infinite; }
+.animate-float   { animation: nm-float 3s ease-in-out infinite; }
+.animate-gradient { animation: nm-gradient-x 15s ease infinite; background-size: 200% auto; }

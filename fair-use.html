@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NHDLXJCG');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="NeoMind Fair Use Policy — typical usage thresholds for Simon and Hugo, what happens at each threshold, and our customer-success commitment. No silent disconnect, no hidden cap.">
+    <link rel="canonical" href="https://neomeric.com/neomind/fair-use.html">
+    <meta property="og:title" content="Fair Use Policy — NeoMind | Neomeric">
+    <meta property="og:description" content="Transparent fair-use thresholds for unlimited Simon and Hugo plans. We never silently cut you off — at the hard threshold, our customer-success team reaches out.">
+    <meta property="og:url" content="https://neomeric.com/neomind/fair-use.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://neomeric.com/images/og-default.png">
+    <meta property="og:site_name" content="Neomeric">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fair Use Policy — NeoMind | Neomeric">
+    <meta name="twitter:description" content="Transparent fair-use thresholds for unlimited Simon and Hugo plans. We never silently cut you off — at the hard threshold, our customer-success team reaches out.">
+    <meta name="twitter:image" content="https://neomeric.com/images/og-default.png">
+    <title>Fair Use Policy — NeoMind | Neomeric</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./css/tailwind.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/neomeric-tokens.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="./components/navbar-section.js" type="module"></script>
+    <script src="./components/footer-section.js" type="module"></script>
+    <style>
+        /* Match NeoMind site typography exactly: Kanit body / Syne display. */
+        body {
+            font-family: var(--font-sans);
+            font-weight: 400;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        h1, h2, h3, h4, .font-display, .display {
+            font-family: var(--font-display);
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+        .gradient-blur {
+            background: radial-gradient(circle at top right, rgba(156, 125, 185, 0.15), transparent 50%),
+                radial-gradient(circle at bottom left, rgba(0, 209, 178, 0.15), transparent 50%);
+        }
+
+        /* Page header — same shape as homepage hero, lighter copy block. */
+        .fup-hero {
+            padding: 96px 0 56px;
+            background: var(--bg-muted);
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        @media (max-width: 768px) { .fup-hero { padding: 72px 0 40px; } }
+
+        /* Article body container — single-column, generous reading measure. */
+        .fup-article {
+            padding: 56px 0 96px;
+        }
+        .fup-prose {
+            max-width: 760px;
+            margin-inline: auto;
+            color: var(--text);
+        }
+        .fup-prose p {
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--text-muted);
+            margin: 0 0 18px;
+        }
+        .fup-prose p strong { color: var(--text); font-weight: 600; }
+        .fup-prose h2 {
+            font-size: clamp(24px, 2.4vw, 30px);
+            line-height: 1.2;
+            color: var(--text);
+            margin: 48px 0 14px;
+        }
+        .fup-prose h3 {
+            font-size: 18px;
+            line-height: 1.3;
+            color: var(--text);
+            margin: 24px 0 8px;
+            letter-spacing: -0.015em;
+        }
+        .fup-prose ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 18px;
+        }
+        .fup-prose ul li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            font-size: 17px;
+            line-height: 1.65;
+            color: var(--text-muted);
+        }
+        .fup-prose ul li::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 11px;
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--accent-500);
+            box-shadow: 0 0 0 4px var(--accent-100);
+        }
+        .dark .fup-prose ul li::before { box-shadow: 0 0 0 4px rgba(0, 209, 178, 0.18); }
+        .fup-prose a {
+            color: var(--secondary-700);
+            text-decoration: underline;
+            text-decoration-color: rgba(0, 73, 153, 0.35);
+            text-underline-offset: 3px;
+        }
+        .dark .fup-prose a { color: var(--secondary-300); }
+
+        /* Threshold table — soft surface card, brand-accented header row. */
+        .fup-table-wrap {
+            margin: 28px 0 14px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            background: var(--surface);
+        }
+        .dark .fup-table-wrap { background: var(--gray-800); border-color: rgba(255,255,255,0.08); }
+        .fup-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px;
+        }
+        .fup-table thead th {
+            text-align: left;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: var(--primary-700);
+            padding: 16px 20px;
+            background: var(--primary-50);
+            border-bottom: 1px solid var(--border);
+        }
+        .dark .fup-table thead th { background: rgba(156, 125, 185, 0.12); color: var(--primary-300); border-color: rgba(255,255,255,0.06); }
+        .fup-table tbody td {
+            padding: 16px 20px;
+            color: var(--text);
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+            line-height: 1.55;
+        }
+        .dark .fup-table tbody td { border-color: rgba(255,255,255,0.06); color: var(--gray-100); }
+        .fup-table tbody tr:last-child td { border-bottom: none; }
+        .fup-agent {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: -0.01em;
+        }
+        .fup-agent .role {
+            display: block;
+            font-family: var(--font-sans);
+            font-weight: 400;
+            font-size: 13px;
+            color: var(--text-muted);
+            letter-spacing: 0;
+            margin-top: 2px;
+        }
+        .fup-num {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 17px;
+            color: var(--text);
+        }
+        .fup-num .unit {
+            display: block;
+            font-family: var(--font-sans);
+            font-weight: 400;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+        .fup-pill {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            background: var(--gray-100);
+            color: var(--text-muted);
+        }
+        .dark .fup-pill { background: rgba(255,255,255,0.06); color: var(--gray-300); }
+        .fup-table-caption {
+            font-size: 13px;
+            line-height: 1.5;
+            color: var(--text-subtle);
+            margin: 0 0 28px;
+        }
+
+        @media (max-width: 640px) {
+            .fup-table { font-size: 14px; }
+            .fup-table thead th, .fup-table tbody td { padding: 12px 14px; }
+        }
+
+        /* Threshold explainer cards — soft / hard side by side. */
+        .fup-step-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin: 24px 0 8px;
+        }
+        @media (max-width: 720px) { .fup-step-grid { grid-template-columns: 1fr; } }
+        .fup-step {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 24px;
+        }
+        .dark .fup-step { background: var(--gray-800); border-color: rgba(255,255,255,0.06); }
+        .fup-step-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+        }
+        .fup-step-tag .dot {
+            width: 8px; height: 8px; border-radius: 50%;
+        }
+        .fup-step.soft .fup-step-tag { color: var(--accent-700); }
+        .fup-step.soft .fup-step-tag .dot { background: var(--accent-500); box-shadow: 0 0 0 4px var(--accent-100); }
+        .fup-step.hard .fup-step-tag { color: var(--primary-700); }
+        .fup-step.hard .fup-step-tag .dot { background: var(--primary-500); box-shadow: 0 0 0 4px var(--primary-100); }
+        .fup-step h3 {
+            margin: 0 0 8px;
+            font-size: 19px;
+            line-height: 1.25;
+        }
+        .fup-step p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .dark .fup-step p { color: var(--gray-300); }
+
+        /* Reassurance callout — pulled-out commitment line, no auto-cutoff. */
+        .fup-callout {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            margin: 32px 0 8px;
+            padding: 22px 24px;
+            background: linear-gradient(135deg, rgba(156, 125, 185, 0.06), rgba(0, 209, 178, 0.06));
+            border: 1px solid rgba(156, 125, 185, 0.18);
+            border-radius: 20px;
+        }
+        .dark .fup-callout {
+            background: linear-gradient(135deg, rgba(156, 125, 185, 0.12), rgba(0, 209, 178, 0.10));
+            border-color: rgba(156, 125, 185, 0.3);
+        }
+        .fup-callout-icon {
+            flex-shrink: 0;
+            width: 36px; height: 36px;
+            border-radius: 10px;
+            background: white;
+            color: var(--primary-700);
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+        }
+        .dark .fup-callout-icon { background: var(--gray-900); color: var(--primary-300); }
+        .fup-callout-body { flex: 1; }
+        .fup-callout-body strong {
+            display: block;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+        .fup-callout-body p {
+            font-size: 15px !important;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin: 0 !important;
+        }
+
+        .fup-meta {
+            margin-top: 56px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            font-size: 13px;
+            color: var(--text-subtle);
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300 text-gray-900 dark:text-white">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHDLXJCG" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <a href="#main"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-gray-900 focus:rounded-lg focus:shadow-lg">Skip to content</a>
+
+    <navbar-section></navbar-section>
+
+    <main id="main">
+        <!-- HEADER -->
+        <section class="fup-hero gradient-blur pt-32">
+            <div class="nm-container">
+                <div style="max-width: 760px;">
+                    <span class="eyebrow"><span class="dot"></span> NeoMind · Policy</span>
+                    <h1 style="font-family: var(--font-display); font-weight: 700; font-size: clamp(36px, 4.6vw, 56px); line-height: 1.05; letter-spacing: -0.025em; margin: 14px 0 18px; text-wrap: balance; color: var(--text);">
+                        Fair Use <span class="grad-text">Policy</span>
+                    </h1>
+                    <p style="font-size: 19px; line-height: 1.55; color: var(--text-muted); max-width: 60ch; margin: 0;">
+                        Our Simon and Hugo plans are described as &ldquo;unlimited (fair-use).&rdquo; This page tells you exactly what that means &mdash; the typical usage thresholds, what happens when you cross them, and the commitments we make either way. No silent disconnect. No hidden cap.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ARTICLE -->
+        <section class="fup-article">
+            <div class="nm-container">
+                <article class="fup-prose">
+
+                    <h2>Why we publish thresholds</h2>
+                    <p>
+                        Plenty of products advertise &ldquo;unlimited&rdquo; and quietly throttle, deprioritise, or disconnect heavy users with no warning. We don&rsquo;t. We think customers deserve to know, before they sign up, what counts as typical usage and what we&rsquo;ll do if their usage runs well beyond it.
+                    </p>
+                    <p>
+                        This page is also our compliance position: under the Australian Consumer Law (s.18 &mdash; misleading or deceptive conduct), &ldquo;unlimited&rdquo; needs honest disclosure of any practical limits. The numbers below are our honest disclosure. They are the same numbers our customer-success team uses internally.
+                    </p>
+
+                    <h2>Typical usage thresholds</h2>
+                    <p>
+                        Two thresholds per agent: a <strong>soft alert</strong> (we send you a friendly nudge so nothing surprises you at month-end) and a <strong>hard threshold</strong> (our customer-success team gets in touch). Both are based on the kind of usage we see across hundreds of small Australian businesses; if you&rsquo;re below them, you&rsquo;re in normal territory.
+                    </p>
+
+                    <div class="fup-table-wrap">
+                        <table class="fup-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Agent</th>
+                                    <th scope="col">Soft alert</th>
+                                    <th scope="col">Hard threshold</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="fup-agent">Simon
+                                            <span class="role">Website chat</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="fup-num">3,000
+                                            <span class="unit">chats / month</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="fup-num">5,000
+                                            <span class="unit">chats / month</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="fup-agent">Hugo
+                                            <span class="role">Internal HR / IT</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="fup-num">6,000
+                                            <span class="unit">staff queries / month</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="fup-num">10,000
+                                            <span class="unit">staff queries / month</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="fup-agent">Maeve
+                                            <span class="role">Voice phone</span>
+                                        </div>
+                                    </td>
+                                    <td colspan="2">
+                                        <span class="fup-pill">No fair-use cap</span>
+                                        <p style="font-size: 14px; line-height: 1.55; color: var(--text-muted); margin: 8px 0 0;">
+                                            Maeve runs on a pre-purchased minute pool included with your plan, with transparent per-minute overage pricing. There is no fair-use threshold &mdash; you simply pay for what you use beyond the included pool. See the <a href="index.html#pricing">pricing page</a> for the included minutes and overage rate that apply to your tier.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="fup-table-caption">
+                        Counts are measured on a calendar-month cycle aligned to your billing date. A &ldquo;chat&rdquo; with Simon is a single visitor conversation; a &ldquo;query&rdquo; with Hugo is a single Slack/Teams message that triggers a response.
+                    </p>
+
+                    <h2>What happens at each threshold</h2>
+
+                    <div class="fup-step-grid">
+                        <div class="fup-step soft">
+                            <div class="fup-step-tag"><span class="dot"></span> Soft alert</div>
+                            <h3>A friendly nudge &mdash; nothing changes</h3>
+                            <p>
+                                You&rsquo;ll get an email letting you know your usage is approaching the upper end of typical. Your service keeps running exactly as before. The alert exists so you&rsquo;re not surprised if you&rsquo;re tracking towards the hard threshold &mdash; not to push you to upgrade.
+                            </p>
+                        </div>
+                        <div class="fup-step hard">
+                            <div class="fup-step-tag"><span class="dot"></span> Hard threshold</div>
+                            <h3>Our team reaches out &mdash; service stays on</h3>
+                            <p>
+                                Someone from our customer-success team gets in touch within one business day. We&rsquo;ll talk through what your usage looks like, whether a Squad or Enterprise plan would be a better fit, and any pricing options that make sense. Your agents keep answering throughout.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="fup-callout">
+                        <div class="fup-callout-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-12V5l-8-3-8 3v5c0 8 8 12 8 12z"/>
+                                <path d="m9 12 2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <div class="fup-callout-body">
+                            <strong>The hard threshold is never an auto-cutoff.</strong>
+                            <p>We do not silently disconnect, throttle, or degrade your agents when you cross it. The hard threshold simply triggers a human conversation. If you choose not to upgrade, we&rsquo;ll work with you on a path that keeps your service running &mdash; we won&rsquo;t pull the plug without a chat first.</p>
+                        </div>
+                    </div>
+
+                    <h2>What counts as excessive use</h2>
+                    <p>
+                        The hard threshold isn&rsquo;t a moral judgement &mdash; if you&rsquo;re a busy retailer with high web traffic and you legitimately have 6,000 buyer chats a month with Simon, you&rsquo;re not doing anything wrong, you&rsquo;ve just outgrown a Solo plan. The Squad and Enterprise tiers exist for that.
+                    </p>
+                    <p>
+                        That said, fair-use cover does not extend to:
+                    </p>
+                    <ul>
+                        <li>Automated scripts, load-testing tools, or bots driving conversations that aren&rsquo;t real visitors or staff.</li>
+                        <li>Re-selling agent capacity to third parties under your account.</li>
+                        <li>Deliberate abuse designed to drain capacity (for example, looped prompts or attempts to extract training data).</li>
+                    </ul>
+                    <p>
+                        For these cases we may suspend the offending traffic source after notice. We&rsquo;ll always tell you what we&rsquo;re seeing before taking action.
+                    </p>
+
+                    <h2>Overage versus fair-use</h2>
+                    <p>
+                        On Simon and Hugo plans, fair-use is what governs the &ldquo;unlimited&rdquo; framing. There is also a separate <strong>overage rate</strong> &mdash; a per-chat or per-query price that only applies if your usage genuinely exceeds the hard threshold and you and our team have agreed that overage billing (rather than a plan upgrade) is the right path. You will never be billed overage without explicit prior agreement.
+                    </p>
+                    <p>
+                        Maeve is different: because voice minutes have a real per-minute cost we can&rsquo;t absorb, Maeve is metered transparently from minute one. Her overage rate is published on the <a href="index.html#pricing">pricing page</a> and applies automatically once you&rsquo;ve used your included minutes.
+                    </p>
+
+                    <h2>Changes to this policy</h2>
+                    <p>
+                        If we ever change the thresholds, we&rsquo;ll email every existing customer at least 30 days before the change takes effect, and your existing thresholds will be honoured to the end of your current annual term. We won&rsquo;t silently lower a threshold underneath an active customer.
+                    </p>
+
+                    <h2>Questions</h2>
+                    <p>
+                        If anything here is unclear, or you&rsquo;d like to talk through what your projected usage looks like before signing up, <a href="index.html#contact" data-contact-cta>get in touch</a> &mdash; we&rsquo;d rather have the conversation upfront than after a surprise.
+                    </p>
+
+                    <p class="fup-meta">
+                        This Fair Use Policy is part of the NeoMind Terms of Service and forms part of your agreement with Neomeric Pty Ltd. Last updated 7 May 2026.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shared contact dialog — message + book-a-call paths.
+         Any element with [data-contact-cta] in this page opens it. -->
+    <contact-modal></contact-modal>
+
+    <footer-section></footer-section>
+
+    <button id="darkModeToggle" type="button" aria-label="Toggle dark mode"
+        class="fixed bottom-6 right-6 p-3 bg-gray-800 dark:bg-white rounded-full shadow-lg z-50 hover:scale-105 transition-transform">
+        <svg class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+        </svg>
+    </button>
+
+    <script src="/neomind/js/app.js"></script>
+</body>
+
+</html>

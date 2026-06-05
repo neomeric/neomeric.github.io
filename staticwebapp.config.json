@@ -1,0 +1,47 @@
+{
+  "routes": [
+    {
+      "route": "/au",
+      "redirect": "/au/",
+      "statusCode": 301
+    },
+    {
+      "route": "/es",
+      "redirect": "/es/",
+      "statusCode": 301
+    },
+    {
+      "route": "/au/",
+      "rewrite": "/au/index.html"
+    },
+    {
+      "route": "/au/*",
+      "rewrite": "/au/index.html"
+    },
+    {
+      "route": "/es/",
+      "rewrite": "/es/index.html"
+    },
+    {
+      "route": "/es/*",
+      "rewrite": "/es/index.html"
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": [
+      "/api/*",
+      "/css/*",
+      "/components/*",
+      "/js/*",
+      "/images/*",
+      "/assets/*",
+      "/au/*",
+      "/es/*",
+      "/*.{webp,png,jpg,jpeg,svg,ico,gif,css,js,json,xml,txt,map,woff,woff2,ttf,eot,mp4,webm}"
+    ]
+  },
+  "mimeTypes": {
+    ".webp": "image/webp"
+  }
+}
