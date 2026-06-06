@@ -678,17 +678,19 @@
                                 <span class="nm-live-dot"></span>
                                 <span>Live in 60 minutes</span>
                             </span>
-                            <span class="grad-text" style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600;">Australian-made · a digital workforce you can manage</span>
+                            <span class="grad-text" style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600;">Australian-made &middot; Measurable performance &middot; Trackable results</span>
                         </div>
 
                         <h1 class="nm-hero-h1">
-                            Australian-made AI employees
+                            <span class="nm-hero-word">AI employees.</span>
                             <br class="nm-hide-sm" />
-                            you can manage and measure.
+                            <span class="text-gradient-brand nm-hero-word" style="animation-delay:0.16s">Measured.</span>
+                            <span class="text-gradient-brand nm-hero-word" style="animation-delay:0.32s">Tracked.</span>
+                            <span class="text-gradient-brand nm-hero-word" style="animation-delay:0.48s">Proven.</span>
                         </h1>
 
                         <p class="nm-hero-lead">
-                            NeoMind gives you a team of AI employees that do the real work &mdash; answer your website and phone, book jobs, capture leads, handle staff questions &mdash; all grounded in your own knowledge, with no hallucinations. Hosted in Sydney, so your data never leaves Australia. Give each one an objective, score its performance on every conversation, and run it like staff.
+                            A team of AI employees that do the real work &mdash; answer your website and phone, book jobs, capture leads. Give each one an objective, then score its performance on every conversation. Grounded in your own knowledge, hosted in Australia.
                         </p>
 
                         <div class="nm-hero-ctas">
@@ -916,6 +918,15 @@
             @keyframes nm-fade-in-up { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
             @keyframes nm-typing-dot { 0%, 60%, 100% { transform: translateY(0); opacity: 0.4; } 30% { transform: translateY(-4px); opacity: 1; } }
             @media (prefers-reduced-motion: reduce) { * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; } }
+
+            /* Hero headline staggered reveal — "AI employees. Measured. Tracked. Proven." */
+            @keyframes nm-hero-rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+            .nm-hero-word { display: inline-block; opacity: 0; animation: nm-hero-rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+            @media (prefers-reduced-motion: reduce) { .nm-hero-word { opacity: 1 !important; animation: none !important; transform: none !important; } }
+
+            /* Comparison table — emphasise the row no competitor can tick */
+            tr.nm-compare-key td, tr.nm-compare-key th { background: linear-gradient(90deg, rgba(0, 123, 255, 0.06), rgba(0, 209, 178, 0.06)); }
+            tr.nm-compare-key th[scope="row"] { font-weight: 700; box-shadow: inset 3px 0 0 var(--accent-500); }
 
             /* HERO */
             .nm-hero { padding: 64px 0 96px; overflow: hidden; position: relative; }
@@ -1707,7 +1718,7 @@
                                 <td class="nm-compare-gen"><span class="nm-compare-dash" aria-hidden="true"></span>Replies only</td>
                                 <td class="nm-compare-us"><span class="nm-compare-tick" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Books, captures, escalates, updates CRM</td>
                             </tr>
-                            <tr>
+                            <tr class="nm-compare-key">
                                 <th scope="row">Can you measure it</th>
                                 <td class="nm-compare-gen"><span class="nm-compare-dash" aria-hidden="true"></span>No</td>
                                 <td class="nm-compare-us"><span class="nm-compare-tick" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Objectives + KPIs + scorecards per employee</td>

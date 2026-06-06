@@ -35,7 +35,7 @@ class NavbarSection extends HTMLElement {
     // Nav menu/CTA labels resolve from the locale; English fallback keeps
     // intl working if the locale table fails to load.
     const nav = Object.assign(
-      { measurable:"Measurable", roster:"Roster", brain:"The Brain", integrations:"Integrations", pricing:"Pricing", faq:"FAQ", signIn:"Sign in", startFree:"Start free" },
+      { measurable:"Measurable", roster:"Roster", brain:"The Brain", integrations:"Integrations", pricing:"Pricing", compare:"Compare", resources:"Resources", faq:"FAQ", signIn:"Sign in", startFree:"Start free" },
       L.navLabels || {}
     );
 
@@ -58,6 +58,12 @@ class NavbarSection extends HTMLElement {
       "<li><a href=\"" + L.path + "#brain\">" + nav.brain + "</a></li>" +
       "<li><a href=\"" + L.path + "#integrations\">" + nav.integrations + "</a></li>" +
       "<li><a href=\"" + L.path + "#pricing\">" + nav.pricing + "</a></li>" +
+      // Compare + Resources are locale-prefixed, rendered for locales whose hubs
+      // exist today (intl + au). es stays hidden until its content pass ships.
+      (L.code === "intl" || L.code === "au"
+        ? "<li><a href=\"" + L.path + "compare/\">" + nav.compare + "</a></li>" +
+          "<li><a href=\"" + L.path + "resources/\">" + nav.resources + "</a></li>"
+        : "") +
       "<li><a href=\"" + L.path + "#faq\">" + nav.faq + "</a></li>" +
       "</ul>" +
       "<div class=\"cta\">" +

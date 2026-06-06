@@ -25,7 +25,7 @@ class FooterSection extends HTMLElement {
     // fallback keeps intl working if the locale table fails to load.
     const f = Object.assign(
       { product:"Product", account:"Account", legal:"Legal",
-        measurable:"Measurable", roster:"Roster", brain:"The Brain", integrations:"Integrations", pricing:"Pricing", faq:"FAQ",
+        measurable:"Measurable", roster:"Roster", brain:"The Brain", integrations:"Integrations", pricing:"Pricing", compare:"Compare", resources:"Resources", faq:"FAQ",
         startTrial:"Start free trial", signIn:"Sign in", support:"Support",
         privacy:"Privacy", terms:"Terms", fairUse:"Fair use" },
       L.footerLabels || {}
@@ -36,7 +36,7 @@ class FooterSection extends HTMLElement {
       ? "<p class=\"au-note\">Hosted in Sydney, Australia. Your data never leaves Australia. Privacy Act 1988 aligned.</p>"
       : L.code === "es"
         ? "<p class=\"intl-note\">" + L.hostingLine + "</p>"
-        : "<p class=\"intl-note\">Australian-made. Hosted on Microsoft Azure.</p>";
+        : "<p class=\"intl-note\">" + L.hostingLine + "</p>";
 
     const markup =
       "<style>" + STYLES + "</style>" +
@@ -53,6 +53,12 @@ class FooterSection extends HTMLElement {
       "<li><a href=\"" + L.path + "#brain\">" + f.brain + "</a></li>" +
       "<li><a href=\"" + L.path + "#integrations\">" + f.integrations + "</a></li>" +
       "<li><a href=\"" + L.path + "#pricing\">" + f.pricing + "</a></li>" +
+      // Compare + Resources are locale-prefixed, rendered for locales whose hubs
+      // exist today (intl + au). es stays hidden until its content pass ships.
+      (L.code === "intl" || L.code === "au"
+        ? "<li><a href=\"" + L.path + "compare/\">" + f.compare + "</a></li>" +
+          "<li><a href=\"" + L.path + "resources/\">" + f.resources + "</a></li>"
+        : "") +
       "<li><a href=\"" + L.path + "#faq\">" + f.faq + "</a></li>" +
       "</ul></div>" +
       "<div><h4>" + f.account + "</h4><ul>" +
