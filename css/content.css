@@ -74,6 +74,8 @@ h1, h2, h3, h4, .font-display, .display {
 
 /* ── Article shell ── */
 .nm-article { max-width: 760px; margin: 0 auto; }
+/* Prevent wide content (tables, code) from leaking horizontal scroll to the document */
+@media (max-width: 640px) { .nm-article { overflow-x: hidden; } }
 .nm-article-head { padding: 32px 0 8px; }
 .nm-article-h1 {
     font-family: var(--font-display); font-weight: 700;
@@ -189,7 +191,7 @@ h1, h2, h3, h4, .font-display, .display {
 
 /* ── CTA band (mirrors homepage) ── */
 .nm-cta-band {
-    position: relative; overflow: hidden;
+    position: relative; overflow: clip;
     padding: 64px 56px; border-radius: 36px; color: white;
     background: linear-gradient(135deg, #9C7DB9 0%, #007BFF 50%, #00D1B2 100%);
 }
