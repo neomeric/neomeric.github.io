@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="es" class="scroll-smooth">
 
 <head>
-    <!-- Consent Mode v2 default (before GTM) -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -12,14 +11,12 @@
         functionality_storage:'granted', security_storage:'granted',
         wait_for_update: 500
       });
-      // Re-apply a previously saved choice on load so returning visitors keep their setting
       try { var c=document.cookie.match(/(?:^|; )nm_consent=([^;]+)/);
         if(c){ var v=decodeURIComponent(c[1]);
           if(v==='granted'){ gtag('consent','update',{ad_storage:'granted',analytics_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'}); }
         }
       } catch(e){}
     </script>
-    <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
                 'gtm.start':
@@ -28,27 +25,26 @@
                 j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-NHDLXJCG');</script>
-    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>Pricing — Hire Your AI Workforce | NeoMind</title>
+    <title>Precios — Contrata tu plantilla de IA | NeoMind</title>
     <meta name="description"
-        content="Simple, predictable pricing for measurable AI employees: Solo $79, Duo $149, Squad $299 (USD/mo) or Enterprise. Pay only for usage beyond your allowance.">
-    <link rel="canonical" href="https://neomindhub.com/pricing/">
+        content="Precios sencillos y predecibles para empleados de IA que puedes medir: Solo 79 €, Pareja 149 €, Squad 299 € (al mes, IVA no incluido) o Enterprise. Paga solo por el uso que supere tu límite.">
+    <link rel="canonical" href="https://neomindhub.com/es/pricing/">
     <link rel="alternate" hreflang="en"    href="https://neomindhub.com/pricing/" />
     <link rel="alternate" hreflang="en-au" href="https://neomindhub.com/au/pricing/" />
     <link rel="alternate" hreflang="es"    href="https://neomindhub.com/es/pricing/" />
     <link rel="alternate" hreflang="x-default" href="https://neomindhub.com/pricing/" />
-    <meta property="og:title" content="Pricing — Hire Your AI Workforce | NeoMind">
-    <meta property="og:description" content="Simple, predictable pricing for measurable AI employees. Solo $79, Duo $149, Squad $299 (USD/mo) or Enterprise. Pay only for usage beyond your allowance.">
-    <meta property="og:url" content="https://neomindhub.com/pricing/">
+    <meta property="og:title" content="Precios — Contrata tu plantilla de IA | NeoMind">
+    <meta property="og:description" content="Precios sencillos y predecibles para empleados de IA que puedes medir. Solo 79 €, Pareja 149 €, Squad 299 € (al mes, IVA no incluido) o Enterprise. Paga solo por el uso que supere tu límite.">
+    <meta property="og:url" content="https://neomindhub.com/es/pricing/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://neomindhub.com/images/logo1.png">
     <meta property="og:site_name" content="NeoMind">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Pricing — Hire Your AI Workforce | NeoMind">
-    <meta name="twitter:description" content="Simple, predictable pricing for measurable AI employees. Solo $79, Duo $149, Squad $299 (USD/mo) or Enterprise.">
+    <meta name="twitter:title" content="Precios — Contrata tu plantilla de IA | NeoMind">
+    <meta name="twitter:description" content="Precios sencillos y predecibles para empleados de IA que puedes medir. Solo 79 €, Pareja 149 €, Squad 299 € (al mes, IVA no incluido) o Enterprise.">
     <meta name="twitter:image" content="https://neomindhub.com/images/logo1.png">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/css/tailwind.css">
@@ -60,20 +56,18 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <!-- Locale data must load synchronously before any component connectedCallback runs -->
     <script src="/js/locales.js"></script>
-    <script>window.NM_LOCALE = "intl";</script>
+    <script>window.NM_LOCALE = "es";</script>
     <script src="/components/navbar-section.js" type="module"></script>
     <script src="/components/footer-section.js" type="module"></script>
 
-    <!-- Structured data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://neomindhub.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://neomindhub.com/pricing/" }
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://neomindhub.com/es/" },
+        { "@type": "ListItem", "position": 2, "name": "Precios", "item": "https://neomindhub.com/es/pricing/" }
       ]
     }
     </script>
@@ -81,15 +75,15 @@
     {
       "@context": "https://schema.org",
       "@type": "Product",
-      "name": "NeoMind — AI Workforce Platform",
-      "description": "Measurable AI employees powered by one shared Brain: Simon (web), Hugo (internal HR/IT) and Maeve (voice). Grounded in your knowledge, takes real actions, scored against objectives and KPIs.",
+      "name": "NeoMind — Plataforma de plantilla de IA",
+      "description": "Empleados de IA que puedes medir, impulsados por un único Brain compartido: Simon (web), Hugo (RR. HH./TI interno) y Maeve (voz). Basados en tu conocimiento, ejecutan acciones reales y se evalúan según objetivos y KPIs.",
       "brand": { "@type": "Brand", "name": "NeoMind" },
       "image": "https://neomindhub.com/images/logo1.png",
-      "url": "https://neomindhub.com/pricing/",
+      "url": "https://neomindhub.com/es/pricing/",
       "offers": [
-        { "@type": "Offer", "name": "Solo", "price": "79", "priceCurrency": "USD", "url": "https://neomindhub.com/pricing/", "availability": "https://schema.org/InStock", "description": "One AI employee — pick Simon, Hugo or Maeve. 600 customer chats / month. Overage 10c per extra chat." },
-        { "@type": "Offer", "name": "Duo", "price": "149", "priceCurrency": "USD", "url": "https://neomindhub.com/pricing/", "availability": "https://schema.org/InStock", "description": "Two AI employees — e.g. Simon + Hugo. 600 customer chats plus 1,000 staff queries." },
-        { "@type": "Offer", "name": "Squad", "price": "299", "priceCurrency": "USD", "url": "https://neomindhub.com/pricing/", "availability": "https://schema.org/InStock", "description": "All three employees plus voice. 1,500 chats, 200 calls and 2,000 staff queries per month." }
+        { "@type": "Offer", "name": "Solo", "price": "79", "priceCurrency": "EUR", "url": "https://neomindhub.com/es/pricing/", "availability": "https://schema.org/InStock", "description": "Un empleado de IA — elige Simon, Hugo o Maeve. 600 chats de clientes al mes. Coste adicional: 0,10 € por chat extra. IVA no incluido." },
+        { "@type": "Offer", "name": "Pareja", "price": "149", "priceCurrency": "EUR", "url": "https://neomindhub.com/es/pricing/", "availability": "https://schema.org/InStock", "description": "Dos empleados de IA — p. ej. Simon + Hugo. 600 chats de clientes más 1.000 consultas del personal. IVA no incluido." },
+        { "@type": "Offer", "name": "Squad", "price": "299", "priceCurrency": "EUR", "url": "https://neomindhub.com/es/pricing/", "availability": "https://schema.org/InStock", "description": "Los tres empleados más voz. 1.500 chats, 200 llamadas y 2.000 consultas del personal al mes. IVA no incluido." }
       ]
     }
     </script>
@@ -100,45 +94,49 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is an AI employee?",
-          "acceptedAnswer": { "@type": "Answer", "text": "An AI employee is a digital teammate powered by NeoMind's shared Brain. Simon answers your website, Maeve answers your phone, and Hugo runs an internal HR/IT helpdesk. Each is grounded in your own knowledge, takes real actions like capturing leads and booking appointments, and can be scored against objectives and KPIs — so you manage it like staff, not a black-box bot." }
+          "name": "¿Qué es un empleado de IA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un empleado de IA es un compañero digital impulsado por el Brain compartido de NeoMind. Simon atiende tu web, Maeve atiende tu teléfono y Hugo gestiona un servicio interno de RR. HH./TI. Cada uno se basa en tu propio conocimiento, ejecuta acciones reales como captar contactos y reservar citas, y se evalúa según objetivos y KPIs — así lo gestionas como a tu plantilla, no como a un bot opaco." }
         },
         {
           "@type": "Question",
-          "name": "How does overage work?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Every plan includes a monthly allowance per employee. If you go over, you only pay for the extra — 10c per additional customer chat (Simon), 50c per extra call (Maeve) and 5c per extra staff query (Hugo). There are no packs to buy and no contracts, and you can set a hard cap on overage spend in your dashboard so nothing surprises you." }
+          "name": "¿Cómo funciona el uso adicional?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Cada plan incluye un límite mensual por empleado. Si lo superas, solo pagas el excedente — 0,10 € por cada chat de cliente adicional (Simon), 0,50 € por llamada adicional (Maeve) y 0,05 € por consulta del personal adicional (Hugo), más IVA. No hay bonos que comprar ni contratos, y puedes fijar un tope de gasto en tu panel para que nada te sorprenda." }
         },
         {
           "@type": "Question",
-          "name": "Can I cancel any time?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Plans are month-to-month with no lock-in contract, and there's a 14-day money-back guarantee when you start. Cancel any time from your dashboard." }
+          "name": "¿Los precios incluyen IVA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Todos los precios están en euros y no incluyen IVA. El IVA se añade en tu factura. Las empresas pueden deducirlo según la normativa fiscal aplicable." }
         },
         {
           "@type": "Question",
-          "name": "What's included on every plan?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Every plan includes the shared Brain trained on your own documents and FAQs, a one-line website embed, calendar booking, and objectives, KPIs and scorecards so you can measure each employee. Additional agents are included on every plan — you choose which employees to deploy within your tier." }
+          "name": "¿Puedo cancelar cuando quiera?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Los planes son mes a mes, sin permanencia, y tienes garantía de devolución de 14 días al empezar. Cancela cuando quieras desde tu panel." }
         },
         {
           "@type": "Question",
-          "name": "Can a single bill ever surprise me?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. You set a hard cap on overage spend per employee in your dashboard, and we send automatic alerts at 80% and 100% of your allowance — by email and in-app — before you cross either line. If usage looks unusual, a real person reaches out before anything becomes a bill." }
+          "name": "¿Qué incluye cada plan?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Cada plan incluye el Brain compartido entrenado con tus propios documentos y preguntas frecuentes, integración en tu web con una sola línea de código, reserva de citas en el calendario, y objetivos, KPIs y cuadros de mando para medir a cada empleado. Los agentes adicionales están incluidos en todos los planes — eliges qué empleados desplegar dentro de tu nivel." }
         },
         {
           "@type": "Question",
-          "name": "Can I add more agents?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes — additional agents are included on every plan. Agents are configuration; what you pay for is usage. Each agent draws on your plan's shared allowance of website chats, calls and staff queries, so you can stand up extra agents under each mind without a new line on your invoice. You only pay when usage runs past the included allowance." }
+          "name": "¿Una factura puede sorprenderme?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Fijas un tope de gasto por empleado en tu panel y enviamos avisos automáticos al 80 % y al 100 % de tu límite — por correo y en la app — antes de cruzar cualquiera de esas líneas. Si el uso parece inusual, una persona real te avisa antes de que nada se convierta en una factura." }
         },
         {
           "@type": "Question",
-          "name": "Do you have an enterprise option?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Enterprise covers custom usage envelopes, bespoke integrations, private cloud or on-premise deployment, customer-managed encryption keys, a dedicated account manager and security evidence — scoped to your environment. Talk to us for a tailored quote." }
+          "name": "¿Puedo añadir más agentes?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí — los agentes adicionales están incluidos en todos los planes. Los agentes son configuración; lo que pagas es el uso. Cada agente consume el límite compartido de tu plan de chats web, llamadas y consultas del personal, así que puedes desplegar agentes extra bajo cada mind sin una nueva línea en tu factura. Solo pagas cuando el uso supera el límite incluido." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Tenéis opción Enterprise?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Enterprise cubre límites de uso a medida, integraciones personalizadas, despliegue en nube privada u on-premise, claves de cifrado gestionadas por el cliente, un gestor de cuenta dedicado y evidencias de seguridad — adaptado a tu entorno. Habla con ventas para un presupuesto a medida." }
         }
       ]
     }
     </script>
 
     <style>
-        /* Scoped to this pricing page — mirrors the homepage #pricing block exactly. */
         .nm-pricing-page { padding: 56px 0 0; }
         .nm-pricing-head { text-align: center; max-width: 720px; margin: 0 auto 44px; }
         .nm-pricing-head .eyebrow { justify-content: center; }
@@ -171,7 +169,6 @@
         .nm-price-card--featured .nm-price-pick { background: rgba(255,255,255,0.16); color: rgba(255,255,255,0.92); }
         .nm-price-card--featured .nm-price-pick strong { color: white; }
 
-        /* ── Per-pick selector — pick-pills (ported from the production team-picker) ── */
         .nm-pick-label { font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 9px; }
         .nm-price-card--featured .nm-pick-label { color: rgba(255,255,255,0.78); }
         .nm-pick-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
@@ -189,17 +186,14 @@
             border-color: transparent; box-shadow: 0 4px 12px rgba(0,123,255,0.28);
         }
         .nm-pick-pill:focus-visible { outline: 2px solid var(--secondary-500); outline-offset: 2px; }
-        /* Inactive pills on the featured gradient card need a translucent-white treatment for legibility */
         .nm-price-card--featured .nm-pick-pill:not(.active) {
             background: rgba(255,255,255,0.14); color: rgba(255,255,255,0.9);
             border-color: rgba(255,255,255,0.22);
         }
         .nm-price-card--featured .nm-pick-pill:not(.active):hover { border-color: rgba(255,255,255,0.55); color: white; }
         .nm-price-card--featured .nm-pick-pill.active { background: white; color: #004999; box-shadow: 0 6px 16px rgba(0,0,0,0.18); }
-        /* Static (non-interactive) pills for the Squad card */
         .nm-pick-pill--static { cursor: default; background: var(--gradient-brand); color: white; border-color: transparent; }
         .nm-pick-pill--static:hover { border-color: transparent; color: white; }
-        /* Price flip animation */
         .nm-price-num { transition: transform 0.18s ease, opacity 0.18s ease; }
         .nm-price-num.flipping { transform: translateY(-6px); opacity: 0; }
         @media (prefers-reduced-motion: reduce) { .nm-price-num { transition: none; } }
@@ -244,12 +238,10 @@
         .nm-price-usage-v { font-size: 13px; color: var(--text-muted); }
         .nm-price-note { max-width: 760px; margin: 24px auto 0; text-align: center; font-size: 12px; color: var(--text-subtle); line-height: 1.55; }
 
-        /* Trust strip + FAQ heading for the standalone page */
         .nm-price-trust { max-width: 880px; margin: 40px auto 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 14px; }
         .nm-price-trust span { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); padding: 8px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; }
         .nm-price-trust span svg { color: var(--accent-700); flex-shrink: 0; }
 
-        /* ── Our overage promise — band between cards and Enterprise ── */
         .nm-overage-promise {
             max-width: 1080px; margin: 28px auto 0;
             border-radius: 22px; padding: 30px 34px;
@@ -282,7 +274,6 @@
             .nm-overage-promise-points { grid-template-columns: 1fr; }
         }
 
-        /* ── Plan comparison table ── */
         .nm-compare { max-width: 1080px; margin: 56px auto 0; min-width: 0; }
         .nm-compare-head { text-align: center; margin-bottom: 26px; }
         .nm-compare-head h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(26px, 3vw, 38px); letter-spacing: -0.025em; color: var(--text); margin: 12px 0 0; }
@@ -304,7 +295,6 @@
         .nm-compare-note { font-size: 12.5px; line-height: 1.55; color: var(--text-subtle); margin: 16px auto 0; max-width: 760px; text-align: center; }
         .nm-compare-note a { color: var(--secondary-700); }
 
-        /* Scroll-reveal — reduced-motion safe */
         .nm-reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
         .nm-reveal.is-in { opacity: 1; transform: none; }
         @media (prefers-reduced-motion: reduce) {
@@ -318,308 +308,301 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHDLXJCG" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#main"
-        class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-gray-900 focus:rounded-lg focus:shadow-lg">Skip to content</a>
+        class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-gray-900 focus:rounded-lg focus:shadow-lg">Saltar al contenido</a>
 
-    <navbar-section data-locale="intl"></navbar-section>
+    <navbar-section data-locale="es"></navbar-section>
 
     <main id="main">
         <section class="nm-pricing-page" style="background: var(--bg-muted); border-bottom: 1px solid var(--border);">
             <div class="nm-container">
-                <!-- Breadcrumb -->
-                <nav class="nm-breadcrumb" aria-label="Breadcrumb">
-                    <a href="/">Home</a>
+                <nav class="nm-breadcrumb" aria-label="Ruta de navegación">
+                    <a href="/es/">Inicio</a>
                     <span class="sep" aria-hidden="true">/</span>
-                    <span aria-current="page">Pricing</span>
+                    <span aria-current="page">Precios</span>
                 </nav>
 
                 <div class="nm-pricing-head">
-                    <span class="eyebrow"><span class="dot"></span> Pricing</span>
-                    <h1>Hire your AI workforce.<br /><span class="muted">Cancel any time. No procurement call.</span></h1>
+                    <span class="eyebrow"><span class="dot"></span> Precios</span>
+                    <h1>Contrata a tu plantilla de IA.<br /><span class="muted">Cancela cuando quieras. Sin llamadas comerciales.</span></h1>
                     <p>
-                        Pick the employees you need &mdash; additional agents included on every plan. Plans from $79. Pay only for what you
-                        use beyond the included allowance. No packs, no contracts. USD &middot; 14-day money-back &middot; cancel any time.
+                        Elige los empleados que necesitas &mdash; agentes adicionales incluidos en todos los planes. Planes desde 79 &euro;. Paga solo por lo que
+                        uses por encima del límite incluido. Sin bonos, sin contratos. EUR, IVA no incluido &middot; garantía de 14 días &middot; cancela cuando quieras.
                     </p>
                 </div>
 
                 <div class="nm-price-grid nm-reveal">
-                    <!-- SOLO — per-pick selector (Simon / Hugo / Maeve) -->
                     <div class="nm-price-card" data-tier="solo">
                         <div class="nm-price-tier">Solo</div>
-                        <div class="nm-price-sub">One AI employee</div>
-                        <div class="nm-price-amount"><span class="nm-price-num" data-price>$79</span><span class="nm-price-per">USD / mo</span></div>
-                        <div class="nm-pick-label">Pick your teammate</div>
+                        <div class="nm-price-sub">Un empleado de IA</div>
+                        <div class="nm-price-amount"><span class="nm-price-num" data-price>79 &euro;</span><span class="nm-price-per">EUR / mes + IVA</span></div>
+                        <div class="nm-pick-label">Elige a tu compañero</div>
                         <div class="nm-pick-row">
                             <button type="button" class="nm-pick-pill active" data-pick="simon" data-card="solo">Simon</button>
                             <button type="button" class="nm-pick-pill" data-pick="hugo" data-card="solo">Hugo</button>
                             <button type="button" class="nm-pick-pill" data-pick="maeve" data-card="solo">Maeve</button>
                         </div>
                         <ul class="nm-price-list" data-included>
-                            <li><span class="nm-price-tick"></span><span><strong>600</strong> website chats / month</span></li>
-                            <li><span class="nm-price-tick"></span><span>Embed on your site, one line of code</span></li>
-                            <li><span class="nm-price-tick"></span><span>Trained on your docs &amp; FAQs</span></li>
-                            <li><span class="nm-price-tick"></span><span>Books straight into your calendar</span></li>
+                            <li><span class="nm-price-tick"></span><span><strong>600</strong> chats web / mes</span></li>
+                            <li><span class="nm-price-tick"></span><span>Intégralo en tu web con una línea de código</span></li>
+                            <li><span class="nm-price-tick"></span><span>Entrenado con tus documentos y FAQs</span></li>
+                            <li><span class="nm-price-tick"></span><span>Reserva citas directamente en tu calendario</span></li>
                         </ul>
-                        <div class="nm-price-overage">Need more? <strong data-overage>10&cent;</strong> per extra <span data-overage-unit>chat</span>.</div>
-                        <a href="https://app.neomindhub.com/signup?plan=solo&amp;pick=simon" class="nm-price-cta nm-price-cta--ghost" data-cta="pricing-page-solo" data-cta-link>Hire Solo</a>
+                        <div class="nm-price-overage">¿Necesitas más? <strong data-overage>0,10 &euro;</strong> por <span data-overage-unit>chat</span> adicional (+IVA).</div>
+                        <a href="https://app.neomindhub.com/signup?plan=solo&amp;pick=simon" class="nm-price-cta nm-price-cta--ghost" data-cta="pricing-page-solo" data-cta-link>Contrata Solo</a>
                     </div>
 
-                    <!-- DUO (FEATURED) — per-pick selector (Simon+Hugo / Simon+Maeve) -->
                     <div class="nm-price-card nm-price-card--featured" data-tier="duo">
-                        <span class="nm-price-badge">Most popular</span>
-                        <div class="nm-price-tier">Duo</div>
-                        <div class="nm-price-sub">Two AI employees</div>
-                        <div class="nm-price-amount"><span class="nm-price-num" data-price>$149</span><span class="nm-price-per">USD / mo</span></div>
-                        <div class="nm-pick-label">Pick your duo</div>
+                        <span class="nm-price-badge">El más popular</span>
+                        <div class="nm-price-tier">Pareja</div>
+                        <div class="nm-price-sub">Dos empleados de IA</div>
+                        <div class="nm-price-amount"><span class="nm-price-num" data-price>149 &euro;</span><span class="nm-price-per">EUR / mes + IVA</span></div>
+                        <div class="nm-pick-label">Elige tu pareja</div>
                         <div class="nm-pick-row">
                             <button type="button" class="nm-pick-pill active" data-pick="simon-hugo" data-card="duo">Simon + Hugo</button>
                             <button type="button" class="nm-pick-pill" data-pick="simon-maeve" data-card="duo">Simon + Maeve</button>
                         </div>
                         <ul class="nm-price-list" data-included>
-                            <li><span class="nm-price-tick"></span><span><strong>600</strong> website chats (Simon)</span></li>
-                            <li><span class="nm-price-tick"></span><span><strong>1,000</strong> staff queries (Hugo)</span></li>
-                            <li><span class="nm-price-tick"></span><span>Slack (live) &middot; Microsoft Teams (coming soon)</span></li>
-                            <li><span class="nm-price-tick"></span><span>Priority email support</span></li>
+                            <li><span class="nm-price-tick"></span><span><strong>600</strong> chats web (Simon)</span></li>
+                            <li><span class="nm-price-tick"></span><span><strong>1.000</strong> consultas del personal (Hugo)</span></li>
+                            <li><span class="nm-price-tick"></span><span>Slack (disponible) &middot; Microsoft Teams (muy pronto)</span></li>
+                            <li><span class="nm-price-tick"></span><span>Soporte prioritario por correo</span></li>
                         </ul>
-                        <div class="nm-price-overage">Same per-unit overage as Solo &mdash; pay only for <span data-overage-unit>extras</span>.</div>
-                        <a href="https://app.neomindhub.com/signup?plan=duo&amp;pick=simon-hugo" class="nm-price-cta nm-price-cta--solid" data-cta="pricing-page-duo" data-cta-link>Hire the pair</a>
+                        <div class="nm-price-overage">El mismo coste por unidad que Solo &mdash; paga solo los <span data-overage-unit>extras</span> (+IVA).</div>
+                        <a href="https://app.neomindhub.com/signup?plan=duo&amp;pick=simon-hugo" class="nm-price-cta nm-price-cta--solid" data-cta="pricing-page-duo" data-cta-link>Contrata la pareja</a>
                     </div>
 
-                    <!-- SQUAD — fixed -->
                     <div class="nm-price-card nm-price-card--squad" data-tier="squad">
                         <div class="nm-price-tier">Squad</div>
-                        <div class="nm-price-sub">All three, plus voice</div>
-                        <div class="nm-price-amount"><span class="nm-price-num">$299</span><span class="nm-price-per">USD / mo</span></div>
-                        <div class="nm-pick-label">Your full AI team</div>
+                        <div class="nm-price-sub">Los tres, con voz incluida</div>
+                        <div class="nm-price-amount"><span class="nm-price-num">299 &euro;</span><span class="nm-price-per">EUR / mes + IVA</span></div>
+                        <div class="nm-pick-label">Tu equipo de IA completo</div>
                         <div class="nm-pick-row">
                             <span class="nm-pick-pill nm-pick-pill--static">Simon</span>
                             <span class="nm-pick-pill nm-pick-pill--static">Hugo</span>
                             <span class="nm-pick-pill nm-pick-pill--static">Maeve</span>
                         </div>
                         <ul class="nm-price-list">
-                            <li><span class="nm-price-tick"></span><span><strong>1,500</strong> website chats / mo</span></li>
-                            <li><span class="nm-price-tick"></span><span><strong>200</strong> phone calls / mo</span></li>
-                            <li><span class="nm-price-tick"></span><span><strong>2,000</strong> staff queries / mo</span></li>
-                            <li><span class="nm-price-tick"></span><span>Twilio + Calendar (Slack live, Teams soon)</span></li>
-                            <li><span class="nm-price-tick"></span><span>Priority support</span></li>
+                            <li><span class="nm-price-tick"></span><span><strong>1.500</strong> chats web / mes</span></li>
+                            <li><span class="nm-price-tick"></span><span><strong>200</strong> llamadas / mes</span></li>
+                            <li><span class="nm-price-tick"></span><span><strong>2.000</strong> consultas del personal / mes</span></li>
+                            <li><span class="nm-price-tick"></span><span>Twilio + Calendario (Slack en vivo, Teams pronto)</span></li>
+                            <li><span class="nm-price-tick"></span><span>Soporte prioritario</span></li>
                         </ul>
-                        <div class="nm-price-overage"><strong>$327</strong> if hired individually &mdash; Squad is $299, ~10% off.</div>
-                        <a href="https://app.neomindhub.com/signup?plan=squad" class="nm-price-cta nm-price-cta--gradient" data-cta="pricing-page-squad">Hire the whole Squad</a>
+                        <div class="nm-price-overage"><strong>327 &euro;</strong> por separado &mdash; el Squad cuesta 299 &euro;, ~10 % de ahorro.</div>
+                        <a href="https://app.neomindhub.com/signup?plan=squad" class="nm-price-cta nm-price-cta--gradient" data-cta="pricing-page-squad">Contrata al equipo</a>
                     </div>
                 </div>
 
-                <!-- Our overage promise — band between cards and Enterprise -->
-                <div class="nm-overage-promise nm-reveal" aria-label="Our overage promise">
+                <div class="nm-overage-promise nm-reveal" aria-label="Nuestra promesa de uso adicional">
                     <div>
-                        <span class="nm-overage-promise-eyebrow"><span class="dot"></span> Our overage promise</span>
-                        <h2 class="nm-overage-promise-headline">No overage shock. The price you see is the price you pay.</h2>
-                        <p class="nm-overage-promise-sub">Flat monthly rate, hard caps you set yourself, automatic alerts at 80% and 100%, and a real person who reaches out before any unusual usage ever becomes a bill.</p>
+                        <span class="nm-overage-promise-eyebrow"><span class="dot"></span> Nuestra promesa de uso adicional</span>
+                        <h2 class="nm-overage-promise-headline">Sin sustos en la factura. El precio que ves es el que pagas.</h2>
+                        <p class="nm-overage-promise-sub">Tarifa mensual fija, topes que tú mismo defines, avisos automáticos al 80 % y al 100 %, y una persona real que te avisa antes de que cualquier uso inusual se convierta en una factura.</p>
                     </div>
                     <ul class="nm-overage-promise-points">
                         <li>
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-                            <span><strong>Flat monthly rate</strong><span class="sub">No mystery line items on your invoice.</span></span>
+                            <span><strong>Tarifa mensual fija</strong><span class="sub">Sin partidas misteriosas en tu factura.</span></span>
                         </li>
                         <li>
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                            <span><strong>Hard caps you control</strong><span class="sub">Set a ceiling per employee in your dashboard.</span></span>
+                            <span><strong>Topes que tú controlas</strong><span class="sub">Fija un límite por empleado en tu panel.</span></span>
                         </li>
                         <li>
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-                            <span><strong>Alerts at 80% &amp; 100%</strong><span class="sub">Email + dashboard before you cross either line.</span></span>
+                            <span><strong>Avisos al 80 % y 100 %</strong><span class="sub">Correo + panel antes de cruzar cada línea.</span></span>
                         </li>
                         <li>
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                            <span><strong>A human checks in first</strong><span class="sub">We call before unusual usage flips into a bill.</span></span>
+                            <span><strong>Una persona te avisa primero</strong><span class="sub">Te contactamos antes de que el uso inusual sea factura.</span></span>
                         </li>
                     </ul>
                 </div>
 
-                <!-- Enterprise -->
                 <div class="nm-price-ent nm-reveal">
                     <div class="nm-price-ent-glow" aria-hidden="true"></div>
                     <div class="nm-price-ent-glow nm-price-ent-glow--2" aria-hidden="true"></div>
                     <div class="nm-price-ent-copy">
                         <div class="nm-price-ent-tag">Enterprise</div>
-                        <h2 class="nm-price-ent-title">For larger organisations</h2>
-                        <p class="nm-price-ent-body">Custom usage envelopes, bespoke integrations, private cloud or on-premise, customer-managed encryption keys, a dedicated account manager, and security evidence (SOC 2 / ISO underway). Scoped to your environment.</p>
+                        <h2 class="nm-price-ent-title">Para organizaciones más grandes</h2>
+                        <p class="nm-price-ent-body">Límites de uso a medida, integraciones personalizadas, nube privada u on-premise, claves de cifrado gestionadas por el cliente, un gestor de cuenta dedicado y evidencias de seguridad (SOC 2 / ISO en curso). Adaptado a tu entorno.</p>
                     </div>
-                    <a href="/contact/?subject=NeoMind%3A%20Enterprise%20Enquiry&amp;source=pricing-enterprise" class="nm-price-ent-cta" data-cta="pricing-page-enterprise">
-                        Talk to us
+                    <a href="/contact/?subject=NeoMind%3A%20Consulta%20Enterprise&amp;source=pricing-enterprise" class="nm-price-ent-cta" data-cta="pricing-page-enterprise">
+                        Hablar con ventas
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
                     </a>
                 </div>
 
-                <!-- How usage works -->
                 <div class="nm-price-usage nm-reveal">
-                    <h2 class="nm-price-usage-title">How usage works</h2>
-                    <p class="nm-price-usage-body">Each employee has its own monthly allowance. Go over and you only pay for the extra &mdash; no packs to buy, no contracts. Set a hard cap on overage spend in your dashboard so nothing surprises you.</p>
+                    <h2 class="nm-price-usage-title">Cómo funciona el uso</h2>
+                    <p class="nm-price-usage-body">Cada empleado tiene su propio límite mensual. Si lo superas, solo pagas el excedente &mdash; sin bonos que comprar, sin contratos. Fija un tope de gasto en tu panel para que nada te sorprenda.</p>
                     <div class="nm-price-usage-grid">
-                        <div><span class="nm-price-usage-k">Simon overage</span><span class="nm-price-usage-v">10&cent; per extra chat</span></div>
-                        <div><span class="nm-price-usage-k">Maeve overage</span><span class="nm-price-usage-v">50&cent; per extra call</span></div>
-                        <div><span class="nm-price-usage-k">Hugo overage</span><span class="nm-price-usage-v">5&cent; per extra query</span></div>
+                        <div><span class="nm-price-usage-k">Coste extra de Simon</span><span class="nm-price-usage-v">0,10 &euro; por chat adicional (+IVA)</span></div>
+                        <div><span class="nm-price-usage-k">Coste extra de Maeve</span><span class="nm-price-usage-v">0,50 &euro; por llamada adicional (+IVA)</span></div>
+                        <div><span class="nm-price-usage-k">Coste extra de Hugo</span><span class="nm-price-usage-v">0,05 &euro; por consulta adicional (+IVA)</span></div>
                     </div>
                 </div>
 
-                <!-- Trust strip -->
                 <div class="nm-price-trust nm-reveal">
-                    <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>14-day money-back</span>
-                    <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>No lock-in contract</span>
-                    <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Additional agents included</span>
-                    <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Cancel any time</span>
+                    <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Garantía de 14 días</span>
+                    <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Sin permanencia</span>
+                    <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Agentes adicionales incluidos</span>
+                    <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Cancela cuando quieras</span>
                 </div>
 
-                <p class="nm-price-note">All prices in USD. Pay-as-you-go overage is billed on your normal monthly invoice. Additional agents are included on every plan. Fair-use applies to typical business interactions &mdash; see our <a href="/fair-use.html">fair-use policy</a>.</p>
+                <p class="nm-price-note">Precios en euros, IVA no incluido. El uso adicional de pago por uso se factura en tu factura mensual habitual. Los agentes adicionales están incluidos en todos los planes. Se aplica una política de uso aceptable a las interacciones de negocio habituales &mdash; consulta nuestra <a href="/fair-use.html">política de uso aceptable</a>.</p>
 
-                <!-- Plan comparison table — plain HTML table, no per-row Offer schema -->
                 <div class="nm-compare nm-reveal">
                     <div class="nm-compare-head">
-                        <span class="eyebrow" style="justify-content: center;"><span class="dot"></span> Compare plans</span>
-                        <h2>Everything, side by side.</h2>
+                        <span class="eyebrow" style="justify-content: center;"><span class="dot"></span> Compara los planes</span>
+                        <h2>Todo, en paralelo.</h2>
                     </div>
-                    <div class="nm-compare-scroll" role="region" aria-label="Plan comparison" tabindex="0">
+                    <div class="nm-compare-scroll" role="region" aria-label="Comparativa de planes" tabindex="0">
                         <table class="nm-compare-table">
-                            <caption class="sr-only">Feature comparison across the Solo, Duo, Squad and Enterprise plans</caption>
+                            <caption class="sr-only">Comparativa de funciones entre los planes Solo, Pareja, Squad y Enterprise</caption>
                             <thead>
                                 <tr>
-                                    <th scope="col">Feature</th>
-                                    <th scope="col" class="col-plan">Solo<span class="price">from $79/mo</span></th>
-                                    <th scope="col" class="col-plan is-pop">Duo<span class="price">from $149/mo</span></th>
-                                    <th scope="col" class="col-plan">Squad<span class="price">$299/mo</span></th>
-                                    <th scope="col" class="col-plan">Enterprise<span class="price">Talk to us</span></th>
+                                    <th scope="col">Función</th>
+                                    <th scope="col" class="col-plan">Solo<span class="price">desde 79 &euro;/mes</span></th>
+                                    <th scope="col" class="col-plan is-pop">Pareja<span class="price">desde 149 &euro;/mes</span></th>
+                                    <th scope="col" class="col-plan">Squad<span class="price">299 &euro;/mes</span></th>
+                                    <th scope="col" class="col-plan">Enterprise<span class="price">Hablar con ventas</span></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- Employees & volume -->
-                                <tr class="row-group"><td colspan="5">Employees &amp; volume</td></tr>
-                                <tr class="row-feat"><th scope="row">Employees included</th><td class="val">1</td><td class="val">2</td><td class="val">3 + custom agents</td><td class="val">Unlimited</td></tr>
-                                <tr class="row-feat"><th scope="row">Website chats / mo</th><td class="val">600</td><td class="val">600</td><td class="val">1,500</td><td class="val">Custom</td></tr>
-                                <tr class="row-feat"><th scope="row">Phone calls / mo <span style="color:var(--text-subtle);font-weight:400;">(with Maeve)</span></th><td class="val">100</td><td class="val">100</td><td class="val">200</td><td class="val">Custom</td></tr>
-                                <tr class="row-feat"><th scope="row">Staff queries / mo <span style="color:var(--text-subtle);font-weight:400;">(with Hugo)</span></th><td class="val">1,000</td><td class="val">1,000</td><td class="val">2,000</td><td class="val">Custom</td></tr>
-                                <tr class="row-feat"><th scope="row">Additional agents under each mind</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-group"><td colspan="5">Empleados y volumen</td></tr>
+                                <tr class="row-feat"><th scope="row">Empleados incluidos</th><td class="val">1</td><td class="val">2</td><td class="val">3 + agentes a medida</td><td class="val">Ilimitados</td></tr>
+                                <tr class="row-feat"><th scope="row">Chats web / mes</th><td class="val">600</td><td class="val">600</td><td class="val">1.500</td><td class="val">A medida</td></tr>
+                                <tr class="row-feat"><th scope="row">Llamadas / mes <span style="color:var(--text-subtle);font-weight:400;">(con Maeve)</span></th><td class="val">100</td><td class="val">100</td><td class="val">200</td><td class="val">A medida</td></tr>
+                                <tr class="row-feat"><th scope="row">Consultas del personal / mes <span style="color:var(--text-subtle);font-weight:400;">(con Hugo)</span></th><td class="val">1.000</td><td class="val">1.000</td><td class="val">2.000</td><td class="val">A medida</td></tr>
+                                <tr class="row-feat"><th scope="row">Agentes adicionales bajo cada mind</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
 
-                                <!-- The Brain -->
-                                <tr class="row-group"><td colspan="5">The Brain</td></tr>
-                                <tr class="row-feat"><th scope="row">Docs + site crawl</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
-                                <tr class="row-feat"><th scope="row">Cited answers</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
-                                <tr class="row-feat"><th scope="row">Live re-index</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
-                                <tr class="row-feat"><th scope="row">Knowledge scopes per agent</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val">Granular</td></tr>
+                                <tr class="row-group"><td colspan="5">El Brain</td></tr>
+                                <tr class="row-feat"><th scope="row">Documentos + rastreo del sitio</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-feat"><th scope="row">Respuestas con fuente citada</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-feat"><th scope="row">Reindexado en vivo</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-feat"><th scope="row">Ámbitos de conocimiento por agente</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val">Granular</td></tr>
 
-                                <!-- Measurability -->
-                                <tr class="row-group"><td colspan="5">Measurability</td></tr>
-                                <tr class="row-feat"><th scope="row">Objectives per employee</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
-                                <tr class="row-feat"><th scope="row">Weighted KPIs scored per conversation</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
-                                <tr class="row-feat"><th scope="row">Scorecards &amp; reporting</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
-                                <tr class="row-feat"><th scope="row">Custom KPI rubrics</th><td class="val"><span class="nm-compare-no" aria-label="Not included">&minus;</span></td><td class="val"><span class="nm-compare-no" aria-label="Not included">&minus;</span></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-group"><td colspan="5">Medición</td></tr>
+                                <tr class="row-feat"><th scope="row">Objetivos por empleado</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-feat"><th scope="row">KPIs ponderados evaluados por conversación</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-feat"><th scope="row">Cuadros de mando e informes</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-feat"><th scope="row">Rúbricas de KPI personalizadas</th><td class="val"><span class="nm-compare-no" aria-label="No incluido">&minus;</span></td><td class="val"><span class="nm-compare-no" aria-label="No incluido">&minus;</span></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
 
-                                <!-- Actions & integrations -->
-                                <tr class="row-group"><td colspan="5">Actions &amp; integrations</td></tr>
-                                <tr class="row-feat"><th scope="row">Calendar booking</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
-                                <tr class="row-feat"><th scope="row">Lead capture &amp; routing</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-group"><td colspan="5">Acciones e integraciones</td></tr>
+                                <tr class="row-feat"><th scope="row">Reserva de citas en calendario</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-feat"><th scope="row">Captación y enrutado de contactos</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
                                 <tr class="row-feat"><th scope="row">Webhooks / CRM</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
-                                <tr class="row-feat"><th scope="row">Voice via Twilio</th><td class="val"><span style="font-size:12.5px;">Maeve picks</span></td><td class="val"><span style="font-size:12.5px;">Maeve picks</span></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
-                                <tr class="row-feat"><th scope="row">Slack <span style="color:var(--text-subtle);font-weight:400;">(live for Hugo)</span></th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
-                                <tr class="row-feat"><th scope="row">Microsoft Teams</th><td class="val"><span class="nm-compare-soon">Coming soon</span></td><td class="val"><span class="nm-compare-soon">Coming soon</span></td><td class="val"><span class="nm-compare-soon">Coming soon</span></td><td class="val"><span class="nm-compare-soon">Coming soon</span></td></tr>
-                                <tr class="row-feat"><th scope="row">Human escalation</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-feat"><th scope="row">Voz vía Twilio</th><td class="val"><span style="font-size:12.5px;">Si eliges Maeve</span></td><td class="val"><span style="font-size:12.5px;">Si eliges Maeve</span></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-feat"><th scope="row">Slack <span style="color:var(--text-subtle);font-weight:400;">(en vivo para Hugo)</span></th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-feat"><th scope="row">Microsoft Teams</th><td class="val"><span class="nm-compare-soon">Próximamente</span></td><td class="val"><span class="nm-compare-soon">Próximamente</span></td><td class="val"><span class="nm-compare-soon">Próximamente</span></td><td class="val"><span class="nm-compare-soon">Próximamente</span></td></tr>
+                                <tr class="row-feat"><th scope="row">Escalado a una persona</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
 
-                                <!-- Support & trust -->
-                                <tr class="row-group"><td colspan="5">Support &amp; trust</td></tr>
-                                <tr class="row-feat"><th scope="row">Support</th><td class="val">Email</td><td class="val">Priority</td><td class="val">Priority</td><td class="val">Dedicated AM</td></tr>
-                                <tr class="row-feat"><th scope="row">Hard overage caps + alerts</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
-                                <tr class="row-feat"><th scope="row">Data residency</th><td class="val">Your region</td><td class="val">Your region</td><td class="val">Your region</td><td class="val">Private cloud / on-prem</td></tr>
-                                <tr class="row-feat"><th scope="row">SSO / 2FA</th><td class="val"><span class="nm-compare-no" aria-label="Not included">&minus;</span></td><td class="val"><span class="nm-compare-no" aria-label="Not included">&minus;</span></td><td class="val"><span class="nm-compare-no" aria-label="Not included">&minus;</span></td><td class="val"><span class="nm-compare-soon">Coming soon</span></td></tr>
-                                <tr class="row-feat"><th scope="row">Security evidence pack</th><td class="val"><span class="nm-compare-no" aria-label="Not included">&minus;</span></td><td class="val"><span class="nm-compare-no" aria-label="Not included">&minus;</span></td><td class="val"><span class="nm-compare-no" aria-label="Not included">&minus;</span></td><td class="val" data-yes></td></tr>
+                                <tr class="row-group"><td colspan="5">Soporte y confianza</td></tr>
+                                <tr class="row-feat"><th scope="row">Soporte</th><td class="val">Correo</td><td class="val">Prioritario</td><td class="val">Prioritario</td><td class="val">Gestor dedicado</td></tr>
+                                <tr class="row-feat"><th scope="row">Topes de uso adicional + avisos</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-feat"><th scope="row">Residencia de datos</th><td class="val">Tu región</td><td class="val">Tu región</td><td class="val">Tu región</td><td class="val">Nube privada / on-prem</td></tr>
+                                <tr class="row-feat"><th scope="row">SSO / 2FA</th><td class="val"><span class="nm-compare-no" aria-label="No incluido">&minus;</span></td><td class="val"><span class="nm-compare-no" aria-label="No incluido">&minus;</span></td><td class="val"><span class="nm-compare-no" aria-label="No incluido">&minus;</span></td><td class="val"><span class="nm-compare-soon">Próximamente</span></td></tr>
+                                <tr class="row-feat"><th scope="row">Paquete de evidencias de seguridad</th><td class="val"><span class="nm-compare-no" aria-label="No incluido">&minus;</span></td><td class="val"><span class="nm-compare-no" aria-label="No incluido">&minus;</span></td><td class="val"><span class="nm-compare-no" aria-label="No incluido">&minus;</span></td><td class="val" data-yes></td></tr>
                             </tbody>
                         </table>
                     </div>
-                    <p class="nm-compare-note">Every tick reflects a capability live today. Microsoft Teams and SSO / 2FA are on the roadmap and labelled honestly. Overage stays flat per unit &mdash; 10&cent;/chat (Simon), 50&cent;/call (Maeve), 5&cent;/query (Hugo) &mdash; with a hard cap you set. See how we stack up on the <a href="/compare/">comparison hub</a>.</p>
+                    <p class="nm-compare-note">Cada marca refleja una capacidad disponible hoy. Microsoft Teams y SSO / 2FA están en la hoja de ruta y se etiquetan con honestidad. El coste adicional es fijo por unidad &mdash; 0,10 &euro;/chat (Simon), 0,50 &euro;/llamada (Maeve), 0,05 &euro;/consulta (Hugo), más IVA &mdash; con un tope que tú defines. Mira cómo nos comparamos en el <a href="/compare/">centro de comparativas</a>.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Pricing FAQ — agency accordion pattern -->
         <section id="pricing-faq" class="py-24" style="background: var(--bg);">
             <div class="nm-container" style="max-width: 820px;">
                 <div style="text-align: center; margin-bottom: 36px;">
-                    <span class="eyebrow" style="justify-content: center;"><span class="dot"></span> Pricing FAQ</span>
+                    <span class="eyebrow" style="justify-content: center;"><span class="dot"></span> Preguntas frecuentes</span>
                     <h2 class="nm-section-headline" style="font-size: clamp(28px, 3.4vw, 42px); margin: 14px 0 0;">
-                        The questions buyers ask first.
+                        Las preguntas que todo comprador hace primero.
                     </h2>
                 </div>
                 <div class="nm-faq-list" id="nm-faq-list">
                     <div class="nm-faq-item open">
                         <button class="nm-faq-q" aria-expanded="true" type="button">
-                            <span class="nm-faq-q-text">What is an AI employee?</span>
+                            <span class="nm-faq-q-text">¿Qué es un empleado de IA?</span>
                             <span class="nm-faq-toggle">+</span>
                         </button>
                         <div class="nm-faq-a">
-                            <p>An AI employee is a digital teammate powered by NeoMind&rsquo;s shared Brain. Simon answers your website, Maeve answers your phone, and Hugo runs an internal HR/IT helpdesk. Each is grounded in your own knowledge, takes real actions like capturing leads and booking appointments, and can be scored against objectives and KPIs &mdash; so you manage it like staff, not a black-box bot.</p>
+                            <p>Un empleado de IA es un compañero digital impulsado por el Brain compartido de NeoMind. Simon atiende tu web, Maeve atiende tu teléfono y Hugo gestiona un servicio interno de RR. HH./TI. Cada uno se basa en tu propio conocimiento, ejecuta acciones reales como captar contactos y reservar citas, y se evalúa según objetivos y KPIs &mdash; así lo gestionas como a tu plantilla, no como a un bot opaco.</p>
                         </div>
                     </div>
                     <div class="nm-faq-item">
                         <button class="nm-faq-q" aria-expanded="false" type="button">
-                            <span class="nm-faq-q-text">How does overage work?</span>
+                            <span class="nm-faq-q-text">¿Cómo funciona el uso adicional?</span>
                             <span class="nm-faq-toggle">+</span>
                         </button>
                         <div class="nm-faq-a">
-                            <p>Every plan includes a monthly allowance per employee. If you go over, you only pay for the extra &mdash; 10&cent; per additional customer chat (Simon), 50&cent; per extra call (Maeve) and 5&cent; per extra staff query (Hugo). There are no packs to buy and no contracts, and you can set a hard cap on overage spend in your dashboard so nothing surprises you.</p>
+                            <p>Cada plan incluye un límite mensual por empleado. Si lo superas, solo pagas el excedente &mdash; 0,10 &euro; por cada chat de cliente adicional (Simon), 0,50 &euro; por llamada adicional (Maeve) y 0,05 &euro; por consulta del personal adicional (Hugo), más IVA. No hay bonos que comprar ni contratos, y puedes fijar un tope de gasto en tu panel para que nada te sorprenda.</p>
                         </div>
                     </div>
                     <div class="nm-faq-item">
                         <button class="nm-faq-q" aria-expanded="false" type="button">
-                            <span class="nm-faq-q-text">Can I cancel any time?</span>
+                            <span class="nm-faq-q-text">¿Los precios incluyen IVA?</span>
                             <span class="nm-faq-toggle">+</span>
                         </button>
                         <div class="nm-faq-a">
-                            <p>Yes. Plans are month-to-month with no lock-in contract, and there&rsquo;s a 14-day money-back guarantee when you start. Cancel any time from your dashboard.</p>
+                            <p>No. Todos los precios están en euros y no incluyen IVA. El IVA se añade en tu factura. Las empresas pueden deducirlo según la normativa fiscal aplicable.</p>
                         </div>
                     </div>
                     <div class="nm-faq-item">
                         <button class="nm-faq-q" aria-expanded="false" type="button">
-                            <span class="nm-faq-q-text">What&rsquo;s included on every plan?</span>
+                            <span class="nm-faq-q-text">¿Puedo cancelar cuando quiera?</span>
                             <span class="nm-faq-toggle">+</span>
                         </button>
                         <div class="nm-faq-a">
-                            <p>Every plan includes the shared Brain trained on your own documents and FAQs, a one-line website embed, calendar booking, and objectives, KPIs and scorecards so you can measure each employee. Additional agents are included on every plan &mdash; you choose which employees to deploy within your tier.</p>
+                            <p>Sí. Los planes son mes a mes, sin permanencia, y tienes garantía de devolución de 14 días al empezar. Cancela cuando quieras desde tu panel.</p>
                         </div>
                     </div>
                     <div class="nm-faq-item">
                         <button class="nm-faq-q" aria-expanded="false" type="button">
-                            <span class="nm-faq-q-text">Can a single bill ever surprise me?</span>
+                            <span class="nm-faq-q-text">¿Qué incluye cada plan?</span>
                             <span class="nm-faq-toggle">+</span>
                         </button>
                         <div class="nm-faq-a">
-                            <p>No. You set a hard cap on overage spend per employee in your dashboard, and we send automatic alerts at 80% and 100% of your allowance &mdash; by email and in-app &mdash; before you cross either line. If usage looks unusual, a real person reaches out before anything becomes a bill. That&rsquo;s our overage promise.</p>
+                            <p>Cada plan incluye el Brain compartido entrenado con tus propios documentos y preguntas frecuentes, integración en tu web con una sola línea de código, reserva de citas en el calendario, y objetivos, KPIs y cuadros de mando para medir a cada empleado. Los agentes adicionales están incluidos en todos los planes &mdash; eliges qué empleados desplegar dentro de tu nivel.</p>
                         </div>
                     </div>
                     <div class="nm-faq-item">
                         <button class="nm-faq-q" aria-expanded="false" type="button">
-                            <span class="nm-faq-q-text">Can I add more agents?</span>
+                            <span class="nm-faq-q-text">¿Una factura puede sorprenderme?</span>
                             <span class="nm-faq-toggle">+</span>
                         </button>
                         <div class="nm-faq-a">
-                            <p>Yes &mdash; additional agents are included on every plan. Agents are configuration; what you pay for is usage. Each agent draws on your plan&rsquo;s shared allowance of website chats, calls and staff queries, so you can stand up extra agents under each mind without a new line on your invoice. You only pay when usage runs past the included allowance.</p>
+                            <p>No. Fijas un tope de gasto por empleado en tu panel y enviamos avisos automáticos al 80 % y al 100 % de tu límite &mdash; por correo y en la app &mdash; antes de cruzar cualquiera de esas líneas. Si el uso parece inusual, una persona real te avisa antes de que nada se convierta en una factura. Esa es nuestra promesa de uso adicional.</p>
                         </div>
                     </div>
                     <div class="nm-faq-item">
                         <button class="nm-faq-q" aria-expanded="false" type="button">
-                            <span class="nm-faq-q-text">Do you have an enterprise option?</span>
+                            <span class="nm-faq-q-text">¿Puedo añadir más agentes?</span>
                             <span class="nm-faq-toggle">+</span>
                         </button>
                         <div class="nm-faq-a">
-                            <p>Yes. Enterprise covers custom usage envelopes, bespoke integrations, private cloud or on-premise deployment, customer-managed encryption keys, a dedicated account manager and security evidence &mdash; scoped to your environment. <a href="/contact/?subject=NeoMind%3A%20Enterprise%20Enquiry&amp;source=pricing-faq">Talk to us</a> for a tailored quote.</p>
+                            <p>Sí &mdash; los agentes adicionales están incluidos en todos los planes. Los agentes son configuración; lo que pagas es el uso. Cada agente consume el límite compartido de tu plan de chats web, llamadas y consultas del personal, así que puedes desplegar agentes extra bajo cada mind sin una nueva línea en tu factura. Solo pagas cuando el uso supera el límite incluido.</p>
+                        </div>
+                    </div>
+                    <div class="nm-faq-item">
+                        <button class="nm-faq-q" aria-expanded="false" type="button">
+                            <span class="nm-faq-q-text">¿Tenéis opción Enterprise?</span>
+                            <span class="nm-faq-toggle">+</span>
+                        </button>
+                        <div class="nm-faq-a">
+                            <p>Sí. Enterprise cubre límites de uso a medida, integraciones personalizadas, despliegue en nube privada u on-premise, claves de cifrado gestionadas por el cliente, un gestor de cuenta dedicado y evidencias de seguridad &mdash; adaptado a tu entorno. <a href="/contact/?subject=NeoMind%3A%20Consulta%20Enterprise&amp;source=pricing-faq">Habla con ventas</a> para un presupuesto a medida.</p>
                         </div>
                     </div>
                 </div>
 
                 <p style="margin-top: 36px; text-align: center; font-size: 15px; color: var(--text-muted);">
-                    Want to see how it&rsquo;s measured? Read
-                    <a href="/resources/how-to-measure-an-ai-employee/">how to measure an AI employee</a>,
-                    or compare NeoMind on the <a href="/compare/">comparison hub</a>.
+                    ¿Quieres ver cómo se mide? Lee
+                    <a href="/resources/how-to-measure-an-ai-employee/">cómo medir a un empleado de IA</a>,
+                    o compara NeoMind en el <a href="/compare/">centro de comparativas</a>.
                 </p>
             </div>
         </section>
 
-        <!-- CTA — gradient band, mirrors homepage #cta -->
         <section style="background: var(--bg-muted); padding: 80px 0; border-top: 1px solid var(--border);">
             <div class="nm-container" style="max-width: 920px;">
                 <div class="nm-cta-band">
@@ -627,21 +610,21 @@
                     <div aria-hidden="true" style="position: absolute; top: -100px; right: -100px; width: 360px; height: 360px; border-radius: 50%; background: rgba(255,255,255,0.06);"></div>
                     <div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; gap: 48px; flex-wrap: wrap;">
                         <div style="max-width: 38ch;">
-                            <span style="display: inline-block; padding: 5px 12px; background: rgba(255,255,255,0.18); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 9999px; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 20px;">Get started</span>
+                            <span style="display: inline-block; padding: 5px 12px; background: rgba(255,255,255,0.18); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 9999px; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 20px;">Empieza ya</span>
                             <h2 style="font-family: var(--font-display); font-weight: 700; font-size: clamp(32px, 4.2vw, 52px); line-height: 1.05; letter-spacing: -0.025em; margin: 0 0 18px; text-wrap: balance;">
-                                Build your first AI employee.
+                                Crea tu primer empleado de IA.
                             </h2>
                             <p style="font-size: 18px; line-height: 1.55; opacity: 0.92; margin: 0; max-width: 46ch;">
-                                Grounded in your knowledge, takes real actions, and scored against KPIs you set. Live in under 60 minutes &mdash; no credit card to start.
+                                Basado en tu conocimiento, ejecuta acciones reales y se evalúa según los KPIs que fijes. Operativo en menos de 60 minutos &mdash; sin tarjeta para empezar.
                             </p>
                         </div>
                         <div style="display: flex; gap: 12px; flex-wrap: wrap;">
                             <a href="https://app.neomindhub.com/signup" class="btn" style="background: white; color: var(--gray-900); padding: 16px 28px; font-size: 15px;" data-cta="pricing-page-cta-signup">
-                                Start free trial
+                                Prueba gratis
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
                             </a>
                             <a href="/contact/" class="btn" style="background: rgba(255,255,255,0.12); color: white; border: 1px solid rgba(255,255,255,0.28); padding: 16px 28px; font-size: 15px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);" data-cta="pricing-page-cta-demo">
-                                Book a demo
+                                Solicita una demo
                             </a>
                         </div>
                     </div>
@@ -650,9 +633,9 @@
         </section>
     </main>
 
-    <footer-section data-locale="intl"></footer-section>
+    <footer-section data-locale="es"></footer-section>
 
-    <button id="darkModeToggle" type="button" aria-label="Toggle dark mode"
+    <button id="darkModeToggle" type="button" aria-label="Cambiar a modo oscuro"
         class="fixed bottom-6 right-6 p-3 bg-gray-800 dark:bg-white rounded-full shadow-lg z-50 hover:scale-105 transition-transform">
         <svg class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
@@ -660,7 +643,6 @@
     </button>
 
     <script>
-        // Dark-mode parity with the homepage (shares the `darkMode` localStorage key).
         (function () {
             var html = document.documentElement;
             if (localStorage.getItem('darkMode') === 'true') html.classList.add('dark');
@@ -670,7 +652,6 @@
                 localStorage.setItem('darkMode', html.classList.contains('dark'));
             });
         })();
-        // FAQ accordion (same behaviour as the homepage).
         (function () {
             document.querySelectorAll('#nm-faq-list .nm-faq-q').forEach(function (btn) {
                 btn.addEventListener('click', function () {
@@ -680,41 +661,31 @@
                 });
             });
         })();
-        // ── Pricing — per-pick team selector ──────────────────────────────
-        // Ported from the production team-picker (js/app.js `teamPicker`),
-        // kept page-scoped so it never re-enters the shared bundle. Solo and
-        // Duo cards carry .nm-pick-pill buttons; clicking one updates the
-        // price, the included list, the overage unit and the CTA href on that
-        // card. All content is built via DOM methods (no innerHTML) — the
-        // pricing data is fully controlled here. Prices are USD (intl page).
         (function teamPicker() {
             var PICKS = {
-                // SOLO — one employee. Each `included` entry is a string, or
-                // [boldNumber, rest] for the "600 website chats / month" shape.
                 'solo:simon': {
-                    price: '$79',
-                    included: [['600', 'website chats / month'], 'Embed on your site, one line of code', 'Trained on your docs & FAQs', 'Books straight into your calendar'],
-                    overage: '10¢', overageUnit: 'chat', pick: 'simon',
+                    price: '79 €',
+                    included: [['600', 'chats web / mes'], 'Intégralo en tu web con una línea de código', 'Entrenado con tus documentos y FAQs', 'Reserva citas directamente en tu calendario'],
+                    overage: '0,10 €', overageUnit: 'chat', pick: 'simon',
                 },
                 'solo:hugo': {
-                    price: '$99',
-                    included: [['1,000', 'staff queries / month'], 'Lives in your dashboard (Slack live, Teams soon)', 'Cites the source policy doc', 'Escalates to your people team'],
-                    overage: '5¢', overageUnit: 'staff query', pick: 'hugo',
+                    price: '99 €',
+                    included: [['1.000', 'consultas del personal / mes'], 'Vive en tu panel (Slack en vivo, Teams pronto)', 'Cita el documento de política de origen', 'Escala a tu equipo de personas'],
+                    overage: '0,05 €', overageUnit: 'consulta', pick: 'hugo',
                 },
                 'solo:maeve': {
-                    price: '$149',
-                    included: [['100', 'phone calls / month'], '24/7 voice — books & qualifies', 'Local phone number provisioned', 'Real actions, not just answers'],
-                    overage: '50¢', overageUnit: 'call', pick: 'maeve',
+                    price: '149 €',
+                    included: [['100', 'llamadas / mes'], 'Voz 24/7 — reserva y cualifica', 'Número español activo en 1–2 días laborables', 'Acciones reales, no solo respuestas'],
+                    overage: '0,50 €', overageUnit: 'llamada', pick: 'maeve',
                 },
-                // DUO — two employees.
                 'duo:simon-hugo': {
-                    price: '$149',
-                    included: [['600', 'website chats (Simon)'], ['1,000', 'staff queries (Hugo)'], 'Slack (live) · Microsoft Teams (coming soon)', 'Priority email support'],
+                    price: '149 €',
+                    included: [['600', 'chats web (Simon)'], ['1.000', 'consultas del personal (Hugo)'], 'Slack (disponible) · Microsoft Teams (muy pronto)', 'Soporte prioritario por correo'],
                     overageUnit: 'extras', pick: 'simon-hugo',
                 },
                 'duo:simon-maeve': {
-                    price: '$219',
-                    included: [['600', 'website chats (Simon)'], ['100', 'phone calls (Maeve)'], 'Web + phone covered', 'Priority support'],
+                    price: '219 €',
+                    included: [['600', 'chats web (Simon)'], ['100', 'llamadas (Maeve)'], 'Web y teléfono cubiertos', 'Soporte prioritario'],
                     overageUnit: 'extras', pick: 'simon-maeve',
                 },
             };
@@ -729,7 +700,6 @@
                 var data = PICKS[key];
                 if (!data) return;
 
-                // Price flip
                 var priceEl = card.querySelector('[data-price]');
                 if (priceEl) {
                     priceEl.classList.add('flipping');
@@ -739,7 +709,6 @@
                     }, 170);
                 }
 
-                // Rebuild the included list (DOM only)
                 var ul = card.querySelector('[data-included]');
                 if (ul) {
                     while (ul.firstChild) ul.removeChild(ul.firstChild);
@@ -760,17 +729,14 @@
                     });
                 }
 
-                // Overage amount + unit (Solo shows the amount; Duo shows only the unit)
                 var overageEl = card.querySelector('[data-overage]');
                 if (overageEl && data.overage) overageEl.textContent = data.overage;
                 var unitEl = card.querySelector('[data-overage-unit]');
                 if (unitEl && data.overageUnit) unitEl.textContent = data.overageUnit;
 
-                // CTA href carries the pick
                 var cta = card.querySelector('[data-cta-link]');
                 if (cta) cta.href = 'https://app.neomindhub.com/signup?plan=' + card.dataset.tier + '&pick=' + data.pick;
 
-                // Pill active state (within this card only)
                 card.querySelectorAll('.nm-pick-pill[data-pick]').forEach(function (p) {
                     p.classList.toggle('active', p.dataset.pick === data.pick);
                 });
@@ -785,7 +751,6 @@
             });
         })();
 
-        // ── Comparison table — inject the ✓ glyph into every [data-yes] cell ──
         (function () {
             var SVG_NS = 'http://www.w3.org/2000/svg';
             document.querySelectorAll('.nm-compare-table td[data-yes]').forEach(function (td) {
@@ -797,7 +762,7 @@
                 svg.setAttribute('stroke-width', '2.6');
                 svg.setAttribute('stroke-linecap', 'round');
                 svg.setAttribute('stroke-linejoin', 'round');
-                svg.setAttribute('aria-label', 'Included');
+                svg.setAttribute('aria-label', 'Incluido');
                 svg.setAttribute('role', 'img');
                 var path = document.createElementNS(SVG_NS, 'path');
                 path.setAttribute('d', 'M5 12l5 5L20 7');
@@ -806,7 +771,6 @@
             });
         })();
 
-        // Subtle scroll-reveal (reduced-motion safe — CSS no-ops the transition).
         (function () {
             var els = document.querySelectorAll('.nm-reveal');
             if (!('IntersectionObserver' in window)) {

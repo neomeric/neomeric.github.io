@@ -13,7 +13,7 @@ window.NM_LOCALES = {
     demoMeta:{
       simon:{ eyebrow:"Live · trained on neomeric.com", title:"Ask Simon anything about NeoMind" },
       maeve:{ eyebrow:"Live · 90-second voice demo", title:"Maeve — your AI receptionist" },
-      hugo:{ eyebrow:"Preview · staff Q&A · Slack & Teams coming soon", title:"Hugo — your HR assistant in your Member dashboard" } } },
+      hugo:{ eyebrow:"Preview · staff Q&A · Slack live, Teams coming soon", title:"Hugo — your HR assistant in your Member dashboard" } } },
   au: { code:"au", lang:"en-AU", hreflang:"en-au", currency:"AUD", currencySymbol:"$", path:"/au/",
     hostingLine:"Hosted in Sydney (Azure Australia East). Your data never leaves Australia. Privacy Act 1988 aligned.",
     residencyLine:"Onshore-hosted, locally encrypted, never used to train shared models.",
@@ -28,7 +28,7 @@ window.NM_LOCALES = {
     demoMeta:{
       simon:{ eyebrow:"Live · trained on neomeric.com", title:"Ask Simon anything about NeoMind" },
       maeve:{ eyebrow:"Live · 90-second voice demo", title:"Maeve — your AI receptionist" },
-      hugo:{ eyebrow:"Preview · staff Q&A · Slack & Teams coming soon", title:"Hugo — your HR assistant in your Member dashboard" } } },
+      hugo:{ eyebrow:"Preview · staff Q&A · Slack live, Teams coming soon", title:"Hugo — your HR assistant in your Member dashboard" } } },
   es: { code:"es", lang:"es", hreflang:"es", currency:"EUR", currencySymbol:"€", path:"/es/",
     hostingLine:"Alojado en Microsoft Azure. Región de datos de la UE en despliegue.",
     residencyLine:"Cumple el RGPD. Cifrado en tránsito y en reposo. Nunca se usa para entrenar modelos compartidos.",
@@ -43,7 +43,7 @@ window.NM_LOCALES = {
     demoMeta:{
       simon:{ eyebrow:"En vivo · entrenado con neomeric.com", title:"Pregunta a Simon lo que quieras sobre NeoMind" },
       maeve:{ eyebrow:"En vivo · demo de voz de 90 segundos", title:"Maeve — tu recepcionista de IA" },
-      hugo:{ eyebrow:"Vista previa · dudas del personal · Slack y Teams muy pronto", title:"Hugo — tu asistente de RR. HH. en tu panel de Member" } } },
+      hugo:{ eyebrow:"Vista previa · dudas del personal · Slack disponible, Teams próximamente", title:"Hugo — tu asistente de RR. HH. en tu panel de Member" } } },
   entity: { legalName:"Neomeric Pty Ltd", product:"NeoMind", founded:"2015",
     canonicalEntityUrl:"https://neomindhub.com/",
     sameAs:["https://www.linkedin.com/company/neomindhub"] },

@@ -31,7 +31,7 @@
     const META = (L && L.demoMeta) || {
         simon: { eyebrow: 'Live · trained on neomeric.com', title: 'Ask Simon anything about NeoMind' },
         maeve: { eyebrow: 'Live · 90-second voice demo', title: 'Maeve — your AI receptionist' },
-        hugo: { eyebrow: 'Preview · staff Q&A · Slack & Teams coming soon', title: 'Hugo — your HR assistant in your Member dashboard' }
+        hugo: { eyebrow: 'Preview · staff Q&A · Slack live, Teams coming soon', title: 'Hugo — your HR assistant in your Member dashboard' }
     };
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
