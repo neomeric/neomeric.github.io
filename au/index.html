@@ -406,58 +406,6 @@
         }
         @media (max-width: 768px) { .nm-hero-section { padding: 72px 0 48px; } }
 
-        .nm-mind-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-        @media (max-width: 1100px) { .nm-mind-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 600px) { .nm-mind-grid { grid-template-columns: 1fr; } }
-
-        .nm-mind-card {
-            display: block; padding: 28px;
-            background: var(--surface); border: 1px solid var(--border);
-            border-radius: 24px;
-            transition: all 280ms cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative; overflow: hidden;
-            box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset;
-            text-decoration: none;
-        }
-        .nm-mind-card:hover { transform: translateY(-3px); box-shadow: 0 22px 48px -16px rgba(15,23,42,0.18); }
-        .nm-mind-card .mind-glow {
-            position: absolute; top: 0; right: 0; width: 200px; height: 200px;
-            opacity: 0.5; transition: opacity 280ms; pointer-events: none;
-        }
-        .nm-mind-card:hover .mind-glow { opacity: 1; }
-        .nm-mind-icon {
-            position: relative;
-            display: inline-flex; align-items: center; justify-content: center;
-            width: 48px; height: 48px; border-radius: 14px; margin-bottom: 28px;
-        }
-        .nm-mind-name {
-            font-family: var(--font-display); font-weight: 700; font-size: 26px;
-            letter-spacing: -0.02em; margin: 0; color: var(--text);
-        }
-        .nm-mind-role { font-size: 13px; color: var(--text-subtle); font-weight: 500; }
-        .nm-mind-blurb { font-size: 14.5px; line-height: 1.55; color: var(--text-muted); margin: 0 0 24px; position: relative; }
-        .nm-mind-foot {
-            position: relative; display: flex; flex-direction: column; gap: 16px;
-            align-items: flex-start;
-            padding-top: 20px; border-top: 1px solid var(--border);
-        }
-        .nm-mind-metric {
-            font-family: var(--font-display); font-weight: 700; font-size: 30px;
-            letter-spacing: -0.02em; line-height: 1;
-        }
-        .nm-mind-metric-label { font-size: 12px; color: var(--text-subtle); margin-top: 4px; max-width: 20ch; }
-        .nm-mind-cta {
-            display: inline-flex; align-items: center; gap: 6px;
-            font-size: 13px; font-weight: 600;
-            padding: 8px 14px; border-radius: 9999px;
-            background: var(--bg-muted); color: var(--text);
-            transition: all 220ms;
-        }
-        .nm-mind-card:hover .nm-mind-cta[data-mind="simon"] { background: var(--secondary-500); color: white; }
-        .nm-mind-card:hover .nm-mind-cta[data-mind="maeve"] { background: var(--accent-500); color: white; }
-        .nm-mind-card:hover .nm-mind-cta[data-mind="hugo"] { background: var(--primary-500); color: white; }
-        .nm-mind-card:hover .nm-mind-cta[data-mind="custom"] { background: var(--accent-500); color: white; }
-
         /* ── Reusable section-header pattern (NON-hero sections).
               Mirrors agency homepage `#paths` exactly (lines 941-952).
               Hero is the only place gradient text accents may appear. ── */
@@ -636,7 +584,7 @@
         {
           "@type": "Question",
           "name": "Can I add more than three employees?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes — start with Simon, Maeve and Hugo, or configure custom AI employees with their own persona, skills and access." }
+          "acceptedAnswer": { "@type": "Answer", "text": "There are always exactly three minds — Simon, Maeve and Hugo. What you scale is agents: under each mind you configure the agents your business needs, each with its own persona, skills and access policy, all on one shared Brain." }
         },
         {
           "@type": "Question",
@@ -1453,127 +1401,143 @@
         <section id="roster" class="py-24" style="padding: 96px 0; background: var(--bg);">
             <div class="nm-container">
                 <div class="nm-section-header">
-                    <span class="eyebrow"><span class="dot"></span> Meet the roster</span>
+                    <span class="eyebrow"><span class="dot"></span> Your AI workforce</span>
                     <h2 class="nm-section-headline">
-                        Start with three.<br />
-                        <span class="muted">Build the team you need.</span>
+                        Three minds.<br />
+                        <span class="muted">A team of agents.</span>
                     </h2>
                     <p class="nm-section-sub">
-                        Simon, Maeve and Hugo are ready out of the box. Need more? Configure custom AI employees &mdash; each with its own persona, skills, and access policy.
+                        Simon answers your website, Maeve takes your calls, Hugo answers your team &mdash; the three minds, all on one shared Brain. Under each, deploy the agents your business needs &mdash; a sales Simon, a support Simon, an HR Hugo &mdash; each its own employee with its own persona, scope and scorecard.
                     </p>
                 </div>
 
-
-                <!-- Three Minds — equal-column grid -->
-                <div class="nm-mind-grid">
-                    <a href="https://app.neomindhub.com/signup?agent=simon" class="nm-mind-card" data-cta="mind-simon">
-                        <div class="mind-glow" style="background: radial-gradient(circle at top right, rgba(0,123,255,0.18), transparent 60%);"></div>
-                        <div class="nm-mind-icon" style="background: var(--secondary-50); color: var(--secondary-700);">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/></svg>
-                        </div>
-                        <div style="position: relative; display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px;">
-                            <h3 class="nm-mind-name">Simon</h3>
-                            <span class="nm-mind-role">· Website</span>
-                        </div>
-                        <p class="nm-mind-blurb">Answers buyer questions, qualifies and captures leads on every page &mdash; grounded in your site, FAQs and PDFs.</p>
-                        <div class="nm-mind-foot">
-                            <div class="nm-mind-skills">
-                                <span class="nm-mind-skill">Answer</span>
-                                <span class="nm-mind-skill">Qualify</span>
-                                <span class="nm-mind-skill">Capture leads</span>
-                            </div>
-                            <span class="nm-mind-cta" data-mind="simon">
-                                Try Simon
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
-                            </span>
-                        </div>
-                    </a>
-
-                    <a href="https://app.neomindhub.com/signup?agent=maeve" class="nm-mind-card" data-cta="mind-maeve">
-                        <div class="mind-glow" style="background: radial-gradient(circle at top right, rgba(0,209,178,0.18), transparent 60%);"></div>
-                        <div class="nm-mind-icon" style="background: var(--accent-50); color: var(--accent-700);">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                        </div>
-                        <div style="position: relative; display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px;">
-                            <h3 class="nm-mind-name">Maeve</h3>
-                            <span class="nm-mind-role">· Phone</span>
-                        </div>
-                        <p class="nm-mind-blurb">Answers your business line 24/7 &mdash; books, qualifies, and routes urgent calls to your on-call staff.</p>
-                        <div class="nm-mind-foot">
-                            <div class="nm-mind-skills">
-                                <span class="nm-mind-skill">Answer 24/7</span>
-                                <span class="nm-mind-skill">Book</span>
-                                <span class="nm-mind-skill">Route</span>
-                            </div>
-                            <span class="nm-mind-cta" data-mind="maeve">
-                                Try Maeve
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
-                            </span>
-                        </div>
-                    </a>
-
-                    <a href="https://app.neomindhub.com/signup?agent=hugo" class="nm-mind-card" data-cta="mind-hugo">
-                        <div class="mind-glow" style="background: radial-gradient(circle at top right, rgba(156,125,185,0.18), transparent 60%);"></div>
-                        <div class="nm-mind-icon" style="background: var(--primary-50); color: var(--primary-700);">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                        </div>
-                        <div style="position: relative; display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px;">
-                            <h3 class="nm-mind-name">Hugo</h3>
-                            <span class="nm-mind-role">· Internal</span>
-                        </div>
-                        <p class="nm-mind-blurb">Answers staff questions on leave, expenses and policy &mdash; straight from your real handbook. Slack &amp; Teams native coming soon.</p>
-                        <div class="nm-mind-foot">
-                            <div class="nm-mind-skills">
-                                <span class="nm-mind-skill">Leave</span>
-                                <span class="nm-mind-skill">Expenses</span>
-                                <span class="nm-mind-skill">Policy</span>
-                            </div>
-                            <span class="nm-mind-cta" data-mind="hugo">
-                                Try Hugo
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
-                            </span>
-                        </div>
-                    </a>
-
-                    <a href="https://app.neomindhub.com/signup" class="nm-mind-card nm-mind-card--custom" data-cta="mind-custom">
-                        <div class="mind-glow" style="background: radial-gradient(circle at top right, rgba(0,209,178,0.16), transparent 60%);"></div>
-                        <div class="nm-mind-icon nm-mind-icon--dashed">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
-                        </div>
-                        <div style="position: relative; display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px;">
-                            <h3 class="nm-mind-name">Custom employees</h3>
-                        </div>
-                        <p class="nm-mind-blurb">Define a role, give it skills and a knowledge scope, set what it can access. It&rsquo;s your roster, not a fixed three.</p>
-                        <div class="nm-mind-foot">
-                            <div class="nm-mind-skills">
-                                <span class="nm-mind-skill">Persona</span>
-                                <span class="nm-mind-skill">Skills</span>
-                                <span class="nm-mind-skill">Access policy</span>
-                            </div>
-                            <span class="nm-mind-cta" data-mind="custom">
-                                Configure one
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
-                            </span>
-                        </div>
-                    </a>
+                <!-- One Brain → three minds → agents — workforce diagram -->
+                <div class="nm-wf" role="img" aria-label="One shared Brain powers three minds — Simon for your website, Maeve for phone, Hugo for internal company memory. Each mind runs example agents: Simon runs Sales and Support, Maeve runs Bookings and After-hours, Hugo runs HR and IT.">
+                  <div class="nm-wf__crown"><div class="nm-wf__brain"><span class="nm-wf__brain-glow" aria-hidden="true"></span>
+                    <svg class="nm-wf__brain-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4.5a2.6 2.6 0 0 0-2.6 2.6c0 .2 0 .4.06.6A2.7 2.7 0 0 0 7.2 12c0 .5.13.96.36 1.36A2.5 2.5 0 0 0 9.4 18a2.6 2.6 0 0 0 2.6-2.6V4.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M12 4.5a2.6 2.6 0 0 1 2.6 2.6c0 .2 0 .4-.06.6A2.7 2.7 0 0 1 16.8 12c0 .5-.13.96-.36 1.36A2.5 2.5 0 0 1 14.6 18a2.6 2.6 0 0 1-2.6-2.6V4.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+                    <span class="nm-wf__brain-text"><strong>One Brain</strong><em>Shared knowledge</em></span></div>
+                    <span class="nm-wf__stem" aria-hidden="true"></span></div>
+                  <span class="nm-wf__spine" aria-hidden="true"></span>
+                  <div class="nm-wf__minds">
+                    <div class="nm-wf__branch" style="--wf-accent: var(--secondary-500); --wf-accent-soft: 0,123,255;"><span class="nm-wf__drop" aria-hidden="true"></span>
+                      <div class="nm-wf__mind"><span class="nm-wf__mind-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4.5" width="18" height="15" rx="2.2" stroke="currentColor" stroke-width="1.5"/><path d="M3 8.5h18" stroke="currentColor" stroke-width="1.5"/><circle cx="5.8" cy="6.5" r=".55" fill="currentColor"/><circle cx="7.6" cy="6.5" r=".55" fill="currentColor"/></svg></span>
+                        <span class="nm-wf__mind-name">Simon</span><span class="nm-wf__mind-channel">Website</span></div>
+                      <span class="nm-wf__fan" aria-hidden="true"><i></i><i></i></span>
+                      <div class="nm-wf__agents"><span class="nm-wf__agent">Sales</span><span class="nm-wf__agent">Support</span></div></div>
+                    <div class="nm-wf__branch" style="--wf-accent: var(--accent-500); --wf-accent-soft: 0,209,178;"><span class="nm-wf__drop" aria-hidden="true"></span>
+                      <div class="nm-wf__mind"><span class="nm-wf__mind-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6.5 4.5h3l1.3 3.3-1.9 1.4a11 11 0 0 0 4.9 4.9l1.4-1.9 3.3 1.3v3a2 2 0 0 1-2.2 2A15.5 15.5 0 0 1 4.5 6.7a2 2 0 0 1 2-2.2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span>
+                        <span class="nm-wf__mind-name">Maeve</span><span class="nm-wf__mind-channel">Phone</span></div>
+                      <span class="nm-wf__fan" aria-hidden="true"><i></i><i></i></span>
+                      <div class="nm-wf__agents"><span class="nm-wf__agent">Bookings</span><span class="nm-wf__agent">After-hours</span></div></div>
+                    <div class="nm-wf__branch" style="--wf-accent: var(--primary-500); --wf-accent-soft: 156,125,185;"><span class="nm-wf__drop" aria-hidden="true"></span>
+                      <div class="nm-wf__mind"><span class="nm-wf__mind-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.2" stroke="currentColor" stroke-width="1.5"/><path d="M5.5 19a6.5 6.5 0 0 1 13 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+                        <span class="nm-wf__mind-name">Hugo</span><span class="nm-wf__mind-channel">Internal</span></div>
+                      <span class="nm-wf__fan" aria-hidden="true"><i></i><i></i></span>
+                      <div class="nm-wf__agents"><span class="nm-wf__agent">HR</span><span class="nm-wf__agent">IT</span></div></div>
+                  </div>
                 </div>
 
                 <style>
-                    .nm-mind-skills { display: flex; flex-wrap: wrap; gap: 6px; }
-                    .nm-mind-skill { font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 999px; background: var(--bg-muted); color: var(--text-muted); border: 1px solid var(--border); }
-                    .nm-mind-card--custom { border-style: dashed; background: var(--bg); }
-                    .nm-mind-card--custom:hover { border-color: var(--accent-500); border-style: solid; }
-                    .nm-mind-icon--dashed { background: transparent; color: var(--accent-700); border: 1.5px dashed var(--border-strong); transition: border-color 220ms, color 220ms; }
-                    .nm-mind-card--custom:hover .nm-mind-icon--dashed { border-color: var(--accent-500); border-style: solid; }
-                    .dark .nm-mind-icon--dashed { color: var(--accent-300, #5eead4); }
+                    /* ── Workforce diagram: One Brain → 3 minds → 2 agents each ── */
+                    .nm-wf {
+                        --wf-entrance: nm-wf-rise 620ms cubic-bezier(0.22, 1, 0.36, 1) both;
+                        max-width: 920px; margin: 56px auto 0;
+                        display: flex; flex-direction: column; align-items: center;
+                    }
+                    .nm-wf__crown { display: flex; flex-direction: column; align-items: center; }
+                    .nm-wf__brain {
+                        position: relative; display: inline-flex; align-items: center; gap: 12px;
+                        padding: 14px 22px; border-radius: 18px;
+                        background: linear-gradient(135deg, var(--primary-500), var(--secondary-500) 55%, var(--accent-500));
+                        color: #fff; box-shadow: 0 20px 44px -18px rgba(0,123,255,0.55);
+                        animation: var(--wf-entrance);
+                    }
+                    .nm-wf__brain-glow {
+                        position: absolute; inset: -2px; border-radius: 20px; z-index: -1;
+                        background: linear-gradient(135deg, var(--primary-500), var(--accent-500));
+                        opacity: 0.45; filter: blur(16px); pointer-events: none;
+                    }
+                    .nm-wf__brain-icon { width: 30px; height: 30px; flex-shrink: 0; color: #fff; opacity: 0.95; }
+                    .nm-wf__brain-text { display: flex; flex-direction: column; line-height: 1.15; text-align: left; }
+                    .nm-wf__brain-text strong { font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: -0.01em; }
+                    .nm-wf__brain-text em { font-style: normal; font-size: 11.5px; font-weight: 500; opacity: 0.82; }
+                    .nm-wf__stem { width: 2px; height: 26px; background: linear-gradient(var(--border-strong), var(--border)); border-radius: 2px; }
+                    .nm-wf__spine { width: min(100%, 700px); height: 2px; background: var(--border-strong); border-radius: 2px; }
+                    .nm-wf__minds { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; width: 100%; }
+                    .nm-wf__branch {
+                        display: flex; flex-direction: column; align-items: center;
+                        animation: var(--wf-entrance); animation-delay: calc(var(--wf-i, 0) * 90ms);
+                    }
+                    .nm-wf__minds .nm-wf__branch:nth-child(1) { --wf-i: 1; }
+                    .nm-wf__minds .nm-wf__branch:nth-child(2) { --wf-i: 2; }
+                    .nm-wf__minds .nm-wf__branch:nth-child(3) { --wf-i: 3; }
+                    .nm-wf__drop { width: 2px; height: 22px; background: var(--border-strong); border-radius: 2px; }
+                    .nm-wf__mind {
+                        position: relative; display: flex; flex-direction: column; align-items: center; gap: 4px;
+                        width: 100%; max-width: 168px; padding: 16px 14px; border-radius: 16px;
+                        background: var(--surface);
+                        border: 1px solid rgba(var(--wf-accent-soft), 0.4);
+                        box-shadow: 0 12px 30px -18px rgba(var(--wf-accent-soft), 0.55);
+                    }
+                    .nm-wf__mind-icon {
+                        display: inline-flex; align-items: center; justify-content: center;
+                        width: 40px; height: 40px; border-radius: 12px; margin-bottom: 2px;
+                        background: rgba(var(--wf-accent-soft), 0.12); color: var(--wf-accent);
+                    }
+                    .nm-wf__mind-icon svg { width: 22px; height: 22px; }
+                    .nm-wf__mind-name { font-family: var(--font-display); font-weight: 700; font-size: 19px; letter-spacing: -0.01em; color: var(--text); }
+                    .nm-wf__mind-channel {
+                        font-size: 11px; font-weight: 600; letter-spacing: 0.02em;
+                        padding: 2px 10px; border-radius: 999px;
+                        color: var(--wf-accent); background: rgba(var(--wf-accent-soft), 0.12);
+                    }
+                    .nm-wf__fan { position: relative; width: 100%; max-width: 168px; height: 24px; }
+                    .nm-wf__fan::before { content: ""; position: absolute; left: 50%; top: 0; width: 2px; height: 11px; background: var(--border-strong); transform: translateX(-50%); }
+                    .nm-wf__fan i { position: absolute; top: 11px; width: 50%; height: 2px; background: var(--border-strong); }
+                    .nm-wf__fan i:first-child { left: 0; }
+                    .nm-wf__fan i:last-child { right: 0; }
+                    .nm-wf__fan i::after { content: ""; position: absolute; top: 0; width: 2px; height: 13px; background: var(--border-strong); }
+                    .nm-wf__fan i:first-child::after { left: 25%; }
+                    .nm-wf__fan i:last-child::after { right: 25%; }
+                    .nm-wf__agents { display: flex; gap: 10px; width: 100%; max-width: 168px; }
+                    .nm-wf__agent {
+                        flex: 1; text-align: center; padding: 8px 6px; border-radius: 10px;
+                        font-size: 12.5px; font-weight: 600; letter-spacing: -0.005em;
+                        color: var(--text); background: var(--surface);
+                        border: 1px solid rgba(var(--wf-accent-soft), 0.32);
+                        box-shadow: 0 1px 2px rgba(15,23,42,0.04);
+                    }
+                    .dark .nm-wf__mind, .dark .nm-wf__agent { background: var(--surface-alt); }
+                    .dark .nm-wf__mind-name, .dark .nm-wf__agent { color: var(--gray-100, #f3f4f6); }
+                    @keyframes nm-wf-rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+                    @media (prefers-reduced-motion: reduce) {
+                        .nm-wf__brain, .nm-wf__branch { animation: none; }
+                    }
+                    @media (max-width: 720px) {
+                        .nm-wf__minds { gap: 18px; }
+                        .nm-wf__mind, .nm-wf__fan, .nm-wf__agents { max-width: 100%; }
+                        .nm-wf__brain-text strong { font-size: 16px; }
+                    }
+                    @media (max-width: 560px) {
+                        .nm-wf { margin-top: 40px; }
+                        .nm-wf__spine { display: none; }
+                        .nm-wf__minds { grid-template-columns: 1fr; gap: 28px; }
+                        .nm-wf__drop { height: 16px; }
+                        .nm-wf__agents { gap: 8px; }
+                        .nm-wf__agent { font-size: 12px; padding: 7px 5px; }
+                    }
                 </style>
 
-                <!-- Roster footnote — capability signals only, no fake stats -->
-                <p style="text-align: center; margin-top: 48px; font-size: 14px; color: var(--text-subtle);">
-                    One Brain feeds every employee &mdash; teach it once, the whole roster knows.
-                    <a href="https://app.neomindhub.com/signup" style="color: var(--secondary-700); font-weight: 600; text-decoration: none;">Start a free trial</a>
-                    and add employees as you grow.
-                </p>
+                <!-- Honest clarifier + route to the full employees hub -->
+                <div style="text-align: center; margin-top: 44px; display: flex; flex-direction: column; align-items: center; gap: 16px;">
+                    <p style="margin: 0; font-size: 14.5px; color: var(--text-muted); max-width: 64ch;">
+                        Every agent is yours to configure &mdash; name, persona, skills, what it can access &mdash; but always one of the three minds. One Brain feeds them all: teach it once, the whole team knows.
+                    </p>
+                    <a href="https://app.neomindhub.com/signup" class="btn btn-gradient" data-cta="roster-signup">
+                        Start a free trial
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -1999,7 +1963,7 @@
                             <span class="nm-faq-toggle">+</span>
                         </button>
                         <div class="nm-faq-a">
-                            <p>Yes &mdash; start with Simon, Maeve and Hugo, or configure custom AI employees with their own persona, skills and access.</p>
+                            <p>There are always exactly three minds &mdash; Simon, Maeve and Hugo. What you scale is agents: under each mind you configure the agents your business needs, each with its own persona, skills and access policy, all on one shared Brain.</p>
                         </div>
                     </div>
                     <div class="nm-faq-item">
