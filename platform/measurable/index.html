@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NHDLXJCG');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Measurability &amp; Scorecards | NeoMind</title>
+    <meta name="description"
+        content="Give each AI employee an objective and weighted KPIs, then score every conversation with an AI judge. Read the scorecard — and it's un-gameable by design.">
+    <link rel="canonical" href="https://neomindhub.com/platform/measurable/">
+    <!-- hreflang: this intl page (en + x-default) → self. add en-au/es when localized. -->
+    <link rel="alternate" hreflang="en"        href="https://neomindhub.com/platform/measurable/" />
+    <link rel="alternate" hreflang="x-default" href="https://neomindhub.com/platform/measurable/" />
+    <meta property="og:title" content="Measurability &amp; Scorecards">
+    <meta property="og:description" content="Objectives, weighted KPIs and scorecards. Every conversation scored by an AI judge — un-gameable by design.">
+    <meta property="og:url" content="https://neomindhub.com/platform/measurable/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://neomindhub.com/images/logo1.png">
+    <meta property="og:site_name" content="NeoMind">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Measurability &amp; Scorecards">
+    <meta name="twitter:description" content="Objectives, weighted KPIs and scorecards. Every conversation scored by an AI judge — un-gameable by design.">
+    <meta name="twitter:image" content="https://neomindhub.com/images/logo1.png">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/neomeric-tokens.css">
+    <link rel="stylesheet" href="/css/content.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Locale data must load synchronously before any component connectedCallback runs -->
+    <script src="/js/locales.js"></script>
+    <script>window.NM_LOCALE = "intl";</script>
+    <script src="/components/navbar-section.js" type="module"></script>
+    <script src="/components/footer-section.js" type="module"></script>
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://neomindhub.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Platform", "item": "https://neomindhub.com/platform/" },
+        { "@type": "ListItem", "position": 3, "name": "Measurable", "item": "https://neomindhub.com/platform/measurable/" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Measurability & Scorecards",
+      "description": "Give each AI employee an objective and weighted KPIs, then score every conversation with an AI judge. Read the scorecard — and it's un-gameable by design.",
+      "inLanguage": "en",
+      "url": "https://neomindhub.com/platform/measurable/",
+      "isPartOf": { "@type": "WebSite", "name": "NeoMind", "url": "https://neomindhub.com/" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Neomeric Pty Ltd",
+        "logo": { "@type": "ImageObject", "url": "https://neomindhub.com/images/logo1.png" }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How is each conversation scored?",
+          "acceptedAnswer": { "@type": "Answer", "text": "An AI judge — an LLM acting as evaluator — reads each conversation and grades it against your weighted KPI rubric automatically. Every interaction is scored, not a small manual sample, and the scores roll up into a per-employee scorecard." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can an employee game its own score?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Guardrail violations — hallucinating, making a binding promise, going off-scope — score negative, so an employee can't inflate its number by cutting corners. The measurement is designed to be un-gameable." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a data team to measure it?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. You set an objective in plain language, pick a handful of weighted KPIs, and the AI judge does the scoring. There's no manual QA queue, dashboards to build, or analytics pipeline to maintain." }
+        },
+        {
+          "@type": "Question",
+          "name": "What's a good KPI for an AI employee?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A good KPI is tied to the employee's objective and observable in a conversation — for example lead-capture rate, answer accuracy or groundedness, appropriate escalation, and resolution. Pick the handful that matter and weight them so priorities are explicit." }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* ── Scoped to this Platform page (no shared-file edits) ── */
+        .pf-hero { padding: 84px 0 56px; background: var(--bg-muted); border-bottom: 1px solid var(--border); position: relative; overflow: clip; }
+        @media (max-width: 768px) { .pf-hero { padding: 64px 0 44px; } }
+        .pf-hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
+        @media (max-width: 920px) { .pf-hero-grid { grid-template-columns: 1fr; gap: 40px; } }
+        .pf-hero h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(38px, 5vw, 62px); line-height: 1.03; letter-spacing: -0.03em; margin: 18px 0 20px; text-wrap: balance; color: var(--text); }
+        .pf-hero-lede { font-size: 19px; line-height: 1.6; color: var(--text-muted); max-width: 56ch; margin: 0 0 30px; }
+        .pf-hero-ambient { position: absolute; inset: 0; z-index: 0; pointer-events: none; background:
+            radial-gradient(40% 50% at 80% 16%, rgba(0,209,178,0.14), transparent 70%),
+            radial-gradient(36% 44% at 6% 90%, rgba(0,123,255,0.10), transparent 70%); }
+        .pf-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+        .btn-gradient { background: var(--gradient-brand); color: white; background-size: 200% 100%; box-shadow: 0 8px 24px rgba(0,123,255,0.22); }
+        .btn-gradient:hover { background-position: right center; transform: translateY(-1px); box-shadow: 0 12px 32px rgba(0,123,255,0.32); }
+        .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border-strong); }
+        .btn-ghost:hover { border-color: var(--text); transform: translateY(-1px); }
+
+        /* Signature: animated scorecard (KPI bars fill on reveal) */
+        .pf-sc-frame { position: relative; }
+        .pf-sc-frame::before { content: ""; position: absolute; inset: -42px -32px; z-index: 0; background: radial-gradient(60% 60% at 70% 25%, rgba(0,209,178,0.16), transparent 70%), radial-gradient(55% 60% at 20% 85%, rgba(0,123,255,0.18), transparent 70%); filter: blur(16px); }
+        .pf-sc { position: relative; z-index: 1; background: var(--surface); border: 1px solid var(--border); border-radius: 22px; padding: 24px; box-shadow: 0 28px 70px -22px rgba(15,23,42,0.22), 0 8px 22px -10px rgba(15,23,42,0.08); }
+        .dark .pf-sc { box-shadow: 0 28px 70px -22px rgba(0,0,0,0.55); }
+        .pf-sc-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding-bottom: 18px; border-bottom: 1px solid var(--border); }
+        .pf-sc-eyebrow { font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--text-subtle); margin-bottom: 6px; }
+        .pf-sc-name { font-family: var(--font-display); font-weight: 700; font-size: 19px; letter-spacing: -0.015em; color: var(--text); }
+        .pf-sc-grade { display: flex; align-items: baseline; gap: 3px; }
+        .pf-sc-grade-num { font-family: var(--font-display); font-weight: 800; font-size: 40px; line-height: 1; letter-spacing: -0.03em; background: linear-gradient(135deg, var(--secondary-500), var(--accent-500)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .pf-sc-grade-lab { font-size: 13px; font-weight: 600; color: var(--text-subtle); }
+        .pf-sc-obj { display: flex; flex-direction: column; gap: 4px; margin: 18px 0; padding: 14px 16px; background: var(--bg-muted); border-radius: 12px; }
+        .pf-sc-obj-lab { font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; color: var(--text-subtle); }
+        .pf-sc-obj-val { font-size: 14px; font-weight: 500; color: var(--text); }
+        .pf-kpis { display: flex; flex-direction: column; gap: 14px; }
+        .pf-kpi { display: grid; grid-template-columns: 12ch 1fr 4ch; gap: 12px; align-items: center; }
+        .pf-kpi-name { font-size: 13px; color: var(--text-muted); }
+        .pf-kpi-track { height: 8px; border-radius: 999px; background: var(--bg-muted); overflow: hidden; }
+        .pf-kpi-fill { display: block; height: 100%; width: var(--w); border-radius: 999px; background: linear-gradient(90deg, var(--secondary-500), var(--accent-500)); transform: scaleX(0); transform-origin: left center; transition: transform 900ms cubic-bezier(0.16,1,0.3,1); }
+        .pf-kpi-fill.neg { background: linear-gradient(90deg, #f59e0b, #ef4444); transform-origin: right center; }
+        .pf-sc[data-revealed] .pf-kpi-fill { transform: scaleX(1); }
+        .pf-sc[data-revealed] .pf-kpi:nth-child(1) .pf-kpi-fill { transition-delay: 80ms; }
+        .pf-sc[data-revealed] .pf-kpi:nth-child(2) .pf-kpi-fill { transition-delay: 200ms; }
+        .pf-sc[data-revealed] .pf-kpi:nth-child(3) .pf-kpi-fill { transition-delay: 320ms; }
+        .pf-sc[data-revealed] .pf-kpi:nth-child(4) .pf-kpi-fill { transition-delay: 440ms; }
+        .pf-kpi-val { font-size: 13px; font-weight: 700; color: var(--text); text-align: right; font-family: var(--font-display); }
+        .pf-kpi-val.neg { color: #ef4444; }
+        .pf-sc-foot { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 10px; font-size: 12.5px; color: var(--text-muted); }
+        .pf-sc-foot strong { color: var(--text); font-weight: 600; }
+        .pf-pulse-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent-500); box-shadow: 0 0 0 0 rgba(0,209,178,0.5); animation: pf-dot 2.4s infinite; }
+        @keyframes pf-dot { 0% { box-shadow: 0 0 0 0 rgba(0,209,178,0.5); } 70% { box-shadow: 0 0 0 8px rgba(0,209,178,0); } 100% { box-shadow: 0 0 0 0 rgba(0,209,178,0); } }
+
+        .pf-section { padding: 84px 0; background: var(--bg); }
+        .pf-section.alt { background: var(--bg-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .pf-head { max-width: 720px; margin: 0 0 44px; }
+
+        /* 4-step pipeline */
+        .pf-pipe { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+        @media (max-width: 920px) { .pf-pipe { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 540px) { .pf-pipe { grid-template-columns: 1fr; } }
+        .pf-pipe-step { padding: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; position: relative; }
+        .pf-pipe-num { width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; font-size: 14px; background: var(--gradient-brand); color: white; margin-bottom: 14px; }
+        .pf-pipe-step h3 { font-family: var(--font-display); font-weight: 700; font-size: 16px; color: var(--text); margin: 0 0 6px; }
+        .pf-pipe-step p { font-size: 13.5px; line-height: 1.55; color: var(--text-muted); margin: 0; }
+
+        .pf-ungame { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; }
+        @media (max-width: 920px) { .pf-ungame { grid-template-columns: 1fr; gap: 36px; } }
+        .pf-ungame-list { list-style: none; padding: 0; margin: 18px 0 0; display: flex; flex-direction: column; gap: 14px; }
+        .pf-ungame-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.55; color: var(--text-muted); }
+        .pf-ungame-list li strong { color: var(--text); font-weight: 600; }
+        .pf-x { flex-shrink: 0; width: 24px; height: 24px; border-radius: 7px; display: inline-flex; align-items: center; justify-content: center; margin-top: 1px; background: rgba(239,68,68,0.1); color: #ef4444; }
+
+        .pf-guide { display: flex; align-items: center; gap: 22px; padding: 28px; background: var(--surface); border: 1px solid var(--border); border-radius: 22px; flex-wrap: wrap; }
+        .pf-guide-ico { width: 54px; height: 54px; border-radius: 15px; display: inline-flex; align-items: center; justify-content: center; background: var(--accent-50); color: var(--accent-700); flex-shrink: 0; }
+        .pf-guide-body { flex: 1; min-width: 240px; }
+        .pf-guide-body h3 { font-family: var(--font-display); font-weight: 700; font-size: 20px; color: var(--text); margin: 0 0 4px; }
+        .pf-guide-body p { font-size: 14px; color: var(--text-muted); margin: 0; }
+
+        .pf-faq-wrap { max-width: 760px; margin: 0 auto; }
+
+        .pf-reveal { opacity: 0; transform: translateY(18px); transition: opacity 620ms ease, transform 620ms cubic-bezier(0.16,1,0.3,1); }
+        .pf-reveal.is-in { opacity: 1; transform: translateY(0); }
+
+        @media (prefers-reduced-motion: reduce) {
+            .pf-reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+            .pf-kpi-fill { transform: scaleX(1) !important; transition: none !important; }
+            .pf-pulse-dot { animation: none !important; }
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300 text-gray-900 dark:text-white">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHDLXJCG" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <a href="#main"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-gray-900 focus:rounded-lg focus:shadow-lg">Skip to content</a>
+
+    <navbar-section data-locale="intl"></navbar-section>
+
+    <main id="main">
+        <!-- Hero with animated scorecard -->
+        <section class="pf-hero">
+            <div class="pf-hero-ambient" aria-hidden="true"></div>
+            <div class="nm-container">
+                <nav class="nm-breadcrumb" aria-label="Breadcrumb">
+                    <a href="/">Home</a>
+                    <span class="sep" aria-hidden="true">/</span>
+                    <a href="/platform/">Platform</a>
+                    <span class="sep" aria-hidden="true">/</span>
+                    <span aria-current="page">Measurable</span>
+                </nav>
+                <div class="pf-hero-grid">
+                    <div>
+                        <span class="eyebrow"><span class="dot"></span> The proof</span>
+                        <h1>Manage your AI like staff. Measured, every conversation.</h1>
+                        <p class="pf-hero-lede">
+                            Give each employee an objective and a handful of weighted KPIs. An AI judge scores every
+                            single conversation against them and rolls the result into a scorecard you read like a
+                            performance review &mdash; so &ldquo;is the AI doing a good job?&rdquo; finally has a number.
+                        </p>
+                        <div class="pf-actions">
+                            <a href="https://app.neomindhub.com/signup" class="btn btn-gradient" data-cta="measure-hero-start">
+                                Start free
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="/resources/how-to-measure-an-ai-employee/" class="btn btn-ghost" data-cta="measure-hero-guide">Read the guide</a>
+                        </div>
+                    </div>
+
+                    <!-- Signature animated scorecard -->
+                    <div class="pf-sc-frame pf-reveal">
+                        <div class="pf-sc" data-pf-sc role="img"
+                            aria-label="An AI employee scorecard scoring 86 out of 100, with weighted KPI bars for lead capture, groundedness, resolution and a negative guardrail-violation score.">
+                            <div class="pf-sc-head">
+                                <div>
+                                    <div class="pf-sc-eyebrow">Employee scorecard &middot; this week</div>
+                                    <div class="pf-sc-name">Simon &middot; Website</div>
+                                </div>
+                                <div class="pf-sc-grade">
+                                    <span class="pf-sc-grade-num">86</span>
+                                    <span class="pf-sc-grade-lab">/ 100</span>
+                                </div>
+                            </div>
+                            <div class="pf-sc-obj">
+                                <span class="pf-sc-obj-lab">Objective</span>
+                                <span class="pf-sc-obj-val">Qualify &amp; capture more high-intent leads</span>
+                            </div>
+                            <div class="pf-kpis">
+                                <div class="pf-kpi">
+                                    <span class="pf-kpi-name">Lead capture &middot; 40%</span>
+                                    <span class="pf-kpi-track"><span class="pf-kpi-fill" style="--w: 91%;"></span></span>
+                                    <span class="pf-kpi-val">91</span>
+                                </div>
+                                <div class="pf-kpi">
+                                    <span class="pf-kpi-name">Grounded &middot; 30%</span>
+                                    <span class="pf-kpi-track"><span class="pf-kpi-fill" style="--w: 98%;"></span></span>
+                                    <span class="pf-kpi-val">98</span>
+                                </div>
+                                <div class="pf-kpi">
+                                    <span class="pf-kpi-name">Resolution &middot; 20%</span>
+                                    <span class="pf-kpi-track"><span class="pf-kpi-fill" style="--w: 79%;"></span></span>
+                                    <span class="pf-kpi-val">79</span>
+                                </div>
+                                <div class="pf-kpi">
+                                    <span class="pf-kpi-name">Guardrail breaches</span>
+                                    <span class="pf-kpi-track"><span class="pf-kpi-fill neg" style="--w: 6%;"></span></span>
+                                    <span class="pf-kpi-val neg">&minus;6</span>
+                                </div>
+                            </div>
+                            <div class="pf-sc-foot">
+                                <span class="pf-pulse-dot" aria-hidden="true"></span>
+                                <span>Judged automatically on <strong>1,284</strong> conversations this week</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The pipeline -->
+        <section class="pf-section">
+            <div class="nm-container">
+                <div class="pf-head pf-reveal">
+                    <span class="eyebrow"><span class="dot"></span> How scoring works</span>
+                    <h2 class="nm-section-headline">From objective<br /><span class="muted">to a number you can defend.</span></h2>
+                    <p class="nm-section-sub">
+                        Four steps turn an AI from a black box into an accountable team member &mdash; no manual QA, no
+                        analytics pipeline to build.
+                    </p>
+                </div>
+                <div class="pf-pipe pf-reveal">
+                    <div class="pf-pipe-step">
+                        <span class="pf-pipe-num">1</span>
+                        <h3>Set an objective</h3>
+                        <p>Tell the employee what it's for, in plain language &mdash; book more jobs, qualify better leads, deflect repetitive questions.</p>
+                    </div>
+                    <div class="pf-pipe-step">
+                        <span class="pf-pipe-num">2</span>
+                        <h3>Weight the KPIs</h3>
+                        <p>Pick the handful that move the objective and weight them, so priority is explicit rather than implied.</p>
+                    </div>
+                    <div class="pf-pipe-step">
+                        <span class="pf-pipe-num">3</span>
+                        <h3>An AI judge scores</h3>
+                        <p>An LLM evaluator reads every conversation and grades it against your rubric &mdash; the whole week, not a 2% sample.</p>
+                    </div>
+                    <div class="pf-pipe-step">
+                        <span class="pf-pipe-num">4</span>
+                        <h3>Read the scorecard</h3>
+                        <p>KPIs roll up into a per-employee scorecard you read like a performance review &mdash; and the gaps it surfaces tell you what to fix.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Un-gameable -->
+        <section class="pf-section alt">
+            <div class="nm-container">
+                <div class="pf-ungame pf-reveal">
+                    <div>
+                        <span class="eyebrow"><span class="dot"></span> Un-gameable</span>
+                        <h2 class="nm-section-headline">A score that can't<br /><span class="muted">be cheated.</span></h2>
+                        <p class="nm-section-sub" style="margin-top: 14px;">
+                            A measurement system you can game is worthless. So in NeoMind, the shortcuts an AI might take
+                            to look good are precisely what the rubric penalises &mdash; they score
+                            <strong style="color: var(--text);">negative</strong> and pull the number down.
+                        </p>
+                        <ul class="pf-ungame-list">
+                            <li><span class="pf-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg></span><span><strong>Hallucinating</strong> &mdash; making up an answer instead of grounding it in your knowledge.</span></li>
+                            <li><span class="pf-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg></span><span><strong>Binding promises</strong> &mdash; committing to something the business hasn't authorised.</span></li>
+                            <li><span class="pf-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg></span><span><strong>Going off-scope</strong> &mdash; wandering outside its remit to seem more helpful than it should.</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="nm-section-sub" style="max-width: none;">
+                            Escalating to a human at the right moment does the opposite &mdash; it <strong style="color: var(--text);">raises</strong>
+                            the score. The bright line between routine work and human judgement isn't a gap in the
+                            product; it's the thing that makes a measurable AI employee safe to deploy. Anything binding
+                            stays with your team.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flagship guide -->
+        <section class="pf-section">
+            <div class="nm-container" style="max-width: 920px;">
+                <div class="pf-guide pf-reveal">
+                    <span class="pf-guide-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
+                    <div class="pf-guide-body">
+                        <h3>The full framework</h3>
+                        <p>Our flagship guide walks through objectives, weighted KPIs, the AI judge and un-gameable scoring in depth.</p>
+                    </div>
+                    <a href="/resources/how-to-measure-an-ai-employee/" class="btn btn-gradient" data-cta="measure-guide-link">
+                        How to measure an AI employee
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="pf-section alt">
+            <div class="nm-container">
+                <div class="pf-faq-wrap">
+                    <div class="pf-head pf-reveal" style="margin-bottom: 28px;">
+                        <span class="eyebrow"><span class="dot"></span> Questions</span>
+                        <h2 class="nm-section-headline" style="font-size: clamp(30px, 4vw, 46px);">About measurement</h2>
+                    </div>
+                    <div class="nm-faq-list pf-reveal" id="nm-faq-list">
+                        <div class="nm-faq-item open">
+                            <button class="nm-faq-q" aria-expanded="true" type="button">
+                                <span class="nm-faq-q-text">How is each conversation scored?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a"><p>An AI judge &mdash; an LLM acting as evaluator &mdash; reads each conversation and grades it against your weighted KPI rubric automatically. Every interaction is scored, not a small manual sample, and the scores roll up into a per-employee scorecard.</p></div>
+                        </div>
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">Can an employee game its own score?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a"><p>No. Guardrail violations &mdash; hallucinating, making a binding promise, going off-scope &mdash; score negative, so an employee can't inflate its number by cutting corners. The measurement is designed to be un-gameable.</p></div>
+                        </div>
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">Do I need a data team to measure it?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a"><p>No. You set an objective in plain language, pick a handful of weighted KPIs, and the AI judge does the scoring. There's no manual QA queue, dashboards to build, or analytics pipeline to maintain.</p></div>
+                        </div>
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">What's a good KPI for an AI employee?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a"><p>A good KPI is tied to the employee's objective and observable in a conversation &mdash; for example lead-capture rate, answer accuracy or groundedness, appropriate escalation, and resolution. Pick the handful that matter and weight them so priorities are explicit.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA band -->
+        <section style="background: var(--bg); padding: 80px 0;">
+            <div class="nm-container" style="max-width: 920px;">
+                <div class="nm-cta-band">
+                    <div aria-hidden="true" style="position: absolute; inset: 0; background: radial-gradient(60% 80% at 30% 30%, rgba(255,255,255,0.18), transparent 60%);"></div>
+                    <div aria-hidden="true" style="position: absolute; top: -100px; right: -100px; width: 360px; height: 360px; border-radius: 50%; background: rgba(255,255,255,0.06);"></div>
+                    <div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; gap: 48px; flex-wrap: wrap;">
+                        <div style="max-width: 40ch;">
+                            <span style="display: inline-block; padding: 5px 12px; background: rgba(255,255,255,0.18); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 9999px; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 20px;">Get started</span>
+                            <h2 style="font-family: var(--font-display); font-weight: 700; font-size: clamp(32px, 4.2vw, 52px); line-height: 1.05; letter-spacing: -0.025em; margin: 0 0 18px; text-wrap: balance;">
+                                Hire an AI employee you can actually measure.
+                            </h2>
+                            <p style="font-size: 18px; line-height: 1.55; opacity: 0.92; margin: 0; max-width: 46ch;">
+                                Set an objective, weight the KPIs, read the scorecard. See our <a href="/pricing/" style="color: white; text-decoration: underline;">plans</a>.
+                            </p>
+                        </div>
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                            <a href="https://app.neomindhub.com/signup" class="btn" style="background: white; color: var(--gray-900); padding: 16px 28px; font-size: 15px;" data-cta="measure-cta-signup">
+                                Start free
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="/platform/" class="btn" style="background: rgba(255,255,255,0.12); color: white; border: 1px solid rgba(255,255,255,0.28); padding: 16px 28px; font-size: 15px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);" data-cta="measure-cta-platform">
+                                Back to Platform
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer-section data-locale="intl"></footer-section>
+
+    <button id="darkModeToggle" type="button" aria-label="Toggle dark mode"
+        class="fixed bottom-6 right-6 p-3 bg-gray-800 dark:bg-white rounded-full shadow-lg z-50 hover:scale-105 transition-transform">
+        <svg class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+        </svg>
+    </button>
+
+    <script>
+        (function () {
+            var html = document.documentElement;
+            if (localStorage.getItem('darkMode') === 'true') html.classList.add('dark');
+            var btn = document.getElementById('darkModeToggle');
+            if (btn) btn.addEventListener('click', function () {
+                html.classList.toggle('dark');
+                localStorage.setItem('darkMode', html.classList.contains('dark'));
+            });
+        })();
+        (function () {
+            document.querySelectorAll('#nm-faq-list .nm-faq-q').forEach(function (q) {
+                q.addEventListener('click', function () {
+                    var item = q.closest('.nm-faq-item');
+                    var open = item.classList.toggle('open');
+                    q.setAttribute('aria-expanded', open ? 'true' : 'false');
+                });
+            });
+        })();
+        // Scroll-reveal for sections + the signature scorecard.
+        (function () {
+            var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            var reveals = document.querySelectorAll('.pf-reveal');
+            var sc = document.querySelector('[data-pf-sc]');
+            function showAll() {
+                reveals.forEach(function (el) { el.classList.add('is-in'); });
+                if (sc) sc.setAttribute('data-revealed', '');
+            }
+            if (reduce || !('IntersectionObserver' in window)) { showAll(); return; }
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('is-in');
+                        io.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.18 });
+            reveals.forEach(function (el) { io.observe(el); });
+            if (sc) {
+                var io2 = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) { if (e.isIntersecting) { sc.setAttribute('data-revealed', ''); io2.disconnect(); } });
+                }, { threshold: 0.3 });
+                io2.observe(sc);
+            }
+        })();
+    </script>
+</body>
+
+</html>

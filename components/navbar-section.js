@@ -35,7 +35,8 @@ class NavbarSection extends HTMLElement {
     // Nav menu/CTA labels resolve from the locale; English fallback keeps
     // intl working if the locale table fails to load.
     const nav = Object.assign(
-      { product:"How it works", measurable:"Measurable", roster:"Roster", brain:"The Brain", integrations:"Integrations", pricing:"Pricing", compare:"Compare", resources:"Resources", faq:"FAQ", signIn:"Sign in", startFree:"Start free" },
+      { product:"How it works", measurable:"Measurable", roster:"Roster", brain:"The Brain", integrations:"Integrations", pricing:"Pricing", compare:"Compare", resources:"Resources", faq:"FAQ", signIn:"Sign in", startFree:"Start free",
+        platform:"Platform", employees:"AI Employees", solutions:"Solutions", company:"Company" },
       L.navLabels || {}
     );
 
@@ -48,20 +49,32 @@ class NavbarSection extends HTMLElement {
       return "<option value=\"" + code + "\"" + selected + ">" + loc.switcherLabel + "</option>";
     }).join("");
 
-    // Streamlined 4-item nav. Resources + Compare are locale-prefixed hub pages,
-    // rendered only for locales whose hubs exist today (intl + au); es shows just
-    // How it works + Pricing until its content pass ships. Roster / The Brain /
-    // Integrations / FAQ are dropped from the nav (still reachable via scroll +
-    // footer). The same link set drives both the desktop ul and the mobile panel.
-    const gated = (L.code === "intl" || L.code === "au");
-    const gatedLinks = gated
-      ? "<li><a href=\"" + L.path + "resources/\">" + nav.resources + "</a></li>" +
-        "<li><a href=\"" + L.path + "compare/\">" + nav.compare + "</a></li>"
-      : "";
-    const navItems =
-      "<li><a href=\"" + L.path + "#measurable\">" + nav.product + "</a></li>" +
-      "<li><a href=\"" + L.path + "#pricing\">" + nav.pricing + "</a></li>" +
-      gatedLinks;
+    // Nav links. intl now routes to dedicated hub PAGES (the full content build
+    // landed): Platform / AI Employees / Solutions / Pricing / Resources / Company,
+    // each an absolute page link (no #anchors). Compare folds under Resources.
+    // au/es keep their existing scroll-anchor + gated-hub behaviour unchanged,
+    // because their localized hub pages don't exist yet. The same link set drives
+    // both the desktop ul and the mobile panel.
+    let navItems;
+    if (L.code === "intl") {
+      navItems =
+        "<li><a href=\"/platform/\">" + nav.platform + "</a></li>" +
+        "<li><a href=\"/employees/\">" + nav.employees + "</a></li>" +
+        "<li><a href=\"/solutions/\">" + nav.solutions + "</a></li>" +
+        "<li><a href=\"/pricing/\">" + nav.pricing + "</a></li>" +
+        "<li><a href=\"/resources/\">" + nav.resources + "</a></li>" +
+        "<li><a href=\"/company/\">" + nav.company + "</a></li>";
+    } else {
+      const gated = (L.code === "au");
+      const gatedLinks = gated
+        ? "<li><a href=\"" + L.path + "resources/\">" + nav.resources + "</a></li>" +
+          "<li><a href=\"" + L.path + "compare/\">" + nav.compare + "</a></li>"
+        : "";
+      navItems =
+        "<li><a href=\"" + L.path + "#measurable\">" + nav.product + "</a></li>" +
+        "<li><a href=\"" + L.path + "#pricing\">" + nav.pricing + "</a></li>" +
+        gatedLinks;
+    }
 
     const markup =
       "<style>" + STYLES + "</style>" +

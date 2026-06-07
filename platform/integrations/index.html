@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NHDLXJCG');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Integrations | NeoMind</title>
+    <meta name="description"
+        content="Connect your AI employees to Calendar, Webhooks, email handover, Slack, Microsoft Teams and Twilio — acting inside the tools you already run on.">
+    <link rel="canonical" href="https://neomindhub.com/platform/integrations/">
+    <!-- hreflang: this intl page (en + x-default) → self. add en-au/es when localized. -->
+    <link rel="alternate" hreflang="en"        href="https://neomindhub.com/platform/integrations/" />
+    <link rel="alternate" hreflang="x-default" href="https://neomindhub.com/platform/integrations/" />
+    <meta property="og:title" content="Integrations">
+    <meta property="og:description" content="Calendar, Webhooks, email handover, Slack, Microsoft Teams and Twilio — your AI employees act inside the tools you already run on.">
+    <meta property="og:url" content="https://neomindhub.com/platform/integrations/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://neomindhub.com/images/logo1.png">
+    <meta property="og:site_name" content="NeoMind">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Integrations">
+    <meta name="twitter:description" content="Calendar, Webhooks, email handover, Slack, Microsoft Teams and Twilio — your AI employees act inside the tools you already run on.">
+    <meta name="twitter:image" content="https://neomindhub.com/images/logo1.png">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/neomeric-tokens.css">
+    <link rel="stylesheet" href="/css/content.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Locale data must load synchronously before any component connectedCallback runs -->
+    <script src="/js/locales.js"></script>
+    <script>window.NM_LOCALE = "intl";</script>
+    <script src="/components/navbar-section.js" type="module"></script>
+    <script src="/components/footer-section.js" type="module"></script>
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://neomindhub.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Platform", "item": "https://neomindhub.com/platform/" },
+        { "@type": "ListItem", "position": 3, "name": "Integrations", "item": "https://neomindhub.com/platform/integrations/" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Integrations",
+      "description": "Connect your AI employees to Calendar, Webhooks, email handover, Slack, Microsoft Teams and Twilio — so they act inside the tools your business already runs on.",
+      "inLanguage": "en",
+      "url": "https://neomindhub.com/platform/integrations/",
+      "isPartOf": { "@type": "WebSite", "name": "NeoMind", "url": "https://neomindhub.com/" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Neomeric Pty Ltd",
+        "logo": { "@type": "ImageObject", "url": "https://neomindhub.com/images/logo1.png" }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do my AI employees connect to my tools?",
+          "acceptedAnswer": { "@type": "Answer", "text": "You connect each integration from the dashboard — authorise your calendar, add a webhook endpoint, link Slack or Teams. Once connected, the relevant employee can act through it: booking a time, posting an event, or answering in a channel." }
+        },
+        {
+          "@type": "Question",
+          "name": "Are webhooks secure?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Outbound webhook events are signed with an HMAC signature so your endpoint can verify the payload genuinely came from NeoMind and wasn't tampered with in transit." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can an AI employee book a meeting on its own?",
+          "acceptedAnswer": { "@type": "Answer", "text": "An employee can offer available times and book into your connected calendar as part of a conversation. Anything binding stays inside the guardrails you set — when a request needs human judgement, the employee escalates to a person." }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* ── Scoped to this Platform page (no shared-file edits) ── */
+        .pf-hero { padding: 84px 0 56px; background: var(--bg-muted); border-bottom: 1px solid var(--border); position: relative; overflow: clip; }
+        @media (max-width: 768px) { .pf-hero { padding: 64px 0 44px; } }
+        .pf-hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.02fr 1fr; gap: 56px; align-items: center; }
+        @media (max-width: 920px) { .pf-hero-grid { grid-template-columns: 1fr; gap: 40px; } }
+        .pf-hero h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(38px, 5vw, 62px); line-height: 1.03; letter-spacing: -0.03em; margin: 18px 0 20px; text-wrap: balance; color: var(--text); }
+        .pf-hero-lede { font-size: 19px; line-height: 1.6; color: var(--text-muted); max-width: 56ch; margin: 0 0 30px; }
+        .pf-hero-ambient { position: absolute; inset: 0; z-index: 0; pointer-events: none; background:
+            radial-gradient(40% 50% at 80% 16%, rgba(156,125,185,0.14), transparent 70%),
+            radial-gradient(36% 44% at 6% 90%, rgba(0,123,255,0.10), transparent 70%); }
+        .pf-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+        .btn-gradient { background: var(--gradient-brand); color: white; background-size: 200% 100%; box-shadow: 0 8px 24px rgba(0,123,255,0.22); }
+        .btn-gradient:hover { background-position: right center; transform: translateY(-1px); box-shadow: 0 12px 32px rgba(0,123,255,0.32); }
+        .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border-strong); }
+        .btn-ghost:hover { border-color: var(--text); transform: translateY(-1px); }
+
+        /* Signature: animated connections hub (Brain centre → integration nodes on a ring) */
+        .pf-hub { position: relative; width: 100%; max-width: 420px; margin: 0 auto; aspect-ratio: 1 / 1; }
+        .pf-hub-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+        .pf-spoke { stroke-dasharray: 5 6; opacity: 0; transition: opacity 600ms ease; }
+        .pf-hub[data-revealed] .pf-spoke { opacity: 0.8; }
+        .pf-spark { opacity: 0; }
+        .pf-hub[data-revealed] .pf-spark { opacity: 1; transition: opacity 400ms ease; }
+        .pf-hub-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 86px; height: 86px; border-radius: 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; color: white; background: linear-gradient(135deg, var(--primary-500), var(--secondary-500) 55%, var(--accent-500)); box-shadow: 0 18px 44px -12px rgba(0,123,255,0.5); z-index: 2; }
+        .pf-hub-center span { font-size: 10px; font-weight: 700; letter-spacing: 0.04em; }
+        .pf-hub-center::after { content: ''; position: absolute; inset: -8px; border-radius: 30px; border: 1.5px solid var(--secondary-500); opacity: 0; animation: pf-ring 3s ease-out infinite; }
+        @keyframes pf-ring { 0% { transform: scale(0.85); opacity: 0.5; } 100% { transform: scale(1.25); opacity: 0; } }
+        .pf-pin { position: absolute; transform: translate(-50%, -50%); width: 54px; height: 54px; border-radius: 16px; display: inline-flex; align-items: center; justify-content: center; background: var(--surface); border: 1px solid var(--border); box-shadow: 0 10px 26px -12px rgba(15,23,42,0.3); color: var(--text-muted); z-index: 2; opacity: 0; transition: opacity 460ms ease, transform 460ms cubic-bezier(0.16,1,0.3,1); }
+        .pf-hub[data-revealed] .pf-pin { opacity: 1; }
+        .pf-pin svg { width: 24px; height: 24px; }
+
+        .pf-section { padding: 84px 0; background: var(--bg); }
+        .pf-section.alt { background: var(--bg-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .pf-head { max-width: 720px; margin: 0 0 44px; }
+
+        /* Integration cards */
+        .pf-ints { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        @media (max-width: 920px) { .pf-ints { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 560px) { .pf-ints { grid-template-columns: 1fr; } }
+        .pf-int { padding: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease; }
+        .pf-int:hover { transform: translateY(-2px); box-shadow: 0 18px 40px -18px rgba(15,23,42,0.18); border-color: var(--border-strong); }
+        .pf-int-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 14px; }
+        .pf-int-ico { width: 46px; height: 46px; border-radius: 13px; display: inline-flex; align-items: center; justify-content: center; background: var(--secondary-50); color: var(--secondary-700); }
+        .pf-badge { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 9px; border-radius: 999px; }
+        .pf-badge.live { background: var(--accent-50); color: var(--accent-700); }
+        .pf-int h3 { font-family: var(--font-display); font-weight: 700; font-size: 18px; letter-spacing: -0.015em; color: var(--text); margin: 0 0 6px; }
+        .pf-int p { font-size: 14px; line-height: 1.55; color: var(--text-muted); margin: 0; }
+
+        /* How connections work — 3 steps */
+        .pf-steps { display: flex; align-items: stretch; gap: 14px; flex-wrap: wrap; }
+        .pf-step { flex: 1; min-width: 220px; padding: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; }
+        .pf-step-num { width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; font-size: 15px; background: var(--gradient-brand); color: white; margin-bottom: 14px; }
+        .pf-step h3 { font-family: var(--font-display); font-weight: 700; font-size: 16px; color: var(--text); margin: 0 0 6px; }
+        .pf-step p { font-size: 13.5px; line-height: 1.55; color: var(--text-muted); margin: 0; }
+
+        .pf-faq-wrap { max-width: 760px; margin: 0 auto; }
+
+        .pf-reveal { opacity: 0; transform: translateY(18px); transition: opacity 620ms ease, transform 620ms cubic-bezier(0.16,1,0.3,1); }
+        .pf-reveal.is-in { opacity: 1; transform: translateY(0); }
+
+        @media (prefers-reduced-motion: reduce) {
+            .pf-reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+            .pf-spoke, .pf-spark, .pf-pin { opacity: 1 !important; transform: translate(-50%, -50%) !important; }
+            .pf-hub-center::after { animation: none !important; }
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300 text-gray-900 dark:text-white">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHDLXJCG" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <a href="#main"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-gray-900 focus:rounded-lg focus:shadow-lg">Skip to content</a>
+
+    <navbar-section data-locale="intl"></navbar-section>
+
+    <main id="main">
+        <!-- Hero with connections-hub visual -->
+        <section class="pf-hero">
+            <div class="pf-hero-ambient" aria-hidden="true"></div>
+            <div class="nm-container">
+                <nav class="nm-breadcrumb" aria-label="Breadcrumb">
+                    <a href="/">Home</a>
+                    <span class="sep" aria-hidden="true">/</span>
+                    <a href="/platform/">Platform</a>
+                    <span class="sep" aria-hidden="true">/</span>
+                    <span aria-current="page">Integrations</span>
+                </nav>
+                <div class="pf-hero-grid">
+                    <div>
+                        <span class="eyebrow"><span class="dot"></span> The reach</span>
+                        <h1>Your AI employees, working inside your tools.</h1>
+                        <p class="pf-hero-lede">
+                            Connect NeoMind to the systems you already run on. Your employees can book into the
+                            calendar, post events to a webhook, hand a conversation to email, answer in Slack or
+                            Microsoft Teams, and take calls over Twilio &mdash; all drawing from the same Brain.
+                        </p>
+                        <div class="pf-actions">
+                            <a href="https://app.neomindhub.com/signup" class="btn btn-gradient" data-cta="int-hero-start">
+                                Start free
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="/platform/security/" class="btn btn-ghost" data-cta="int-hero-security">How we keep it secure</a>
+                        </div>
+                    </div>
+
+                    <!-- Signature animated connections hub -->
+                    <div class="pf-hub pf-reveal" data-pf-hub role="img"
+                        aria-label="Diagram: the Brain at the centre connected to six integrations — Calendar, Webhooks, Email, Slack, Microsoft Teams and Twilio.">
+                        <svg class="pf-hub-svg" viewBox="0 0 420 420" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="spokeGrad" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0" stop-color="var(--secondary-500)" stop-opacity="0.6"/>
+                                    <stop offset="1" stop-color="var(--accent-500)" stop-opacity="0.6"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- spokes from centre (210,210) to 6 ring positions, r=150 -->
+                            <path class="pf-spoke" d="M210 210 L210 60"   stroke="url(#spokeGrad)" stroke-width="2"/>
+                            <path class="pf-spoke" d="M210 210 L340 135"  stroke="url(#spokeGrad)" stroke-width="2"/>
+                            <path class="pf-spoke" d="M210 210 L340 285"  stroke="url(#spokeGrad)" stroke-width="2"/>
+                            <path class="pf-spoke" d="M210 210 L210 360"  stroke="url(#spokeGrad)" stroke-width="2"/>
+                            <path class="pf-spoke" d="M210 210 L80 285"   stroke="url(#spokeGrad)" stroke-width="2"/>
+                            <path class="pf-spoke" d="M210 210 L80 135"   stroke="url(#spokeGrad)" stroke-width="2"/>
+                            <circle class="pf-spark" r="4" fill="var(--accent-500)"><animateMotion dur="2.4s" repeatCount="indefinite" calcMode="linear" path="M210 210 L210 60"/></circle>
+                            <circle class="pf-spark" r="4" fill="var(--secondary-500)"><animateMotion dur="2.4s" begin="0.4s" repeatCount="indefinite" calcMode="linear" path="M210 210 L340 135"/></circle>
+                            <circle class="pf-spark" r="4" fill="var(--primary-500)"><animateMotion dur="2.4s" begin="0.8s" repeatCount="indefinite" calcMode="linear" path="M210 210 L340 285"/></circle>
+                            <circle class="pf-spark" r="4" fill="var(--accent-500)"><animateMotion dur="2.4s" begin="1.2s" repeatCount="indefinite" calcMode="linear" path="M210 210 L210 360"/></circle>
+                            <circle class="pf-spark" r="4" fill="var(--secondary-500)"><animateMotion dur="2.4s" begin="1.6s" repeatCount="indefinite" calcMode="linear" path="M210 210 L80 285"/></circle>
+                            <circle class="pf-spark" r="4" fill="var(--primary-500)"><animateMotion dur="2.4s" begin="2s" repeatCount="indefinite" calcMode="linear" path="M210 210 L80 135"/></circle>
+                        </svg>
+
+                        <div class="pf-hub-center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a3 3 0 0 0-3 3 3 3 0 0 0-1 5.8A2.5 2.5 0 0 0 12 19a2.5 2.5 0 0 0 4-4.2A3 3 0 0 0 15 8a3 3 0 0 0-3-3z"/><path d="M12 5v14"/></svg><span>Brain</span></div>
+
+                        <!-- pins positioned to ring points (% of 420) -->
+                        <span class="pf-pin" style="left: 50%; top: 14.3%; transition-delay: 60ms;" title="Calendar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+                        <span class="pf-pin" style="left: 80.9%; top: 32.1%; transition-delay: 140ms;" title="Webhooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span>
+                        <span class="pf-pin" style="left: 80.9%; top: 67.9%; transition-delay: 220ms;" title="Slack"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+                        <span class="pf-pin" style="left: 50%; top: 85.7%; transition-delay: 300ms;" title="Twilio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+                        <span class="pf-pin" style="left: 19.1%; top: 67.9%; transition-delay: 380ms;" title="Microsoft Teams"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></span>
+                        <span class="pf-pin" style="left: 19.1%; top: 32.1%; transition-delay: 460ms;" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Integration cards -->
+        <section class="pf-section">
+            <div class="nm-container">
+                <div class="pf-head pf-reveal">
+                    <span class="eyebrow"><span class="dot"></span> What connects</span>
+                    <h2 class="nm-section-headline">Put your employees<br /><span class="muted">to work, everywhere.</span></h2>
+                    <p class="nm-section-sub">
+                        Each integration is something an employee can actually do &mdash; not a logo wall. Connect what
+                        you need and leave the rest.
+                    </p>
+                </div>
+                <div class="pf-ints pf-reveal">
+                    <div class="pf-int">
+                        <div class="pf-int-top">
+                            <span class="pf-int-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+                            <span class="pf-badge live">Available</span>
+                        </div>
+                        <h3>Calendar</h3>
+                        <p>Employees offer available times and book appointments straight into your connected calendar during a conversation.</p>
+                    </div>
+                    <div class="pf-int">
+                        <div class="pf-int-top">
+                            <span class="pf-int-ico" style="background: var(--primary-50); color: var(--primary-700);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span>
+                            <span class="pf-badge live">Available</span>
+                        </div>
+                        <h3>Webhooks (HMAC)</h3>
+                        <p>Stream events &mdash; new leads, bookings, escalations &mdash; to your own systems. Every payload is HMAC-signed so you can verify it's genuinely from NeoMind.</p>
+                    </div>
+                    <div class="pf-int">
+                        <div class="pf-int-top">
+                            <span class="pf-int-ico" style="background: var(--accent-50); color: var(--accent-700);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+                            <span class="pf-badge live">Available</span>
+                        </div>
+                        <h3>Email handover</h3>
+                        <p>When a conversation needs a person, the employee hands it over by email with the full context &mdash; so nothing is dropped or repeated.</p>
+                    </div>
+                    <div class="pf-int">
+                        <div class="pf-int-top">
+                            <span class="pf-int-ico" style="background: var(--secondary-50); color: var(--secondary-700);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+                            <span class="pf-badge live">Available</span>
+                        </div>
+                        <h3>Slack</h3>
+                        <p>Bring Hugo into Slack so staff can ask questions where they already work &mdash; answers come from the same Brain, in the channel.</p>
+                    </div>
+                    <div class="pf-int">
+                        <div class="pf-int-top">
+                            <span class="pf-int-ico" style="background: var(--primary-50); color: var(--primary-700);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></span>
+                            <span class="pf-badge live">Available</span>
+                        </div>
+                        <h3>Microsoft Teams</h3>
+                        <p>The same internal employee, in Teams. Staff get answers to policy, leave and process questions without leaving the app.</p>
+                    </div>
+                    <div class="pf-int">
+                        <div class="pf-int-top">
+                            <span class="pf-int-ico" style="background: var(--accent-50); color: var(--accent-700);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+                            <span class="pf-badge live">Available</span>
+                        </div>
+                        <h3>Twilio (voice)</h3>
+                        <p>Maeve answers calls over Twilio, captures details and books into your calendar in a natural conversation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How connections work -->
+        <section class="pf-section alt">
+            <div class="nm-container">
+                <div class="pf-head pf-reveal">
+                    <span class="eyebrow"><span class="dot"></span> How it works</span>
+                    <h2 class="nm-section-headline">Connect once.<br /><span class="muted">Your employees take it from there.</span></h2>
+                    <p class="nm-section-sub">
+                        Connecting an integration takes a few minutes from the dashboard &mdash; no engineering project.
+                    </p>
+                </div>
+                <div class="pf-steps pf-reveal">
+                    <div class="pf-step">
+                        <span class="pf-step-num">1</span>
+                        <h3>Authorise</h3>
+                        <p>Connect your calendar, add a webhook endpoint, or link Slack and Teams from the dashboard.</p>
+                    </div>
+                    <div class="pf-step">
+                        <span class="pf-step-num">2</span>
+                        <h3>Assign</h3>
+                        <p>Decide which employee uses which connection &mdash; Maeve on Twilio, Hugo in Teams, Simon booking the calendar.</p>
+                    </div>
+                    <div class="pf-step">
+                        <span class="pf-step-num">3</span>
+                        <h3>It just runs</h3>
+                        <p>From then on the employee acts through the connection in conversation &mdash; within the guardrails you set.</p>
+                    </div>
+                </div>
+                <p class="nm-section-sub pf-reveal" style="margin-top: 30px; max-width: 70ch;">
+                    Need something beyond the list? Webhooks give your developers a clean, signed event stream to build
+                    on, and bespoke integrations are available on <a href="/pricing/" style="color: var(--primary-700); text-decoration: underline; text-underline-offset: 2px;">Enterprise plans</a>.
+                </p>
+            </div>
+        </section>
+
+        <!-- The bright line -->
+        <section class="pf-section">
+            <div class="nm-container" style="max-width: 760px;">
+                <div class="pf-head pf-reveal" style="margin-bottom: 0;">
+                    <span class="eyebrow"><span class="dot"></span> The bright line</span>
+                    <h2 class="nm-section-headline">Connected, but never<br /><span class="muted">off the leash.</span></h2>
+                    <p class="nm-section-sub" style="margin-top: 14px;">
+                        Integrations let your employees <em>act</em> &mdash; book a time, post an event, hand over a
+                        conversation. But anything that binds your business stays with your team. When a request needs
+                        human judgement, the employee escalates to a person rather than committing on your behalf. The
+                        same guardrails apply across every channel, drawn from the one Brain.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="pf-section alt">
+            <div class="nm-container">
+                <div class="pf-faq-wrap">
+                    <div class="pf-head pf-reveal" style="margin-bottom: 28px;">
+                        <span class="eyebrow"><span class="dot"></span> Questions</span>
+                        <h2 class="nm-section-headline" style="font-size: clamp(30px, 4vw, 46px);">About integrations</h2>
+                    </div>
+                    <div class="nm-faq-list pf-reveal" id="nm-faq-list">
+                        <div class="nm-faq-item open">
+                            <button class="nm-faq-q" aria-expanded="true" type="button">
+                                <span class="nm-faq-q-text">How do my AI employees connect to my tools?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a"><p>You connect each integration from the dashboard &mdash; authorise your calendar, add a webhook endpoint, link Slack or Teams. Once connected, the relevant employee can act through it: booking a time, posting an event, or answering in a channel.</p></div>
+                        </div>
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">Are webhooks secure?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a"><p>Yes. Outbound webhook events are signed with an HMAC signature so your endpoint can verify the payload genuinely came from NeoMind and wasn't tampered with in transit.</p></div>
+                        </div>
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">Can an AI employee book a meeting on its own?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a"><p>An employee can offer available times and book into your connected calendar as part of a conversation. Anything binding stays inside the guardrails you set &mdash; when a request needs human judgement, the employee escalates to a person.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA band -->
+        <section style="background: var(--bg); padding: 80px 0;">
+            <div class="nm-container" style="max-width: 920px;">
+                <div class="nm-cta-band">
+                    <div aria-hidden="true" style="position: absolute; inset: 0; background: radial-gradient(60% 80% at 30% 30%, rgba(255,255,255,0.18), transparent 60%);"></div>
+                    <div aria-hidden="true" style="position: absolute; top: -100px; right: -100px; width: 360px; height: 360px; border-radius: 50%; background: rgba(255,255,255,0.06);"></div>
+                    <div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; gap: 48px; flex-wrap: wrap;">
+                        <div style="max-width: 40ch;">
+                            <span style="display: inline-block; padding: 5px 12px; background: rgba(255,255,255,0.18); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 9999px; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 20px;">Get started</span>
+                            <h2 style="font-family: var(--font-display); font-weight: 700; font-size: clamp(32px, 4.2vw, 52px); line-height: 1.05; letter-spacing: -0.025em; margin: 0 0 18px; text-wrap: balance;">
+                                Connect your stack in minutes.
+                            </h2>
+                            <p style="font-size: 18px; line-height: 1.55; opacity: 0.92; margin: 0; max-width: 46ch;">
+                                Calendar, webhooks, Slack, Teams, Twilio &mdash; ready when you are. See our <a href="/pricing/" style="color: white; text-decoration: underline;">plans</a>.
+                            </p>
+                        </div>
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                            <a href="https://app.neomindhub.com/signup" class="btn" style="background: white; color: var(--gray-900); padding: 16px 28px; font-size: 15px;" data-cta="int-cta-signup">
+                                Start free
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="/platform/" class="btn" style="background: rgba(255,255,255,0.12); color: white; border: 1px solid rgba(255,255,255,0.28); padding: 16px 28px; font-size: 15px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);" data-cta="int-cta-platform">
+                                Back to Platform
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer-section data-locale="intl"></footer-section>
+
+    <button id="darkModeToggle" type="button" aria-label="Toggle dark mode"
+        class="fixed bottom-6 right-6 p-3 bg-gray-800 dark:bg-white rounded-full shadow-lg z-50 hover:scale-105 transition-transform">
+        <svg class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+        </svg>
+    </button>
+
+    <script>
+        (function () {
+            var html = document.documentElement;
+            if (localStorage.getItem('darkMode') === 'true') html.classList.add('dark');
+            var btn = document.getElementById('darkModeToggle');
+            if (btn) btn.addEventListener('click', function () {
+                html.classList.toggle('dark');
+                localStorage.setItem('darkMode', html.classList.contains('dark'));
+            });
+        })();
+        (function () {
+            document.querySelectorAll('#nm-faq-list .nm-faq-q').forEach(function (q) {
+                q.addEventListener('click', function () {
+                    var item = q.closest('.nm-faq-item');
+                    var open = item.classList.toggle('open');
+                    q.setAttribute('aria-expanded', open ? 'true' : 'false');
+                });
+            });
+        })();
+        (function () {
+            var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            var reveals = document.querySelectorAll('.pf-reveal');
+            var hub = document.querySelector('[data-pf-hub]');
+            function showAll() {
+                reveals.forEach(function (el) { el.classList.add('is-in'); });
+                if (hub) hub.setAttribute('data-revealed', '');
+            }
+            if (reduce || !('IntersectionObserver' in window)) { showAll(); return; }
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('is-in');
+                        if (e.target === hub) e.target.setAttribute('data-revealed', '');
+                        io.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.18 });
+            reveals.forEach(function (el) { io.observe(el); });
+            if (hub) io.observe(hub);
+        })();
+    </script>
+</body>
+
+</html>

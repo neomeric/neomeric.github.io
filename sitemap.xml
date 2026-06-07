@@ -263,6 +263,165 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/au/resources/onshore-australian-ai/"/>
   </url>
 
+  <!-- ════════════ Product pages — intl-only for now (en + x-default self-referential) ════════════ -->
+
+  <!-- Platform hub + sub-pages -->
+  <url>
+    <loc>https://neomindhub.com/platform/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://neomindhub.com/platform/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/platform/"/>
+  </url>
+  <url>
+    <loc>https://neomindhub.com/platform/brain/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://neomindhub.com/platform/brain/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/platform/brain/"/>
+  </url>
+  <url>
+    <loc>https://neomindhub.com/platform/measurable/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://neomindhub.com/platform/measurable/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/platform/measurable/"/>
+  </url>
+  <url>
+    <loc>https://neomindhub.com/platform/integrations/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://neomindhub.com/platform/integrations/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/platform/integrations/"/>
+  </url>
+  <url>
+    <loc>https://neomindhub.com/platform/security/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://neomindhub.com/platform/security/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/platform/security/"/>
+  </url>
+
+  <!-- AI Employees hub + sub-pages -->
+  <url>
+    <loc>https://neomindhub.com/employees/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://neomindhub.com/employees/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/employees/"/>
+  </url>
+  <url>
+    <loc>https://neomindhub.com/employees/simon/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://neomindhub.com/employees/simon/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/employees/simon/"/>
+  </url>
+  <url>
+    <loc>https://neomindhub.com/employees/hugo/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://neomindhub.com/employees/hugo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/employees/hugo/"/>
+  </url>
+  <url>
+    <loc>https://neomindhub.com/employees/maeve/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://neomindhub.com/employees/maeve/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/employees/maeve/"/>
+  </url>
+  <url>
+    <loc>https://neomindhub.com/employees/build-your-own/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://neomindhub.com/employees/build-your-own/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/employees/build-your-own/"/>
+  </url>
+
+  <!-- Solutions hub + industry pages -->
+  <url>
+    <loc>https://neomindhub.com/solutions/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://neomindhub.com/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/solutions/"/>
+  </url>
+  <url>
+    <loc>https://neomindhub.com/solutions/trades-and-home-services/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://neomindhub.com/solutions/trades-and-home-services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/solutions/trades-and-home-services/"/>
+  </url>
+  <url>
+    <loc>https://neomindhub.com/solutions/professional-services/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://neomindhub.com/solutions/professional-services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/solutions/professional-services/"/>
+  </url>
+  <url>
+    <loc>https://neomindhub.com/solutions/healthcare/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://neomindhub.com/solutions/healthcare/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/solutions/healthcare/"/>
+  </url>
+  <url>
+    <loc>https://neomindhub.com/solutions/manufacturing/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://neomindhub.com/solutions/manufacturing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/solutions/manufacturing/"/>
+  </url>
+  <url>
+    <loc>https://neomindhub.com/solutions/education/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://neomindhub.com/solutions/education/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/solutions/education/"/>
+  </url>
+  <url>
+    <loc>https://neomindhub.com/solutions/recruitment/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://neomindhub.com/solutions/recruitment/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/solutions/recruitment/"/>
+  </url>
+
+  <!-- Pricing / Company / Contact -->
+  <url>
+    <loc>https://neomindhub.com/pricing/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://neomindhub.com/pricing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/pricing/"/>
+  </url>
+  <url>
+    <loc>https://neomindhub.com/company/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://neomindhub.com/company/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/company/"/>
+  </url>
+  <url>
+    <loc>https://neomindhub.com/contact/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://neomindhub.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/contact/"/>
+  </url>
+
+  <!-- Comparison — additional intl page -->
+  <url>
+    <loc>https://neomindhub.com/compare/neomind-vs-notion-ai/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://neomindhub.com/compare/neomind-vs-notion-ai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/compare/neomind-vs-notion-ai/"/>
+  </url>
+
   <!-- Legal pages — root only, no locale variants yet; hreflang alternates omitted intentionally -->
   <url>
     <loc>https://neomindhub.com/privacy.html</loc>
