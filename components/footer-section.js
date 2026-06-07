@@ -26,9 +26,9 @@ class FooterSection extends HTMLElement {
     const f = Object.assign(
       { product:"Product", company:"Company", account:"Account", legal:"Legal",
         measurable:"Measurable", roster:"Roster", brain:"The Brain", integrations:"Integrations", pricing:"Pricing", compare:"Compare", resources:"Resources", faq:"FAQ",
-        about:"About", contact:"Contact",
+        about:"About", customers:"Customers", contact:"Contact",
         startTrial:"Start free trial", signIn:"Sign in", support:"Support",
-        privacy:"Privacy", terms:"Terms", fairUse:"Fair use" },
+        privacy:"Privacy", terms:"Terms", fairUse:"Fair use", cookieSettings:"Cookie settings" },
       L.footerLabels || {}
     );
 
@@ -64,6 +64,7 @@ class FooterSection extends HTMLElement {
       "</ul></div>" +
       "<div><h4>" + f.company + "</h4><ul>" +
       "<li><a href=\"/company/\">" + f.about + "</a></li>" +
+      "<li><a href=\"/customers/\">" + f.customers + "</a></li>" +
       "<li><a href=\"/contact/\">" + f.contact + "</a></li>" +
       "</ul></div>" +
       "<div><h4>" + f.account + "</h4><ul>" +
@@ -75,6 +76,7 @@ class FooterSection extends HTMLElement {
       "<li><a href=\"" + legalBase + "privacy.html\">" + f.privacy + "</a></li>" +
       "<li><a href=\"" + legalBase + "terms.html\">" + f.terms + "</a></li>" +
       "<li><a href=\"" + legalBase + "fair-use.html\">" + f.fairUse + "</a></li>" +
+      "<li><a href=\"#\" class=\"cookie-settings\">" + f.cookieSettings + "</a></li>" +
       "</ul></div>" +
       "</div>" +
       "<div class=\"bottom\"><p>&copy; " + entity.legalName + " &middot; " + entity.product + " &middot; since " + entity.founded + (L.code === "au" ? " &middot; Melbourne, Australia." : ".") + "</p></div>" +
@@ -83,6 +85,15 @@ class FooterSection extends HTMLElement {
     const parsed = new DOMParser().parseFromString(markup, "text/html");
     while (parsed.head.firstChild) this.shadowRoot.appendChild(parsed.head.firstChild);
     while (parsed.body.firstChild) this.shadowRoot.appendChild(parsed.body.firstChild);
+
+    // "Cookie settings" reopens the consent banner (js/cookie-consent.js).
+    const cookieLink = this.shadowRoot.querySelector(".cookie-settings");
+    if (cookieLink) {
+      cookieLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (typeof window.nmOpenCookieSettings === "function") window.nmOpenCookieSettings();
+      });
+    }
   }
 }
 

@@ -46,6 +46,23 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/resources/"/>
   </url>
 
+  <!-- Customers / case studies -->
+  <url>
+    <loc>https://neomindhub.com/customers/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://neomindhub.com/customers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/customers/"/>
+  </url>
+
+  <url>
+    <loc>https://neomindhub.com/customers/vascali/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://neomindhub.com/customers/vascali/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/customers/vascali/"/>
+  </url>
+
   <url>
     <loc>https://neomindhub.com/resources/how-to-measure-an-ai-employee/</loc>
     <changefreq>monthly</changefreq>

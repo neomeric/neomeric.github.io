@@ -3,6 +3,23 @@
 
 <head>
   <meta name="robots" content="noindex, nofollow">
+    <!-- Consent Mode v2 default (before GTM) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent','default',{
+        ad_storage:'denied', analytics_storage:'denied',
+        ad_user_data:'denied', ad_personalization:'denied',
+        functionality_storage:'granted', security_storage:'granted',
+        wait_for_update: 500
+      });
+      // Re-apply a previously saved choice on load so returning visitors keep their setting
+      try { var c=document.cookie.match(/(?:^|; )nm_consent=([^;]+)/);
+        if(c){ var v=decodeURIComponent(c[1]);
+          if(v==='granted'){ gtag('consent','update',{ad_storage:'granted',analytics_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'}); }
+        }
+      } catch(e){}
+    </script>
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
@@ -1941,25 +1958,25 @@
 
                 <!-- Logo band — real client logos drop in here once permissions are cleared -->
                 <div class="nm-proof-logos" aria-label="Pilot customers">
-                    <!-- [REAL CLIENT LOGO — awaiting owner data: cleared logo file + name. Candidates: Vascali, Indo Sultan, Sungold, droneguru] -->
-                    <div class="nm-proof-logo nm-proof-logo--placeholder">Your logo here</div>
+                    <!-- Vascali — first real customer. [NEED: cleared Vascali logo file] — neutral wordmark placeholder until supplied; do NOT invent a logo. DO NOT DEPLOY name+logo live until Vascali permission confirmed. -->
+                    <a href="/customers/vascali/" class="nm-proof-logo nm-proof-logo--real" aria-label="Vascali — read the story">Vascali</a>
+                    <!-- [REAL CLIENT LOGO — awaiting owner data: cleared logo file + name. Candidates: Indo Sultan, Sungold, droneguru] -->
                     <div class="nm-proof-logo nm-proof-logo--placeholder">Your logo here</div>
                     <div class="nm-proof-logo nm-proof-logo--placeholder">Your logo here</div>
                     <div class="nm-proof-logo nm-proof-logo--placeholder">Your logo here</div>
                 </div>
 
-                <!-- Case-study cards — real before/after metrics drop in here -->
+                <!-- Case-study cards — first card is a REAL deployment story (Vascali); the rest stay honest placeholders for before/after results. -->
                 <div class="nm-proof-cases">
-                    <!-- [REAL CASE STUDY — awaiting owner data: client name, logo, before/after metric (e.g. "after-hours leads captured", "response time X→Y", "% staff questions self-served"). Do NOT invent.] -->
-                    <article class="nm-proof-case nm-proof-case--placeholder">
-                        <div class="nm-proof-case-tag">Case study &middot; coming soon</div>
-                        <div class="nm-proof-case-metric">
-                            <span class="nm-proof-before">Before</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-                            <span class="nm-proof-after">After</span>
-                        </div>
-                        <p class="nm-proof-case-body">A real before/after outcome from a cleared pilot will appear here &mdash; the metric that mattered to the customer.</p>
-                    </article>
+                    <!-- Vascali — REAL deployment story, no outcome metrics yet (upgrades to before/after at week 8). [NEED: cleared Vascali logo]. DO NOT DEPLOY name+logo live until permission confirmed. -->
+                    <a class="nm-proof-case nm-proof-case--real" href="/customers/vascali/">
+                        <div class="nm-proof-case-tag">Customer story &middot; Manufacturing &amp; Export</div>
+                        <div class="nm-proof-case-logo" aria-label="Vascali logo placeholder">Vascali</div>
+                        <p class="nm-proof-case-body">A 30-country soap exporter put NeoMind&rsquo;s AI employee Simon on inquiry duty &mdash; answering OEM, private-label and quotation questions around the clock, grounded in its own catalogue.</p>
+                        <span class="nm-proof-case-link">Read the story
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </span>
+                    </a>
                     <article class="nm-proof-case nm-proof-case--placeholder">
                         <div class="nm-proof-case-tag">Case study &middot; coming soon</div>
                         <div class="nm-proof-case-metric">
@@ -2010,6 +2027,9 @@
             @media (max-width: 640px) { .nm-proof-logos { grid-template-columns: repeat(2, 1fr); } }
             .nm-proof-logo { display: flex; align-items: center; justify-content: center; height: 72px; border-radius: 14px; font-size: 13px; font-weight: 500; color: var(--text-subtle); }
             .nm-proof-logo--placeholder { background: var(--surface); border: 1px dashed var(--border-strong); }
+            /* Vascali real entry — neutral wordmark slot (logo file pending), clickable through to the story. */
+            .nm-proof-logo--real { background: var(--surface); border: 1px solid var(--border); color: var(--text-muted); font-family: var(--font-display); font-weight: 700; letter-spacing: -0.01em; text-decoration: none; transition: border-color 220ms, color 220ms, transform 220ms; }
+            .nm-proof-logo--real:hover { border-color: var(--border-strong); color: var(--text); transform: translateY(-2px); }
             .nm-proof-cases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
             @media (max-width: 880px) { .nm-proof-cases { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; } }
             .nm-proof-case { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 26px 24px; }
@@ -2020,6 +2040,14 @@
             .nm-proof-after { color: var(--accent-700); background: var(--accent-50); }
             .dark .nm-proof-after { color: var(--accent-300, #5eead4); background: rgba(0,209,178,0.14); }
             .nm-proof-case-body { font-size: 13.5px; line-height: 1.55; color: var(--text-muted); margin: 0; }
+            /* Real Vascali deployment-story card — a logo slot + blurb + link, NO before/after metric (deployment story). */
+            .nm-proof-case--real { display: flex; flex-direction: column; text-decoration: none; transition: transform 280ms cubic-bezier(0.4,0,0.2,1), box-shadow 280ms cubic-bezier(0.4,0,0.2,1), border-color 280ms; }
+            .nm-proof-case--real:hover { transform: translateY(-3px); box-shadow: 0 22px 48px -16px rgba(15,23,42,0.18); border-color: var(--border-strong); }
+            .nm-proof-case-logo { display: inline-flex; align-self: flex-start; align-items: center; justify-content: center; min-width: 96px; height: 40px; padding: 0 16px; margin-bottom: 14px; font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: -0.01em; color: var(--text-muted); background: var(--bg-muted); border: 1px dashed var(--border-strong); border-radius: 10px; }
+            .nm-proof-case--real .nm-proof-case-body { margin-bottom: 16px; }
+            .nm-proof-case-link { margin-top: auto; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--text); }
+            .nm-proof-case--real:hover .nm-proof-case-link .arrow { transform: translateX(3px); }
+            .nm-proof-case-link .arrow { transition: transform 220ms cubic-bezier(0.4,0,0.2,1); }
         </style>
 
         <!-- ════════════ VISION ════════════ -->
@@ -2425,6 +2453,7 @@
     </script>
     <!-- Geo-redirect banner — deferred so it runs after DOM is fully parsed -->
     <script src="/js/geo-redirect.js" defer></script>
+<script src="/js/cookie-consent.js" defer></script>
 </body>
 
 </html>

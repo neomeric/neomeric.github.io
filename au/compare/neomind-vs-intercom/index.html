@@ -2,6 +2,23 @@
 <html lang="en-AU" class="scroll-smooth">
 
 <head>
+    <!-- Consent Mode v2 default (before GTM) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent','default',{
+        ad_storage:'denied', analytics_storage:'denied',
+        ad_user_data:'denied', ad_personalization:'denied',
+        functionality_storage:'granted', security_storage:'granted',
+        wait_for_update: 500
+      });
+      // Re-apply a previously saved choice on load so returning visitors keep their setting
+      try { var c=document.cookie.match(/(?:^|; )nm_consent=([^;]+)/);
+        if(c){ var v=decodeURIComponent(c[1]);
+          if(v==='granted'){ gtag('consent','update',{ad_storage:'granted',analytics_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'}); }
+        }
+      } catch(e){}
+    </script>
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
@@ -342,6 +359,7 @@
             });
         })();
     </script>
+<script src="/js/cookie-consent.js" defer></script>
 </body>
 
 </html>

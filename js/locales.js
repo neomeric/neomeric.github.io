@@ -9,7 +9,7 @@ window.NM_LOCALES = {
       measurable:"Measurable", roster:"Roster", brain:"The Brain", integrations:"Integrations", pricing:"Pricing", compare:"Compare", resources:"Resources", faq:"FAQ",
       about:"About", contact:"Contact",
       startTrial:"Start free trial", signIn:"Sign in", support:"Support",
-      privacy:"Privacy", terms:"Terms", fairUse:"Fair use" },
+      privacy:"Privacy", terms:"Terms", fairUse:"Fair use", cookieSettings:"Cookie settings" },
     demoMeta:{
       simon:{ eyebrow:"Live · trained on neomeric.com", title:"Ask Simon anything about NeoMind" },
       maeve:{ eyebrow:"Live · 90-second voice demo", title:"Maeve — your AI receptionist" },
@@ -24,7 +24,7 @@ window.NM_LOCALES = {
       measurable:"Measurable", roster:"Roster", brain:"The Brain", integrations:"Integrations", pricing:"Pricing", compare:"Compare", resources:"Resources", faq:"FAQ",
       about:"About", contact:"Contact",
       startTrial:"Start free trial", signIn:"Sign in", support:"Support",
-      privacy:"Privacy", terms:"Terms", fairUse:"Fair use" },
+      privacy:"Privacy", terms:"Terms", fairUse:"Fair use", cookieSettings:"Cookie settings" },
     demoMeta:{
       simon:{ eyebrow:"Live · trained on neomeric.com", title:"Ask Simon anything about NeoMind" },
       maeve:{ eyebrow:"Live · 90-second voice demo", title:"Maeve — your AI receptionist" },
@@ -39,7 +39,7 @@ window.NM_LOCALES = {
       measurable:"Medible", roster:"El equipo", brain:"El Brain", integrations:"Integraciones", pricing:"Precios", compare:"Comparativas", resources:"Recursos", faq:"Preguntas",
       about:"Sobre nosotros", contact:"Contacto",
       startTrial:"Prueba gratis", signIn:"Iniciar sesión", support:"Soporte",
-      privacy:"Privacidad", terms:"Términos", fairUse:"Uso aceptable" },
+      privacy:"Privacidad", terms:"Términos", fairUse:"Uso aceptable", cookieSettings:"Configuración de cookies" },
     demoMeta:{
       simon:{ eyebrow:"En vivo · entrenado con neomeric.com", title:"Pregunta a Simon lo que quieras sobre NeoMind" },
       maeve:{ eyebrow:"En vivo · demo de voz de 90 segundos", title:"Maeve — tu recepcionista de IA" },
