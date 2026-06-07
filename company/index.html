@@ -15,22 +15,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>About NeoMind — Built by Neomeric | NeoMind</title>
+    <title>About Neomeric — the company behind NeoMind | NeoMind</title>
     <meta name="description"
-        content="NeoMind is the AI workforce platform from Neomeric, an Australian AI company founded in 2015 — digital employees for every organisation, on a shared Brain.">
+        content="Neomeric is an Australian AI product studio in Melbourne, founded 2015 — &quot;AI Simplified&quot;. We design, build and operate AI products end-to-end, including NeoMind, our AI workforce platform.">
     <link rel="canonical" href="https://neomindhub.com/company/">
     <!-- hreflang cluster: this intl page (en + x-default); no AU/ES twin exists yet -->
     <link rel="alternate" hreflang="en"    href="https://neomindhub.com/company/" />
     <link rel="alternate" hreflang="x-default" href="https://neomindhub.com/company/" />
-    <meta property="og:title" content="About NeoMind — Built by Neomeric">
-    <meta property="og:description" content="NeoMind is the AI workforce platform from Neomeric, an Australian AI company founded in 2015. Digital employees on one shared Brain.">
+    <meta property="og:title" content="About Neomeric — the company behind NeoMind">
+    <meta property="og:description" content="Neomeric is an Australian AI product studio in Melbourne, founded 2015. We design, build and operate AI products end-to-end — including NeoMind, our AI workforce platform.">
     <meta property="og:url" content="https://neomindhub.com/company/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://neomindhub.com/images/logo1.png">
     <meta property="og:site_name" content="NeoMind">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About NeoMind — Built by Neomeric">
-    <meta name="twitter:description" content="NeoMind is the AI workforce platform from Neomeric, an Australian AI company founded in 2015. Digital employees on one shared Brain.">
+    <meta name="twitter:title" content="About Neomeric — the company behind NeoMind">
+    <meta name="twitter:description" content="Neomeric is an Australian AI product studio in Melbourne, founded 2015. We design, build and operate AI products end-to-end — including NeoMind, our AI workforce platform.">
     <meta name="twitter:image" content="https://neomindhub.com/images/logo1.png">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/css/tailwind.css">
@@ -55,7 +55,7 @@
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://neomindhub.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Company", "item": "https://neomindhub.com/company/" }
+        { "@type": "ListItem", "position": 2, "name": "About", "item": "https://neomindhub.com/company/" }
       ]
     }
     </script>
@@ -65,12 +65,17 @@
       "@type": "Organization",
       "name": "Neomeric",
       "legalName": "Neomeric Pty Ltd",
-      "alternateName": "NeoMind",
-      "url": "https://neomindhub.com/company/",
+      "url": "https://neomeric.com/",
       "logo": "https://neomindhub.com/images/logo1.png",
       "foundingDate": "2015",
-      "founder": { "@type": "Person", "name": "Haseeb" },
-      "description": "Neomeric is an Australian AI company founded in 2015. It builds NeoMind, an AI workforce platform of measurable digital employees powered by one shared organisational Brain.",
+      "slogan": "AI Simplified",
+      "description": "Neomeric is an Australian AI product studio based in Melbourne, founded in 2015. It designs, builds and operates AI products end-to-end — both custom builds for clients and its own productised line, including NeoMind, an AI workforce platform of measurable digital employees on one shared Brain.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Melbourne",
+        "addressRegion": "VIC",
+        "addressCountry": "AU"
+      },
       "makesOffer": {
         "@type": "Offer",
         "itemOffered": {
@@ -107,6 +112,13 @@
         .nm-co-card h3 { font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: -0.01em; color: var(--text); margin: 0 0 8px; }
         .nm-co-card p { font-size: 14px; line-height: 1.6; color: var(--text-muted); margin: 0; }
 
+        .nm-co-creds { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 24px 0 8px; }
+        @media (max-width: 760px) { .nm-co-creds { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 460px) { .nm-co-creds { grid-template-columns: 1fr; } }
+        .nm-co-cred { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 16px 18px; }
+        .nm-co-cred-k { font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: -0.01em; color: var(--text); display: block; }
+        .nm-co-cred-v { font-size: 12.5px; color: var(--text-muted); margin-top: 5px; display: block; line-height: 1.5; }
+
         .nm-co-vision { position: relative; overflow: clip; border-radius: 24px; color: white; padding: 48px 44px; margin: 8px 0; background: linear-gradient(135deg, #001833 0%, #003166 55%, #004999 100%); box-shadow: 0 24px 56px -22px rgba(0,49,102,0.55); }
         .nm-co-vision-glow { position: absolute; top: -80px; right: -60px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(0,209,178,0.22), transparent 65%); pointer-events: none; }
         @media (max-width: 640px) { .nm-co-vision { padding: 36px 26px; } }
@@ -127,21 +139,22 @@
                 <nav class="nm-breadcrumb" aria-label="Breadcrumb">
                     <a href="/">Home</a>
                     <span class="sep" aria-hidden="true">/</span>
-                    <span aria-current="page">Company</span>
+                    <span aria-current="page">About</span>
                 </nav>
 
                 <header class="nm-article-head">
-                    <span class="eyebrow"><span class="dot"></span> Company &middot; About</span>
-                    <h1 class="nm-article-h1">We build digital employees you can manage.</h1>
+                    <span class="eyebrow"><span class="dot"></span> Company &middot; About Neomeric</span>
+                    <h1 class="nm-article-h1">The Australian studio that ships AI &mdash; not slideware.</h1>
                     <p class="nm-article-lede">
-                        NeoMind is the flagship product of <strong>Neomeric</strong>, an Australian AI company founded in
-                        <strong>2015</strong> by <strong>Haseeb</strong>. We exist for one reason: organisations are
-                        drowning in their own knowledge &mdash; scattered across documents, inboxes and the heads of busy
-                        people &mdash; and every resignation quietly walks experience out the door. So we build AI employees
-                        that put that knowledge to work, on one shared Brain, and can be measured like staff.
+                        <strong>Neomeric</strong> is an Australian AI product studio based in <strong>Melbourne</strong>,
+                        founded in <strong>2015</strong> and Australian-owned. Our promise is simple &mdash;
+                        <strong>&ldquo;AI Simplified&rdquo;</strong>: we design, build and operate AI products
+                        end-to-end, so organisations get something live in weeks, not a roadmap that never ships.
+                        <strong>NeoMind</strong> &mdash; the AI workforce platform this site is about &mdash; is our
+                        flagship product.
                     </p>
                     <div class="nm-article-meta">
-                        <span class="nm-author">Neomeric &middot; building AI since 2015</span>
+                        <span class="nm-author">Neomeric &middot; building AI products since 2015</span>
                     </div>
                 </header>
 
@@ -149,44 +162,62 @@
                     <div class="nm-co-stats nm-reveal" role="list">
                         <div class="nm-co-stat" role="listitem">
                             <span class="nm-co-stat-k">2015</span>
-                            <span class="nm-co-stat-v">Year Neomeric was founded as an Australian AI company.</span>
+                            <span class="nm-co-stat-v">Year Neomeric was founded as an Australian AI studio in Melbourne.</span>
                         </div>
                         <div class="nm-co-stat" role="listitem">
-                            <span class="nm-co-stat-k">1 Brain</span>
-                            <span class="nm-co-stat-v">One shared organisational intelligence layer every employee learns from.</span>
+                            <span class="nm-co-stat-k">7+ products</span>
+                            <span class="nm-co-stat-v">Shipped across 4+ industries &mdash; finance, logistics, services and manufacturing.</span>
                         </div>
                         <div class="nm-co-stat" role="listitem">
-                            <span class="nm-co-stat-k">3 employees</span>
-                            <span class="nm-co-stat-v">Simon, Hugo and Maeve &mdash; plus build-your-own.</span>
+                            <span class="nm-co-stat-k">4&ndash;6 weeks</span>
+                            <span class="nm-co-stat-v">From kick-off to a working pilot. Production in months, not years.</span>
                         </div>
                     </div>
 
-                    <h2 id="why">Why we built NeoMind</h2>
+                    <h2 id="why">Why we exist</h2>
                     <p>
-                        Most companies don&rsquo;t have a knowledge problem because they lack knowledge. They have a knowledge
-                        problem because it&rsquo;s everywhere and nowhere: in a folder someone named badly, in an email thread
-                        three people were on, in the memory of a colleague who&rsquo;s on leave. The same questions get asked
-                        every week. Leads arrive after hours and go cold. And when someone resigns, years of hard-won context
-                        leaves with them &mdash; you don&rsquo;t even know what you lost until you need it.
+                        Most organisations don&rsquo;t struggle with AI because the technology isn&rsquo;t ready. They struggle
+                        because the projects never ship &mdash; endless discovery, a proof-of-concept that stalls, a roadmap
+                        measured in years. Meanwhile the real problem keeps growing: knowledge scattered across documents,
+                        inboxes and the heads of busy people, the same questions asked every week, and experience that quietly
+                        walks out the door every time someone resigns.
                     </p>
                     <p>
-                        We didn&rsquo;t think the answer was another chatbot bolted onto a website. The answer was to treat AI the
-                        way you treat people: give it your knowledge, give it a job, and hold it to a standard. That meant
-                        building a single <strong>Brain</strong> &mdash; one place your organisation&rsquo;s knowledge lives &mdash; and
-                        a set of <strong>digital employees</strong> that all draw from it. Change a fact once in the Brain, and
-                        every employee is instantly up to date.
+                        Neomeric was founded in 2015 to close that gap. We&rsquo;re an AI product studio, not a deck factory:
+                        we design, build <em>and operate</em> AI products end-to-end, and we hold ourselves to a delivery
+                        standard &mdash; <strong>a working pilot in four to six weeks, production in months, not years</strong>.
+                        That discipline is the whole point of &ldquo;AI Simplified&rdquo;.
                     </p>
 
-                    <h2 id="mission">Our mission</h2>
+                    <h2 id="what-we-do">What we do</h2>
+                    <p>
+                        We work in two ways. First, <strong>custom AI builds</strong> &mdash; bespoke products designed
+                        around a client&rsquo;s own roadmap, shipped end-to-end and then run for them. Second, our own
+                        <strong>productised line</strong>, where we take what we&rsquo;ve learned across dozens of builds and
+                        turn it into software any organisation can switch on. <strong>NeoMind</strong> is the leading
+                        product in that line.
+                    </p>
+                    <p>
+                        Over the years that&rsquo;s meant <strong>7+ products shipped across 4+ industries</strong> &mdash;
+                        finance, logistics, services and manufacturing. Alongside NeoMind, the studio has built
+                        <strong>Aourix</strong>, a lead-to-cash ERP for manufacturers, and <strong>AuraFusen</strong>, an HR
+                        platform &mdash; plus custom systems for clients. Different problems, one operating habit: build the
+                        smallest thing that&rsquo;s genuinely useful, get it live, then compound it.
+                    </p>
+
+                    <h2 id="neomind">NeoMind &mdash; our AI workforce platform</h2>
                     <p class="nm-lead-takeaway">
                         Turn the knowledge a business already has into employees it can rely on &mdash; grounded in its own
                         information, taking real actions, and measurable like any member of staff.
                     </p>
                     <p>
-                        That last word matters. An AI you can&rsquo;t measure is an AI you can&rsquo;t trust with real work. So every
-                        NeoMind employee can be given a business objective and weighted KPIs, and every conversation is scored
-                        against that rubric &mdash; guardrail violations score negative, so the number can&rsquo;t be gamed. The result
-                        is an AI you manage with evidence, not hope.
+                        NeoMind treats AI the way you treat people: give it your knowledge, give it a job, and hold it to a
+                        standard. Everything runs on a single <strong>Brain</strong> &mdash; one place your organisation&rsquo;s
+                        knowledge lives &mdash; with a set of <strong>digital employees</strong> that all draw from it. Change a
+                        fact once in the Brain, and every employee is instantly up to date. And because an AI you can&rsquo;t
+                        measure is an AI you can&rsquo;t trust with real work, every employee can be given a business objective
+                        and weighted KPIs, with each conversation scored against that rubric &mdash; guardrail violations score
+                        negative, so the number can&rsquo;t be gamed.
                     </p>
 
                     <h2 id="employees">Meet the workforce</h2>
@@ -226,11 +257,21 @@
                         way for your data to train someone else&rsquo;s model. Trust is the product.
                     </p>
 
+                    <h2 id="credibility">Why teams trust Neomeric</h2>
+                    <div class="nm-co-creds nm-reveal" role="list">
+                        <div class="nm-co-cred" role="listitem"><span class="nm-co-cred-k">Microsoft AI Cloud Partner</span><span class="nm-co-cred-v">Built and run on Microsoft Azure.</span></div>
+                        <div class="nm-co-cred" role="listitem"><span class="nm-co-cred-k">ISO 27001-aligned</span><span class="nm-co-cred-v">Security practices aligned to the standard.</span></div>
+                        <div class="nm-co-cred" role="listitem"><span class="nm-co-cred-k">GDPR-compliant</span><span class="nm-co-cred-v">Privacy-first by design.</span></div>
+                        <div class="nm-co-cred" role="listitem"><span class="nm-co-cred-k">Sydney-hosted</span><span class="nm-co-cred-v">Australian infrastructure, Azure Australia East.</span></div>
+                        <div class="nm-co-cred" role="listitem"><span class="nm-co-cred-k">7+ products shipped</span><span class="nm-co-cred-v">Across 4+ industries since 2015.</span></div>
+                        <div class="nm-co-cred" role="listitem"><span class="nm-co-cred-k">Australian-owned</span><span class="nm-co-cred-v">Founder-led, based in Melbourne.</span></div>
+                    </div>
+
                     <div class="nm-co-vision nm-reveal">
                         <div class="nm-co-vision-glow" aria-hidden="true"></div>
                         <span class="nm-co-vision-tag">Our vision</span>
                         <blockquote>
-                            Every company will have digital employees. NeoMind is the platform that powers them.
+                            Every company will have digital employees. NeoMind is how Neomeric delivers them.
                         </blockquote>
                     </div>
 

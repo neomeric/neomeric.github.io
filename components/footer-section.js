@@ -24,8 +24,9 @@ class FooterSection extends HTMLElement {
     // Footer column headings + link labels resolve from the locale; English
     // fallback keeps intl working if the locale table fails to load.
     const f = Object.assign(
-      { product:"Product", account:"Account", legal:"Legal",
+      { product:"Product", company:"Company", account:"Account", legal:"Legal",
         measurable:"Measurable", roster:"Roster", brain:"The Brain", integrations:"Integrations", pricing:"Pricing", compare:"Compare", resources:"Resources", faq:"FAQ",
+        about:"About", contact:"Contact",
         startTrial:"Start free trial", signIn:"Sign in", support:"Support",
         privacy:"Privacy", terms:"Terms", fairUse:"Fair use" },
       L.footerLabels || {}
@@ -61,6 +62,10 @@ class FooterSection extends HTMLElement {
         : "") +
       "<li><a href=\"" + L.path + "#faq\">" + f.faq + "</a></li>" +
       "</ul></div>" +
+      "<div><h4>" + f.company + "</h4><ul>" +
+      "<li><a href=\"/company/\">" + f.about + "</a></li>" +
+      "<li><a href=\"/contact/\">" + f.contact + "</a></li>" +
+      "</ul></div>" +
       "<div><h4>" + f.account + "</h4><ul>" +
       "<li><a href=\"https://app.neomindhub.com/signup\">" + f.startTrial + "</a></li>" +
       "<li><a href=\"https://app.neomindhub.com/login\">" + f.signIn + "</a></li>" +
@@ -85,7 +90,8 @@ const STYLES = [
   ":host { display: block; border-top: 1px solid rgba(0, 0, 0, 0.08); background: #f8f9fb; padding: 64px 0 32px; margin-top: 80px; font-family: 'Kanit', sans-serif; }",
   "@media (prefers-color-scheme: dark) { :host { background: #0f1623; border-top-color: rgba(255,255,255,0.08); } }",
   ".container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }",
-  ".grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(0, 0, 0, 0.08); }",
+  ".grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 48px; border-bottom: 1px solid rgba(0, 0, 0, 0.08); }",
+  "@media (max-width: 1024px) { .grid { grid-template-columns: 1fr 1fr 1fr; } .brand-col { grid-column: span 3; } }",
   "@media (prefers-color-scheme: dark) { .grid { border-bottom-color: rgba(255,255,255,0.08); } }",
   ".brand-col { max-width: 340px; }",
   ".wordmark { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 22px; background: linear-gradient(135deg, #9C7DB9, #007BFF, #00D1B2); -webkit-background-clip: text; background-clip: text; color: transparent; letter-spacing: -0.015em; margin-bottom: 12px; }",

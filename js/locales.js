@@ -5,8 +5,9 @@ window.NM_LOCALES = {
     footerTagline:"Measurable AI employees that do the real work — grounded in your own knowledge.",
     switcherLabel:"International (USD)",
     navLabels:{ platform:"Platform", employees:"AI Employees", solutions:"Solutions", company:"Company", product:"How it works", measurable:"Measurable", roster:"Roster", brain:"The Brain", integrations:"Integrations", pricing:"Pricing", compare:"Compare", resources:"Resources", faq:"FAQ", signIn:"Sign in", startFree:"Start free" },
-    footerLabels:{ product:"Product", account:"Account", legal:"Legal",
+    footerLabels:{ product:"Product", company:"Company", account:"Account", legal:"Legal",
       measurable:"Measurable", roster:"Roster", brain:"The Brain", integrations:"Integrations", pricing:"Pricing", compare:"Compare", resources:"Resources", faq:"FAQ",
+      about:"About", contact:"Contact",
       startTrial:"Start free trial", signIn:"Sign in", support:"Support",
       privacy:"Privacy", terms:"Terms", fairUse:"Fair use" },
     demoMeta:{
@@ -19,8 +20,9 @@ window.NM_LOCALES = {
     footerTagline:"Australian-made measurable AI employees. One Brain, grounded in your business.",
     switcherLabel:"Australia (AUD)",
     navLabels:{ platform:"Platform", employees:"AI Employees", solutions:"Solutions", company:"Company", product:"How it works", measurable:"Measurable", roster:"Roster", brain:"The Brain", integrations:"Integrations", pricing:"Pricing", compare:"Compare", resources:"Resources", faq:"FAQ", signIn:"Sign in", startFree:"Start free" },
-    footerLabels:{ product:"Product", account:"Account", legal:"Legal",
+    footerLabels:{ product:"Product", company:"Company", account:"Account", legal:"Legal",
       measurable:"Measurable", roster:"Roster", brain:"The Brain", integrations:"Integrations", pricing:"Pricing", compare:"Compare", resources:"Resources", faq:"FAQ",
+      about:"About", contact:"Contact",
       startTrial:"Start free trial", signIn:"Sign in", support:"Support",
       privacy:"Privacy", terms:"Terms", fairUse:"Fair use" },
     demoMeta:{
@@ -33,8 +35,9 @@ window.NM_LOCALES = {
     footerTagline:"Empleados de IA que puedes medir y gestionar, basados en tu propio conocimiento.",
     switcherLabel:"España (EUR)",
     navLabels:{ platform:"Plataforma", employees:"Empleados de IA", solutions:"Soluciones", company:"Empresa", product:"Cómo funciona", measurable:"Medible", roster:"El equipo", brain:"El Brain", integrations:"Integraciones", pricing:"Precios", compare:"Comparativas", resources:"Recursos", faq:"Preguntas", signIn:"Iniciar sesión", startFree:"Prueba gratis" },
-    footerLabels:{ product:"Producto", account:"Cuenta", legal:"Legal",
+    footerLabels:{ product:"Producto", company:"Empresa", account:"Cuenta", legal:"Legal",
       measurable:"Medible", roster:"El equipo", brain:"El Brain", integrations:"Integraciones", pricing:"Precios", compare:"Comparativas", resources:"Recursos", faq:"Preguntas",
+      about:"Sobre nosotros", contact:"Contacto",
       startTrial:"Prueba gratis", signIn:"Iniciar sesión", support:"Soporte",
       privacy:"Privacidad", terms:"Términos", fairUse:"Uso aceptable" },
     demoMeta:{

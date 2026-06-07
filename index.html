@@ -969,224 +969,6 @@
             .nm-wave span { width: 4px; border-radius: 4px; transition: height 80ms linear; background: var(--secondary-500); }
         </style>
 
-        <!-- LIVE DEMO — interactive Simon chat (real API), Maeve 3-min voice demo, Hugo Slack preview -->
-        <section id="demo" class="py-24">
-            <div class="nm-container">
-                <div class="nm-section-header">
-                    <span class="eyebrow"><span class="dot"></span> See a NeoMind employee answer, grounded in real docs</span>
-                    <h2 class="nm-section-headline">
-                        Don't take our word for it.<br />
-                        <span class="muted">Ask one yourself.</span>
-                    </h2>
-                    <p class="nm-section-sub">
-                        Simon is the real thing &mdash; trained on this very site, answering live, no hallucinations. Maeve and Hugo run on sample businesses so you can hear how each employee works.
-                    </p>
-                </div>
-
-                <div role="tablist" aria-label="AI teammate demos" class="tab-bar flex gap-2 mb-6 border-b border-gray-200 dark:border-gray-700">
-                    <button role="tab" aria-selected="true" data-tab="simon" class="tab-btn active flex items-center gap-2 px-4 py-3 border-b-2 border-primary text-primary font-medium">
-                        <span class="tab-icon" style="background: var(--secondary-50); color: var(--secondary-700);">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/></svg>
-                        </span>
-                        <span>Simon</span>
-                        <span class="hidden sm:inline text-xs text-gray-500 dark:text-gray-400 font-normal ml-1">— live</span>
-                    </button>
-                    <button role="tab" aria-selected="false" data-tab="maeve" class="tab-btn flex items-center gap-2 px-4 py-3 border-b-2 border-transparent text-gray-500 dark:text-gray-400 hover:text-primary font-medium">
-                        <span class="tab-icon" style="background: var(--accent-50); color: var(--accent-700);">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                        </span>
-                        <span>Maeve</span>
-                        <span class="hidden sm:inline text-xs text-gray-500 dark:text-gray-400 font-normal ml-1">— live · 90s</span>
-                    </button>
-                    <button role="tab" aria-selected="false" data-tab="hugo" class="tab-btn flex items-center gap-2 px-4 py-3 border-b-2 border-transparent text-gray-500 dark:text-gray-400 hover:text-primary font-medium">
-                        <span class="tab-icon" style="background: var(--primary-50); color: var(--primary-700);">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                        </span>
-                        <span>Hugo</span>
-                        <span class="hidden sm:inline text-xs text-gray-500 dark:text-gray-400 font-normal ml-1">— demo on request</span>
-                    </button>
-                </div>
-
-                <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-800 max-w-3xl">
-                    <div class="p-5 text-white" style="background: var(--gradient-brand);">
-                        <div class="text-xs uppercase tracking-wide opacity-80" id="panel-eyebrow">Live · trained on neomeric.com</div>
-                        <div class="text-lg font-semibold" id="panel-title">Ask Simon anything about NeoMind</div>
-                    </div>
-
-                    <!-- Simon panel (live API) -->
-                    <div data-panel="simon" class="tab-panel">
-                        <div class="chat-surface" id="chat-simon"></div>
-                        <div class="border-t border-gray-100 dark:border-gray-800 p-3 flex gap-2 bg-white dark:bg-gray-900">
-                            <input id="input-simon" type="text" placeholder="Ask Simon — e.g. how much does NeoMind cost?"
-                                class="flex-1 px-4 py-2.5 rounded-full bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-primary text-sm" />
-                            <button data-send="simon" class="btn btn-gradient" style="padding: 10px 20px; font-size: 14px;">Send</button>
-                        </div>
-                        <div class="px-4 pb-3 flex flex-wrap gap-2">
-                            <button class="suggest-btn" data-mind="simon">How much does NeoMind cost?</button>
-                            <button class="suggest-btn" data-mind="simon">What's the difference between the employees?</button>
-                            <button class="suggest-btn" data-mind="simon">Where is my data stored?</button>
-                        </div>
-                    </div>
-
-                    <!-- Maeve panel (LIVE — 3-minute browser voice demo) -->
-                    <div data-panel="maeve" class="tab-panel hidden">
-                        <div id="maeve-cta" class="maeve-cta-screen">
-                            <div class="text-5xl mb-4">📞</div>
-                            <h3 class="text-xl font-display font-semibold text-gray-900 dark:text-white mb-2">Talk to Maeve for 3 minutes</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 max-w-md mx-auto">
-                                Maeve is a real, natural-sounding voice agent, running on this site's Brain.
-                                Allow microphone access and speak naturally.
-                            </p>
-                            <button id="maeve-start" type="button" class="btn btn-gradient">
-                                <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 14a3 3 0 003-3V5a3 3 0 00-6 0v6a3 3 0 003 3z"/><path d="M19 11a1 1 0 10-2 0 5 5 0 01-10 0 1 1 0 10-2 0 7 7 0 006 6.92V20H8a1 1 0 100 2h8a1 1 0 100-2h-3v-2.08A7 7 0 0019 11z"/></svg>
-                                Start 3-minute demo
-                            </button>
-                            <p class="text-xs text-gray-500 dark:text-gray-500 mt-4">No download · works in Chrome, Edge, Safari · Email captured to schedule a longer demo</p>
-                        </div>
-
-                        <div id="maeve-stage" class="hidden" style="position: relative;">
-                            <div id="maeve-connect-overlay" class="maeve-connect-overlay">
-                                <div class="maeve-connect-rings">
-                                    <div class="maeve-connect-glyph">📞</div>
-                                </div>
-                                <div class="maeve-connect-status" id="maeve-connect-status">Setting up your call…</div>
-                                <div class="maeve-connect-sub" id="maeve-connect-sub">This usually takes a few seconds</div>
-                            </div>
-                            <div class="maeve-stage-header" id="maeve-stage-header">
-                                <span><span class="maeve-stage-pulse"></span><strong>Live</strong> · <span id="maeve-status">Connecting…</span></span>
-                                <span class="text-xs font-medium uppercase tracking-wide" id="maeve-timer">90s</span>
-                            </div>
-                            <div class="maeve-stage" style="border-bottom: 1px solid rgba(0,0,0,0.05);">
-                                <div id="maeve-transcript" class="maeve-transcript"></div>
-                            </div>
-                            <div class="p-4 bg-white dark:bg-gray-900 flex justify-between items-center text-sm">
-                                <span class="text-gray-500 dark:text-gray-400 hidden sm:inline">Speak naturally — Maeve is listening</span>
-                                <button id="maeve-stop" type="button"
-                                    class="inline-flex items-center px-4 py-2 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 rounded-full text-sm font-medium hover:bg-red-100 transition-all">
-                                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M6 6h12v12H6z"/></svg>
-                                    End call
-                                </button>
-                            </div>
-                        </div>
-
-                        <div id="maeve-end" class="maeve-end-screen hidden">
-                            <div class="text-5xl mb-4">✓</div>
-                            <h3 class="text-xl font-display font-semibold text-gray-900 dark:text-white mb-2">That's a wrap.</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 max-w-md mx-auto">
-                                That was the real Maeve, on the real NeoMind brain. Imagine her trained on
-                                <strong>your</strong> business — your scripts, your calendar, your CRM.
-                            </p>
-                            <div class="flex flex-wrap gap-3 justify-center">
-                                <a href="https://app.neomindhub.com/signup?agent=maeve" class="btn btn-gradient" data-contact-cta data-contact-path="NeoMind" data-contact-source="neomindhub-maeve-after">
-                                    Start your free trial
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-                                </a>
-                                <button id="maeve-retry" type="button"
-                                    class="inline-flex items-center px-5 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-primary text-gray-800 dark:text-white rounded-full text-sm font-medium transition-all">
-                                    Run another 90s
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Hugo panel (read-only Slack preview · live demo on request) -->
-                    <div data-panel="hugo" class="tab-panel hidden">
-                        <div class="hugo-banner">
-                            <span><span class="hugo-banner-pulse"></span><strong>Hugo runs on your real handbook.</strong> Slack-style preview shown — Slack &amp; Teams native coming soon. At launch, Hugo answers in your Member dashboard.</span>
-                            <span class="text-xs font-medium uppercase tracking-wide hidden sm:inline">Demo on request</span>
-                        </div>
-
-                        <div class="slack-surface">
-                            <div class="slack-channel-tag">#hr-questions · 247 members</div>
-
-                            <div class="slack-msg">
-                                <div class="slack-avatar" style="background:#fbbf24">JC</div>
-                                <div class="flex-1">
-                                    <div class="slack-meta"><span class="slack-name">Jess C.</span><span class="slack-time">10:42 AM</span></div>
-                                    <div class="slack-body">how many days of annual leave do I get? trying to plan a trip in september</div>
-                                </div>
-                            </div>
-
-                            <div class="slack-msg" style="padding-left: 2.5rem;">
-                                <div class="slack-avatar" style="background:linear-gradient(135deg,#007BFF,#00D1B2)">H</div>
-                                <div class="flex-1">
-                                    <div class="slack-meta"><span class="slack-name">Hugo</span><span class="slack-app-tag">App</span><span class="slack-time">10:42 AM</span></div>
-                                    <div class="slack-body">You get <strong>20 days</strong> of paid annual leave per year (pro-rated for part-time), on top of public holidays. Leave accrues at <strong>1.67 days/month</strong>, and you can carry up to 10 days into next year.</div>
-                                    <a class="slack-source" href="#" onclick="event.preventDefault()">
-                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
-                                        Source: Employee Handbook §4.2 — Annual Leave
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="slack-msg">
-                                <div class="slack-avatar" style="background:#a78bfa">MR</div>
-                                <div class="flex-1">
-                                    <div class="slack-meta"><span class="slack-name">Marco R.</span><span class="slack-time">11:15 AM</span></div>
-                                    <div class="slack-body">@Hugo what's the WFH policy these days?</div>
-                                </div>
-                            </div>
-
-                            <div class="slack-msg" style="padding-left: 2.5rem;">
-                                <div class="slack-avatar" style="background:linear-gradient(135deg,#007BFF,#00D1B2)">H</div>
-                                <div class="flex-1">
-                                    <div class="slack-meta"><span class="slack-name">Hugo</span><span class="slack-app-tag">App</span><span class="slack-time">11:15 AM</span></div>
-                                    <div class="slack-body">Up to <strong>3 days/week</strong> WFH with manager approval. Minimum <strong>2 days in-office</strong> per week. WFH days agreed with your manager 1 week ahead.</div>
-                                    <a class="slack-source" href="#" onclick="event.preventDefault()">
-                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
-                                        Source: Employee Handbook §6.1 — Hybrid Working
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="slack-msg">
-                                <div class="slack-avatar" style="background:#34d399">PT</div>
-                                <div class="flex-1">
-                                    <div class="slack-meta"><span class="slack-name">Priya T.</span><span class="slack-time">2:08 PM</span></div>
-                                    <div class="slack-body">@Hugo I bought a flight for a client visit — how do I claim it back?</div>
-                                </div>
-                            </div>
-
-                            <div class="slack-msg" style="padding-left: 2.5rem;">
-                                <div class="slack-avatar" style="background:linear-gradient(135deg,#007BFF,#00D1B2)">H</div>
-                                <div class="flex-1">
-                                    <div class="slack-meta"><span class="slack-name">Hugo</span><span class="slack-app-tag">App</span><span class="slack-time">2:08 PM</span></div>
-                                    <div class="slack-body">Submit through <strong>HR Portal → Expense Claims</strong>. Attach the receipt, pick category <em>Travel · Client</em>. Claims under $500 auto-route to your manager; above goes to Finance. Paid on the next payroll cycle.</div>
-                                    <a class="slack-source" href="#" onclick="event.preventDefault()">
-                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
-                                        Source: Finance SOP §3 — Expense Reimbursement
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="border-t border-gray-100 dark:border-gray-800 p-5 bg-white dark:bg-gray-900 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                            <div class="text-sm text-gray-600 dark:text-gray-400">
-                                Want Hugo to read <strong>your</strong> handbook and answer <strong>your</strong> team in your Member dashboard? (Slack &amp; Teams native coming soon.)
-                            </div>
-                            <a href="https://app.neomindhub.com/signup?agent=hugo" class="inline-flex items-center px-5 py-2.5 bg-gradient-to-r from-secondary to-accent text-white rounded-full text-sm font-medium hover:shadow-lg transition-all whitespace-nowrap" data-contact-cta data-contact-path="NeoMind" data-contact-source="neomindhub-hugo">
-                                Start a free trial
-                                <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ════════════ 2. ONE-LINE PROBLEM ════════════ -->
-        <section id="problem" class="py-20" style="background: var(--bg-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-            <div class="nm-container" style="max-width: 920px; text-align: center;">
-                <span class="eyebrow" style="justify-content: center;"><span class="dot"></span> Chatbot vs. employee</span>
-                <h2 class="nm-section-headline" style="margin: 14px auto 18px; max-width: 22ch;">
-                    A chatbot answers. An AI&nbsp;employee gets the job done &mdash; <span class="muted">and tells you how it&rsquo;s performing.</span>
-                </h2>
-                <p class="nm-section-sub" style="margin: 0 auto; max-width: 60ch;">
-                    Most &ldquo;AI&rdquo; you can buy is a bot that replies and hopes. NeoMind employees take real actions, work from your real knowledge, and are measured against objectives you set &mdash; so you&rsquo;re managing a team, not babysitting a script.
-                </p>
-            </div>
-        </section>
-
         <!-- ════════════ ★ PLATFORM ARCHITECTURE — THE SIGNATURE ANIMATED MOMENT ════════════ -->
         <section id="architecture" class="py-24" style="background: var(--bg); overflow: clip; position: relative;">
             <div class="nm-arch-ambient" aria-hidden="true"></div>
@@ -1424,6 +1206,224 @@
                 io.observe(arch);
             })();
         </script>
+
+        <!-- LIVE DEMO — interactive Simon chat (real API), Maeve 3-min voice demo, Hugo Slack preview -->
+        <section id="demo" class="py-24" style="background: var(--bg-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+            <div class="nm-container">
+                <div class="nm-section-header">
+                    <span class="eyebrow"><span class="dot"></span> See a NeoMind employee answer, grounded in real docs</span>
+                    <h2 class="nm-section-headline">
+                        Don't take our word for it.<br />
+                        <span class="muted">Ask one yourself.</span>
+                    </h2>
+                    <p class="nm-section-sub">
+                        Simon is the real thing &mdash; trained on this very site, answering live, no hallucinations. Maeve and Hugo run on sample businesses so you can hear how each employee works.
+                    </p>
+                </div>
+
+                <div role="tablist" aria-label="AI teammate demos" class="tab-bar flex gap-2 mb-6 border-b border-gray-200 dark:border-gray-700">
+                    <button role="tab" aria-selected="true" data-tab="simon" class="tab-btn active flex items-center gap-2 px-4 py-3 border-b-2 border-primary text-primary font-medium">
+                        <span class="tab-icon" style="background: var(--secondary-50); color: var(--secondary-700);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/></svg>
+                        </span>
+                        <span>Simon</span>
+                        <span class="hidden sm:inline text-xs text-gray-500 dark:text-gray-400 font-normal ml-1">— live</span>
+                    </button>
+                    <button role="tab" aria-selected="false" data-tab="maeve" class="tab-btn flex items-center gap-2 px-4 py-3 border-b-2 border-transparent text-gray-500 dark:text-gray-400 hover:text-primary font-medium">
+                        <span class="tab-icon" style="background: var(--accent-50); color: var(--accent-700);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </span>
+                        <span>Maeve</span>
+                        <span class="hidden sm:inline text-xs text-gray-500 dark:text-gray-400 font-normal ml-1">— live · 90s</span>
+                    </button>
+                    <button role="tab" aria-selected="false" data-tab="hugo" class="tab-btn flex items-center gap-2 px-4 py-3 border-b-2 border-transparent text-gray-500 dark:text-gray-400 hover:text-primary font-medium">
+                        <span class="tab-icon" style="background: var(--primary-50); color: var(--primary-700);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </span>
+                        <span>Hugo</span>
+                        <span class="hidden sm:inline text-xs text-gray-500 dark:text-gray-400 font-normal ml-1">— demo on request</span>
+                    </button>
+                </div>
+
+                <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-800 max-w-3xl">
+                    <div class="p-5 text-white" style="background: var(--gradient-brand);">
+                        <div class="text-xs uppercase tracking-wide opacity-80" id="panel-eyebrow">Live · trained on neomeric.com</div>
+                        <div class="text-lg font-semibold" id="panel-title">Ask Simon anything about NeoMind</div>
+                    </div>
+
+                    <!-- Simon panel (live API) -->
+                    <div data-panel="simon" class="tab-panel">
+                        <div class="chat-surface" id="chat-simon"></div>
+                        <div class="border-t border-gray-100 dark:border-gray-800 p-3 flex gap-2 bg-white dark:bg-gray-900">
+                            <input id="input-simon" type="text" placeholder="Ask Simon — e.g. how much does NeoMind cost?"
+                                class="flex-1 px-4 py-2.5 rounded-full bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-primary text-sm" />
+                            <button data-send="simon" class="btn btn-gradient" style="padding: 10px 20px; font-size: 14px;">Send</button>
+                        </div>
+                        <div class="px-4 pb-3 flex flex-wrap gap-2">
+                            <button class="suggest-btn" data-mind="simon">How much does NeoMind cost?</button>
+                            <button class="suggest-btn" data-mind="simon">What's the difference between the employees?</button>
+                            <button class="suggest-btn" data-mind="simon">Where is my data stored?</button>
+                        </div>
+                    </div>
+
+                    <!-- Maeve panel (LIVE — 3-minute browser voice demo) -->
+                    <div data-panel="maeve" class="tab-panel hidden">
+                        <div id="maeve-cta" class="maeve-cta-screen">
+                            <div class="text-5xl mb-4">📞</div>
+                            <h3 class="text-xl font-display font-semibold text-gray-900 dark:text-white mb-2">Talk to Maeve for 3 minutes</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 max-w-md mx-auto">
+                                Maeve is a real, natural-sounding voice agent, running on this site's Brain.
+                                Allow microphone access and speak naturally.
+                            </p>
+                            <button id="maeve-start" type="button" class="btn btn-gradient">
+                                <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 14a3 3 0 003-3V5a3 3 0 00-6 0v6a3 3 0 003 3z"/><path d="M19 11a1 1 0 10-2 0 5 5 0 01-10 0 1 1 0 10-2 0 7 7 0 006 6.92V20H8a1 1 0 100 2h8a1 1 0 100-2h-3v-2.08A7 7 0 0019 11z"/></svg>
+                                Start 3-minute demo
+                            </button>
+                            <p class="text-xs text-gray-500 dark:text-gray-500 mt-4">No download · works in Chrome, Edge, Safari · Email captured to schedule a longer demo</p>
+                        </div>
+
+                        <div id="maeve-stage" class="hidden" style="position: relative;">
+                            <div id="maeve-connect-overlay" class="maeve-connect-overlay">
+                                <div class="maeve-connect-rings">
+                                    <div class="maeve-connect-glyph">📞</div>
+                                </div>
+                                <div class="maeve-connect-status" id="maeve-connect-status">Setting up your call…</div>
+                                <div class="maeve-connect-sub" id="maeve-connect-sub">This usually takes a few seconds</div>
+                            </div>
+                            <div class="maeve-stage-header" id="maeve-stage-header">
+                                <span><span class="maeve-stage-pulse"></span><strong>Live</strong> · <span id="maeve-status">Connecting…</span></span>
+                                <span class="text-xs font-medium uppercase tracking-wide" id="maeve-timer">90s</span>
+                            </div>
+                            <div class="maeve-stage" style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <div id="maeve-transcript" class="maeve-transcript"></div>
+                            </div>
+                            <div class="p-4 bg-white dark:bg-gray-900 flex justify-between items-center text-sm">
+                                <span class="text-gray-500 dark:text-gray-400 hidden sm:inline">Speak naturally — Maeve is listening</span>
+                                <button id="maeve-stop" type="button"
+                                    class="inline-flex items-center px-4 py-2 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 rounded-full text-sm font-medium hover:bg-red-100 transition-all">
+                                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M6 6h12v12H6z"/></svg>
+                                    End call
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="maeve-end" class="maeve-end-screen hidden">
+                            <div class="text-5xl mb-4">✓</div>
+                            <h3 class="text-xl font-display font-semibold text-gray-900 dark:text-white mb-2">That's a wrap.</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 max-w-md mx-auto">
+                                That was the real Maeve, on the real NeoMind brain. Imagine her trained on
+                                <strong>your</strong> business — your scripts, your calendar, your CRM.
+                            </p>
+                            <div class="flex flex-wrap gap-3 justify-center">
+                                <a href="https://app.neomindhub.com/signup?agent=maeve" class="btn btn-gradient" data-contact-cta data-contact-path="NeoMind" data-contact-source="neomindhub-maeve-after">
+                                    Start your free trial
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                </a>
+                                <button id="maeve-retry" type="button"
+                                    class="inline-flex items-center px-5 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-primary text-gray-800 dark:text-white rounded-full text-sm font-medium transition-all">
+                                    Run another 90s
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hugo panel (read-only Slack preview · live demo on request) -->
+                    <div data-panel="hugo" class="tab-panel hidden">
+                        <div class="hugo-banner">
+                            <span><span class="hugo-banner-pulse"></span><strong>Hugo runs on your real handbook.</strong> Slack-style preview shown — Slack &amp; Teams native coming soon. At launch, Hugo answers in your Member dashboard.</span>
+                            <span class="text-xs font-medium uppercase tracking-wide hidden sm:inline">Demo on request</span>
+                        </div>
+
+                        <div class="slack-surface">
+                            <div class="slack-channel-tag">#hr-questions · 247 members</div>
+
+                            <div class="slack-msg">
+                                <div class="slack-avatar" style="background:#fbbf24">JC</div>
+                                <div class="flex-1">
+                                    <div class="slack-meta"><span class="slack-name">Jess C.</span><span class="slack-time">10:42 AM</span></div>
+                                    <div class="slack-body">how many days of annual leave do I get? trying to plan a trip in september</div>
+                                </div>
+                            </div>
+
+                            <div class="slack-msg" style="padding-left: 2.5rem;">
+                                <div class="slack-avatar" style="background:linear-gradient(135deg,#007BFF,#00D1B2)">H</div>
+                                <div class="flex-1">
+                                    <div class="slack-meta"><span class="slack-name">Hugo</span><span class="slack-app-tag">App</span><span class="slack-time">10:42 AM</span></div>
+                                    <div class="slack-body">You get <strong>20 days</strong> of paid annual leave per year (pro-rated for part-time), on top of public holidays. Leave accrues at <strong>1.67 days/month</strong>, and you can carry up to 10 days into next year.</div>
+                                    <a class="slack-source" href="#" onclick="event.preventDefault()">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                                        Source: Employee Handbook §4.2 — Annual Leave
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="slack-msg">
+                                <div class="slack-avatar" style="background:#a78bfa">MR</div>
+                                <div class="flex-1">
+                                    <div class="slack-meta"><span class="slack-name">Marco R.</span><span class="slack-time">11:15 AM</span></div>
+                                    <div class="slack-body">@Hugo what's the WFH policy these days?</div>
+                                </div>
+                            </div>
+
+                            <div class="slack-msg" style="padding-left: 2.5rem;">
+                                <div class="slack-avatar" style="background:linear-gradient(135deg,#007BFF,#00D1B2)">H</div>
+                                <div class="flex-1">
+                                    <div class="slack-meta"><span class="slack-name">Hugo</span><span class="slack-app-tag">App</span><span class="slack-time">11:15 AM</span></div>
+                                    <div class="slack-body">Up to <strong>3 days/week</strong> WFH with manager approval. Minimum <strong>2 days in-office</strong> per week. WFH days agreed with your manager 1 week ahead.</div>
+                                    <a class="slack-source" href="#" onclick="event.preventDefault()">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                                        Source: Employee Handbook §6.1 — Hybrid Working
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="slack-msg">
+                                <div class="slack-avatar" style="background:#34d399">PT</div>
+                                <div class="flex-1">
+                                    <div class="slack-meta"><span class="slack-name">Priya T.</span><span class="slack-time">2:08 PM</span></div>
+                                    <div class="slack-body">@Hugo I bought a flight for a client visit — how do I claim it back?</div>
+                                </div>
+                            </div>
+
+                            <div class="slack-msg" style="padding-left: 2.5rem;">
+                                <div class="slack-avatar" style="background:linear-gradient(135deg,#007BFF,#00D1B2)">H</div>
+                                <div class="flex-1">
+                                    <div class="slack-meta"><span class="slack-name">Hugo</span><span class="slack-app-tag">App</span><span class="slack-time">2:08 PM</span></div>
+                                    <div class="slack-body">Submit through <strong>HR Portal → Expense Claims</strong>. Attach the receipt, pick category <em>Travel · Client</em>. Claims under $500 auto-route to your manager; above goes to Finance. Paid on the next payroll cycle.</div>
+                                    <a class="slack-source" href="#" onclick="event.preventDefault()">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                                        Source: Finance SOP §3 — Expense Reimbursement
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-gray-100 dark:border-gray-800 p-5 bg-white dark:bg-gray-900 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div class="text-sm text-gray-600 dark:text-gray-400">
+                                Want Hugo to read <strong>your</strong> handbook and answer <strong>your</strong> team in your Member dashboard? (Slack &amp; Teams native coming soon.)
+                            </div>
+                            <a href="https://app.neomindhub.com/signup?agent=hugo" class="inline-flex items-center px-5 py-2.5 bg-gradient-to-r from-secondary to-accent text-white rounded-full text-sm font-medium hover:shadow-lg transition-all whitespace-nowrap" data-contact-cta data-contact-path="NeoMind" data-contact-source="neomindhub-hugo">
+                                Start a free trial
+                                <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════════ 2. ONE-LINE PROBLEM ════════════ -->
+        <section id="problem" class="py-20">
+            <div class="nm-container" style="max-width: 920px; text-align: center;">
+                <span class="eyebrow" style="justify-content: center;"><span class="dot"></span> Chatbot vs. employee</span>
+                <h2 class="nm-section-headline" style="margin: 14px auto 18px; max-width: 22ch;">
+                    A chatbot answers. An AI&nbsp;employee gets the job done &mdash; <span class="muted">and tells you how it&rsquo;s performing.</span>
+                </h2>
+                <p class="nm-section-sub" style="margin: 0 auto; max-width: 60ch;">
+                    Most &ldquo;AI&rdquo; you can buy is a bot that replies and hopes. NeoMind employees take real actions, work from your real knowledge, and are measured against objectives you set &mdash; so you&rsquo;re managing a team, not babysitting a script.
+                </p>
+            </div>
+        </section>
 
         <!-- ════════════ 3. PILLAR 1 — MEASURABLE (the headline differentiator) ════════════ -->
         <section id="measurable" class="py-24" style="background: var(--bg);">

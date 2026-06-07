@@ -50,8 +50,9 @@ class NavbarSection extends HTMLElement {
     }).join("");
 
     // Nav links. intl now routes to dedicated hub PAGES (the full content build
-    // landed): Platform / AI Employees / Solutions / Pricing / Resources / Company,
+    // landed): Platform / AI Employees / Solutions / Pricing / Resources,
     // each an absolute page link (no #anchors). Compare folds under Resources.
+    // Company/About is no longer a top-level nav item — it lives in the footer.
     // au/es keep their existing scroll-anchor + gated-hub behaviour unchanged,
     // because their localized hub pages don't exist yet. The same link set drives
     // both the desktop ul and the mobile panel.
@@ -62,8 +63,7 @@ class NavbarSection extends HTMLElement {
         "<li><a href=\"/employees/\">" + nav.employees + "</a></li>" +
         "<li><a href=\"/solutions/\">" + nav.solutions + "</a></li>" +
         "<li><a href=\"/pricing/\">" + nav.pricing + "</a></li>" +
-        "<li><a href=\"/resources/\">" + nav.resources + "</a></li>" +
-        "<li><a href=\"/company/\">" + nav.company + "</a></li>";
+        "<li><a href=\"/resources/\">" + nav.resources + "</a></li>";
     } else {
       const gated = (L.code === "au");
       const gatedLinks = gated
