@@ -115,7 +115,17 @@
         {
           "@type": "Question",
           "name": "What's included on every plan?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Every plan includes the shared Brain trained on your own documents and FAQs, a one-line website embed, calendar booking, and objectives, KPIs and scorecards so you can measure each employee. Additional agents are now included on every plan — you choose which employees to deploy within your tier." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Every plan includes the shared Brain trained on your own documents and FAQs, a one-line website embed, calendar booking, and objectives, KPIs and scorecards so you can measure each employee. Additional agents are included on every plan — you choose which employees to deploy within your tier." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a single bill ever surprise me?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. You set a hard cap on overage spend per employee in your dashboard, and we send automatic alerts at 80% and 100% of your allowance — by email and in-app — before you cross either line. If usage looks unusual, a real person reaches out before anything becomes a bill." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I add more agents?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes — additional agents are included on every plan. Agents are configuration; what you pay for is usage. Each agent draws on your plan's shared allowance of website chats, calls and staff queries, so you can stand up extra agents under each mind without a new line on your invoice. You only pay when usage runs past the included allowance." }
         },
         {
           "@type": "Question",
@@ -159,6 +169,39 @@
         .nm-price-pick strong { color: var(--text); font-weight: 600; }
         .nm-price-card--featured .nm-price-pick { background: rgba(255,255,255,0.16); color: rgba(255,255,255,0.92); }
         .nm-price-card--featured .nm-price-pick strong { color: white; }
+
+        /* ── Per-pick selector — pick-pills (ported from the production team-picker) ── */
+        .nm-pick-label { font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 9px; }
+        .nm-price-card--featured .nm-pick-label { color: rgba(255,255,255,0.78); }
+        .nm-pick-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+        .nm-pick-pill {
+            font-size: 13px; font-weight: 500; line-height: 1;
+            padding: 8px 14px; border-radius: 999px; cursor: pointer;
+            background: var(--bg-muted); color: var(--text-muted);
+            border: 1px solid var(--border-strong);
+            transition: all 0.16s ease; user-select: none;
+            font-family: var(--font-sans);
+        }
+        .nm-pick-pill:hover { border-color: var(--secondary-500); color: var(--secondary-700); }
+        .nm-pick-pill.active {
+            background: var(--gradient-brand); color: white;
+            border-color: transparent; box-shadow: 0 4px 12px rgba(0,123,255,0.28);
+        }
+        .nm-pick-pill:focus-visible { outline: 2px solid var(--secondary-500); outline-offset: 2px; }
+        /* Inactive pills on the featured gradient card need a translucent-white treatment for legibility */
+        .nm-price-card--featured .nm-pick-pill:not(.active) {
+            background: rgba(255,255,255,0.14); color: rgba(255,255,255,0.9);
+            border-color: rgba(255,255,255,0.22);
+        }
+        .nm-price-card--featured .nm-pick-pill:not(.active):hover { border-color: rgba(255,255,255,0.55); color: white; }
+        .nm-price-card--featured .nm-pick-pill.active { background: white; color: #004999; box-shadow: 0 6px 16px rgba(0,0,0,0.18); }
+        /* Static (non-interactive) pills for the Squad card */
+        .nm-pick-pill--static { cursor: default; background: var(--gradient-brand); color: white; border-color: transparent; }
+        .nm-pick-pill--static:hover { border-color: transparent; color: white; }
+        /* Price flip animation */
+        .nm-price-num { transition: transform 0.18s ease, opacity 0.18s ease; }
+        .nm-price-num.flipping { transform: translateY(-6px); opacity: 0; }
+        @media (prefers-reduced-motion: reduce) { .nm-price-num { transition: none; } }
         .nm-price-list { list-style: none; padding: 0; margin: 0 0 20px; display: flex; flex-direction: column; gap: 11px; flex: 1; }
         .nm-price-list li { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; line-height: 1.45; color: var(--text-muted); }
         .nm-price-list li strong { color: var(--text); font-weight: 700; }
@@ -205,6 +248,61 @@
         .nm-price-trust span { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); padding: 8px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; }
         .nm-price-trust span svg { color: var(--accent-700); flex-shrink: 0; }
 
+        /* ── Our overage promise — band between cards and Enterprise ── */
+        .nm-overage-promise {
+            max-width: 1080px; margin: 28px auto 0;
+            border-radius: 22px; padding: 30px 34px;
+            background: linear-gradient(135deg, rgba(0,209,178,0.08) 0%, rgba(0,123,255,0.06) 100%);
+            border: 1px solid color-mix(in oklab, var(--accent-500) 28%, transparent);
+            display: grid; grid-template-columns: 1.15fr 1fr; gap: 30px; align-items: center;
+        }
+        .nm-overage-promise-eyebrow {
+            display: inline-flex; align-items: center; gap: 7px;
+            font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+            font-weight: 700; color: var(--accent-700); margin-bottom: 10px;
+        }
+        .nm-overage-promise-eyebrow .dot {
+            width: 6px; height: 6px; border-radius: 50%;
+            background: var(--accent-500); box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent-500) 20%, transparent);
+        }
+        .nm-overage-promise-headline {
+            font-family: var(--font-display); font-weight: 700;
+            font-size: clamp(21px, 2.3vw, 28px); line-height: 1.15;
+            letter-spacing: -0.02em; color: var(--text); margin: 0 0 10px; text-wrap: balance;
+        }
+        .nm-overage-promise-sub { font-size: 14.5px; line-height: 1.6; color: var(--text-muted); margin: 0; max-width: 46ch; }
+        .nm-overage-promise-points { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 20px; }
+        .nm-overage-promise-points li { display: flex; gap: 11px; align-items: flex-start; font-size: 13.5px; line-height: 1.4; color: var(--text); }
+        .nm-overage-promise-points li svg { flex-shrink: 0; margin-top: 2px; color: var(--accent-700); }
+        .nm-overage-promise-points strong { font-weight: 600; display: block; }
+        .nm-overage-promise-points .sub { display: block; font-weight: 400; font-size: 12.5px; color: var(--text-muted); margin-top: 2px; }
+        @media (max-width: 900px) {
+            .nm-overage-promise { grid-template-columns: 1fr; padding: 26px 22px; }
+            .nm-overage-promise-points { grid-template-columns: 1fr; }
+        }
+
+        /* ── Plan comparison table ── */
+        .nm-compare { max-width: 1080px; margin: 56px auto 0; min-width: 0; }
+        .nm-compare-head { text-align: center; margin-bottom: 26px; }
+        .nm-compare-head h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(26px, 3vw, 38px); letter-spacing: -0.025em; color: var(--text); margin: 12px 0 0; }
+        .nm-compare-scroll { max-width: 100%; overflow-x: auto; border: 1px solid var(--border); border-radius: 20px; background: var(--surface); -webkit-overflow-scrolling: touch; }
+        .nm-compare-table { width: 100%; min-width: 720px; border-collapse: collapse; font-size: 14px; }
+        .nm-compare-table th, .nm-compare-table td { padding: 13px 18px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); }
+        .nm-compare-table thead th { position: sticky; top: 0; background: var(--surface); z-index: 2; }
+        .nm-compare-table thead .col-plan { font-family: var(--font-display); font-weight: 700; font-size: 15px; color: var(--text); text-align: center; }
+        .nm-compare-table thead .col-plan .price { display: block; font-family: var(--font-sans); font-weight: 500; font-size: 12.5px; color: var(--text-subtle); margin-top: 2px; }
+        .nm-compare-table thead .col-plan.is-pop { color: var(--secondary-700); }
+        .nm-compare-table .row-group td { background: var(--bg-muted); font-family: var(--font-display); font-weight: 700; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--secondary-700); padding: 11px 18px; }
+        .nm-compare-table .row-feat th { font-weight: 500; color: var(--text); width: 30%; }
+        .nm-compare-table td.val { text-align: center; color: var(--text-muted); }
+        .nm-compare-table td.val .yes { display: inline-flex; }
+        .nm-compare-yes { width: 17px; height: 17px; color: var(--accent-700); }
+        .nm-compare-no { color: var(--text-subtle); font-size: 17px; line-height: 1; }
+        .nm-compare-soon { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.02em; padding: 2px 9px; border-radius: 999px; background: var(--bg-muted); color: var(--text-subtle); border: 1px solid var(--border); white-space: nowrap; }
+        .nm-compare-table tbody tr:last-child td, .nm-compare-table tbody tr:last-child th { border-bottom: none; }
+        .nm-compare-note { font-size: 12.5px; line-height: 1.55; color: var(--text-subtle); margin: 16px auto 0; max-width: 760px; text-align: center; }
+        .nm-compare-note a { color: var(--secondary-700); }
+
         /* Scroll-reveal — reduced-motion safe */
         .nm-reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
         .nm-reveal.is-in { opacity: 1; transform: none; }
@@ -237,61 +335,102 @@
                     <span class="eyebrow"><span class="dot"></span> Pricing</span>
                     <h1>Hire your AI workforce.<br /><span class="muted">Cancel any time. No procurement call.</span></h1>
                     <p>
-                        Pick the employees you need &mdash; additional agents now included on every plan. Pay only for what you
+                        Pick the employees you need &mdash; additional agents included on every plan. Plans from $79. Pay only for what you
                         use beyond the included allowance. No packs, no contracts. USD &middot; 14-day money-back &middot; cancel any time.
                     </p>
                 </div>
 
                 <div class="nm-price-grid nm-reveal">
-                    <!-- SOLO -->
+                    <!-- SOLO — per-pick selector (Simon / Hugo / Maeve) -->
                     <div class="nm-price-card" data-tier="solo">
                         <div class="nm-price-tier">Solo</div>
                         <div class="nm-price-sub">One AI employee</div>
-                        <div class="nm-price-amount"><span class="nm-price-num">$79</span><span class="nm-price-per">USD / mo</span></div>
-                        <div class="nm-price-pick">Pick one: <strong>Simon</strong>, <strong>Hugo</strong> or <strong>Maeve</strong></div>
-                        <ul class="nm-price-list">
-                            <li><span class="nm-price-tick"></span><span><strong>600</strong> customer chats / month</span></li>
+                        <div class="nm-price-amount"><span class="nm-price-num" data-price>$79</span><span class="nm-price-per">USD / mo</span></div>
+                        <div class="nm-pick-label">Pick your teammate</div>
+                        <div class="nm-pick-row">
+                            <button type="button" class="nm-pick-pill active" data-pick="simon" data-card="solo">Simon</button>
+                            <button type="button" class="nm-pick-pill" data-pick="hugo" data-card="solo">Hugo</button>
+                            <button type="button" class="nm-pick-pill" data-pick="maeve" data-card="solo">Maeve</button>
+                        </div>
+                        <ul class="nm-price-list" data-included>
+                            <li><span class="nm-price-tick"></span><span><strong>600</strong> website chats / month</span></li>
                             <li><span class="nm-price-tick"></span><span>Embed on your site, one line of code</span></li>
                             <li><span class="nm-price-tick"></span><span>Trained on your docs &amp; FAQs</span></li>
                             <li><span class="nm-price-tick"></span><span>Books straight into your calendar</span></li>
                         </ul>
-                        <div class="nm-price-overage">Need more? <strong>10&cent;</strong> per extra chat.</div>
-                        <a href="https://app.neomindhub.com/signup?plan=solo" class="nm-price-cta nm-price-cta--ghost" data-cta="pricing-page-solo">Get started with Solo</a>
+                        <div class="nm-price-overage">Need more? <strong data-overage>10&cent;</strong> per extra <span data-overage-unit>chat</span>.</div>
+                        <a href="https://app.neomindhub.com/signup?plan=solo&amp;pick=simon" class="nm-price-cta nm-price-cta--ghost" data-cta="pricing-page-solo" data-cta-link>Hire Solo</a>
                     </div>
 
-                    <!-- DUO (FEATURED) -->
+                    <!-- DUO (FEATURED) — per-pick selector (Simon+Hugo / Simon+Maeve) -->
                     <div class="nm-price-card nm-price-card--featured" data-tier="duo">
                         <span class="nm-price-badge">Most popular</span>
                         <div class="nm-price-tier">Duo</div>
                         <div class="nm-price-sub">Two AI employees</div>
-                        <div class="nm-price-amount"><span class="nm-price-num">$149</span><span class="nm-price-per">USD / mo</span></div>
-                        <div class="nm-price-pick">Pair any two &mdash; e.g. <strong>Simon + Hugo</strong></div>
-                        <ul class="nm-price-list">
-                            <li><span class="nm-price-tick"></span><span><strong>600</strong> customer chats (Simon)</span></li>
+                        <div class="nm-price-amount"><span class="nm-price-num" data-price>$149</span><span class="nm-price-per">USD / mo</span></div>
+                        <div class="nm-pick-label">Pick your duo</div>
+                        <div class="nm-pick-row">
+                            <button type="button" class="nm-pick-pill active" data-pick="simon-hugo" data-card="duo">Simon + Hugo</button>
+                            <button type="button" class="nm-pick-pill" data-pick="simon-maeve" data-card="duo">Simon + Maeve</button>
+                        </div>
+                        <ul class="nm-price-list" data-included>
+                            <li><span class="nm-price-tick"></span><span><strong>600</strong> website chats (Simon)</span></li>
                             <li><span class="nm-price-tick"></span><span><strong>1,000</strong> staff queries (Hugo)</span></li>
                             <li><span class="nm-price-tick"></span><span>Slack &amp; Microsoft Teams (coming soon)</span></li>
                             <li><span class="nm-price-tick"></span><span>Priority email support</span></li>
                         </ul>
-                        <div class="nm-price-overage">Same per-unit overage as Solo &mdash; pay only for extras.</div>
-                        <a href="https://app.neomindhub.com/signup?plan=duo" class="nm-price-cta nm-price-cta--solid" data-cta="pricing-page-duo">Get started with Duo</a>
+                        <div class="nm-price-overage">Same per-unit overage as Solo &mdash; pay only for <span data-overage-unit>extras</span>.</div>
+                        <a href="https://app.neomindhub.com/signup?plan=duo&amp;pick=simon-hugo" class="nm-price-cta nm-price-cta--solid" data-cta="pricing-page-duo" data-cta-link>Hire the pair</a>
                     </div>
 
-                    <!-- SQUAD -->
+                    <!-- SQUAD — fixed -->
                     <div class="nm-price-card nm-price-card--squad" data-tier="squad">
                         <div class="nm-price-tier">Squad</div>
                         <div class="nm-price-sub">All three, plus voice</div>
                         <div class="nm-price-amount"><span class="nm-price-num">$299</span><span class="nm-price-per">USD / mo</span></div>
-                        <div class="nm-price-pick"><strong>Simon</strong> &middot; <strong>Hugo</strong> &middot; <strong>Maeve</strong></div>
+                        <div class="nm-pick-label">Your full AI team</div>
+                        <div class="nm-pick-row">
+                            <span class="nm-pick-pill nm-pick-pill--static">Simon</span>
+                            <span class="nm-pick-pill nm-pick-pill--static">Hugo</span>
+                            <span class="nm-pick-pill nm-pick-pill--static">Maeve</span>
+                        </div>
                         <ul class="nm-price-list">
-                            <li><span class="nm-price-tick"></span><span><strong>1,500</strong> customer chats / mo</span></li>
+                            <li><span class="nm-price-tick"></span><span><strong>1,500</strong> website chats / mo</span></li>
                             <li><span class="nm-price-tick"></span><span><strong>200</strong> phone calls / mo</span></li>
                             <li><span class="nm-price-tick"></span><span><strong>2,000</strong> staff queries / mo</span></li>
-                            <li><span class="nm-price-tick"></span><span>Twilio + Calendar (Slack/Teams soon)</span></li>
+                            <li><span class="nm-price-tick"></span><span>Twilio + Calendar (Slack live, Teams soon)</span></li>
                             <li><span class="nm-price-tick"></span><span>Priority support</span></li>
                         </ul>
-                        <div class="nm-price-overage">~10% saving vs. buying employees individually.</div>
+                        <div class="nm-price-overage"><strong>$327</strong> if hired individually &mdash; Squad is $299, ~10% off.</div>
                         <a href="https://app.neomindhub.com/signup?plan=squad" class="nm-price-cta nm-price-cta--gradient" data-cta="pricing-page-squad">Hire the whole Squad</a>
                     </div>
+                </div>
+
+                <!-- Our overage promise — band between cards and Enterprise -->
+                <div class="nm-overage-promise nm-reveal" aria-label="Our overage promise">
+                    <div>
+                        <span class="nm-overage-promise-eyebrow"><span class="dot"></span> Our overage promise</span>
+                        <h2 class="nm-overage-promise-headline">No overage shock. The price you see is the price you pay.</h2>
+                        <p class="nm-overage-promise-sub">Flat monthly rate, hard caps you set yourself, automatic alerts at 80% and 100%, and a real person who reaches out before any unusual usage ever becomes a bill.</p>
+                    </div>
+                    <ul class="nm-overage-promise-points">
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                            <span><strong>Flat monthly rate</strong><span class="sub">No mystery line items on your invoice.</span></span>
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                            <span><strong>Hard caps you control</strong><span class="sub">Set a ceiling per employee in your dashboard.</span></span>
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                            <span><strong>Alerts at 80% &amp; 100%</strong><span class="sub">Email + dashboard before you cross either line.</span></span>
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            <span><strong>A human checks in first</strong><span class="sub">We call before unusual usage flips into a bill.</span></span>
+                        </li>
+                    </ul>
                 </div>
 
                 <!-- Enterprise -->
@@ -328,7 +467,71 @@
                     <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Cancel any time</span>
                 </div>
 
-                <p class="nm-price-note">All prices in USD. Pay-as-you-go overage is billed on your normal monthly invoice. Additional agents are now included on every plan. Fair-use applies to typical business interactions.</p>
+                <p class="nm-price-note">All prices in USD. Pay-as-you-go overage is billed on your normal monthly invoice. Additional agents are included on every plan. Fair-use applies to typical business interactions &mdash; see our <a href="/fair-use.html">fair-use policy</a>.</p>
+
+                <!-- Plan comparison table — plain HTML table, no per-row Offer schema -->
+                <div class="nm-compare nm-reveal">
+                    <div class="nm-compare-head">
+                        <span class="eyebrow" style="justify-content: center;"><span class="dot"></span> Compare plans</span>
+                        <h2>Everything, side by side.</h2>
+                    </div>
+                    <div class="nm-compare-scroll" role="region" aria-label="Plan comparison" tabindex="0">
+                        <table class="nm-compare-table">
+                            <caption class="sr-only">Feature comparison across the Solo, Duo, Squad and Enterprise plans</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Feature</th>
+                                    <th scope="col" class="col-plan">Solo<span class="price">from $79/mo</span></th>
+                                    <th scope="col" class="col-plan is-pop">Duo<span class="price">from $149/mo</span></th>
+                                    <th scope="col" class="col-plan">Squad<span class="price">$299/mo</span></th>
+                                    <th scope="col" class="col-plan">Enterprise<span class="price">Talk to us</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Employees & volume -->
+                                <tr class="row-group"><td colspan="5">Employees &amp; volume</td></tr>
+                                <tr class="row-feat"><th scope="row">Employees included</th><td class="val">1</td><td class="val">2</td><td class="val">3 + custom agents</td><td class="val">Unlimited</td></tr>
+                                <tr class="row-feat"><th scope="row">Website chats / mo</th><td class="val">600</td><td class="val">600</td><td class="val">1,500</td><td class="val">Custom</td></tr>
+                                <tr class="row-feat"><th scope="row">Phone calls / mo <span style="color:var(--text-subtle);font-weight:400;">(with Maeve)</span></th><td class="val">100</td><td class="val">100</td><td class="val">200</td><td class="val">Custom</td></tr>
+                                <tr class="row-feat"><th scope="row">Staff queries / mo <span style="color:var(--text-subtle);font-weight:400;">(with Hugo)</span></th><td class="val">1,000</td><td class="val">1,000</td><td class="val">2,000</td><td class="val">Custom</td></tr>
+                                <tr class="row-feat"><th scope="row">Additional agents under each mind</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+
+                                <!-- The Brain -->
+                                <tr class="row-group"><td colspan="5">The Brain</td></tr>
+                                <tr class="row-feat"><th scope="row">Docs + site crawl</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-feat"><th scope="row">Cited answers</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-feat"><th scope="row">Live re-index</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-feat"><th scope="row">Knowledge scopes per agent</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val">Granular</td></tr>
+
+                                <!-- Measurability -->
+                                <tr class="row-group"><td colspan="5">Measurability</td></tr>
+                                <tr class="row-feat"><th scope="row">Objectives per employee</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-feat"><th scope="row">Weighted KPIs scored per conversation</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-feat"><th scope="row">Scorecards &amp; reporting</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-feat"><th scope="row">Custom KPI rubrics</th><td class="val"><span class="nm-compare-no" aria-label="Not included">&minus;</span></td><td class="val"><span class="nm-compare-no" aria-label="Not included">&minus;</span></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+
+                                <!-- Actions & integrations -->
+                                <tr class="row-group"><td colspan="5">Actions &amp; integrations</td></tr>
+                                <tr class="row-feat"><th scope="row">Calendar booking</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-feat"><th scope="row">Lead capture &amp; routing</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-feat"><th scope="row">Webhooks / CRM</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-feat"><th scope="row">Voice via Twilio</th><td class="val"><span style="font-size:12.5px;">Maeve picks</span></td><td class="val"><span style="font-size:12.5px;">Maeve picks</span></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-feat"><th scope="row">Slack <span style="color:var(--text-subtle);font-weight:400;">(live for Hugo)</span></th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-feat"><th scope="row">Microsoft Teams</th><td class="val"><span class="nm-compare-soon">Coming soon</span></td><td class="val"><span class="nm-compare-soon">Coming soon</span></td><td class="val"><span class="nm-compare-soon">Coming soon</span></td><td class="val"><span class="nm-compare-soon">Coming soon</span></td></tr>
+                                <tr class="row-feat"><th scope="row">Human escalation</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+
+                                <!-- Support & trust -->
+                                <tr class="row-group"><td colspan="5">Support &amp; trust</td></tr>
+                                <tr class="row-feat"><th scope="row">Support</th><td class="val">Email</td><td class="val">Priority</td><td class="val">Priority</td><td class="val">Dedicated AM</td></tr>
+                                <tr class="row-feat"><th scope="row">Hard overage caps + alerts</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-feat"><th scope="row">Data residency</th><td class="val">Your region</td><td class="val">Your region</td><td class="val">Your region</td><td class="val">Private cloud / on-prem</td></tr>
+                                <tr class="row-feat"><th scope="row">SSO / 2FA</th><td class="val"><span class="nm-compare-no" aria-label="Not included">&minus;</span></td><td class="val"><span class="nm-compare-no" aria-label="Not included">&minus;</span></td><td class="val"><span class="nm-compare-no" aria-label="Not included">&minus;</span></td><td class="val"><span class="nm-compare-soon">Coming soon</span></td></tr>
+                                <tr class="row-feat"><th scope="row">Security evidence pack</th><td class="val"><span class="nm-compare-no" aria-label="Not included">&minus;</span></td><td class="val"><span class="nm-compare-no" aria-label="Not included">&minus;</span></td><td class="val"><span class="nm-compare-no" aria-label="Not included">&minus;</span></td><td class="val" data-yes></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="nm-compare-note">Every tick reflects a capability live today. Microsoft Teams and SSO / 2FA are on the roadmap and labelled honestly. Overage stays flat per unit &mdash; 10&cent;/chat (Simon), 50&cent;/call (Maeve), 5&cent;/query (Hugo) &mdash; with a hard cap you set. See how we stack up on the <a href="/compare/">comparison hub</a>.</p>
+                </div>
             </div>
         </section>
 
@@ -375,7 +578,25 @@
                             <span class="nm-faq-toggle">+</span>
                         </button>
                         <div class="nm-faq-a">
-                            <p>Every plan includes the shared Brain trained on your own documents and FAQs, a one-line website embed, calendar booking, and objectives, KPIs and scorecards so you can measure each employee. Additional agents are now included on every plan &mdash; you choose which employees to deploy within your tier.</p>
+                            <p>Every plan includes the shared Brain trained on your own documents and FAQs, a one-line website embed, calendar booking, and objectives, KPIs and scorecards so you can measure each employee. Additional agents are included on every plan &mdash; you choose which employees to deploy within your tier.</p>
+                        </div>
+                    </div>
+                    <div class="nm-faq-item">
+                        <button class="nm-faq-q" aria-expanded="false" type="button">
+                            <span class="nm-faq-q-text">Can a single bill ever surprise me?</span>
+                            <span class="nm-faq-toggle">+</span>
+                        </button>
+                        <div class="nm-faq-a">
+                            <p>No. You set a hard cap on overage spend per employee in your dashboard, and we send automatic alerts at 80% and 100% of your allowance &mdash; by email and in-app &mdash; before you cross either line. If usage looks unusual, a real person reaches out before anything becomes a bill. That&rsquo;s our overage promise.</p>
+                        </div>
+                    </div>
+                    <div class="nm-faq-item">
+                        <button class="nm-faq-q" aria-expanded="false" type="button">
+                            <span class="nm-faq-q-text">Can I add more agents?</span>
+                            <span class="nm-faq-toggle">+</span>
+                        </button>
+                        <div class="nm-faq-a">
+                            <p>Yes &mdash; additional agents are included on every plan. Agents are configuration; what you pay for is usage. Each agent draws on your plan&rsquo;s shared allowance of website chats, calls and staff queries, so you can stand up extra agents under each mind without a new line on your invoice. You only pay when usage runs past the included allowance.</p>
                         </div>
                     </div>
                     <div class="nm-faq-item">
@@ -458,6 +679,132 @@
                 });
             });
         })();
+        // ── Pricing — per-pick team selector ──────────────────────────────
+        // Ported from the production team-picker (js/app.js `teamPicker`),
+        // kept page-scoped so it never re-enters the shared bundle. Solo and
+        // Duo cards carry .nm-pick-pill buttons; clicking one updates the
+        // price, the included list, the overage unit and the CTA href on that
+        // card. All content is built via DOM methods (no innerHTML) — the
+        // pricing data is fully controlled here. Prices are USD (intl page).
+        (function teamPicker() {
+            var PICKS = {
+                // SOLO — one employee. Each `included` entry is a string, or
+                // [boldNumber, rest] for the "600 website chats / month" shape.
+                'solo:simon': {
+                    price: '$79',
+                    included: [['600', 'website chats / month'], 'Embed on your site, one line of code', 'Trained on your docs & FAQs', 'Books straight into your calendar'],
+                    overage: '10¢', overageUnit: 'chat', pick: 'simon',
+                },
+                'solo:hugo': {
+                    price: '$99',
+                    included: [['1,000', 'staff queries / month'], 'Lives in your dashboard (Slack live, Teams soon)', 'Cites the source policy doc', 'Escalates to your people team'],
+                    overage: '5¢', overageUnit: 'staff query', pick: 'hugo',
+                },
+                'solo:maeve': {
+                    price: '$149',
+                    included: [['100', 'phone calls / month'], '24/7 voice — books & qualifies', 'Local phone number provisioned', 'Real actions, not just answers'],
+                    overage: '50¢', overageUnit: 'call', pick: 'maeve',
+                },
+                // DUO — two employees.
+                'duo:simon-hugo': {
+                    price: '$149',
+                    included: [['600', 'website chats (Simon)'], ['1,000', 'staff queries (Hugo)'], 'Slack & Microsoft Teams (coming soon)', 'Priority email support'],
+                    overageUnit: 'extras', pick: 'simon-hugo',
+                },
+                'duo:simon-maeve': {
+                    price: '$219',
+                    included: [['600', 'website chats (Simon)'], ['100', 'phone calls (Maeve)'], 'Web + phone covered', 'Priority support'],
+                    overageUnit: 'extras', pick: 'simon-maeve',
+                },
+            };
+
+            function tick() {
+                var s = document.createElement('span');
+                s.className = 'nm-price-tick';
+                return s;
+            }
+
+            function applyPick(card, key) {
+                var data = PICKS[key];
+                if (!data) return;
+
+                // Price flip
+                var priceEl = card.querySelector('[data-price]');
+                if (priceEl) {
+                    priceEl.classList.add('flipping');
+                    setTimeout(function () {
+                        priceEl.textContent = data.price;
+                        priceEl.classList.remove('flipping');
+                    }, 170);
+                }
+
+                // Rebuild the included list (DOM only)
+                var ul = card.querySelector('[data-included]');
+                if (ul) {
+                    while (ul.firstChild) ul.removeChild(ul.firstChild);
+                    data.included.forEach(function (item) {
+                        var li = document.createElement('li');
+                        li.appendChild(tick());
+                        var span = document.createElement('span');
+                        if (Array.isArray(item)) {
+                            var strong = document.createElement('strong');
+                            strong.textContent = item[0];
+                            span.appendChild(strong);
+                            span.appendChild(document.createTextNode(' ' + item[1]));
+                        } else {
+                            span.textContent = item;
+                        }
+                        li.appendChild(span);
+                        ul.appendChild(li);
+                    });
+                }
+
+                // Overage amount + unit (Solo shows the amount; Duo shows only the unit)
+                var overageEl = card.querySelector('[data-overage]');
+                if (overageEl && data.overage) overageEl.textContent = data.overage;
+                var unitEl = card.querySelector('[data-overage-unit]');
+                if (unitEl && data.overageUnit) unitEl.textContent = data.overageUnit;
+
+                // CTA href carries the pick
+                var cta = card.querySelector('[data-cta-link]');
+                if (cta) cta.href = 'https://app.neomindhub.com/signup?plan=' + card.dataset.tier + '&pick=' + data.pick;
+
+                // Pill active state (within this card only)
+                card.querySelectorAll('.nm-pick-pill[data-pick]').forEach(function (p) {
+                    p.classList.toggle('active', p.dataset.pick === data.pick);
+                });
+            }
+
+            document.querySelectorAll('.nm-pick-pill[data-pick][data-card]').forEach(function (pill) {
+                pill.addEventListener('click', function () {
+                    var card = pill.closest('[data-tier]');
+                    if (!card) return;
+                    applyPick(card, card.dataset.tier + ':' + pill.dataset.pick);
+                });
+            });
+        })();
+
+        // ── Comparison table — inject the ✓ glyph into every [data-yes] cell ──
+        (function () {
+            var SVG_NS = 'http://www.w3.org/2000/svg';
+            document.querySelectorAll('.nm-compare-table td[data-yes]').forEach(function (td) {
+                var svg = document.createElementNS(SVG_NS, 'svg');
+                svg.setAttribute('class', 'nm-compare-yes');
+                svg.setAttribute('viewBox', '0 0 24 24');
+                svg.setAttribute('fill', 'none');
+                svg.setAttribute('stroke', 'currentColor');
+                svg.setAttribute('stroke-width', '2.6');
+                svg.setAttribute('stroke-linecap', 'round');
+                svg.setAttribute('stroke-linejoin', 'round');
+                svg.setAttribute('aria-label', 'Included');
+                svg.setAttribute('role', 'img');
+                var path = document.createElementNS(SVG_NS, 'path');
+                path.setAttribute('d', 'M5 12l5 5L20 7');
+                svg.appendChild(path);
+                td.appendChild(svg);
+            });
+        })();
+
         // Subtle scroll-reveal (reduced-motion safe — CSS no-ops the transition).
         (function () {
             var els = document.querySelectorAll('.nm-reveal');
