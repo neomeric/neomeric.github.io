@@ -151,11 +151,6 @@
         .emp-card:hover .emp-card-foot .arrow { transform: translateX(3px); }
         .emp-card-foot .arrow { transition: transform 220ms cubic-bezier(0.4,0,0.2,1); }
 
-        /* Build-your-own banner card (full width) */
-        .emp-byo { grid-column: 1 / -1; display: flex; align-items: center; gap: 28px; flex-wrap: wrap; justify-content: space-between; padding: 30px 34px; border-radius: 24px; background: linear-gradient(135deg, rgba(156,125,185,0.08), rgba(0,123,255,0.06) 55%, rgba(0,209,178,0.07)); border: 1px solid var(--border); }
-        .emp-byo-text h3 { font-family: var(--font-display); font-weight: 700; font-size: 24px; letter-spacing: -0.02em; margin: 0 0 8px; color: var(--text); }
-        .emp-byo-text p { font-size: 15px; line-height: 1.6; color: var(--text-muted); margin: 0; max-width: 56ch; }
-
         /* Why-one-Brain strip */
         .emp-why { background: var(--bg-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
         .emp-why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 40px; }
@@ -225,12 +220,9 @@
             <div class="nm-container">
                 <div class="emp-hero-inner">
                     <span class="eyebrow"><span class="dot"></span> The roster &middot; AI employees</span>
-                    <h1>Three minds.<br />Build a team of agents.</h1>
+                    <h1>Three minds.<br />A team of agents.</h1>
                     <p class="lede">
-                        Simon, Hugo and Maeve are the three <strong>minds</strong> &mdash; one for your website, one for
-                        your team, one for your phone. Under each, you deploy as many <strong>agents</strong> as you need:
-                        each its own configured employee with a name, persona, scope and scorecard. You don&rsquo;t pick
-                        three bots &mdash; you build a workforce, all on one shared Brain.
+                        Simon for your website, Maeve for your phone, Hugo for your team &mdash; the three minds, all on one shared Brain. Meet them, and the agents you run under each.
                     </p>
                     <div class="emp-hero-ctas">
                         <a href="https://app.neomindhub.com/signup" class="btn btn-gradient" data-cta="emp-hub-signup">
@@ -253,21 +245,18 @@
             </div>
         </section>
 
-        <!-- Roster -->
-        <section class="emp-section" style="background: var(--bg);">
+        <!-- Meet the three minds (cards + agent fan, merged) -->
+        <section class="emp-section emp-agents" data-agents style="background: var(--bg);">
             <div class="nm-container">
                 <span class="eyebrow"><span class="dot"></span> The three minds</span>
-                <h2 class="nm-section-headline" style="margin-top: 14px;">Start with three minds.</h2>
+                <h2 class="nm-section-headline" style="margin-top: 14px;">Meet the three minds.</h2>
                 <p class="nm-section-sub" style="margin-bottom: 40px;">
-                    Each mind is an archetype &mdash; a kind of digital employee. Pick the ones you need, then deploy
-                    multiple agents under each. All measurable, all grounded in your business, all bound by the same bright
-                    line: routine work is theirs, judgement stays yours.
+                    Each mind is a fixed archetype. Under each you configure the agents your business needs &mdash; each its own persona, skills, knowledge scope and scorecard.
                 </p>
 
                 <div class="emp-roster" data-roster>
                     <!-- Simon -->
                     <a href="/employees/simon/" class="emp-card" style="--clr: var(--secondary-500); --clr-bg: var(--secondary-50); --clr-fg: var(--secondary-700);">
-                        <span class="emp-card-glow" aria-hidden="true" style="background: radial-gradient(circle at 80% 20%, rgba(0,123,255,0.16), transparent 60%);"></span>
                         <span class="emp-card-icon" style="background: var(--secondary-50); color: var(--secondary-700);">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/></svg>
                         </span>
@@ -281,10 +270,8 @@
                         <span class="emp-card-foot">Meet Simon <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
                     </a>
 
-                    <!-- Hugo (featured) -->
-                    <a href="/employees/hugo/" class="emp-card emp-card--featured" style="--clr: var(--primary-500); --clr-bg: var(--primary-50); --clr-fg: var(--primary-700);">
-                        <span class="emp-card-badge">The differentiator</span>
-                        <span class="emp-card-glow" aria-hidden="true" style="background: radial-gradient(circle at 80% 20%, rgba(156,125,185,0.18), transparent 60%);"></span>
+                    <!-- Hugo -->
+                    <a href="/employees/hugo/" class="emp-card" style="--clr: var(--primary-500); --clr-bg: var(--primary-50); --clr-fg: var(--primary-700);">
                         <span class="emp-card-icon" style="background: var(--primary-50); color: var(--primary-700);">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                         </span>
@@ -300,7 +287,6 @@
 
                     <!-- Maeve -->
                     <a href="/employees/maeve/" class="emp-card" style="--clr: var(--accent-500); --clr-bg: var(--accent-50); --clr-fg: var(--accent-700);">
-                        <span class="emp-card-glow" aria-hidden="true" style="background: radial-gradient(circle at 80% 20%, rgba(0,209,178,0.16), transparent 60%);"></span>
                         <span class="emp-card-icon" style="background: var(--accent-50); color: var(--accent-700);">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                         </span>
@@ -314,9 +300,8 @@
                         <span class="emp-card-foot">Meet Maeve <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
                     </a>
 
-                    <!-- Build your own -->
+                    <!-- Custom agents -->
                     <a href="/employees/build-your-own/" class="emp-card" style="--clr: var(--primary-500); --clr-bg: var(--primary-50); --clr-fg: var(--primary-700);">
-                        <span class="emp-card-glow" aria-hidden="true" style="background: radial-gradient(circle at 80% 20%, rgba(156,125,185,0.14), transparent 60%);"></span>
                         <span class="emp-card-icon" style="background: var(--bg-muted); color: var(--text-muted); border: 1px dashed var(--border-strong);">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
                         </span>
@@ -330,22 +315,9 @@
                         <span class="emp-card-foot">Configure agents <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
                     </a>
                 </div>
-            </div>
-        </section>
 
-        <!-- One mind, many agents -->
-        <section class="emp-section emp-agents" data-agents>
-            <div class="nm-container">
-                <span class="eyebrow"><span class="dot"></span> One mind, many agents</span>
-                <h2 class="nm-section-headline" style="margin-top: 14px;">One mind. A team of agents.</h2>
-                <p class="nm-section-sub" style="max-width: 60ch;">
-                    A mind is the type. An <strong>agent</strong> is a real, configured employee built from it &mdash; its
-                    own name, persona, skills, knowledge scope and access policy, scored independently on its own objective.
-                    Run a sales Simon on your pricing pages and a support Simon in your help centre; an HR Hugo and an IT
-                    Hugo for different teams; a bookings Maeve. Every one of them reads from the same Brain.
-                </p>
-
-                <div class="emp-minds">
+                <!-- Agent fan — one mind, many agents (shown once, under the merged section) -->
+                <div class="emp-minds" style="margin-top: 56px;">
                     <!-- Simon → agents -->
                     <div class="emp-mind">
                         <div class="emp-mind-head">
