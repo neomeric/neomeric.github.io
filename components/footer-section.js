@@ -21,10 +21,9 @@ class FooterSection extends HTMLElement {
     // Legal pages are root-only; all locales link to /privacy.html etc.
     const legalBase = "/";
 
-    // Company-column base: au + intl have their own company/customers/contact
-    // pages (au under /au/, intl under /), so they use L.path. es has no
-    // localized company pages yet, so it falls back to the root (intl) pages.
-    const companyBase = (L.code === "es") ? "/" : L.path;
+    // Company-column base: every locale (intl / au / es) now has its own
+    // company/customers/contact pages under its locale path, so all use L.path.
+    const companyBase = L.path;
 
     // Footer column headings + link labels resolve from the locale; English
     // fallback keeps intl working if the locale table fails to load.
@@ -59,12 +58,10 @@ class FooterSection extends HTMLElement {
       "<li><a href=\"" + L.path + "#brain\">" + f.brain + "</a></li>" +
       "<li><a href=\"" + L.path + "#integrations\">" + f.integrations + "</a></li>" +
       "<li><a href=\"" + L.path + "#pricing\">" + f.pricing + "</a></li>" +
-      // Compare + Resources are locale-prefixed, rendered for locales whose hubs
-      // exist today (intl + au). es stays hidden until its content pass ships.
-      (L.code === "intl" || L.code === "au"
-        ? "<li><a href=\"" + L.path + "compare/\">" + f.compare + "</a></li>" +
-          "<li><a href=\"" + L.path + "resources/\">" + f.resources + "</a></li>"
-        : "") +
+      // Compare + Resources are locale-prefixed; all locales (intl / au / es)
+      // now have their full hubs, so these render for every market.
+      "<li><a href=\"" + L.path + "compare/\">" + f.compare + "</a></li>" +
+      "<li><a href=\"" + L.path + "resources/\">" + f.resources + "</a></li>" +
       "<li><a href=\"" + L.path + "#faq\">" + f.faq + "</a></li>" +
       "</ul></div>" +
       // Company links are locale-prefixed via companyBase so au resolves to

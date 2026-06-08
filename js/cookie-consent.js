@@ -16,6 +16,34 @@
   var MAX_AGE = 15552000; // 180 days, in seconds
   var BANNER_ID = "nm-cookie-consent";
 
+  // ---- i18n -------------------------------------------------------------
+  // Banner copy is keyed off window.NM_LOCALE (set per page before this loads).
+  // intl + au stay English; es renders Spanish. The link target (/privacy.html)
+  // is shared across locales — legal pages are root-only.
+  var COPY = {
+    en: {
+      ariaLabel: "Cookie consent",
+      noticeBefore: "We use cookies to understand how the site is used and improve it. See our ",
+      privacyLink: "Privacy Policy",
+      noticeAfter: ".",
+      accept: "Accept",
+      decline: "Decline"
+    },
+    es: {
+      ariaLabel: "Consentimiento de cookies",
+      noticeBefore: "Usamos cookies para entender cómo se usa el sitio y mejorarlo. Consulta nuestra ",
+      privacyLink: "Política de privacidad",
+      noticeAfter: ".",
+      accept: "Aceptar",
+      decline: "Rechazar"
+    }
+  };
+
+  function getCopy() {
+    var locale = window.NM_LOCALE;
+    return (locale && COPY[locale]) ? COPY[locale] : COPY.en;
+  }
+
   // ---- gtag bridge ------------------------------------------------------
   // The <head> default block defines window.gtag + dataLayer. Fall back to a
   // safe shim so a missing/blocked GTM never throws.
@@ -151,25 +179,25 @@
 
   // ---- banner build -----------------------------------------------------
   function buildBanner() {
+    var copy = getCopy();
+
     var wrap = document.createElement("div");
     wrap.id = BANNER_ID;
     wrap.setAttribute("role", "dialog");
     wrap.setAttribute("aria-live", "polite");
-    wrap.setAttribute("aria-label", "Cookie consent");
+    wrap.setAttribute("aria-label", copy.ariaLabel);
 
     var card = document.createElement("div");
     card.className = "nm-cc-card";
 
     var text = document.createElement("p");
     text.className = "nm-cc-text";
-    text.appendChild(document.createTextNode(
-      "We use cookies to understand how the site is used and improve it. See our "
-    ));
+    text.appendChild(document.createTextNode(copy.noticeBefore));
     var link = document.createElement("a");
     link.href = "/privacy.html";
-    link.textContent = "Privacy Policy";
+    link.textContent = copy.privacyLink;
     text.appendChild(link);
-    text.appendChild(document.createTextNode("."));
+    text.appendChild(document.createTextNode(copy.noticeAfter));
 
     var actions = document.createElement("div");
     actions.className = "nm-cc-actions";
@@ -177,13 +205,13 @@
     var declineBtn = document.createElement("button");
     declineBtn.type = "button";
     declineBtn.className = "nm-cc-decline";
-    declineBtn.textContent = "Decline";
+    declineBtn.textContent = copy.decline;
     declineBtn.addEventListener("click", decline);
 
     var acceptBtn = document.createElement("button");
     acceptBtn.type = "button";
     acceptBtn.className = "nm-cc-accept";
-    acceptBtn.textContent = "Accept";
+    acceptBtn.textContent = copy.accept;
     acceptBtn.addEventListener("click", accept);
 
     actions.appendChild(declineBtn);

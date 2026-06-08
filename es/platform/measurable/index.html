@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <!-- Consent Mode v2 default (before GTM) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent','default',{
+        ad_storage:'denied', analytics_storage:'denied',
+        ad_user_data:'denied', ad_personalization:'denied',
+        functionality_storage:'granted', security_storage:'granted',
+        wait_for_update: 500
+      });
+      // Re-apply a previously saved choice on load so returning visitors keep their setting
+      try { var c=document.cookie.match(/(?:^|; )nm_consent=([^;]+)/);
+        if(c){ var v=decodeURIComponent(c[1]);
+          if(v==='granted'){ gtag('consent','update',{ad_storage:'granted',analytics_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'}); }
+        }
+      } catch(e){}
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NHDLXJCG');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Medición y cuadros de mando | NeoMind</title>
+    <meta name="description"
+        content="Ponle a cada empleado de IA un objetivo y KPIs ponderados, y puntúa cada conversación con un juez de IA. Lee el cuadro de mando, e imposible de trucar por diseño.">
+    <link rel="canonical" href="https://neomindhub.com/es/platform/measurable/">
+    <!-- hreflang cluster -->
+    <link rel="alternate" hreflang="en"        href="https://neomindhub.com/platform/measurable/" />
+    <link rel="alternate" hreflang="en-au"     href="https://neomindhub.com/au/platform/measurable/" />
+    <link rel="alternate" hreflang="es"        href="https://neomindhub.com/es/platform/measurable/" />
+    <link rel="alternate" hreflang="x-default" href="https://neomindhub.com/platform/measurable/" />
+    <meta property="og:title" content="Medición y cuadros de mando">
+    <meta property="og:description" content="Objetivos, KPIs ponderados y cuadros de mando. Cada conversación puntuada por un juez de IA, e imposible de trucar por diseño.">
+    <meta property="og:url" content="https://neomindhub.com/es/platform/measurable/">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://neomindhub.com/images/logo1.png">
+    <meta property="og:site_name" content="NeoMind">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Medición y cuadros de mando">
+    <meta name="twitter:description" content="Objetivos, KPIs ponderados y cuadros de mando. Cada conversación puntuada por un juez de IA, e imposible de trucar por diseño.">
+    <meta name="twitter:image" content="https://neomindhub.com/images/logo1.png">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/neomeric-tokens.css">
+    <link rel="stylesheet" href="/css/content.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Locale data must load synchronously before any component connectedCallback runs -->
+    <script src="/js/locales.js"></script>
+    <script>window.NM_LOCALE = "es";</script>
+    <script src="/components/navbar-section.js" type="module"></script>
+    <script src="/components/footer-section.js" type="module"></script>
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://neomindhub.com/es/" },
+        { "@type": "ListItem", "position": 2, "name": "Plataforma", "item": "https://neomindhub.com/es/platform/" },
+        { "@type": "ListItem", "position": 3, "name": "Medible", "item": "https://neomindhub.com/es/platform/measurable/" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Medición y cuadros de mando",
+      "description": "Ponle a cada empleado de IA un objetivo y KPIs ponderados, y puntúa cada conversación con un juez de IA. Lee el cuadro de mando, e imposible de trucar por diseño.",
+      "inLanguage": "es",
+      "url": "https://neomindhub.com/es/platform/measurable/",
+      "isPartOf": { "@type": "WebSite", "name": "NeoMind", "url": "https://neomindhub.com/" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Neomeric Pty Ltd",
+        "logo": { "@type": "ImageObject", "url": "https://neomindhub.com/images/logo1.png" }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo se puntúa cada conversación?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un juez de IA — un LLM que actúa de evaluador — lee cada conversación y la puntúa automáticamente frente a tu cuadro de KPIs ponderados. Se puntúa cada interacción, no una pequeña muestra manual, y las puntuaciones se agregan en un cuadro de mando por empleado." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puede un empleado trucar su propia puntuación?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Las violaciones de las reglas — inventarse respuestas, hacer una promesa vinculante, salirse del ámbito — puntúan en negativo, así que un empleado no puede inflar su número tomando atajos. La medición está diseñada para no poder trucarse." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Necesito un equipo de datos para medirlo?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Pones un objetivo en lenguaje claro, eliges un puñado de KPIs ponderados y el juez de IA hace la puntuación. No hay cola de control de calidad manual, paneles que construir ni pipeline de analítica que mantener." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es un buen KPI para un empleado de IA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un buen KPI está ligado al objetivo del empleado y es observable en una conversación: por ejemplo, tasa de captación de leads, exactitud o fundamento de las respuestas, derivación adecuada y resolución. Elige el puñado que importa y pondéralo para que las prioridades sean explícitas." }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* ── Scoped to this Platform page (no shared-file edits) ── */
+        .pf-hero { padding: 84px 0 56px; background: var(--bg-muted); border-bottom: 1px solid var(--border); position: relative; overflow: clip; }
+        @media (max-width: 768px) { .pf-hero { padding: 64px 0 44px; } }
+        .pf-hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
+        @media (max-width: 920px) { .pf-hero-grid { grid-template-columns: 1fr; gap: 40px; } }
+        .pf-hero h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(38px, 5vw, 62px); line-height: 1.03; letter-spacing: -0.03em; margin: 18px 0 20px; text-wrap: balance; color: var(--text); }
+        .pf-hero-lede { font-size: 19px; line-height: 1.6; color: var(--text-muted); max-width: 56ch; margin: 0 0 30px; }
+        .pf-hero-ambient { position: absolute; inset: 0; z-index: 0; pointer-events: none; background:
+            radial-gradient(40% 50% at 80% 16%, rgba(0,209,178,0.14), transparent 70%),
+            radial-gradient(36% 44% at 6% 90%, rgba(0,123,255,0.10), transparent 70%); }
+        .pf-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+        .btn-gradient { background: var(--gradient-brand); color: white; background-size: 200% 100%; box-shadow: 0 8px 24px rgba(0,123,255,0.22); }
+        .btn-gradient:hover { background-position: right center; transform: translateY(-1px); box-shadow: 0 12px 32px rgba(0,123,255,0.32); }
+        .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border-strong); }
+        .btn-ghost:hover { border-color: var(--text); transform: translateY(-1px); }
+
+        /* Signature: animated scorecard (KPI bars fill on reveal) */
+        .pf-sc-frame { position: relative; }
+        .pf-sc-frame::before { content: ""; position: absolute; inset: -42px -32px; z-index: 0; background: radial-gradient(60% 60% at 70% 25%, rgba(0,209,178,0.16), transparent 70%), radial-gradient(55% 60% at 20% 85%, rgba(0,123,255,0.18), transparent 70%); filter: blur(16px); }
+        .pf-sc { position: relative; z-index: 1; background: var(--surface); border: 1px solid var(--border); border-radius: 22px; padding: 24px; box-shadow: 0 28px 70px -22px rgba(15,23,42,0.22), 0 8px 22px -10px rgba(15,23,42,0.08); }
+        .dark .pf-sc { box-shadow: 0 28px 70px -22px rgba(0,0,0,0.55); }
+        .pf-sc-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding-bottom: 18px; border-bottom: 1px solid var(--border); }
+        .pf-sc-eyebrow { font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--text-subtle); margin-bottom: 6px; }
+        .pf-sc-name { font-family: var(--font-display); font-weight: 700; font-size: 19px; letter-spacing: -0.015em; color: var(--text); }
+        .pf-sc-grade { display: flex; align-items: baseline; gap: 3px; }
+        .pf-sc-grade-num { font-family: var(--font-display); font-weight: 800; font-size: 40px; line-height: 1; letter-spacing: -0.03em; background: linear-gradient(135deg, var(--secondary-500), var(--accent-500)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .pf-sc-grade-lab { font-size: 13px; font-weight: 600; color: var(--text-subtle); }
+        .pf-sc-obj { display: flex; flex-direction: column; gap: 4px; margin: 18px 0; padding: 14px 16px; background: var(--bg-muted); border-radius: 12px; }
+        .pf-sc-obj-lab { font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; color: var(--text-subtle); }
+        .pf-sc-obj-val { font-size: 14px; font-weight: 500; color: var(--text); }
+        .pf-kpis { display: flex; flex-direction: column; gap: 14px; }
+        .pf-kpi { display: grid; grid-template-columns: 12ch 1fr 4ch; gap: 12px; align-items: center; }
+        .pf-kpi-name { font-size: 13px; color: var(--text-muted); }
+        .pf-kpi-track { height: 8px; border-radius: 999px; background: var(--bg-muted); overflow: hidden; }
+        .pf-kpi-fill { display: block; height: 100%; width: var(--w); border-radius: 999px; background: linear-gradient(90deg, var(--secondary-500), var(--accent-500)); transform: scaleX(0); transform-origin: left center; transition: transform 900ms cubic-bezier(0.16,1,0.3,1); }
+        .pf-kpi-fill.neg { background: linear-gradient(90deg, #f59e0b, #ef4444); transform-origin: right center; }
+        .pf-sc[data-revealed] .pf-kpi-fill { transform: scaleX(1); }
+        .pf-sc[data-revealed] .pf-kpi:nth-child(1) .pf-kpi-fill { transition-delay: 80ms; }
+        .pf-sc[data-revealed] .pf-kpi:nth-child(2) .pf-kpi-fill { transition-delay: 200ms; }
+        .pf-sc[data-revealed] .pf-kpi:nth-child(3) .pf-kpi-fill { transition-delay: 320ms; }
+        .pf-sc[data-revealed] .pf-kpi:nth-child(4) .pf-kpi-fill { transition-delay: 440ms; }
+        .pf-kpi-val { font-size: 13px; font-weight: 700; color: var(--text); text-align: right; font-family: var(--font-display); }
+        .pf-kpi-val.neg { color: #ef4444; }
+        .pf-sc-foot { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 10px; font-size: 12.5px; color: var(--text-muted); }
+        .pf-sc-foot strong { color: var(--text); font-weight: 600; }
+        .pf-pulse-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent-500); box-shadow: 0 0 0 0 rgba(0,209,178,0.5); animation: pf-dot 2.4s infinite; }
+        @keyframes pf-dot { 0% { box-shadow: 0 0 0 0 rgba(0,209,178,0.5); } 70% { box-shadow: 0 0 0 8px rgba(0,209,178,0); } 100% { box-shadow: 0 0 0 0 rgba(0,209,178,0); } }
+
+        .pf-section { padding: 84px 0; background: var(--bg); }
+        .pf-section.alt { background: var(--bg-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .pf-head { max-width: 720px; margin: 0 0 44px; }
+
+        /* 4-step pipeline */
+        .pf-pipe { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+        @media (max-width: 920px) { .pf-pipe { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 540px) { .pf-pipe { grid-template-columns: 1fr; } }
+        .pf-pipe-step { padding: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; position: relative; }
+        .pf-pipe-num { width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; font-size: 14px; background: var(--gradient-brand); color: white; margin-bottom: 14px; }
+        .pf-pipe-step h3 { font-family: var(--font-display); font-weight: 700; font-size: 16px; color: var(--text); margin: 0 0 6px; }
+        .pf-pipe-step p { font-size: 13.5px; line-height: 1.55; color: var(--text-muted); margin: 0; }
+
+        .pf-ungame { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; }
+        @media (max-width: 920px) { .pf-ungame { grid-template-columns: 1fr; gap: 36px; } }
+        .pf-ungame-list { list-style: none; padding: 0; margin: 18px 0 0; display: flex; flex-direction: column; gap: 14px; }
+        .pf-ungame-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.55; color: var(--text-muted); }
+        .pf-ungame-list li strong { color: var(--text); font-weight: 600; }
+        .pf-x { flex-shrink: 0; width: 24px; height: 24px; border-radius: 7px; display: inline-flex; align-items: center; justify-content: center; margin-top: 1px; background: rgba(239,68,68,0.1); color: #ef4444; }
+
+        .pf-guide { display: flex; align-items: center; gap: 22px; padding: 28px; background: var(--surface); border: 1px solid var(--border); border-radius: 22px; flex-wrap: wrap; }
+        .pf-guide-ico { width: 54px; height: 54px; border-radius: 15px; display: inline-flex; align-items: center; justify-content: center; background: var(--accent-50); color: var(--accent-700); flex-shrink: 0; }
+        .pf-guide-body { flex: 1; min-width: 240px; }
+        .pf-guide-body h3 { font-family: var(--font-display); font-weight: 700; font-size: 20px; color: var(--text); margin: 0 0 4px; }
+        .pf-guide-body p { font-size: 14px; color: var(--text-muted); margin: 0; }
+
+        .pf-faq-wrap { max-width: 760px; margin: 0 auto; }
+
+        .pf-reveal { opacity: 0; transform: translateY(18px); transition: opacity 620ms ease, transform 620ms cubic-bezier(0.16,1,0.3,1); }
+        .pf-reveal.is-in { opacity: 1; transform: translateY(0); }
+
+        @media (prefers-reduced-motion: reduce) {
+            .pf-reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+            .pf-kpi-fill { transform: scaleX(1) !important; transition: none !important; }
+            .pf-pulse-dot { animation: none !important; }
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300 text-gray-900 dark:text-white">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHDLXJCG" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <a href="#main"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-gray-900 focus:rounded-lg focus:shadow-lg">Saltar al contenido</a>
+
+    <navbar-section data-locale="es"></navbar-section>
+
+    <main id="main">
+        <!-- Hero with animated scorecard -->
+        <section class="pf-hero">
+            <div class="pf-hero-ambient" aria-hidden="true"></div>
+            <div class="nm-container">
+                <nav class="nm-breadcrumb" aria-label="Ruta de navegación">
+                    <a href="/es/">Inicio</a>
+                    <span class="sep" aria-hidden="true">/</span>
+                    <a href="/es/platform/">Plataforma</a>
+                    <span class="sep" aria-hidden="true">/</span>
+                    <span aria-current="page">Medible</span>
+                </nav>
+                <div class="pf-hero-grid">
+                    <div>
+                        <span class="eyebrow"><span class="dot"></span> La prueba</span>
+                        <h1>Gestiona tu IA como a tu equipo. <span class="text-gradient-brand">Medida en cada conversación.</span></h1>
+                        <p class="pf-hero-lede">
+                            Ponle a cada empleado un objetivo y un puñado de KPIs ponderados. Un juez de IA puntúa cada
+                            conversación frente a ellos y agrega el resultado en un cuadro de mando que lees como una
+                            evaluación de rendimiento, para que &laquo;¿la IA lo está haciendo bien?&raquo; tenga por fin
+                            un número.
+                        </p>
+                        <div class="pf-actions">
+                            <a href="https://app.neomindhub.com/signup" class="btn btn-gradient" data-cta="measure-hero-start">
+                                Empieza gratis
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="/es/resources/how-to-measure-an-ai-employee/" class="btn btn-ghost" data-cta="measure-hero-guide">Lee la guía</a>
+                        </div>
+                    </div>
+
+                    <!-- Signature animated scorecard -->
+                    <div class="pf-sc-frame pf-reveal">
+                        <div class="pf-sc" data-pf-sc role="img"
+                            aria-label="Cuadro de mando de un empleado de IA con una puntuación de 86 sobre 100, con barras de KPIs ponderados de captación de leads, fundamento, resolución y una puntuación negativa por violación de reglas.">
+                            <div class="pf-sc-head">
+                                <div>
+                                    <div class="pf-sc-eyebrow">Cuadro de mando del empleado &middot; esta semana</div>
+                                    <div class="pf-sc-name">Simon &middot; Web</div>
+                                </div>
+                                <div class="pf-sc-grade">
+                                    <span class="pf-sc-grade-num">86</span>
+                                    <span class="pf-sc-grade-lab">/ 100</span>
+                                </div>
+                            </div>
+                            <div class="pf-sc-obj">
+                                <span class="pf-sc-obj-lab">Objetivo</span>
+                                <span class="pf-sc-obj-val">Cualificar y captar más leads de alta intención</span>
+                            </div>
+                            <div class="pf-kpis">
+                                <div class="pf-kpi">
+                                    <span class="pf-kpi-name">Captación de leads &middot; 40 %</span>
+                                    <span class="pf-kpi-track"><span class="pf-kpi-fill" style="--w: 91%;"></span></span>
+                                    <span class="pf-kpi-val">91</span>
+                                </div>
+                                <div class="pf-kpi">
+                                    <span class="pf-kpi-name">Fundamento &middot; 30 %</span>
+                                    <span class="pf-kpi-track"><span class="pf-kpi-fill" style="--w: 98%;"></span></span>
+                                    <span class="pf-kpi-val">98</span>
+                                </div>
+                                <div class="pf-kpi">
+                                    <span class="pf-kpi-name">Resolución &middot; 20 %</span>
+                                    <span class="pf-kpi-track"><span class="pf-kpi-fill" style="--w: 79%;"></span></span>
+                                    <span class="pf-kpi-val">79</span>
+                                </div>
+                                <div class="pf-kpi">
+                                    <span class="pf-kpi-name">Reglas saltadas</span>
+                                    <span class="pf-kpi-track"><span class="pf-kpi-fill neg" style="--w: 6%;"></span></span>
+                                    <span class="pf-kpi-val neg">&minus;6</span>
+                                </div>
+                            </div>
+                            <div class="pf-sc-foot">
+                                <span class="pf-pulse-dot" aria-hidden="true"></span>
+                                <span>Puntuado automáticamente en <strong>1.284</strong> conversaciones esta semana</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The pipeline -->
+        <section class="pf-section">
+            <div class="nm-container">
+                <div class="pf-head pf-reveal">
+                    <span class="eyebrow"><span class="dot"></span> Cómo funciona la puntuación</span>
+                    <h2 class="nm-section-headline">Del objetivo<br /><span class="muted">a un número que puedes defender.</span></h2>
+                    <p class="nm-section-sub">
+                        Cuatro pasos convierten una IA de caja negra en un miembro del equipo del que responder: sin
+                        control de calidad manual, sin pipeline de analítica que montar.
+                    </p>
+                </div>
+                <div class="pf-pipe pf-reveal">
+                    <div class="pf-pipe-step">
+                        <span class="pf-pipe-num">1</span>
+                        <h3>Pon un objetivo</h3>
+                        <p>Dile al empleado para qué está, en lenguaje claro: reservar más trabajos, cualificar mejores leads, resolver preguntas repetitivas.</p>
+                    </div>
+                    <div class="pf-pipe-step">
+                        <span class="pf-pipe-num">2</span>
+                        <h3>Pondera los KPIs</h3>
+                        <p>Elige el puñado que mueve el objetivo y pondéralo, para que la prioridad sea explícita y no implícita.</p>
+                    </div>
+                    <div class="pf-pipe-step">
+                        <span class="pf-pipe-num">3</span>
+                        <h3>Un juez de IA puntúa</h3>
+                        <p>Un evaluador LLM lee cada conversación y la puntúa frente a tu rúbrica: toda la semana, no una muestra del 2 %.</p>
+                    </div>
+                    <div class="pf-pipe-step">
+                        <span class="pf-pipe-num">4</span>
+                        <h3>Lee el cuadro de mando</h3>
+                        <p>Los KPIs se agregan en un cuadro de mando por empleado que lees como una evaluación de rendimiento, y las lagunas que destapa te dicen qué arreglar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Un-gameable -->
+        <section class="pf-section alt">
+            <div class="nm-container">
+                <div class="pf-ungame pf-reveal">
+                    <div>
+                        <span class="eyebrow"><span class="dot"></span> Imposible de trucar</span>
+                        <h2 class="nm-section-headline">Una puntuación que no<br /><span class="muted">se puede engañar.</span></h2>
+                        <p class="nm-section-sub" style="margin-top: 14px;">
+                            Un sistema de medición que puedes trucar no vale nada. Por eso, en NeoMind, los atajos que una
+                            IA podría tomar para quedar bien son justo lo que la rúbrica penaliza: puntúan en
+                            <strong style="color: var(--text);">negativo</strong> y tiran el número hacia abajo.
+                        </p>
+                        <ul class="pf-ungame-list">
+                            <li><span class="pf-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg></span><span><strong>Inventarse respuestas</strong> &mdash; soltar una respuesta en vez de basarla en tu conocimiento.</span></li>
+                            <li><span class="pf-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg></span><span><strong>Promesas vinculantes</strong> &mdash; comprometerse a algo que la empresa no ha autorizado.</span></li>
+                            <li><span class="pf-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg></span><span><strong>Salirse del ámbito</strong> &mdash; meterse fuera de su cometido para parecer más útil de lo que debe.</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="nm-section-sub" style="max-width: none;">
+                            Pasar con una persona en el momento justo hace lo contrario: <strong style="color: var(--text);">sube</strong>
+                            la puntuación. La línea clara entre el trabajo rutinario y el criterio humano no es una carencia
+                            del producto; es lo que hace seguro desplegar un empleado de IA medible. Todo lo vinculante se
+                            queda con tu equipo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flagship guide -->
+        <section class="pf-section">
+            <div class="nm-container" style="max-width: 920px;">
+                <div class="pf-guide pf-reveal">
+                    <span class="pf-guide-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
+                    <div class="pf-guide-body">
+                        <h3>El marco completo</h3>
+                        <p>Nuestra guía de referencia recorre en profundidad los objetivos, los KPIs ponderados, el juez de IA y la puntuación imposible de trucar.</p>
+                    </div>
+                    <a href="/es/resources/how-to-measure-an-ai-employee/" class="btn btn-gradient" data-cta="measure-guide-link">
+                        Cómo medir a un empleado de IA
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="pf-section alt">
+            <div class="nm-container">
+                <div class="pf-faq-wrap">
+                    <div class="pf-head pf-reveal" style="margin-bottom: 28px;">
+                        <span class="eyebrow"><span class="dot"></span> Preguntas</span>
+                        <h2 class="nm-section-headline" style="font-size: clamp(30px, 4vw, 46px);">Sobre la medición</h2>
+                    </div>
+                    <div class="nm-faq-list pf-reveal" id="nm-faq-list">
+                        <div class="nm-faq-item open">
+                            <button class="nm-faq-q" aria-expanded="true" type="button">
+                                <span class="nm-faq-q-text">¿Cómo se puntúa cada conversación?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a"><p>Un juez de IA &mdash; un LLM que actúa de evaluador &mdash; lee cada conversación y la puntúa automáticamente frente a tu cuadro de KPIs ponderados. Se puntúa cada interacción, no una pequeña muestra manual, y las puntuaciones se agregan en un cuadro de mando por empleado.</p></div>
+                        </div>
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">¿Puede un empleado trucar su propia puntuación?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a"><p>No. Las violaciones de las reglas &mdash; inventarse respuestas, hacer una promesa vinculante, salirse del ámbito &mdash; puntúan en negativo, así que un empleado no puede inflar su número tomando atajos. La medición está diseñada para no poder trucarse.</p></div>
+                        </div>
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">¿Necesito un equipo de datos para medirlo?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a"><p>No. Pones un objetivo en lenguaje claro, eliges un puñado de KPIs ponderados y el juez de IA hace la puntuación. No hay cola de control de calidad manual, paneles que construir ni pipeline de analítica que mantener.</p></div>
+                        </div>
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">¿Qué es un buen KPI para un empleado de IA?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a"><p>Un buen KPI está ligado al objetivo del empleado y es observable en una conversación &mdash; por ejemplo, tasa de captación de leads, exactitud o fundamento de las respuestas, derivación adecuada y resolución. Elige el puñado que importa y pondéralo para que las prioridades sean explícitas.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA band -->
+        <section style="background: var(--bg); padding: 80px 0;">
+            <div class="nm-container" style="max-width: 920px;">
+                <div class="nm-cta-band">
+                    <div aria-hidden="true" style="position: absolute; inset: 0; background: radial-gradient(60% 80% at 30% 30%, rgba(255,255,255,0.18), transparent 60%);"></div>
+                    <div aria-hidden="true" style="position: absolute; top: -100px; right: -100px; width: 360px; height: 360px; border-radius: 50%; background: rgba(255,255,255,0.06);"></div>
+                    <div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; gap: 48px; flex-wrap: wrap;">
+                        <div style="max-width: 40ch;">
+                            <span style="display: inline-block; padding: 5px 12px; background: rgba(255,255,255,0.18); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 9999px; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 20px;">Empieza ya</span>
+                            <h2 style="font-family: var(--font-display); font-weight: 700; font-size: clamp(32px, 4.2vw, 52px); line-height: 1.05; letter-spacing: -0.025em; margin: 0 0 18px; text-wrap: balance;">
+                                Contrata a un empleado de IA que de verdad puedes medir.
+                            </h2>
+                            <p style="font-size: 18px; line-height: 1.55; opacity: 0.92; margin: 0; max-width: 46ch;">
+                                Pon un objetivo, pondera los KPIs, lee el cuadro de mando. Mira nuestros <a href="/es/pricing/" style="color: white; text-decoration: underline;">planes</a>.
+                            </p>
+                        </div>
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                            <a href="https://app.neomindhub.com/signup" class="btn" style="background: white; color: var(--gray-900); padding: 16px 28px; font-size: 15px;" data-cta="measure-cta-signup">
+                                Empieza gratis
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="/es/platform/" class="btn" style="background: rgba(255,255,255,0.12); color: white; border: 1px solid rgba(255,255,255,0.28); padding: 16px 28px; font-size: 15px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);" data-cta="measure-cta-platform">
+                                Volver a la plataforma
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer-section data-locale="es"></footer-section>
+
+    <button id="darkModeToggle" type="button" aria-label="Cambiar a modo oscuro"
+        class="fixed bottom-6 right-6 p-3 bg-gray-800 dark:bg-white rounded-full shadow-lg z-50 hover:scale-105 transition-transform">
+        <svg class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+        </svg>
+    </button>
+
+    <script>
+        (function () {
+            var html = document.documentElement;
+            if (localStorage.getItem('darkMode') === 'true') html.classList.add('dark');
+            var btn = document.getElementById('darkModeToggle');
+            if (btn) btn.addEventListener('click', function () {
+                html.classList.toggle('dark');
+                localStorage.setItem('darkMode', html.classList.contains('dark'));
+            });
+        })();
+        (function () {
+            document.querySelectorAll('#nm-faq-list .nm-faq-q').forEach(function (q) {
+                q.addEventListener('click', function () {
+                    var item = q.closest('.nm-faq-item');
+                    var open = item.classList.toggle('open');
+                    q.setAttribute('aria-expanded', open ? 'true' : 'false');
+                });
+            });
+        })();
+        // Scroll-reveal for sections + the signature scorecard.
+        (function () {
+            var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            var reveals = document.querySelectorAll('.pf-reveal');
+            var sc = document.querySelector('[data-pf-sc]');
+            function showAll() {
+                reveals.forEach(function (el) { el.classList.add('is-in'); });
+                if (sc) sc.setAttribute('data-revealed', '');
+            }
+            if (reduce || !('IntersectionObserver' in window)) { showAll(); return; }
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('is-in');
+                        io.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.18 });
+            reveals.forEach(function (el) { io.observe(el); });
+            if (sc) {
+                var io2 = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) { if (e.isIntersecting) { sc.setAttribute('data-revealed', ''); io2.disconnect(); } });
+                }, { threshold: 0.3 });
+                io2.observe(sc);
+            }
+        })();
+    </script>
+<script src="/js/cookie-consent.js" defer></script>
+</body>
+
+</html>

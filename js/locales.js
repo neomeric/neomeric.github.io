@@ -7,7 +7,7 @@ window.NM_LOCALES = {
     navLabels:{ platform:"Platform", employees:"AI Employees", solutions:"Solutions", company:"Company", product:"How it works", measurable:"Measurable", roster:"Roster", brain:"The Brain", integrations:"Integrations", pricing:"Pricing", compare:"Compare", resources:"Resources", faq:"FAQ", signIn:"Sign in", startFree:"Start free" },
     footerLabels:{ product:"Product", company:"Company", account:"Account", legal:"Legal",
       measurable:"Measurable", roster:"Roster", brain:"The Brain", integrations:"Integrations", pricing:"Pricing", compare:"Compare", resources:"Resources", faq:"FAQ",
-      about:"About", contact:"Contact",
+      about:"About", customers:"Customers", contact:"Contact",
       startTrial:"Start free trial", signIn:"Sign in", support:"Support",
       privacy:"Privacy", terms:"Terms", fairUse:"Fair use", cookieSettings:"Cookie settings" },
     demoMeta:{
@@ -22,7 +22,7 @@ window.NM_LOCALES = {
     navLabels:{ platform:"Platform", employees:"AI Employees", solutions:"Solutions", company:"Company", product:"How it works", measurable:"Measurable", roster:"Roster", brain:"The Brain", integrations:"Integrations", pricing:"Pricing", compare:"Compare", resources:"Resources", faq:"FAQ", signIn:"Sign in", startFree:"Start free" },
     footerLabels:{ product:"Product", company:"Company", account:"Account", legal:"Legal",
       measurable:"Measurable", roster:"Roster", brain:"The Brain", integrations:"Integrations", pricing:"Pricing", compare:"Compare", resources:"Resources", faq:"FAQ",
-      about:"About", contact:"Contact",
+      about:"About", customers:"Customers", contact:"Contact",
       startTrial:"Start free trial", signIn:"Sign in", support:"Support",
       privacy:"Privacy", terms:"Terms", fairUse:"Fair use", cookieSettings:"Cookie settings" },
     demoMeta:{
@@ -37,7 +37,7 @@ window.NM_LOCALES = {
     navLabels:{ platform:"Plataforma", employees:"Empleados de IA", solutions:"Soluciones", company:"Empresa", product:"Cómo funciona", measurable:"Medible", roster:"El equipo", brain:"El Brain", integrations:"Integraciones", pricing:"Precios", compare:"Comparativas", resources:"Recursos", faq:"Preguntas", signIn:"Iniciar sesión", startFree:"Prueba gratis" },
     footerLabels:{ product:"Producto", company:"Empresa", account:"Cuenta", legal:"Legal",
       measurable:"Medible", roster:"El equipo", brain:"El Brain", integrations:"Integraciones", pricing:"Precios", compare:"Comparativas", resources:"Recursos", faq:"Preguntas",
-      about:"Sobre nosotros", contact:"Contacto",
+      about:"Sobre nosotros", customers:"Clientes", contact:"Contacto",
       startTrial:"Prueba gratis", signIn:"Iniciar sesión", support:"Soporte",
       privacy:"Privacidad", terms:"Términos", fairUse:"Uso aceptable", cookieSettings:"Configuración de cookies" },
     demoMeta:{

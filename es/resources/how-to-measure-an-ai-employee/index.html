@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <!-- Consent Mode v2 default (before GTM) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent','default',{
+        ad_storage:'denied', analytics_storage:'denied',
+        ad_user_data:'denied', ad_personalization:'denied',
+        functionality_storage:'granted', security_storage:'granted',
+        wait_for_update: 500
+      });
+      // Re-apply a previously saved choice on load so returning visitors keep their setting
+      try { var c=document.cookie.match(/(?:^|; )nm_consent=([^;]+)/);
+        if(c){ var v=decodeURIComponent(c[1]);
+          if(v==='granted'){ gtag('consent','update',{ad_storage:'granted',analytics_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'}); }
+        }
+      } catch(e){}
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NHDLXJCG');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Cómo medir a un empleado de IA | NeoMind</title>
+    <meta name="description"
+        content="Medir a un empleado de IA es darle un objetivo, ponderar KPIs y puntuar cada conversación — para que &quot;¿lo está haciendo bien la IA?&quot; tenga respuesta.">
+    <link rel="canonical" href="https://neomindhub.com/es/resources/how-to-measure-an-ai-employee/">
+    <!-- hreflang cluster -->
+    <link rel="alternate" hreflang="en"        href="https://neomindhub.com/resources/how-to-measure-an-ai-employee/" />
+    <link rel="alternate" hreflang="en-au"     href="https://neomindhub.com/au/resources/how-to-measure-an-ai-employee/" />
+    <link rel="alternate" hreflang="es"        href="https://neomindhub.com/es/resources/how-to-measure-an-ai-employee/" />
+    <link rel="alternate" hreflang="x-default" href="https://neomindhub.com/resources/how-to-measure-an-ai-employee/" />
+    <meta property="og:title" content="Cómo medir a un empleado de IA">
+    <meta property="og:description" content="Dale a un empleado de IA un objetivo, pondera sus KPIs y puntúa cada conversación con un juez de IA. El marco para gestionar la IA como a tu equipo.">
+    <meta property="og:url" content="https://neomindhub.com/es/resources/how-to-measure-an-ai-employee/">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://neomindhub.com/images/logo1.png">
+    <meta property="og:site_name" content="NeoMind">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cómo medir a un empleado de IA">
+    <meta name="twitter:description" content="Dale a un empleado de IA un objetivo, pondera sus KPIs y puntúa cada conversación con un juez de IA. El marco para gestionar la IA como a tu equipo.">
+    <meta name="twitter:image" content="https://neomindhub.com/images/logo1.png">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/neomeric-tokens.css">
+    <link rel="stylesheet" href="/css/content.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Locale data must load synchronously before any component connectedCallback runs -->
+    <script src="/js/locales.js"></script>
+    <script>window.NM_LOCALE = "es";</script>
+    <script src="/components/navbar-section.js" type="module"></script>
+    <script src="/components/footer-section.js" type="module"></script>
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://neomindhub.com/es/" },
+        { "@type": "ListItem", "position": 2, "name": "Recursos", "item": "https://neomindhub.com/es/resources/" },
+        { "@type": "ListItem", "position": 3, "name": "Cómo medir a un empleado de IA", "item": "https://neomindhub.com/es/resources/how-to-measure-an-ai-employee/" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Cómo medir a un empleado de IA",
+      "description": "Medir a un empleado de IA es darle un objetivo de negocio, ponderar un puñado de KPIs y puntuar cada conversación con un juez de IA — para que '¿lo está haciendo bien la IA?' tenga por fin una respuesta.",
+      "inLanguage": "es",
+      "mainEntityOfPage": "https://neomindhub.com/es/resources/how-to-measure-an-ai-employee/",
+      "image": "https://neomindhub.com/images/logo1.png",
+      "author": { "@type": "Organization", "name": "Neomeric Pty Ltd", "url": "https://neomindhub.com/es/" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Neomeric Pty Ltd",
+        "logo": { "@type": "ImageObject", "url": "https://neomindhub.com/images/logo1.png" }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué KPI es bueno para un empleado de IA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un buen KPI está ligado al objetivo del empleado y se observa en una conversación — por ejemplo la tasa de captación de leads, la precisión o el grado en que la respuesta se basa en tus fuentes, la derivación oportuna y la tasa de resolución. Elige el puñado que importa y pondéralos para que las prioridades queden explícitas." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se puntúa cada conversación?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un juez de IA (un LLM que actúa como evaluador) lee la transcripción de cada conversación y la califica contra tu rúbrica de KPIs de forma automática. Se puntúa cada interacción, no una pequeña muestra manual, y las puntuaciones se agregan en un cuadro de mando por empleado." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puede la IA trucar su propia puntuación?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Las violaciones de las normas — inventarse respuestas, hacer una promesa vinculante, salirse de su ámbito — puntúan en negativo, así que un empleado no puede inflar su número cortando por lo sano. La medición está diseñada para no poder trucarse." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Necesito un equipo de datos para medirlo?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Fijas un objetivo en lenguaje natural, eliges KPIs ponderados y el juez de IA hace la puntuación. No hay control de calidad manual, ni cuadros de mando que construir, ni canalización de analítica que mantener." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué se diferencia esto de la analítica de un chatbot?",
+          "acceptedAnswer": { "@type": "Answer", "text": "La analítica de un chatbot cuenta cosas — sesiones, desvíos, pulgares arriba. Medir a un empleado de IA juzga la calidad del trabajo contra un objetivo que tú fijas, puntuando cada conversación contra KPIs ponderados, para que lo gestiones como a tu equipo en lugar de leer gráficas de tráfico." }
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300 text-gray-900 dark:text-white">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHDLXJCG" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <a href="#main"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-gray-900 focus:rounded-lg focus:shadow-lg">Saltar al contenido</a>
+
+    <navbar-section data-locale="es"></navbar-section>
+
+    <main id="main">
+        <article class="nm-article">
+            <div class="nm-container">
+                <!-- Breadcrumb -->
+                <nav class="nm-breadcrumb" aria-label="Migas de pan">
+                    <a href="/es/">Inicio</a>
+                    <span class="sep" aria-hidden="true">/</span>
+                    <a href="/es/resources/">Recursos</a>
+                    <span class="sep" aria-hidden="true">/</span>
+                    <span aria-current="page">Cómo medir a un empleado de IA</span>
+                </nav>
+
+                <header class="nm-article-head">
+                    <span class="eyebrow"><span class="dot"></span> Guía &middot; Medir la IA</span>
+                    <h1 class="nm-article-h1">Cómo <span class="text-gradient-brand">medir</span> a un empleado de IA</h1>
+                    <p class="nm-article-lede">
+                        Para medir a un empleado de IA le das un objetivo de negocio, defines un puñado de KPIs ponderados
+                        y puntúas cada conversación contra ellos con un juez de IA. Hazlo y la pregunta que todo
+                        responsable se hace &mdash; &laquo;¿lo está haciendo bien la IA?&raquo; &mdash; pasa a tener un número detrás.
+                    </p>
+                    <div class="nm-article-meta">
+                        <span class="nm-author">Por el equipo de NeoMind</span>
+                        <span class="sep" aria-hidden="true">&middot;</span>
+                        <span>~6 min de lectura</span>
+                    </div>
+                </header>
+
+                <div class="nm-prose">
+                    <p>
+                        Casi ninguna herramienta de IA se puede medir. Responden, y tú cruzas los dedos. Lees alguna
+                        transcripción cuando algo falla, miras de reojo un porcentaje de &laquo;me gusta&raquo; y, por lo
+                        demás, confías en que la cosa funciona. Eso no es gestión &mdash; es superstición. En cuanto dejas de
+                        tratar a la IA como un cacharro y la tratas como un <strong>empleado</strong>, la pregunta cambia:
+                        ya no es &laquo;¿está respondiendo?&raquo;, sino &laquo;¿está haciendo un buen trabajo?&raquo; &mdash; y el buen
+                        trabajo es algo que puedes definir, puntuar y mejorar.
+                    </p>
+                    <p>
+                        Medir a un empleado de IA es gestionarlo como gestionarías a una persona: fijar una meta, acordar
+                        qué significa hacerlo bien, revisar el trabajo y exigir un estándar. La diferencia es que a un
+                        empleado de IA puedes revisarlo en <strong>cada interacción</strong>, de forma automática, en vez de
+                        en una muestra del 2 % una vez al trimestre. A continuación tienes el marco que usa NeoMind para
+                        convertir la IA de una caja negra en un miembro del equipo del que puedes pedir cuentas.
+                    </p>
+
+                    <h2>1. Empieza por un objetivo</h2>
+                    <p>
+                        Cada empleado de IA debería trabajar hacia una meta de negocio que tú fijas: reservar más trabajos,
+                        cualificar mejor los leads, resolver más consultas de clientes, quitarte de encima las preguntas
+                        internas que se repiten. El objetivo es la columna vertebral de todo lo que viene después &mdash; es lo
+                        que el empleado optimiza y aquello contra lo que se juzga su puntuación. Una IA sin objetivo no es
+                        más que un chatbot: responderá a lo que sea que le pregunten y no tendrás base alguna para decir si
+                        eso era lo <em>correcto</em>.
+                    </p>
+                    <p class="nm-lead-takeaway">
+                        El objetivo va primero porque es lo que da sentido a la medición. No puedes puntuar &laquo;bien&raquo; hasta
+                        que has dicho para qué <em>sirve</em> el empleado.
+                    </p>
+
+                    <h2>2. Define KPIs ponderados</h2>
+                    <p>
+                        Una vez tienes un objetivo, define el puñado de cosas que de verdad lo mueven &mdash; y pondéralas. Estos
+                        son tus <strong>KPIs del empleado de IA</strong>, y la ponderación es lo que obliga a priorizar. A un
+                        empleado que cualifica leads podrías puntuarlo por:
+                    </p>
+                    <ul>
+                        <li><strong>Tasa de captación de leads</strong> &mdash; ¿recogió los datos de contacto cuando había una intención clara?</li>
+                        <li><strong>Precisión / respuestas basadas en tus fuentes</strong> &mdash; ¿las respuestas se apoyaban en tu conocimiento real y no en algo inventado?</li>
+                        <li><strong>Derivación oportuna</strong> &mdash; ¿pasó con una persona en el momento justo, ni demasiado pronto ni demasiado tarde?</li>
+                        <li><strong>Resolución</strong> &mdash; ¿la conversación llegó a un buen final, o quedó a medias?</li>
+                    </ul>
+                    <p>
+                        La ponderación importa porque no todos los KPIs valen lo mismo. Si captar leads es el objetivo, la
+                        tasa de captación debería pesar más en la puntuación que, pongamos, la longitud de la respuesta. Sin
+                        pesos, toda señal parece igual de importante y el número que recibes no te dice nada sobre si el
+                        empleado hizo el trabajo que importa.
+                    </p>
+
+                    <h2>3. Puntúa cada conversación, no muestras</h2>
+                    <p>
+                        Aquí está la parte que el control de calidad tradicional no puede hacer a escala. Para
+                        <strong>puntuar conversaciones de IA</strong> como es debido, un juez de IA &mdash; un LLM que actúa como
+                        evaluador &mdash; lee la transcripción de cada conversación y la califica contra tu rúbrica de KPIs de
+                        forma automática. Sin cola de revisión manual, sin hoja de cálculo con chats muestreados. Se
+                        califica cada interacción, no un 2 %, lo que significa que la puntuación refleja lo que ocurrió de
+                        verdad durante toda la semana, no una instantánea favorecedora.
+                    </p>
+                    <p>
+                        Esto es lo que lo desbloquea todo. El control de calidad humano te obliga a elegir entre cobertura y
+                        coste; muestreas porque no puedes leerlo todo. Un juez de IA elimina ese dilema &mdash; sí puede leerlo
+                        todo &mdash; así que, por primera vez, la medición es completa en vez de orientativa.
+                    </p>
+
+                    <h2>4. Lee el cuadro de mando</h2>
+                    <p>
+                        Los KPIs se agregan en un <strong>cuadro de mando</strong> por empleado que lees como una evaluación
+                        de rendimiento. De un vistazo ves cómo fue el equipo esta semana, qué empleado es fuerte y cuál
+                        flojea, y exactamente dónde se concentran los &laquo;no lo sé&raquo; y las respuestas pobres. Esa última parte
+                        es la clave: el cuadro de mando no solo califica, te enseña la <em>laguna</em> &mdash; las preguntas que tu
+                        base de conocimiento no supo responder &mdash; para que la cierres una vez y subas la puntuación de cada
+                        conversación que venga después.
+                    </p>
+                    <p>
+                        Leído así, el <strong>rendimiento del agente de IA</strong> deja de ser una sensación y se convierte
+                        en una tendencia sobre la que puedes actuar. Mejoras al empleado igual que entrenarías a una persona:
+                        miras dónde se queda corto y cierras esa laguna concreta.
+                    </p>
+
+                    <h2>5. Hazlo imposible de trucar</h2>
+                    <p>
+                        Un sistema de medición que se puede trucar no vale nada. Si un empleado pudiera inflar su número
+                        cortando por lo sano &mdash; inventándose algo con aplomo, prometiendo un reembolso que no tiene autoridad
+                        para prometer, saliéndose de su ámbito para parecer servicial &mdash; la puntuación premiaría justo el
+                        comportamiento que quieres erradicar.
+                    </p>
+                    <p>
+                        Por eso las violaciones de las normas puntúan en <strong>negativo</strong>. Inventarse respuestas,
+                        hacer una promesa vinculante o salirse del ámbito tiran la puntuación hacia abajo en lugar de dejarla
+                        plana. Un empleado no puede maquillar su cuadro de mando tomando atajos, porque los atajos son
+                        precisamente lo que la rúbrica penaliza. Esto es anti-manipulación por diseño, y es lo que hace que
+                        el número sea lo bastante fiable como para gestionar a partir de él.
+                    </p>
+
+                    <h2>Por qué importa</h2>
+                    <p>
+                        Junta estos cinco pasos y la IA deja de ser una caja negra. Se convierte en un miembro del equipo del
+                        que pides cuentas, con una meta, una rúbrica, un registro de revisión completo y una puntuación que
+                        puedes defender. Lo mejoras con evidencias, no con la sensación de que &laquo;parece que va bien&raquo;. Cuando
+                        alguien te pregunte cómo rinde la IA, abres el <a href="/es/platform/measurable/">cuadro de mando</a>
+                        en lugar de encogerte de hombros.
+                    </p>
+
+                    <h2>El límite honesto (que es una virtud)</h2>
+                    <p>
+                        Medir no significa que la IA dirija tu negocio. El empleado de IA hace el trabajo rutinario &mdash;
+                        responder, captar, reservar, descargar al equipo &mdash; de maravilla y a gran volumen. Pero las decisiones
+                        de criterio y todo lo vinculante se quedan con tu equipo. NeoMind nunca firma, ni se compromete, ni
+                        hace una promesa vinculante en tu nombre; cuando una conversación llega a esa raya, lo correcto es
+                        pasar con una persona, y hacerlo <em>sube</em> la puntuación en vez de bajarla. La línea clara entre el
+                        trabajo rutinario y el criterio humano no es una carencia del producto &mdash; es lo que hace que un
+                        empleado de IA medible sea seguro de desplegar.
+                    </p>
+
+                    <h2>Preguntas frecuentes</h2>
+                    <div class="nm-faq-list" id="nm-faq-list" style="margin-top: 8px;">
+                        <div class="nm-faq-item open">
+                            <button class="nm-faq-q" aria-expanded="true" type="button">
+                                <span class="nm-faq-q-text">¿Qué KPI es bueno para un empleado de IA?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a">
+                                <p>Un buen KPI está ligado al objetivo del empleado y se observa en una conversación &mdash; por ejemplo la tasa de captación de leads, la precisión o el grado en que la respuesta se basa en tus fuentes, la derivación oportuna y la tasa de resolución. Elige el puñado que importa y pondéralos para que las prioridades queden explícitas.</p>
+                            </div>
+                        </div>
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">¿Cómo se puntúa cada conversación?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a">
+                                <p>Un juez de IA (un LLM que actúa como evaluador) lee la transcripción de cada conversación y la califica contra tu rúbrica de KPIs de forma automática. Se puntúa cada interacción, no una pequeña muestra manual, y las puntuaciones se agregan en un cuadro de mando por empleado.</p>
+                            </div>
+                        </div>
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">¿Puede la IA trucar su propia puntuación?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a">
+                                <p>No. Las violaciones de las normas &mdash; inventarse respuestas, hacer una promesa vinculante, salirse de su ámbito &mdash; puntúan en negativo, así que un empleado no puede inflar su número cortando por lo sano. La medición está diseñada para no poder trucarse.</p>
+                            </div>
+                        </div>
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">¿Necesito un equipo de datos para medirlo?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a">
+                                <p>No. Fijas un objetivo en lenguaje natural, eliges KPIs ponderados y el juez de IA hace la puntuación. No hay control de calidad manual, ni cuadros de mando que construir, ni canalización de analítica que mantener.</p>
+                            </div>
+                        </div>
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">¿En qué se diferencia esto de la analítica de un chatbot?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a">
+                                <p>La analítica de un chatbot cuenta cosas &mdash; sesiones, desvíos, pulgares arriba. Medir a un empleado de IA juzga la calidad del trabajo contra un objetivo que tú fijas, puntuando cada conversación contra KPIs ponderados, para que lo gestiones como a tu equipo en lugar de leer gráficas de tráfico.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 40px;">
+                        ¿Quieres el panorama completo? Mira cómo encajan los <a href="/es/platform/measurable/">empleados de IA medibles</a>,
+                        o explora más guías en <a href="/es/resources/">Recursos</a>.
+                    </p>
+                </div>
+            </div>
+        </article>
+
+        <!-- CTA — gradient band, mirrors homepage #cta -->
+        <section style="background: var(--bg); padding: 80px 0;">
+            <div class="nm-container" style="max-width: 920px;">
+                <div class="nm-cta-band">
+                    <div aria-hidden="true" style="position: absolute; inset: 0; background: radial-gradient(60% 80% at 30% 30%, rgba(255,255,255,0.18), transparent 60%);"></div>
+                    <div aria-hidden="true" style="position: absolute; top: -100px; right: -100px; width: 360px; height: 360px; border-radius: 50%; background: rgba(255,255,255,0.06);"></div>
+                    <div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; gap: 48px; flex-wrap: wrap;">
+                        <div style="max-width: 38ch;">
+                            <span style="display: inline-block; padding: 5px 12px; background: rgba(255,255,255,0.18); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 9999px; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 20px;">Empieza ya</span>
+                            <h2 style="font-family: var(--font-display); font-weight: 700; font-size: clamp(32px, 4.2vw, 52px); line-height: 1.05; letter-spacing: -0.025em; margin: 0 0 18px; text-wrap: balance;">
+                                Contrata a un empleado de IA que puedas medir.
+                            </h2>
+                            <p style="font-size: 18px; line-height: 1.55; opacity: 0.92; margin: 0; max-width: 46ch;">
+                                Fija un objetivo, pondera los KPIs y lee el cuadro de mando. Operativo en menos de 60 minutos &mdash; sin tarjeta para empezar.
+                            </p>
+                        </div>
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                            <a href="https://app.neomindhub.com/signup" class="btn" style="background: white; color: var(--gray-900); padding: 16px 28px; font-size: 15px;" data-cta="article-signup">
+                                Prueba gratis
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="/es/" class="btn" style="background: rgba(255,255,255,0.12); color: white; border: 1px solid rgba(255,255,255,0.28); padding: 16px 28px; font-size: 15px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);" data-cta="article-home">
+                                Explora NeoMind
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer-section data-locale="es"></footer-section>
+
+    <button id="darkModeToggle" type="button" aria-label="Cambiar modo oscuro"
+        class="fixed bottom-6 right-6 p-3 bg-gray-800 dark:bg-white rounded-full shadow-lg z-50 hover:scale-105 transition-transform">
+        <svg class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+        </svg>
+    </button>
+
+    <script>
+        // Dark-mode parity with the homepage (shares the `darkMode` localStorage key).
+        (function () {
+            var html = document.documentElement;
+            if (localStorage.getItem('darkMode') === 'true') html.classList.add('dark');
+            var btn = document.getElementById('darkModeToggle');
+            if (btn) btn.addEventListener('click', function () {
+                html.classList.toggle('dark');
+                localStorage.setItem('darkMode', html.classList.contains('dark'));
+            });
+        })();
+        // FAQ accordion (same behaviour as the homepage).
+        (function () {
+            document.querySelectorAll('#nm-faq-list .nm-faq-q').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    var item = btn.closest('.nm-faq-item');
+                    var open = item.classList.toggle('open');
+                    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                });
+            });
+        })();
+    </script>
+<script src="/js/cookie-consent.js" defer></script>
+</body>
+
+</html>

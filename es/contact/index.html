@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <!-- Consent Mode v2 default (before GTM) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent','default',{
+        ad_storage:'denied', analytics_storage:'denied',
+        ad_user_data:'denied', ad_personalization:'denied',
+        functionality_storage:'granted', security_storage:'granted',
+        wait_for_update: 500
+      });
+      // Re-apply a previously saved choice on load so returning visitors keep their setting
+      try { var c=document.cookie.match(/(?:^|; )nm_consent=([^;]+)/);
+        if(c){ var v=decodeURIComponent(c[1]);
+          if(v==='granted'){ gtag('consent','update',{ad_storage:'granted',analytics_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'}); }
+        }
+      } catch(e){}
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NHDLXJCG');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Contacto NeoMind — Habla con ventas o reserva una demo | NeoMind</title>
+    <meta name="description"
+        content="Ponte en contacto con el equipo de NeoMind. Envía un mensaje, reserva una demo o escribe a ventas — y descubre qué pueden hacer por tu negocio unos empleados de IA que puedes medir.">
+    <link rel="canonical" href="https://neomindhub.com/es/contact/">
+    <!-- hreflang cluster: intl twin (en + x-default), au twin (en-au), this es page (es) -->
+    <link rel="alternate" hreflang="en"    href="https://neomindhub.com/contact/" />
+    <link rel="alternate" hreflang="en-au" href="https://neomindhub.com/au/contact/" />
+    <link rel="alternate" hreflang="es"    href="https://neomindhub.com/es/contact/" />
+    <link rel="alternate" hreflang="x-default" href="https://neomindhub.com/contact/" />
+    <meta property="og:title" content="Contacto NeoMind — Habla con ventas o reserva una demo">
+    <meta property="og:description" content="Envía un mensaje, reserva una demo o escribe a ventas — y descubre qué pueden hacer por tu negocio unos empleados de IA que puedes medir.">
+    <meta property="og:url" content="https://neomindhub.com/es/contact/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://neomindhub.com/images/logo1.png">
+    <meta property="og:site_name" content="NeoMind">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contacto NeoMind — Habla con ventas o reserva una demo">
+    <meta name="twitter:description" content="Envía un mensaje, reserva una demo o escribe a ventas — y descubre qué pueden hacer por tu negocio unos empleados de IA que puedes medir.">
+    <meta name="twitter:image" content="https://neomindhub.com/images/logo1.png">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/neomeric-tokens.css">
+    <link rel="stylesheet" href="/css/content.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Locale data must load synchronously before any component connectedCallback runs -->
+    <script src="/js/locales.js"></script>
+    <script>window.NM_LOCALE = "es";</script>
+    <script src="/components/navbar-section.js" type="module"></script>
+    <script src="/components/footer-section.js" type="module"></script>
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://neomindhub.com/es/" },
+        { "@type": "ListItem", "position": 2, "name": "Contacto", "item": "https://neomindhub.com/es/contact/" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contacto NeoMind",
+      "url": "https://neomindhub.com/es/contact/",
+      "inLanguage": "es",
+      "description": "Formas de contactar con el equipo de NeoMind: envía un mensaje, reserva una demo o escribe a ventas.",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Neomeric",
+        "alternateName": "NeoMind",
+        "url": "https://neomindhub.com/",
+        "logo": "https://neomindhub.com/images/logo1.png",
+        "email": "sales@neomeric.com",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "sales@neomeric.com",
+          "availableLanguage": ["Spanish", "English"]
+        }
+      }
+    }
+    </script>
+
+    <style>
+        /* Scoped to the contact page. */
+        .nm-contact-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: start; }
+        @media (max-width: 860px) { .nm-contact-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+        .nm-form { background: var(--surface); border: 1px solid var(--border); border-radius: 22px; padding: 30px 30px 28px; box-shadow: 0 24px 56px -34px rgba(15,23,42,0.28); }
+        @media (max-width: 560px) { .nm-form { padding: 24px 22px; } }
+        .nm-field { margin-bottom: 18px; }
+        .nm-field label { display: block; font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 7px; }
+        .nm-field label .req { color: var(--accent-700); }
+        .nm-input, .nm-textarea {
+            width: 100%; font-family: var(--font-sans); font-size: 14.5px; color: var(--text);
+            background: var(--bg-muted); border: 1px solid var(--border-strong); border-radius: 12px;
+            padding: 12px 14px; transition: border-color 180ms ease, box-shadow 180ms ease;
+        }
+        .nm-input::placeholder, .nm-textarea::placeholder { color: var(--text-subtle); }
+        .nm-input:focus, .nm-textarea:focus { outline: none; border-color: var(--secondary-500); box-shadow: 0 0 0 3px rgba(0,123,255,0.14); }
+        .nm-textarea { resize: vertical; min-height: 132px; line-height: 1.5; }
+        .nm-form-submit {
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%;
+            padding: 14px 22px; border: none; cursor: pointer; border-radius: 999px;
+            font-family: var(--font-sans); font-weight: 600; font-size: 15px; color: white;
+            background: var(--gradient-brand); box-shadow: 0 8px 22px rgba(0,123,255,0.24);
+            transition: transform 200ms ease, box-shadow 200ms ease;
+        }
+        .nm-form-submit:hover { transform: translateY(-1px); box-shadow: 0 12px 30px rgba(0,123,255,0.34); }
+        .nm-form-submit svg { transition: transform 200ms ease; }
+        .nm-form-submit:hover svg { transform: translateX(3px); }
+        .nm-form-note { font-size: 12px; color: var(--text-subtle); line-height: 1.5; margin: 14px 0 0; text-align: center; }
+        .nm-form-status { font-size: 13.5px; line-height: 1.5; margin: 14px 0 0; padding: 12px 14px; border-radius: 12px; background: var(--accent-50); color: var(--accent-700); border: 1px solid color-mix(in oklab, var(--accent-700) 20%, transparent); }
+        .nm-form-status[hidden] { display: none; }
+
+        .nm-contact-side h2 { font-family: var(--font-display); font-weight: 700; font-size: 20px; letter-spacing: -0.015em; color: var(--text); margin: 0 0 6px; }
+        .nm-contact-side .lead { font-size: 14.5px; line-height: 1.6; color: var(--text-muted); margin: 0 0 22px; }
+        .nm-contact-channels { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
+        .nm-channel { display: flex; gap: 14px; align-items: flex-start; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px 18px; text-decoration: none; transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease; }
+        .nm-channel:hover { transform: translateY(-2px); border-color: var(--secondary-500); box-shadow: 0 18px 40px -26px rgba(15,23,42,0.3); }
+        .nm-channel-ic { flex-shrink: 0; width: 40px; height: 40px; border-radius: 11px; display: inline-flex; align-items: center; justify-content: center; background: var(--accent-50); color: var(--accent-700); }
+        .nm-channel-k { font-family: var(--font-display); font-weight: 700; font-size: 15px; color: var(--text); margin: 0 0 3px; }
+        .nm-channel-v { font-size: 13.5px; line-height: 1.5; color: var(--text-muted); margin: 0; }
+        .nm-channel-v strong { color: var(--secondary-700); font-weight: 600; }
+
+        .nm-reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .nm-reveal.is-in { opacity: 1; transform: none; }
+        @media (prefers-reduced-motion: reduce) {
+            .nm-reveal { opacity: 1; transform: none; transition: none; }
+            .nm-channel, .nm-form-submit { transition: none; }
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300 text-gray-900 dark:text-white">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHDLXJCG" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <a href="#main"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-gray-900 focus:rounded-lg focus:shadow-lg">Saltar al contenido</a>
+
+    <navbar-section data-locale="es"></navbar-section>
+
+    <main id="main">
+        <article class="nm-article">
+            <div class="nm-container">
+                <!-- Breadcrumb -->
+                <nav class="nm-breadcrumb" aria-label="Ruta de navegación">
+                    <a href="/es/">Inicio</a>
+                    <span class="sep" aria-hidden="true">/</span>
+                    <span aria-current="page">Contacto</span>
+                </nav>
+
+                <header class="nm-article-head" style="margin-bottom: 28px;">
+                    <span class="eyebrow"><span class="dot"></span> Contacto</span>
+                    <h1 class="nm-article-h1">Hablemos.</h1>
+                    <p class="nm-article-lede">
+                        Tanto si quieres ver un empleado de IA en acción, planear un despliegue Enterprise o simplemente
+                        preguntar algo &mdash; respondemos rápido. Escríbenos un mensaje abajo, reserva una demo o escribe
+                        directamente al equipo.
+                    </p>
+                </header>
+
+                <div class="nm-contact-grid">
+                    <!-- Form -->
+                    <div class="nm-reveal">
+                        <form class="nm-form" id="nm-contact-form"
+                              action="mailto:sales@neomeric.com" method="post" enctype="text/plain"
+                              novalidate>
+                            <div class="nm-field">
+                                <label for="cf-name">Nombre <span class="req" aria-hidden="true">*</span></label>
+                                <input class="nm-input" type="text" id="cf-name" name="name" autocomplete="name"
+                                       placeholder="Tu nombre" required>
+                            </div>
+                            <div class="nm-field">
+                                <label for="cf-email">Email <span class="req" aria-hidden="true">*</span></label>
+                                <input class="nm-input" type="email" id="cf-email" name="email" autocomplete="email"
+                                       placeholder="tu@empresa.com" required>
+                            </div>
+                            <div class="nm-field">
+                                <label for="cf-message">Mensaje <span class="req" aria-hidden="true">*</span></label>
+                                <textarea class="nm-textarea" id="cf-message" name="message"
+                                          placeholder="Cuéntanos un poco sobre tu negocio y qué te gustaría que hiciera un empleado de IA." required></textarea>
+                            </div>
+                            <button class="nm-form-submit" type="submit">
+                                Enviar mensaje
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg>
+                            </button>
+                            <p class="nm-form-status" id="nm-form-status" role="status" aria-live="polite" hidden></p>
+                            <p class="nm-form-note">Solo usaremos tus datos para responderte. Nada de spam, nunca.</p>
+                        </form>
+                    </div>
+
+                    <!-- Channels -->
+                    <div class="nm-contact-side nm-reveal">
+                        <h2>Otras formas de contactar</h2>
+                        <p class="lead">¿Prefieres saltarte el formulario? Esta es la línea directa con el equipo.</p>
+                        <ul class="nm-contact-channels">
+                            <li>
+                                <a class="nm-channel" href="https://app.neomindhub.com/signup" data-cta="contact-book-demo">
+                                    <span class="nm-channel-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+                                    <span>
+                                        <span class="nm-channel-k">Reservar una demo</span>
+                                        <span class="nm-channel-v">Empieza una prueba gratis y ve a Simon, Hugo y Maeve trabajando con tu propio conocimiento. <strong>En marcha en menos de 60 minutos.</strong></span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nm-channel" href="mailto:sales@neomeric.com?subject=Consulta%20sobre%20NeoMind" data-cta="contact-email-sales">
+                                    <span class="nm-channel-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+                                    <span>
+                                        <span class="nm-channel-k">Escribir a ventas</span>
+                                        <span class="nm-channel-v"><strong>sales@neomeric.com</strong> &mdash; para precios, despliegues Enterprise y consultas de partnership.</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nm-channel" href="/es/pricing/" data-cta="contact-pricing">
+                                    <span class="nm-channel-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41 13.42 20.6a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><circle cx="7" cy="7" r="1.4"/></svg></span>
+                                    <span>
+                                        <span class="nm-channel-k">Ver precios</span>
+                                        <span class="nm-channel-v">Planes claros y predecibles desde <strong>79 &euro;/mes + IVA</strong>. Sin llamada comercial de por medio.</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <p style="font-size: 13px; color: var(--text-subtle); line-height: 1.6; margin: 22px 0 0;">
+                            NeoMind lo crea <a href="/es/company/" style="color: var(--secondary-700); font-weight: 600;">Neomeric</a>,
+                            un estudio de productos de IA australiano, fundado en 2015.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- CTA — gradient band, mirrors homepage #cta -->
+        <section style="background: var(--bg); padding: 80px 0;">
+            <div class="nm-container" style="max-width: 920px;">
+                <div class="nm-cta-band">
+                    <div aria-hidden="true" style="position: absolute; inset: 0; background: radial-gradient(60% 80% at 30% 30%, rgba(255,255,255,0.18), transparent 60%);"></div>
+                    <div aria-hidden="true" style="position: absolute; top: -100px; right: -100px; width: 360px; height: 360px; border-radius: 50%; background: rgba(255,255,255,0.06);"></div>
+                    <div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; gap: 48px; flex-wrap: wrap;">
+                        <div style="max-width: 38ch;">
+                            <span style="display: inline-block; padding: 5px 12px; background: rgba(255,255,255,0.18); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 9999px; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 20px;">Empieza ya</span>
+                            <h2 style="font-family: var(--font-display); font-weight: 700; font-size: clamp(32px, 4.2vw, 52px); line-height: 1.05; letter-spacing: -0.025em; margin: 0 0 18px; text-wrap: balance;">
+                                ¿Prefieres probarlo sin más?
+                            </h2>
+                            <p style="font-size: 18px; line-height: 1.55; opacity: 0.92; margin: 0; max-width: 46ch;">
+                                Crea tu primer empleado de IA que puedes medir sobre un Brain compartido. En marcha en menos de 60 minutos &mdash; sin tarjeta para empezar.
+                            </p>
+                        </div>
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                            <a href="https://app.neomindhub.com/signup" class="btn" style="background: white; color: var(--gray-900); padding: 16px 28px; font-size: 15px;" data-cta="contact-cta-signup">
+                                Prueba gratis
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="/es/pricing/" class="btn" style="background: rgba(255,255,255,0.12); color: white; border: 1px solid rgba(255,255,255,0.28); padding: 16px 28px; font-size: 15px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);" data-cta="contact-cta-pricing">
+                                Ver precios
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer-section data-locale="es"></footer-section>
+
+    <button id="darkModeToggle" type="button" aria-label="Cambiar modo oscuro"
+        class="fixed bottom-6 right-6 p-3 bg-gray-800 dark:bg-white rounded-full shadow-lg z-50 hover:scale-105 transition-transform">
+        <svg class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+        </svg>
+    </button>
+
+    <script>
+        // Dark-mode parity with the homepage (shares the `darkMode` localStorage key).
+        (function () {
+            var html = document.documentElement;
+            if (localStorage.getItem('darkMode') === 'true') html.classList.add('dark');
+            var btn = document.getElementById('darkModeToggle');
+            if (btn) btn.addEventListener('click', function () {
+                html.classList.toggle('dark');
+                localStorage.setItem('darkMode', html.classList.contains('dark'));
+            });
+        })();
+        // Subtle scroll-reveal (reduced-motion safe — CSS no-ops the transition).
+        (function () {
+            var els = document.querySelectorAll('.nm-reveal');
+            if (!('IntersectionObserver' in window)) {
+                els.forEach(function (el) { el.classList.add('is-in'); });
+            } else {
+                var io = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) {
+                        if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+                    });
+                }, { threshold: 0.12 });
+                els.forEach(function (el) { io.observe(el); });
+            }
+        })();
+        // Front-end-only contact form: validate, then open the visitor's mail client
+        // pre-filled to sales@neomeric.com. No backend; the mailto action is the fallback.
+        (function () {
+            var form = document.getElementById('nm-contact-form');
+            var statusEl = document.getElementById('nm-form-status');
+            if (!form) return;
+            form.addEventListener('submit', function (ev) {
+                var name = form.querySelector('#cf-name');
+                var email = form.querySelector('#cf-email');
+                var message = form.querySelector('#cf-message');
+                // Let native validation surface empty/invalid fields first.
+                if (!form.checkValidity()) { return; }
+                ev.preventDefault();
+                var subject = 'Consulta sobre NeoMind de ' + (name.value || '').trim();
+                var body =
+                    'Nombre: ' + (name.value || '').trim() + '\n' +
+                    'Email: ' + (email.value || '').trim() + '\n\n' +
+                    (message.value || '').trim();
+                var href = 'mailto:sales@neomeric.com'
+                    + '?subject=' + encodeURIComponent(subject)
+                    + '&body=' + encodeURIComponent(body);
+                window.location.href = href;
+                if (statusEl) {
+                    statusEl.textContent = 'Abriendo tu app de correo para enviar a sales@neomeric.com. Si no se abre nada, escríbenos directamente a sales@neomeric.com.';
+                    statusEl.hidden = false;
+                }
+            });
+        })();
+    </script>
+<script src="/js/cookie-consent.js" defer></script>
+</body>
+
+</html>

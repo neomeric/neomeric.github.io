@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <!-- Consent Mode v2 default (before GTM) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent','default',{
+        ad_storage:'denied', analytics_storage:'denied',
+        ad_user_data:'denied', ad_personalization:'denied',
+        functionality_storage:'granted', security_storage:'granted',
+        wait_for_update: 500
+      });
+      // Re-apply a previously saved choice on load so returning visitors keep their setting
+      try { var c=document.cookie.match(/(?:^|; )nm_consent=([^;]+)/);
+        if(c){ var v=decodeURIComponent(c[1]);
+          if(v==='granted'){ gtag('consent','update',{ad_storage:'granted',analytics_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'}); }
+        }
+      } catch(e){}
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NHDLXJCG');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Seguridad y confianza | NeoMind</title>
+    <meta name="description"
+        content="La postura de seguridad de NeoMind: cumplimiento del RGPD, aislamiento de inquilino, cifrado en tránsito y en reposo, tus datos son tuyos y nunca se usan para entrenar modelos compartidos. Certificaciones en proceso.">
+    <link rel="canonical" href="https://neomindhub.com/es/platform/security/">
+    <!-- hreflang cluster -->
+    <link rel="alternate" hreflang="en"        href="https://neomindhub.com/platform/security/" />
+    <link rel="alternate" hreflang="en-au"     href="https://neomindhub.com/au/platform/security/" />
+    <link rel="alternate" hreflang="es"        href="https://neomindhub.com/es/platform/security/" />
+    <link rel="alternate" hreflang="x-default" href="https://neomindhub.com/platform/security/" />
+    <meta property="og:title" content="Seguridad y confianza">
+    <meta property="og:description" content="Cumplimiento del RGPD, aislamiento de inquilino, cifrado en tránsito y en reposo, tus datos son tuyos y nunca se usan para entrenar modelos compartidos. Certificaciones en proceso.">
+    <meta property="og:url" content="https://neomindhub.com/es/platform/security/">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://neomindhub.com/images/logo1.png">
+    <meta property="og:site_name" content="NeoMind">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Seguridad y confianza">
+    <meta name="twitter:description" content="Cumplimiento del RGPD, aislamiento de inquilino, cifrado en tránsito y en reposo, tus datos son tuyos y nunca se usan para entrenar modelos compartidos. Certificaciones en proceso.">
+    <meta name="twitter:image" content="https://neomindhub.com/images/logo1.png">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/neomeric-tokens.css">
+    <link rel="stylesheet" href="/css/content.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Locale data must load synchronously before any component connectedCallback runs -->
+    <script src="/js/locales.js"></script>
+    <script>window.NM_LOCALE = "es";</script>
+    <script src="/components/navbar-section.js" type="module"></script>
+    <script src="/components/footer-section.js" type="module"></script>
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://neomindhub.com/es/" },
+        { "@type": "ListItem", "position": 2, "name": "Plataforma", "item": "https://neomindhub.com/es/platform/" },
+        { "@type": "ListItem", "position": 3, "name": "Seguridad y confianza", "item": "https://neomindhub.com/es/platform/security/" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Seguridad y confianza",
+      "description": "La postura de seguridad de NeoMind: cumplimiento del RGPD, aislamiento de inquilino, cifrado en tránsito y en reposo, tus datos son tuyos y nunca se usan para entrenar modelos compartidos. Certificaciones en proceso.",
+      "inLanguage": "es",
+      "url": "https://neomindhub.com/es/platform/security/",
+      "isPartOf": { "@type": "WebSite", "name": "NeoMind", "url": "https://neomindhub.com/" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Neomeric Pty Ltd",
+        "logo": { "@type": "ImageObject", "url": "https://neomindhub.com/images/logo1.png" }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Se usan mis datos para entrenar modelos de IA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Tu conocimiento no se usa para entrenar modelos compartidos con otros clientes. Se queda dentro de tu propio inquilino y alimenta solo a tus empleados." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cumplís el RGPD y dónde se alojan mis datos?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí, cumplimos el RGPD. Tus datos se alojan en Microsoft Azure, con la región de datos de la UE en despliegue. Como responsable del tratamiento, atendemos las solicitudes de acceso, rectificación y supresión." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Están mis datos aislados de los de otros clientes?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. El conocimiento y las conversaciones de cada cliente están aislados en su propio inquilino, así que los datos de un cliente nunca son visibles para otro." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo borrar mis datos?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Tu conocimiento es tuyo: puedes actualizar o borrar fuentes cuando quieras y solicitar la supresión de tus datos. Mantienes el control de lo que guarda el Brain." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Tenéis la certificación SOC 2 o ISO 27001?",
+          "acceptedAnswer": { "@type": "Answer", "text": "La certificación formal está en proceso. Ya trabajamos según esos controles — cifrado, aislamiento, control de acceso y conservación — y publicaremos las certificaciones cuando se completen las auditorías independientes, en lugar de reclamarlas antes." }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* ── Scoped to this Platform page (no shared-file edits) ── */
+        .pf-hero { padding: 84px 0 56px; background: var(--bg-muted); border-bottom: 1px solid var(--border); position: relative; overflow: clip; }
+        @media (max-width: 768px) { .pf-hero { padding: 64px 0 44px; } }
+        .pf-hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
+        @media (max-width: 920px) { .pf-hero-grid { grid-template-columns: 1fr; gap: 40px; } }
+        .pf-hero h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(38px, 5vw, 62px); line-height: 1.03; letter-spacing: -0.03em; margin: 18px 0 20px; text-wrap: balance; color: var(--text); }
+        .pf-hero-lede { font-size: 19px; line-height: 1.6; color: var(--text-muted); max-width: 56ch; margin: 0 0 30px; }
+        .pf-hero-ambient { position: absolute; inset: 0; z-index: 0; pointer-events: none; background:
+            radial-gradient(40% 50% at 80% 16%, rgba(0,123,255,0.13), transparent 70%),
+            radial-gradient(36% 44% at 6% 90%, rgba(0,209,178,0.10), transparent 70%); }
+        .pf-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+        .btn-gradient { background: var(--gradient-brand); color: white; background-size: 200% 100%; box-shadow: 0 8px 24px rgba(0,123,255,0.22); }
+        .btn-gradient:hover { background-position: right center; transform: translateY(-1px); box-shadow: 0 12px 32px rgba(0,123,255,0.32); }
+        .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border-strong); }
+        .btn-ghost:hover { border-color: var(--text); transform: translateY(-1px); }
+
+        /* Signature: animated shield with check-marks lighting up */
+        .pf-shield-wrap { position: relative; display: flex; align-items: center; justify-content: center; padding: 16px; }
+        .pf-shield { position: relative; width: min(300px, 80%); }
+        .pf-shield-svg { width: 100%; height: auto; display: block; filter: drop-shadow(0 24px 50px rgba(0,123,255,0.28)); }
+        .pf-shield-ring { transform-origin: center; }
+        .pf-shield[data-revealed] .pf-shield-ring { animation: pf-ring 3.2s ease-out infinite; }
+        @keyframes pf-ring { 0% { opacity: 0.5; r: 96px; } 100% { opacity: 0; r: 130px; } }
+        .pf-tick { opacity: 0; }
+        .pf-shield[data-revealed] .pf-tick { animation: pf-tick-in 500ms ease forwards; }
+        .pf-shield[data-revealed] .pf-tick:nth-of-type(1) { animation-delay: 200ms; }
+        .pf-shield[data-revealed] .pf-tick:nth-of-type(2) { animation-delay: 360ms; }
+        .pf-shield[data-revealed] .pf-tick:nth-of-type(3) { animation-delay: 520ms; }
+        @keyframes pf-tick-in { from { opacity: 0; transform: scale(0.6); } to { opacity: 1; transform: scale(1); } }
+        .pf-shield-chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 18px; }
+        .pf-shield-chip { font-size: 11.5px; font-weight: 600; padding: 5px 12px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--text-muted); }
+
+        .pf-section { padding: 84px 0; background: var(--bg); }
+        .pf-section.alt { background: var(--bg-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .pf-head { max-width: 720px; margin: 0 0 44px; }
+
+        /* Posture cards */
+        .pf-posture { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        @media (max-width: 920px) { .pf-posture { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 560px) { .pf-posture { grid-template-columns: 1fr; } }
+        .pf-pcard { padding: 26px; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; }
+        .pf-pcard-ico { width: 46px; height: 46px; border-radius: 13px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 16px; background: var(--secondary-50); color: var(--secondary-700); }
+        .pf-pcard h3 { font-family: var(--font-display); font-weight: 700; font-size: 18px; letter-spacing: -0.015em; color: var(--text); margin: 0 0 8px; }
+        .pf-pcard p { font-size: 14px; line-height: 1.6; color: var(--text-muted); margin: 0; }
+
+        /* Certifications band */
+        .pf-cert { display: flex; align-items: flex-start; gap: 20px; padding: 28px; background: var(--surface); border: 1px solid var(--border); border-radius: 22px; }
+        .pf-cert-ico { width: 50px; height: 50px; border-radius: 14px; display: inline-flex; align-items: center; justify-content: center; background: var(--primary-50); color: var(--primary-700); flex-shrink: 0; }
+        .pf-cert-body h3 { font-family: var(--font-display); font-weight: 700; font-size: 20px; color: var(--text); margin: 0 0 8px; }
+        .pf-cert-body p { font-size: 14.5px; line-height: 1.6; color: var(--text-muted); margin: 0 0 14px; }
+        .pf-cert-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+        .pf-cert-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 600; padding: 6px 13px; border-radius: 999px; background: var(--bg-muted); color: var(--text-muted); border: 1px solid var(--border); }
+        .pf-cert-tag .pf-prog { width: 7px; height: 7px; border-radius: 50%; background: #f59e0b; }
+
+        .pf-faq-wrap { max-width: 760px; margin: 0 auto; }
+
+        .pf-reveal { opacity: 0; transform: translateY(18px); transition: opacity 620ms ease, transform 620ms cubic-bezier(0.16,1,0.3,1); }
+        .pf-reveal.is-in { opacity: 1; transform: translateY(0); }
+
+        @media (prefers-reduced-motion: reduce) {
+            .pf-reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+            .pf-tick { opacity: 1 !important; }
+            .pf-shield[data-revealed] .pf-shield-ring { animation: none !important; }
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300 text-gray-900 dark:text-white">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHDLXJCG" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <a href="#main"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-gray-900 focus:rounded-lg focus:shadow-lg">Saltar al contenido</a>
+
+    <navbar-section data-locale="es"></navbar-section>
+
+    <main id="main">
+        <!-- Hero with animated shield -->
+        <section class="pf-hero">
+            <div class="pf-hero-ambient" aria-hidden="true"></div>
+            <div class="nm-container">
+                <nav class="nm-breadcrumb" aria-label="Ruta de navegación">
+                    <a href="/es/">Inicio</a>
+                    <span class="sep" aria-hidden="true">/</span>
+                    <a href="/es/platform/">Plataforma</a>
+                    <span class="sep" aria-hidden="true">/</span>
+                    <span aria-current="page">Seguridad y confianza</span>
+                </nav>
+                <div class="pf-hero-grid">
+                    <div>
+                        <span class="eyebrow"><span class="dot"></span> La confianza</span>
+                        <h1>Tu conocimiento sigue siendo tuyo. <span class="text-gradient-brand">Seguro desde el diseño.</span></h1>
+                        <p class="pf-hero-lede">
+                            Tratamos tu conocimiento como se merece: aislado en tu propio inquilino, cifrado en tránsito y
+                            en reposo, nunca usado para entrenar modelos compartidos con nadie más, y tuyo para
+                            actualizarlo o borrarlo cuando quieras. Cumplimos el RGPD.
+                        </p>
+                        <div class="pf-actions">
+                            <a href="https://app.neomindhub.com/signup" class="btn btn-gradient" data-cta="sec-hero-start">
+                                Empieza gratis
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="/es/contact/" class="btn btn-ghost" data-cta="sec-hero-contact">Habla con nosotros</a>
+                        </div>
+                    </div>
+
+                    <!-- Signature animated shield -->
+                    <div class="pf-shield-wrap pf-reveal">
+                        <div class="pf-shield" data-pf-shield role="img"
+                            aria-label="Un escudo de seguridad con tres protecciones confirmadas: aislamiento, cifrado y propiedad.">
+                            <svg class="pf-shield-svg" viewBox="0 0 240 240" fill="none" aria-hidden="true">
+                                <defs>
+                                    <linearGradient id="shieldGrad" x1="0" y1="0" x2="1" y2="1">
+                                        <stop offset="0" stop-color="var(--secondary-500)"/>
+                                        <stop offset="0.55" stop-color="var(--primary-500)"/>
+                                        <stop offset="1" stop-color="var(--accent-500)"/>
+                                    </linearGradient>
+                                </defs>
+                                <circle class="pf-shield-ring" cx="120" cy="120" r="96" fill="none" stroke="var(--secondary-500)" stroke-width="1.5" opacity="0"/>
+                                <path d="M120 36 L186 62 V120 C186 164 156 188 120 204 C84 188 54 164 54 120 V62 Z" fill="url(#shieldGrad)" opacity="0.95"/>
+                                <path d="M120 36 L186 62 V120 C186 164 156 188 120 204 C84 188 54 164 54 120 V62 Z" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+                                <g class="pf-tick" transform="translate(120 92)"><circle r="15" fill="rgba(255,255,255,0.95)"/><path d="M-6 0 l4 4 l8 -8" fill="none" stroke="var(--secondary-700)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+                                <g class="pf-tick" transform="translate(98 130)"><circle r="13" fill="rgba(255,255,255,0.95)"/><path d="M-5 0 l3.5 3.5 l7 -7" fill="none" stroke="var(--primary-700)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></g>
+                                <g class="pf-tick" transform="translate(142 130)"><circle r="13" fill="rgba(255,255,255,0.95)"/><path d="M-5 0 l3.5 3.5 l7 -7" fill="none" stroke="var(--accent-700)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="pf-shield-chips pf-reveal" style="margin-top: 28px;">
+                    <span class="pf-shield-chip">Cumplimiento del RGPD</span>
+                    <span class="pf-shield-chip">Aislamiento de inquilino</span>
+                    <span class="pf-shield-chip">Cifrado en tránsito y en reposo</span>
+                    <span class="pf-shield-chip">Tus datos son tuyos</span>
+                    <span class="pf-shield-chip">Región de datos de la UE en despliegue</span>
+                    <span class="pf-shield-chip">Nunca se usan para entrenar modelos compartidos</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Posture cards (real only) -->
+        <section class="pf-section">
+            <div class="nm-container">
+                <div class="pf-head pf-reveal">
+                    <span class="eyebrow"><span class="dot"></span> Nuestra postura</span>
+                    <h2 class="nm-section-headline">Lo que de verdad hacemos<br /><span class="muted">para proteger tu conocimiento.</span></h2>
+                    <p class="nm-section-sub">
+                        Nada de teatro de seguridad: solo los controles que importan, dichos con claridad.
+                    </p>
+                </div>
+                <div class="pf-posture pf-reveal">
+                    <div class="pf-pcard">
+                        <span class="pf-pcard-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+                        <h3>Aislamiento de inquilino</h3>
+                        <p>El conocimiento y las conversaciones de cada cliente viven en su propio inquilino. Los datos de un cliente nunca son visibles para otro.</p>
+                    </div>
+                    <div class="pf-pcard">
+                        <span class="pf-pcard-ico" style="background: var(--accent-50); color: var(--accent-700);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
+                        <h3>Cifrado</h3>
+                        <p>Tus datos van cifrados en tránsito y en reposo, así que están protegidos tanto cuando se mueven como donde se guardan.</p>
+                    </div>
+                    <div class="pf-pcard">
+                        <span class="pf-pcard-ico" style="background: var(--primary-50); color: var(--primary-700);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+                        <h3>Tus datos son tuyos</h3>
+                        <p>Tu conocimiento es tuyo. No se usa para entrenar modelos compartidos con otros clientes: alimenta solo a tus propios empleados.</p>
+                    </div>
+                    <div class="pf-pcard">
+                        <span class="pf-pcard-ico" style="background: var(--secondary-50); color: var(--secondary-700);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+                        <h3>Conservación y borrado</h3>
+                        <p>Mantienes el control de lo que guarda el Brain. Actualiza o borra fuentes cuando quieras y solicita la supresión de tus datos.</p>
+                    </div>
+                    <div class="pf-pcard">
+                        <span class="pf-pcard-ico" style="background: var(--accent-50); color: var(--accent-700);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 11l-3 3-1.5-1.5"/></svg></span>
+                        <h3>Control de acceso</h3>
+                        <p>Los propietarios deciden quién de su organización gestiona el Brain, los agentes y la configuración: el acceso es acotado, no abierto a todos.</p>
+                    </div>
+                    <div class="pf-pcard">
+                        <span class="pf-pcard-ico" style="background: var(--primary-50); color: var(--primary-700);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M2 12h20"/><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z"/></svg></span>
+                        <h3>RGPD y región de datos de la UE</h3>
+                        <p>Cumplimos el RGPD y alojamos tus datos en Microsoft Azure, con la región de datos de la UE en despliegue. Atendemos las solicitudes de acceso, rectificación y supresión.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications — underway, honest -->
+        <section class="pf-section alt">
+            <div class="nm-container" style="max-width: 920px;">
+                <div class="pf-cert pf-reveal">
+                    <span class="pf-cert-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M9 14l-1.5 7L12 19l4.5 2L15 14"/></svg></span>
+                    <div class="pf-cert-body">
+                        <h3>Certificaciones &mdash; en proceso</h3>
+                        <p>
+                            Ya trabajamos según controles de seguridad reconocidos: cifrado, aislamiento, control de acceso
+                            y conservación. La certificación formal pasa por auditorías independientes que llevan su tiempo,
+                            así que no vamos a reclamar un sello que aún no tenemos. Publicaremos las certificaciones cuando
+                            esas auditorías se completen. Si necesitas nuestra postura actual para una compra o una
+                            evaluación de proveedores,
+                            <a href="/es/contact/" style="color: var(--primary-700); text-decoration: underline; text-underline-offset: 2px;">escríbenos</a>.
+                        </p>
+                        <div class="pf-cert-tags">
+                            <span class="pf-cert-tag"><span class="pf-prog" aria-hidden="true"></span> SOC 2 &middot; en proceso</span>
+                            <span class="pf-cert-tag"><span class="pf-prog" aria-hidden="true"></span> ISO 27001 &middot; en proceso</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The bright line (safety) -->
+        <section class="pf-section">
+            <div class="nm-container" style="max-width: 760px;">
+                <div class="pf-head pf-reveal" style="margin-bottom: 0;">
+                    <span class="eyebrow"><span class="dot"></span> Seguro desde el diseño</span>
+                    <h2 class="nm-section-headline">Útil, nunca<br /><span class="muted">imprudente.</span></h2>
+                    <p class="nm-section-sub" style="margin-top: 14px;">
+                        La seguridad no va solo de datos. Tus empleados se mantienen dentro de las reglas que tú marcas:
+                        basan las respuestas en tu conocimiento, no se inventan respuestas y no asumen compromisos
+                        vinculantes en tu nombre. Cuando una conversación necesita criterio humano, el empleado pasa con
+                        una persona. La línea clara entre el trabajo rutinario y el criterio humano es lo que hace seguro
+                        desplegar un empleado de IA, y se mide, para que la veas cumpliéndose. Mira cómo en
+                        <a href="/es/platform/measurable/" style="color: var(--primary-700); text-decoration: underline; text-underline-offset: 2px;">Medible</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="pf-section alt">
+            <div class="nm-container">
+                <div class="pf-faq-wrap">
+                    <div class="pf-head pf-reveal" style="margin-bottom: 28px;">
+                        <span class="eyebrow"><span class="dot"></span> Preguntas</span>
+                        <h2 class="nm-section-headline" style="font-size: clamp(30px, 4vw, 46px);">Sobre la seguridad</h2>
+                    </div>
+                    <div class="nm-faq-list pf-reveal" id="nm-faq-list">
+                        <div class="nm-faq-item open">
+                            <button class="nm-faq-q" aria-expanded="true" type="button">
+                                <span class="nm-faq-q-text">¿Se usan mis datos para entrenar modelos de IA?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a"><p>No. Tu conocimiento no se usa para entrenar modelos compartidos con otros clientes. Se queda dentro de tu propio inquilino y alimenta solo a tus empleados.</p></div>
+                        </div>
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">¿Cumplís el RGPD y dónde se alojan mis datos?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a"><p>Sí, cumplimos el RGPD. Tus datos se alojan en Microsoft Azure, con la región de datos de la UE en despliegue. Como responsable del tratamiento, atendemos las solicitudes de acceso, rectificación y supresión.</p></div>
+                        </div>
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">¿Están mis datos aislados de los de otros clientes?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a"><p>Sí. El conocimiento y las conversaciones de cada cliente están aislados en su propio inquilino, así que los datos de un cliente nunca son visibles para otro.</p></div>
+                        </div>
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">¿Puedo borrar mis datos?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a"><p>Sí. Tu conocimiento es tuyo: puedes actualizar o borrar fuentes cuando quieras y solicitar la supresión de tus datos. Mantienes el control de lo que guarda el Brain.</p></div>
+                        </div>
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">¿Tenéis la certificación SOC 2 o ISO 27001?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a"><p>La certificación formal está en proceso. Ya trabajamos según esos controles &mdash; cifrado, aislamiento, control de acceso y conservación &mdash; y publicaremos las certificaciones cuando se completen las auditorías independientes, en lugar de reclamarlas antes.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA band -->
+        <section style="background: var(--bg); padding: 80px 0;">
+            <div class="nm-container" style="max-width: 920px;">
+                <div class="nm-cta-band">
+                    <div aria-hidden="true" style="position: absolute; inset: 0; background: radial-gradient(60% 80% at 30% 30%, rgba(255,255,255,0.18), transparent 60%);"></div>
+                    <div aria-hidden="true" style="position: absolute; top: -100px; right: -100px; width: 360px; height: 360px; border-radius: 50%; background: rgba(255,255,255,0.06);"></div>
+                    <div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; gap: 48px; flex-wrap: wrap;">
+                        <div style="max-width: 40ch;">
+                            <span style="display: inline-block; padding: 5px 12px; background: rgba(255,255,255,0.18); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 9999px; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 20px;">Empieza ya</span>
+                            <h2 style="font-family: var(--font-display); font-weight: 700; font-size: clamp(32px, 4.2vw, 52px); line-height: 1.05; letter-spacing: -0.025em; margin: 0 0 18px; text-wrap: balance;">
+                                Despliega una plantilla de IA en la que confiar.
+                            </h2>
+                            <p style="font-size: 18px; line-height: 1.55; opacity: 0.92; margin: 0; max-width: 46ch;">
+                                Tus datos aislados, cifrados y tuyos. Mira nuestros <a href="/es/pricing/" style="color: white; text-decoration: underline;">planes</a> o
+                                <a href="/es/contact/" style="color: white; text-decoration: underline;">habla con nosotros</a>.
+                            </p>
+                        </div>
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                            <a href="https://app.neomindhub.com/signup" class="btn" style="background: white; color: var(--gray-900); padding: 16px 28px; font-size: 15px;" data-cta="sec-cta-signup">
+                                Empieza gratis
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="/es/platform/" class="btn" style="background: rgba(255,255,255,0.12); color: white; border: 1px solid rgba(255,255,255,0.28); padding: 16px 28px; font-size: 15px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);" data-cta="sec-cta-platform">
+                                Volver a la plataforma
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer-section data-locale="es"></footer-section>
+
+    <button id="darkModeToggle" type="button" aria-label="Cambiar a modo oscuro"
+        class="fixed bottom-6 right-6 p-3 bg-gray-800 dark:bg-white rounded-full shadow-lg z-50 hover:scale-105 transition-transform">
+        <svg class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+        </svg>
+    </button>
+
+    <script>
+        (function () {
+            var html = document.documentElement;
+            if (localStorage.getItem('darkMode') === 'true') html.classList.add('dark');
+            var btn = document.getElementById('darkModeToggle');
+            if (btn) btn.addEventListener('click', function () {
+                html.classList.toggle('dark');
+                localStorage.setItem('darkMode', html.classList.contains('dark'));
+            });
+        })();
+        (function () {
+            document.querySelectorAll('#nm-faq-list .nm-faq-q').forEach(function (q) {
+                q.addEventListener('click', function () {
+                    var item = q.closest('.nm-faq-item');
+                    var open = item.classList.toggle('open');
+                    q.setAttribute('aria-expanded', open ? 'true' : 'false');
+                });
+            });
+        })();
+        (function () {
+            var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            var reveals = document.querySelectorAll('.pf-reveal');
+            var shield = document.querySelector('[data-pf-shield]');
+            function showAll() {
+                reveals.forEach(function (el) { el.classList.add('is-in'); });
+                if (shield) shield.setAttribute('data-revealed', '');
+            }
+            if (reduce || !('IntersectionObserver' in window)) { showAll(); return; }
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('is-in');
+                        io.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.18 });
+            reveals.forEach(function (el) { io.observe(el); });
+            if (shield) {
+                var io2 = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) { if (e.isIntersecting) { shield.setAttribute('data-revealed', ''); io2.disconnect(); } });
+                }, { threshold: 0.3 });
+                io2.observe(shield);
+            }
+        })();
+    </script>
+<script src="/js/cookie-consent.js" defer></script>
+</body>
+
+</html>

@@ -49,27 +49,18 @@ class NavbarSection extends HTMLElement {
       return "<option value=\"" + code + "\"" + selected + ">" + loc.switcherLabel + "</option>";
     }).join("");
 
-    // Nav links. intl + au now route to dedicated hub PAGES (the full content
-    // build landed for both): Platform / AI Employees / Solutions / Pricing /
-    // Resources, each a locale-prefixed page link (no #anchors). Compare folds
-    // under Resources. Company/About is no longer a top-level nav item — it
-    // lives in the footer. es keeps its limited scroll-anchor nav because its
-    // localized hub pages don't exist yet (es only has homepage + pricing). The
-    // same link set drives both the desktop ul and the mobile panel.
-    let navItems;
-    if (L.code === "intl" || L.code === "au") {
-      navItems =
-        "<li><a href=\"" + L.path + "platform/\">" + nav.platform + "</a></li>" +
-        "<li><a href=\"" + L.path + "employees/\">" + nav.employees + "</a></li>" +
-        "<li><a href=\"" + L.path + "solutions/\">" + nav.solutions + "</a></li>" +
-        "<li><a href=\"" + L.path + "pricing/\">" + nav.pricing + "</a></li>" +
-        "<li><a href=\"" + L.path + "resources/\">" + nav.resources + "</a></li>";
-    } else {
-      // es: limited nav — homepage scroll-anchors + pricing only.
-      navItems =
-        "<li><a href=\"" + L.path + "#measurable\">" + nav.product + "</a></li>" +
-        "<li><a href=\"" + L.path + "pricing/\">" + nav.pricing + "</a></li>";
-    }
+    // Nav links. All locales (intl / au / es) now route to dedicated hub PAGES
+    // (the full localized content build has landed for every market): Platform /
+    // AI Employees / Solutions / Pricing / Resources, each a locale-prefixed
+    // page link (no #anchors). Compare folds under Resources. Company/About is
+    // no longer a top-level nav item — it lives in the footer. The same link set
+    // drives both the desktop ul and the mobile panel.
+    const navItems =
+      "<li><a href=\"" + L.path + "platform/\">" + nav.platform + "</a></li>" +
+      "<li><a href=\"" + L.path + "employees/\">" + nav.employees + "</a></li>" +
+      "<li><a href=\"" + L.path + "solutions/\">" + nav.solutions + "</a></li>" +
+      "<li><a href=\"" + L.path + "pricing/\">" + nav.pricing + "</a></li>" +
+      "<li><a href=\"" + L.path + "resources/\">" + nav.resources + "</a></li>";
 
     const markup =
       "<style>" + STYLES + "</style>" +
