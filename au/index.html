@@ -459,63 +459,6 @@
         }
         @media (max-width: 640px) { .nm-cta-band { padding: 48px 28px; border-radius: 28px; } }
 
-        /* ── Process rail (mirrors agency homepage `#process` lines 426-447) ── */
-        .nm-process-rail-bg {
-            position: absolute; top: 18px; left: 0; right: 0; height: 2px;
-            background: var(--border);
-        }
-        .nm-process-rail-fg {
-            position: absolute; top: 18px; left: 0; height: 2px; width: 100%;
-            background: var(--gradient-brand);
-        }
-        .nm-process-step { padding-top: 44px; position: relative; }
-        .nm-process-node {
-            position: absolute; top: 10px; left: 0;
-            width: 16px; height: 16px; border-radius: 50%;
-            background: var(--bg); border: 2px solid var(--secondary-500);
-            display: inline-flex; align-items: center; justify-content: center;
-        }
-        .nm-process-node-inner { width: 8px; height: 8px; border-radius: 50%; background: var(--gradient-brand); }
-        .nm-process-step:last-child .nm-process-node { border-color: var(--accent-500); }
-        .nm-process-num {
-            font-family: var(--font-mono); font-size: 12px;
-            color: var(--secondary-700); margin-bottom: 6px;
-            font-weight: 600; letter-spacing: 0.05em;
-        }
-        .dark .nm-process-num { color: var(--secondary-300); }
-        .nm-process-title {
-            font-family: var(--font-display); font-weight: 700; font-size: 20px;
-            margin: 0 0 8px; letter-spacing: -0.02em; color: var(--text);
-        }
-        .nm-process-body { font-size: 14.5px; line-height: 1.6; color: var(--text-muted); margin: 0; max-width: 34ch; }
-        @media (max-width: 900px) {
-            .nm-process-grid { grid-template-columns: 1fr 1fr !important; }
-            /* Collapse the intro 2-col header to single column so text doesn't overflow */
-            .nm-how-head { grid-template-columns: 1fr !important; gap: 24px !important; }
-        }
-        @media (max-width: 600px) {
-            .nm-process-grid { grid-template-columns: 1fr !important; }
-            .nm-process-rail-bg, .nm-process-rail-fg { display: none; }
-        }
-
-        /* ── Trust card (sovereignty section) — mirrors agency feature-card style ── */
-        .nm-trust-card {
-            background: var(--surface); border: 1px solid var(--border);
-            border-radius: 24px; padding: 28px;
-            transition: transform 280ms, box-shadow 280ms;
-        }
-        .nm-trust-card:hover { transform: translateY(-3px); box-shadow: 0 22px 48px -16px rgba(15,23,42,0.12); }
-        .nm-trust-icon {
-            display: inline-flex; align-items: center; justify-content: center;
-            width: 44px; height: 44px; border-radius: 12px; margin-bottom: 20px;
-            background: var(--accent-50); color: var(--accent-700);
-        }
-        .nm-trust-title {
-            font-family: var(--font-display); font-weight: 700; font-size: 18px;
-            margin: 0 0 8px; letter-spacing: -0.015em; color: var(--text);
-        }
-        .nm-trust-body { font-size: 14.5px; line-height: 1.6; color: var(--text-muted); margin: 0; }
-
         /* ── FAQ accordion (mirrors agency `.nm-faq-*` lines 489-514) ── */
         .nm-faq-list { max-width: 800px; margin: 0; padding: 0; list-style: none; }
         .nm-faq-item { border-bottom: 1px solid var(--border); }
@@ -651,9 +594,9 @@
                         <h1 class="nm-hero-h1">
                             <span class="nm-hero-word">AI employees.</span>
                             <br class="nm-hide-sm" />
-                            <span class="text-gradient-brand nm-hero-word" style="animation-delay:0.16s">Measured.</span>
-                            <span class="text-gradient-brand nm-hero-word" style="animation-delay:0.32s">Tracked.</span>
-                            <span class="text-gradient-brand nm-hero-word" style="animation-delay:0.48s">Proven.</span>
+                            <span class="text-gradient-brand nm-hero-word" style="animation-delay: 0.16s">Measured.</span>
+                            <span class="text-gradient-brand nm-hero-word" style="animation-delay: 0.32s">Tracked.</span>
+                            <span class="text-gradient-brand nm-hero-word" style="animation-delay: 0.48s">Proven.</span>
                         </h1>
 
                         <p class="nm-hero-lead">
@@ -693,9 +636,6 @@
                             </span>
                         </div>
                     </div>
-                    <!-- [screenshot: real dashboard — roster + scorecard] — hero visual should be a real dashboard shot (roster + a scorecard), not the live-demo panel below. Live panel retained as interactive proof until the screenshot is supplied. -->
-
-
                     <!-- RIGHT: live panel with all 3 panels rendered statically -->
                     <div class="nm-hero-right">
                         <div class="nm-live-panel" id="nm-live-panel">
@@ -838,7 +778,7 @@
                                         <span class="nm-live-dot"></span>
                                         <span><strong>One brain</strong> &middot; trained on your business</span>
                                     </span>
-                                    <span class="mono" style="font-size: 11px; letter-spacing: 0.05em;">v2.4 &middot; Sydney · Australia East</span>
+                                    <span class="mono" style="font-size: 11px; letter-spacing: 0.05em;">v2.4 &middot; Sydney &middot; Australia East</span>
                                 </div>
                             </div>
 
@@ -857,7 +797,7 @@
                                 </div>
                                 <div>
                                     <div class="chip-title">Hosted in Sydney</div>
-                                    <div class="chip-sub">Data never leaves Australia</div>
+                                    <div class="chip-sub">Grounded in your content</div>
                                 </div>
                             </div>
                         </div>
@@ -890,10 +830,6 @@
             @keyframes nm-hero-rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
             .nm-hero-word { display: inline-block; opacity: 0; animation: nm-hero-rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
             @media (prefers-reduced-motion: reduce) { .nm-hero-word { opacity: 1 !important; animation: none !important; transform: none !important; } }
-
-            /* Comparison table — emphasise the row no competitor can tick */
-            tr.nm-compare-key td, tr.nm-compare-key th { background: linear-gradient(90deg, rgba(0, 123, 255, 0.06), rgba(0, 209, 178, 0.06)); }
-            tr.nm-compare-key th[scope="row"] { font-weight: 700; box-shadow: inset 3px 0 0 var(--accent-500); }
 
             /* HERO */
             .nm-hero { padding: 64px 0 96px; overflow: clip; position: relative; }
@@ -947,6 +883,7 @@
             .nm-live-panel-content[hidden] { display: none; }
             .nm-live-foot { margin-top: 14px; padding: 10px 14px; display: flex; align-items: center; justify-content: space-between; background: var(--bg-muted); border-radius: 12px; font-size: 12px; color: var(--text-muted); }
             .nm-live-foot strong { color: var(--text); font-weight: 600; }
+            @media (max-width: 640px) { .nm-live-foot .mono { display: none; } }
             .nm-floating-chip { position: absolute; z-index: 2; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 10px 14px; box-shadow: 0 12px 28px -8px rgba(15,23,42,0.2); display: flex; align-items: center; gap: 10px; }
             .nm-floating-chip .chip-icon { width: 28px; height: 28px; border-radius: 9px; display: inline-flex; align-items: center; justify-content: center; }
             .nm-floating-chip .chip-title { font-size: 12px; font-weight: 600; color: var(--text); }
@@ -956,14 +893,14 @@
             @media (max-width: 640px) {
                 /* The floating chips sit outside the panel box and were being sliced by the
                    panel's overflow:clip (which contains the ambient glow). Their copy
-                   ("Live in 60 min", "Your-region hosting") is already covered by the hero
+                   ("Live in 60 min", "Hosted in Sydney") is already covered by the hero
                    proof row below, so hide them on mobile rather than leave content clipped. */
                 .nm-floating-chip { display: none; }
             }
 
-            /* Hero eyebrow: long uppercase tracked label (AU label is the longest). On mobile,
-               tighten tracking and size and let it wrap so the full label is readable, never
-               cut at the edge. (Overrides the inline desktop values at narrow widths only.) */
+            /* Hero eyebrow: long uppercase tracked label. On mobile, tighten tracking and
+               size and let it wrap so the full label is readable, never cut at the edge.
+               (Overrides the inline desktop letter-spacing/font-size at narrow widths only.) */
             @media (max-width: 640px) {
                 .nm-hero-eyebrow {
                     font-size: 11px !important;
@@ -994,8 +931,245 @@
             .nm-wave span { width: 4px; border-radius: 4px; transition: height 80ms linear; background: var(--secondary-500); }
         </style>
 
+        <!-- ════════════ ★ PLATFORM ARCHITECTURE — THE SIGNATURE ANIMATED MOMENT ════════════ -->
+        <section id="architecture" class="py-24" style="background: var(--bg); overflow: clip; position: relative;">
+            <div class="nm-arch-ambient" aria-hidden="true"></div>
+            <div class="nm-container" style="position: relative; z-index: 1;">
+                <div class="nm-section-header" style="max-width: 760px; margin-bottom: 48px;">
+                    <span class="eyebrow"><span class="dot"></span> The platform</span>
+                    <h2 class="nm-section-headline">
+                        One Brain.<br />
+                        <span class="muted">Every employee draws from it.</span>
+                    </h2>
+                    <p class="nm-section-sub">
+                        Your knowledge lives in one place &mdash; the Brain. Simon, Hugo and Maeve all learn from it. Change a price once, and every employee knows it in seconds. No retraining each bot, no copy-paste, no drift.
+                    </p>
+                </div>
+
+                <!-- Animated diagram: Brain → Simon · Hugo · Maeve -->
+                <div class="nm-arch" data-arch role="img"
+                    aria-label="Diagram: one central Brain feeds three AI employees — Simon on the web, Hugo internally, and Maeve on voice. Knowledge flows from the Brain to all three at once.">
+                    <svg class="nm-arch-svg" viewBox="0 0 1000 520" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="archWire" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0" stop-color="var(--secondary-500)" stop-opacity="0.55"/>
+                                <stop offset="1" stop-color="var(--accent-500)" stop-opacity="0.55"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- connecting wires (Brain centre ~ 500,150 → three nodes along the bottom) -->
+                        <path class="nm-arch-wire" d="M500 150 C 500 300, 200 300, 200 400" fill="none" stroke="url(#archWire)" stroke-width="2.5" stroke-linecap="round"/>
+                        <path class="nm-arch-wire" d="M500 150 C 500 320, 500 320, 500 400" fill="none" stroke="url(#archWire)" stroke-width="2.5" stroke-linecap="round"/>
+                        <path class="nm-arch-wire" d="M500 150 C 500 300, 800 300, 800 400" fill="none" stroke="url(#archWire)" stroke-width="2.5" stroke-linecap="round"/>
+
+                        <!-- travelling knowledge packets (one per wire) -->
+                        <circle class="nm-arch-packet" r="5" fill="var(--accent-500)">
+                            <animateMotion class="nm-arch-motion" dur="2.6s" repeatCount="indefinite" calcMode="linear" path="M500 150 C 500 300, 200 300, 200 400"/>
+                        </circle>
+                        <circle class="nm-arch-packet" r="5" fill="var(--secondary-500)">
+                            <animateMotion class="nm-arch-motion" dur="2.6s" begin="0.5s" repeatCount="indefinite" calcMode="linear" path="M500 150 C 500 320, 500 320, 500 400"/>
+                        </circle>
+                        <circle class="nm-arch-packet" r="5" fill="var(--primary-500)">
+                            <animateMotion class="nm-arch-motion" dur="2.6s" begin="1s" repeatCount="indefinite" calcMode="linear" path="M500 150 C 500 300, 800 300, 800 400"/>
+                        </circle>
+                    </svg>
+
+                    <!-- Brain node — links through to the dedicated Brain page -->
+                    <a class="nm-arch-brain" href="/au/platform/brain/" aria-label="Explore the Brain">
+                        <div class="nm-arch-brain-glow" aria-hidden="true"></div>
+                        <div class="nm-arch-brain-core">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a3 3 0 0 0-3 3 3 3 0 0 0-1 5.8A2.5 2.5 0 0 0 12 19a2.5 2.5 0 0 0 4-4.2A3 3 0 0 0 15 8a3 3 0 0 0-3-3z"/><path d="M12 5v14M9 8h.01M16 13.8h.01M8 13.8h.01"/></svg>
+                        </div>
+                        <div class="nm-arch-brain-label">
+                            <strong>The Brain</strong>
+                            <span>Your knowledge, indexed once</span>
+                        </div>
+                        <div class="nm-arch-chips" aria-hidden="true">
+                            <span class="nm-arch-chip" data-chip="0">Pricing</span>
+                            <span class="nm-arch-chip" data-chip="1">Handbook</span>
+                            <span class="nm-arch-chip" data-chip="2">FAQs</span>
+                            <span class="nm-arch-chip" data-chip="3">SOPs</span>
+                        </div>
+                    </a>
+
+                    <!-- Employee nodes -->
+                    <div class="nm-arch-nodes">
+                        <div class="nm-arch-node" data-node="simon" style="--node: var(--secondary-500); --node-bg: var(--secondary-50); --node-fg: var(--secondary-700);">
+                            <div class="nm-arch-node-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/></svg>
+                            </div>
+                            <div class="nm-arch-node-name">Simon</div>
+                            <div class="nm-arch-node-role">Website</div>
+                            <div class="nm-arch-node-pulse" aria-hidden="true"></div>
+                        </div>
+                        <div class="nm-arch-node" data-node="hugo" style="--node: var(--primary-500); --node-bg: var(--primary-50); --node-fg: var(--primary-700);">
+                            <div class="nm-arch-node-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <div class="nm-arch-node-name">Hugo</div>
+                            <div class="nm-arch-node-role">Inside your business</div>
+                            <div class="nm-arch-node-pulse" aria-hidden="true"></div>
+                        </div>
+                        <div class="nm-arch-node" data-node="maeve" style="--node: var(--accent-500); --node-bg: var(--accent-50); --node-fg: var(--accent-700);">
+                            <div class="nm-arch-node-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div class="nm-arch-node-name">Maeve</div>
+                            <div class="nm-arch-node-role">Voice</div>
+                            <div class="nm-arch-node-pulse" aria-hidden="true"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- "change a price once" proof strip -->
+                <div class="nm-arch-proof" data-arch-proof>
+                    <div class="nm-arch-proof-step">
+                        <span class="nm-arch-proof-num">1</span>
+                        <span>You update <strong>one price</strong> in the Brain.</span>
+                    </div>
+                    <svg class="nm-arch-proof-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                    <div class="nm-arch-proof-step">
+                        <span class="nm-arch-proof-num">2</span>
+                        <span>Simon, Hugo <em>and</em> Maeve all answer with the new number &mdash; <strong>in seconds</strong>.</span>
+                    </div>
+                </div>
+
+                <!-- Platform CTA + connective links out to the deep platform pages -->
+                <div class="nm-arch-out">
+                    <a href="/au/platform/" class="nm-arch-cta">
+                        Explore the platform
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                    </a>
+                    <div class="nm-arch-links">
+                        <a href="/au/platform/integrations/">Plugs into your stack &mdash; Calendar, Webhooks, Slack, Teams, Twilio <span aria-hidden="true">&rarr;</span></a>
+                        <a href="/au/compare/">See how NeoMind compares <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .nm-arch-ambient { position: absolute; inset: 0; z-index: 0; pointer-events: none; background:
+                radial-gradient(38% 42% at 50% 16%, rgba(0,123,255,0.10), transparent 70%),
+                radial-gradient(34% 38% at 18% 82%, rgba(0,209,178,0.08), transparent 70%),
+                radial-gradient(34% 38% at 82% 82%, rgba(156,125,185,0.08), transparent 70%); }
+            .nm-arch { position: relative; max-width: 880px; margin: 0 auto; aspect-ratio: 1000 / 520; }
+            @media (max-width: 720px) { .nm-arch { aspect-ratio: 1000 / 640; } }
+            .nm-arch-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+            .nm-arch-wire { stroke-dasharray: 6 7; opacity: 0; }
+            .nm-arch[data-revealed] .nm-arch-wire { opacity: 1; animation: nm-arch-wire-in 700ms ease forwards; }
+            @keyframes nm-arch-wire-in { from { opacity: 0; } to { opacity: 1; } }
+            .nm-arch-packet { opacity: 0; }
+            .nm-arch[data-revealed] .nm-arch-packet { opacity: 1; transition: opacity 400ms ease; }
+
+            /* Brain node — top centre */
+            .nm-arch-brain { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: min(260px, 60%); display: flex; flex-direction: column; align-items: center; text-align: center; z-index: 2; }
+            .nm-arch-brain-glow { position: absolute; top: -28px; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle, rgba(0,123,255,0.22), transparent 65%); filter: blur(8px); animation: nm-arch-brain-breathe 4s ease-in-out infinite; }
+            .nm-arch-brain-core { position: relative; width: 84px; height: 84px; border-radius: 24px; display: inline-flex; align-items: center; justify-content: center; color: white;
+                background: linear-gradient(135deg, var(--primary-500), var(--secondary-500) 55%, var(--accent-500));
+                box-shadow: 0 18px 44px -12px rgba(0,123,255,0.5), inset 0 1px 0 rgba(255,255,255,0.35); }
+            .nm-arch-brain-core::after { content: ''; position: absolute; inset: -8px; border-radius: 30px; border: 1.5px solid var(--secondary-500); opacity: 0; animation: nm-arch-ring 3s ease-out infinite; }
+            @keyframes nm-arch-ring { 0% { transform: scale(0.85); opacity: 0.5; } 100% { transform: scale(1.25); opacity: 0; } }
+            @keyframes nm-arch-brain-breathe { 0%,100% { transform: scale(1); opacity: 0.85; } 50% { transform: scale(1.08); opacity: 1; } }
+            .nm-arch-brain-label { margin-top: 14px; }
+            .nm-arch-brain-label strong { display: block; font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: -0.015em; color: var(--text); }
+            .nm-arch-brain-label span { font-size: 12.5px; color: var(--text-subtle); }
+            .nm-arch-chips { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-top: 12px; max-width: 240px; }
+            .nm-arch-chip { font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--text-muted); opacity: 0; transform: translateY(4px); transition: background 240ms ease, border-color 240ms ease, color 240ms ease, box-shadow 240ms ease; }
+            .nm-arch[data-revealed] .nm-arch-chip { animation: nm-arch-chip-in 500ms ease forwards; }
+            .nm-arch[data-revealed] .nm-arch-chip[data-chip="0"] { animation-delay: 200ms; }
+            .nm-arch[data-revealed] .nm-arch-chip[data-chip="1"] { animation-delay: 320ms; }
+            .nm-arch[data-revealed] .nm-arch-chip[data-chip="2"] { animation-delay: 440ms; }
+            .nm-arch[data-revealed] .nm-arch-chip[data-chip="3"] { animation-delay: 560ms; }
+            .nm-arch-chip.nm-arch-chip--flash { background: var(--accent-50); border-color: var(--accent-500); color: var(--accent-700); box-shadow: 0 0 0 3px rgba(0,209,178,0.18); }
+            @keyframes nm-arch-chip-in { to { opacity: 1; transform: translateY(0); } }
+
+            /* Employee nodes — along the bottom */
+            .nm-arch-nodes { position: absolute; bottom: 0; left: 0; right: 0; display: grid; grid-template-columns: repeat(3, 1fr); align-items: end; gap: 8px; z-index: 2; }
+            .nm-arch-node { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 18px 14px 16px; border-radius: 18px; background: var(--surface); border: 1px solid var(--border); box-shadow: 0 12px 30px -16px rgba(15,23,42,0.18); width: min(180px, 100%); margin: 0 auto; opacity: 0; transform: translateY(14px); transition: opacity 500ms ease, transform 500ms cubic-bezier(0.16,1,0.3,1), box-shadow 280ms ease, border-color 280ms ease; }
+            .nm-arch[data-revealed] .nm-arch-node { opacity: 1; transform: translateY(0); }
+            .nm-arch[data-revealed] .nm-arch-node[data-node="simon"] { transition-delay: 120ms; }
+            .nm-arch[data-revealed] .nm-arch-node[data-node="hugo"]  { transition-delay: 240ms; }
+            .nm-arch[data-revealed] .nm-arch-node[data-node="maeve"] { transition-delay: 360ms; }
+            . { border-color: color-mix(in oklab, var(--primary-500) 40%, var(--border)); box-shadow: 0 18px 40px -18px rgba(156,125,185,0.45); }
+            .nm-arch-node-badge { position: absolute; top: -11px; left: 50%; transform: translateX(-50%); white-space: nowrap; font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; color: white; background: linear-gradient(135deg, var(--primary-500), var(--secondary-500)); box-shadow: 0 6px 16px -6px rgba(156,125,185,0.6); }
+            .nm-arch-node-icon { width: 46px; height: 46px; border-radius: 13px; display: inline-flex; align-items: center; justify-content: center; background: var(--node-bg); color: var(--node-fg); margin-bottom: 10px; }
+            .nm-arch-node-name { font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: -0.015em; color: var(--text); }
+            .nm-arch-node-role { font-size: 12px; color: var(--text-subtle); margin-top: 1px; }
+            .nm-arch-node-pulse { position: absolute; inset: -1px; border-radius: 18px; border: 1.5px solid var(--node); opacity: 0; pointer-events: none; }
+            .nm-arch-node.nm-arch-node--lit .nm-arch-node-pulse { animation: nm-arch-node-lit 900ms ease-out; }
+            @keyframes nm-arch-node-lit { 0% { opacity: 0.8; box-shadow: 0 0 0 0 color-mix(in oklab, var(--node) 40%, transparent); } 100% { opacity: 0; box-shadow: 0 0 0 12px transparent; } }
+            @media (max-width: 540px) {
+                .nm-arch-node { width: 100%; padding: 14px 8px 12px; }
+                .nm-arch-node-name { font-size: 15px; }
+                .nm-arch-node-badge { font-size: 9px; padding: 2px 7px; }
+            }
+
+            /* proof strip */
+            .nm-arch-proof { display: flex; align-items: center; justify-content: center; gap: 18px; flex-wrap: wrap; max-width: 760px; margin: 48px auto 0; padding: 18px 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; }
+            .nm-arch-proof-step { display: flex; align-items: center; gap: 12px; font-size: 14.5px; color: var(--text-muted); line-height: 1.5; }
+            .nm-arch-proof-step strong { color: var(--text); font-weight: 600; }
+            .nm-arch-proof-num { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; font-size: 13px; color: white; background: linear-gradient(135deg, var(--secondary-500), var(--accent-500)); }
+            .nm-arch-proof-arrow { color: var(--text-subtle); flex-shrink: 0; }
+            @media (max-width: 640px) { .nm-arch-proof-arrow { transform: rotate(90deg); } }
+
+            /* Brain node is now a link — strip default anchor styling */
+            a.nm-arch-brain { text-decoration: none; color: inherit; transition: transform 220ms ease; }
+            a.nm-arch-brain:hover { transform: translateX(-50%) translateY(-3px); }
+            a.nm-arch-brain:focus-visible { outline: 2px solid var(--secondary-500); outline-offset: 6px; border-radius: 24px; }
+
+            /* Platform CTA + connective link-out strip */
+            .nm-arch-out { max-width: 760px; margin: 36px auto 0; display: flex; flex-direction: column; align-items: center; gap: 22px; }
+            .nm-arch-cta { display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px; border-radius: 999px; font-family: var(--font-sans); font-weight: 600; font-size: 14.5px; text-decoration: none; color: white; background: var(--gradient-brand, linear-gradient(135deg, var(--secondary-500), var(--accent-500))); box-shadow: 0 8px 22px rgba(0,123,255,0.24); transition: transform 220ms ease, box-shadow 220ms ease; }
+            .nm-arch-cta svg { transition: transform 220ms ease; }
+            .nm-arch-cta:hover { transform: translateY(-1px); box-shadow: 0 12px 30px rgba(0,123,255,0.34); }
+            .nm-arch-cta:hover svg { transform: translateX(3px); }
+            .nm-arch-links { display: flex; flex-direction: column; gap: 10px; align-items: center; text-align: center; }
+            .nm-arch-links a { font-size: 13.5px; font-weight: 500; color: var(--text-muted); text-decoration: none; transition: color 200ms ease; }
+            .nm-arch-links a span { color: var(--secondary-700); font-weight: 600; }
+            .nm-arch-links a:hover { color: var(--text); }
+
+            @media (prefers-reduced-motion: reduce) {
+                .nm-arch-wire, .nm-arch-packet, .nm-arch-chip, .nm-arch-node { opacity: 1 !important; transform: none !important; animation: none !important; transition: none !important; }
+                .nm-arch-brain-glow, .nm-arch-brain-core::after, .nm-arch-node-pulse { animation: none !important; }
+                .nm-arch-motion { display: none; }
+            }
+        </style>
+        <script>
+            (function () {
+                var arch = document.querySelector('[data-arch]');
+                if (!arch) return;
+                var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                function reveal() {
+                    arch.setAttribute('data-revealed', '');
+                    if (reduce) return;
+                    var chip = arch.querySelector('.nm-arch-chip[data-chip="0"]');
+                    var nodes = arch.querySelectorAll('.nm-arch-node');
+                    function play() {
+                        if (chip) {
+                            chip.classList.add('nm-arch-chip--flash');
+                            setTimeout(function () { chip.classList.remove('nm-arch-chip--flash'); }, 1400);
+                        }
+                        nodes.forEach(function (n, i) {
+                            setTimeout(function () {
+                                n.classList.add('nm-arch-node--lit');
+                                setTimeout(function () { n.classList.remove('nm-arch-node--lit'); }, 900);
+                            }, 600 + i * 260);
+                        });
+                    }
+                    setTimeout(play, 1100);
+                    arch._loop = setInterval(play, 6000);
+                }
+                if (!('IntersectionObserver' in window)) { reveal(); return; }
+                var io = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) { if (e.isIntersecting) { reveal(); io.disconnect(); } });
+                }, { threshold: 0.3 });
+                io.observe(arch);
+            })();
+        </script>
+
         <!-- LIVE DEMO — interactive Simon chat (real API), Maeve 3-min voice demo, Hugo Slack preview -->
-        <section id="demo" class="py-24">
+        <section id="demo" class="py-24" style="background: var(--bg-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
             <div class="nm-container">
                 <div class="nm-section-header">
                     <span class="eyebrow"><span class="dot"></span> See a NeoMind employee answer, grounded in real docs</span>
@@ -1200,7 +1374,7 @@
         </section>
 
         <!-- ════════════ 2. ONE-LINE PROBLEM ════════════ -->
-        <section id="problem" class="py-20" style="background: var(--bg-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <section id="problem" class="py-20">
             <div class="nm-container" style="max-width: 920px; text-align: center;">
                 <span class="eyebrow" style="justify-content: center;"><span class="dot"></span> Chatbot vs. employee</span>
                 <h2 class="nm-section-headline" style="margin: 14px auto 18px; max-width: 22ch;">
@@ -1243,11 +1417,13 @@
                                 <span><strong>Improve on evidence</strong> &mdash; every weak answer and &ldquo;I don&rsquo;t know&rdquo; is visible, so you fix the gap once.</span>
                             </li>
                         </ul>
+                        <a href="/au/platform/measurable/" class="nm-textlink" style="margin-top: 26px;">
+                            How we measure performance
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </a>
                     </div>
 
-                    <!-- Scorecard mock — designed proxy until a real screenshot is supplied -->
                     <div class="nm-scorecard-frame">
-                        <!-- [screenshot: scorecard] — replace this designed mock with a real dashboard scorecard export. -->
                         <div class="nm-scorecard">
                             <div class="nm-scorecard-head">
                                 <div>
@@ -1296,6 +1472,13 @@
         </section>
 
         <style>
+            /* Shared "→ link" used by overview teasers to route to deep pages */
+            .nm-textlink { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-sans); font-size: 14.5px; font-weight: 600; color: var(--secondary-700); text-decoration: none; transition: gap 200ms ease, color 200ms ease; }
+            .nm-textlink svg { transition: transform 200ms ease; }
+            .nm-textlink:hover { color: var(--secondary-500); }
+            .nm-textlink:hover svg { transform: translateX(3px); }
+            .dark .nm-textlink { color: var(--secondary-300, #7cc0ff); }
+
             .nm-measure-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 64px; align-items: center; }
             @media (max-width: 980px) { .nm-measure-grid { grid-template-columns: 1fr; gap: 48px; } }
             .nm-measure-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 18px; }
@@ -1347,74 +1530,7 @@
             })();
         </script>
 
-        <!-- ════════════ 4. PILLAR 2 — TAKES REAL ACTION ════════════ -->
-        <section id="actions" class="py-24" style="background: var(--bg-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-            <div class="nm-container">
-                <div class="nm-section-header">
-                    <span class="eyebrow"><span class="dot"></span> Pillar 2 &middot; Takes real action</span>
-                    <h2 class="nm-section-headline">
-                        They don&rsquo;t just reply.<br />
-                        <span class="muted">They do the work.</span>
-                    </h2>
-                    <p class="nm-section-sub">
-                        NeoMind employees complete the task end to end &mdash; as real, durable actions, not just chat.
-                    </p>
-                </div>
-
-                <div class="nm-action-grid">
-                    <div class="nm-action-card">
-                        <div class="nm-action-icon" style="background: var(--secondary-50); color: var(--secondary-700);">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M9 16l2 2 4-4"/></svg>
-                        </div>
-                        <h3 class="nm-action-title">Book</h3>
-                        <p class="nm-action-body">Appointments straight into your calendar &mdash; with the right slot, confirmed.</p>
-                    </div>
-                    <div class="nm-action-card">
-                        <div class="nm-action-icon" style="background: var(--accent-50); color: var(--accent-700);">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
-                        </div>
-                        <h3 class="nm-action-title">Capture &amp; route</h3>
-                        <p class="nm-action-body">Leads captured and routed to the right person, with context attached.</p>
-                    </div>
-                    <div class="nm-action-card">
-                        <div class="nm-action-icon" style="background: var(--primary-50); color: var(--primary-700);">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-                        </div>
-                        <h3 class="nm-action-title">Escalate</h3>
-                        <p class="nm-action-body">Genuine priorities handed to a human by your rules, never missed.</p>
-                    </div>
-                    <div class="nm-action-card">
-                        <div class="nm-action-icon" style="background: var(--secondary-50); color: var(--secondary-700);">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><polyline points="21 3 21 9 15 9"/></svg>
-                        </div>
-                        <h3 class="nm-action-title">Update your systems</h3>
-                        <p class="nm-action-body">Push to your CRM and tools via webhook &mdash; the record lands where you work.</p>
-                    </div>
-                </div>
-
-                <div class="nm-honesty-line">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    <p>Your employees do the routine work. The judgment calls &mdash; and anything binding &mdash; stay with your team. <strong>NeoMind never signs or commits on your behalf.</strong></p>
-                </div>
-            </div>
-        </section>
-
-        <style>
-            .nm-action-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-            @media (max-width: 1024px) { .nm-action-grid { grid-template-columns: repeat(2, 1fr); } }
-            @media (max-width: 560px) { .nm-action-grid { grid-template-columns: 1fr; } }
-            .nm-action-card { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 26px 24px; transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; }
-            .nm-action-card:hover { transform: translateY(-3px); box-shadow: 0 16px 32px rgba(15,23,42,0.08); border-color: var(--border-strong); }
-            .nm-action-icon { width: 46px; height: 46px; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 18px; }
-            .nm-action-title { font-family: var(--font-display); font-weight: 700; font-size: 18px; letter-spacing: -0.015em; color: var(--text); margin: 0 0 8px; }
-            .nm-action-body { font-size: 13.5px; line-height: 1.55; color: var(--text-muted); margin: 0; }
-            .nm-honesty-line { margin-top: 40px; display: flex; gap: 14px; align-items: flex-start; max-width: 760px; padding: 20px 24px; background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent-500); border-radius: 14px; }
-            .nm-honesty-line svg { flex-shrink: 0; margin-top: 2px; color: var(--accent-700); }
-            .nm-honesty-line p { margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--text-muted); }
-            .nm-honesty-line strong { color: var(--text); font-weight: 600; }
-        </style>
-
-        <!-- ════════════ 5. ROSTER — start with three, build the team you need ════════════ -->
+        <!-- ════════════ 5. MEET THE EMPLOYEES — teaser routing to /employees/ ════════════ -->
         <section id="roster" class="py-24" style="padding: 96px 0; background: var(--bg);">
             <div class="nm-container">
                 <div class="nm-section-header">
@@ -1461,6 +1577,7 @@
                         max-width: 920px; margin: 56px auto 0;
                         display: flex; flex-direction: column; align-items: center;
                     }
+                    /* Crown — the One Brain pill + descending stem */
                     .nm-wf__crown { display: flex; flex-direction: column; align-items: center; }
                     .nm-wf__brain {
                         position: relative; display: inline-flex; align-items: center; gap: 12px;
@@ -1479,7 +1596,9 @@
                     .nm-wf__brain-text strong { font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: -0.01em; }
                     .nm-wf__brain-text em { font-style: normal; font-size: 11.5px; font-weight: 500; opacity: 0.82; }
                     .nm-wf__stem { width: 2px; height: 26px; background: linear-gradient(var(--border-strong), var(--border)); border-radius: 2px; }
+                    /* Spine — the horizontal rail that the three minds hang from */
                     .nm-wf__spine { width: min(100%, 700px); height: 2px; background: var(--border-strong); border-radius: 2px; }
+                    /* Minds row */
                     .nm-wf__minds { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; width: 100%; }
                     .nm-wf__branch {
                         display: flex; flex-direction: column; align-items: center;
@@ -1488,6 +1607,7 @@
                     .nm-wf__minds .nm-wf__branch:nth-child(1) { --wf-i: 1; }
                     .nm-wf__minds .nm-wf__branch:nth-child(2) { --wf-i: 2; }
                     .nm-wf__minds .nm-wf__branch:nth-child(3) { --wf-i: 3; }
+                    /* Drop — vertical connector from spine down to the mind node */
                     .nm-wf__drop { width: 2px; height: 22px; background: var(--border-strong); border-radius: 2px; }
                     .nm-wf__mind {
                         position: relative; display: flex; flex-direction: column; align-items: center; gap: 4px;
@@ -1508,6 +1628,7 @@
                         padding: 2px 10px; border-radius: 999px;
                         color: var(--wf-accent); background: rgba(var(--wf-accent-soft), 0.12);
                     }
+                    /* Fan — splits the mind into two agent chips */
                     .nm-wf__fan { position: relative; width: 100%; max-width: 168px; height: 24px; }
                     .nm-wf__fan::before { content: ""; position: absolute; left: 50%; top: 0; width: 2px; height: 11px; background: var(--border-strong); transform: translateX(-50%); }
                     .nm-wf__fan i { position: absolute; top: 11px; width: 50%; height: 2px; background: var(--border-strong); }
@@ -1516,6 +1637,7 @@
                     .nm-wf__fan i::after { content: ""; position: absolute; top: 0; width: 2px; height: 13px; background: var(--border-strong); }
                     .nm-wf__fan i:first-child::after { left: 25%; }
                     .nm-wf__fan i:last-child::after { right: 25%; }
+                    /* Agents */
                     .nm-wf__agents { display: flex; gap: 10px; width: 100%; max-width: 168px; }
                     .nm-wf__agent {
                         flex: 1; text-align: center; padding: 8px 6px; border-radius: 10px;
@@ -1530,6 +1652,7 @@
                     @media (prefers-reduced-motion: reduce) {
                         .nm-wf__brain, .nm-wf__branch { animation: none; }
                     }
+                    /* Responsive */
                     @media (max-width: 720px) {
                         .nm-wf__minds { gap: 18px; }
                         .nm-wf__mind, .nm-wf__fan, .nm-wf__agents { max-width: 100%; }
@@ -1548,359 +1671,428 @@
                 <!-- Honest clarifier + route to the full employees hub -->
                 <div style="text-align: center; margin-top: 44px; display: flex; flex-direction: column; align-items: center; gap: 16px;">
                     <p style="margin: 0; font-size: 14.5px; color: var(--text-muted); max-width: 64ch;">
-                        Every agent is yours to configure &mdash; name, persona, skills, what it can access &mdash; but always one of the three minds. One Brain feeds them all: teach it once, the whole team knows.
+                        Every agent is yours to configure &mdash; name, persona, skills, what it can access &mdash; but always one of the three minds.
                     </p>
-                    <a href="https://app.neomindhub.com/signup" class="btn btn-gradient" data-cta="roster-signup">
-                        Start a free trial
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                    <a href="/au/employees/" class="nm-textlink">
+                        Meet the employees
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- THE BRAIN -->
-        <section id="brain" class="py-24" style="background: var(--bg-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-            <div class="nm-container">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <span class="eyebrow"><span class="dot"></span> Pillar 3 &middot; One Brain</span>
-                        <h2 class="nm-section-headline">
-                            One Brain.<br />
-                            <span class="muted">Every employee draws from it.</span>
-                        </h2>
-                        <p class="nm-section-sub" style="margin-bottom: 24px;">
-                            Upload your documents, crawl your site, and every AI employee answers from one grounded source of truth &mdash; cited back to the document, re-indexed as your business changes. Change a price once; every employee knows it within seconds. The more you feed the Brain, the smarter your whole team gets.
-                        </p>
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-3"><svg class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-gray-700 dark:text-gray-300"><strong>Upload anything</strong> &mdash; PDFs, Word, web pages, Notion, SOPs, FAQs.</span></li>
-                            <li class="flex items-start gap-3"><svg class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-gray-700 dark:text-gray-300"><strong>Cited answers, every time</strong> &mdash; every reply traces back to its source document.</span></li>
-                            <li class="flex items-start gap-3"><svg class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-gray-700 dark:text-gray-300"><strong>Live re-index</strong> &mdash; schedule re-crawls so answers stay current.</span></li>
-                            <li class="flex items-start gap-3"><svg class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-gray-700 dark:text-gray-300"><strong>No hallucinations</strong> &mdash; it refuses when it doesn&rsquo;t know.</span></li>
-                        </ul>
-                    </div>
-                    <div class="relative">
-                        <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-xl border border-gray-100 dark:border-gray-700">
-                            <div class="text-xs uppercase tracking-wide text-primary mb-4 font-medium">What your Brain knows</div>
-                            <div class="grid grid-cols-2 gap-3 text-sm">
-                                <div class="bg-primary/10 dark:bg-primary/20 rounded-xl p-4">
-                                    <div class="font-semibold text-gray-900 dark:text-white">Website</div>
-                                    <div class="text-xs text-gray-600 dark:text-gray-400 mt-1">42 pages indexed</div>
-                                </div>
-                                <div class="bg-secondary/10 dark:bg-secondary/20 rounded-xl p-4">
-                                    <div class="font-semibold text-gray-900 dark:text-white">Handbook</div>
-                                    <div class="text-xs text-gray-600 dark:text-gray-400 mt-1">128 sections</div>
-                                </div>
-                                <div class="bg-accent/10 dark:bg-accent/20 rounded-xl p-4">
-                                    <div class="font-semibold text-gray-900 dark:text-white">FAQ docs</div>
-                                    <div class="text-xs text-gray-600 dark:text-gray-400 mt-1">87 Q&amp;A pairs</div>
-                                </div>
-                                <div class="bg-gray-100 dark:bg-gray-800 rounded-xl p-4">
-                                    <div class="font-semibold text-gray-900 dark:text-white">SOPs</div>
-                                    <div class="text-xs text-gray-600 dark:text-gray-400 mt-1">23 procedures</div>
-                                </div>
-                            </div>
-                            <div class="mt-6 flex items-center gap-2 text-xs text-gray-600 dark:text-gray-400">
-                                <span class="w-2 h-2 rounded-full bg-green-500"></span>
-                                Last sync: 2 minutes ago · 1,247 chunks · every employee in sync
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- ════════════ 7. INTEGRATIONS ════════════ -->
-        <section id="integrations" class="py-24" style="background: var(--bg);">
+        <!-- ════════════ ROI CALCULATOR — interactive, live-updating ════════════ -->
+        <section id="roi" class="py-24" style="background: var(--bg-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
             <div class="nm-container">
-                <div class="nm-section-header">
-                    <span class="eyebrow"><span class="dot"></span> Pillar 4 &middot; Integrations</span>
+                <div class="nm-section-header" style="margin-bottom: 40px;">
+                    <span class="eyebrow"><span class="dot"></span> The cost of "let me find out"</span>
                     <h2 class="nm-section-headline">
-                        Plugs into the stack<br />
-                        <span class="muted">you already run.</span>
+                        What does scattered knowledge<br />
+                        <span class="muted">cost you every year?</span>
                     </h2>
                     <p class="nm-section-sub">
-                        Connect NeoMind to your tools so actions land where your business lives.
+                        Every time someone hunts for an answer that should be instant, it costs you. Move the sliders to your team &mdash; see the number.
                     </p>
                 </div>
 
-                <div class="nm-integ-cols">
-                    <div class="nm-integ-col">
-                        <div class="nm-integ-col-head">
-                            <span class="nm-integ-status nm-integ-status--live"><span class="nm-live-dot"></span> Live now</span>
+                <div class="nm-roi" data-roi>
+                    <div class="nm-roi-inputs">
+                        <div class="nm-roi-field">
+                            <div class="nm-roi-field-head">
+                                <label for="roi-staff">People on your team</label>
+                                <output class="nm-roi-out" id="roi-staff-out">25</output>
+                            </div>
+                            <input id="roi-staff" type="range" min="3" max="500" step="1" value="25" class="nm-roi-slider" aria-describedby="roi-staff-out">
                         </div>
-                        <ul class="nm-integ-list">
-                            <li>
-                                <span class="nm-integ-icon" style="background: var(--secondary-50); color: var(--secondary-700);">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-                                </span>
-                                <span class="nm-integ-text"><strong>Calendar</strong><span>Book appointments straight into your booking calendar.</span></span>
-                            </li>
-                            <li>
-                                <span class="nm-integ-icon" style="background: var(--accent-50); color: var(--accent-700);">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                                </span>
-                                <span class="nm-integ-text"><strong>Webhooks (HMAC-signed)</strong><span>Push leads and events to your CRM and systems, securely.</span></span>
-                            </li>
-                            <li>
-                                <span class="nm-integ-icon" style="background: var(--primary-50); color: var(--primary-700);">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
-                                </span>
-                                <span class="nm-integ-text"><strong>Email handover</strong><span>Hand a conversation to your team by email, with full context.</span></span>
-                            </li>
-                            <li>
-                                <span class="nm-integ-icon" style="background: var(--secondary-50); color: var(--secondary-700);">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg>
-                                </span>
-                                <span class="nm-integ-text"><strong>Slack</strong><span>Hugo answering staff questions natively in your Slack workspace.</span></span>
-                            </li>
-                        </ul>
+                        <div class="nm-roi-field">
+                            <div class="nm-roi-field-head">
+                                <label for="roi-mins">Minutes/day each spends searching for info</label>
+                                <output class="nm-roi-out" id="roi-mins-out">30</output>
+                            </div>
+                            <input id="roi-mins" type="range" min="5" max="120" step="5" value="30" class="nm-roi-slider" aria-describedby="roi-mins-out">
+                        </div>
+                        <div class="nm-roi-field">
+                            <div class="nm-roi-field-head">
+                                <label for="roi-rate">Average loaded hourly cost</label>
+                                <output class="nm-roi-out" id="roi-rate-out">$45</output>
+                            </div>
+                            <input id="roi-rate" type="range" min="20" max="150" step="5" value="45" class="nm-roi-slider" aria-describedby="roi-rate-out">
+                        </div>
+                        <p class="nm-roi-assumption">
+                            Assumes a 230-day working year. Hugo deflects roughly <strong>70%</strong> of repeat questions to instant, cited answers &mdash; a conservative, configurable estimate.
+                        </p>
                     </div>
 
-                    <div class="nm-integ-col nm-integ-col--soon">
-                        <div class="nm-integ-col-head">
-                            <span class="nm-integ-status nm-integ-status--soon">Coming soon</span>
+                    <div class="nm-roi-result">
+                        <div class="nm-roi-result-glow" aria-hidden="true"></div>
+                        <div class="nm-roi-result-card">
+                            <div class="nm-roi-result-row">
+                                <span class="nm-roi-result-label">Wasted on searching, per year</span>
+                                <span class="nm-roi-result-waste" id="roi-waste" data-value="0">$0</span>
+                            </div>
+                            <div class="nm-roi-result-divider"></div>
+                            <div class="nm-roi-result-row nm-roi-result-row--hero">
+                                <span class="nm-roi-result-label">Recoverable with a shared Brain</span>
+                                <span class="nm-roi-result-save" id="roi-save" data-value="0">$0</span>
+                            </div>
+                            <div class="nm-roi-result-foot">
+                                <span class="nm-roi-result-hours" id="roi-hours">0 hours/year handed back to your team</span>
+                                <a href="https://app.neomindhub.com/signup?agent=hugo" class="btn btn-gradient" data-cta="roi-start" style="padding: 11px 20px; font-size: 14px; margin-top: 6px;">
+                                    Put Hugo to work
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                </a>
+                            </div>
                         </div>
-                        <ul class="nm-integ-list">
-                            <li>
-                                <span class="nm-integ-icon nm-integ-icon--soon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M8 5v14M3 12h5"/></svg>
-                                </span>
-                                <span class="nm-integ-text"><strong>Microsoft Teams</strong><span>Native Hugo for teams that live in Microsoft 365.</span></span>
-                            </li>
-                        </ul>
-                        <p class="nm-integ-note">We label what&rsquo;s shipped honestly. Microsoft Teams is in build; everything else is live.</p>
+                        <p class="nm-roi-disclaimer">Illustrative estimate based on your inputs &mdash; not a quote.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <style>
-            .nm-integ-cols { display: grid; grid-template-columns: 1.1fr 1fr; gap: 24px; align-items: start; }
-            @media (max-width: 860px) { .nm-integ-cols { grid-template-columns: 1fr; } }
-            .nm-integ-col { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 28px; }
-            .nm-integ-col--soon { background: var(--bg-muted); border-style: dashed; }
-            .nm-integ-col-head { margin-bottom: 22px; }
-            .nm-integ-status { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; }
-            .nm-integ-status--live { background: var(--accent-50); color: var(--accent-700); }
-            .dark .nm-integ-status--live { background: rgba(0,209,178,0.14); color: var(--accent-300, #5eead4); }
-            .nm-integ-status--soon { background: transparent; color: var(--text-subtle); border: 1px solid var(--border-strong); }
-            .nm-integ-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 16px; }
-            .nm-integ-list li { display: flex; gap: 14px; align-items: flex-start; }
-            .nm-integ-icon { flex-shrink: 0; width: 42px; height: 42px; border-radius: 11px; display: inline-flex; align-items: center; justify-content: center; }
-            .nm-integ-icon--soon { background: var(--surface); color: var(--text-subtle); border: 1px solid var(--border); }
-            .nm-integ-text { display: flex; flex-direction: column; gap: 3px; }
-            .nm-integ-text strong { font-size: 15px; font-weight: 600; color: var(--text); }
-            .nm-integ-text span { font-size: 13.5px; line-height: 1.5; color: var(--text-muted); }
-            .nm-integ-note { margin: 22px 0 0; font-size: 12.5px; color: var(--text-subtle); line-height: 1.5; }
-        </style>
+            .nm-roi { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: stretch; max-width: 1040px; margin: 0 auto; }
+            @media (max-width: 880px) { .nm-roi { grid-template-columns: 1fr; gap: 24px; } }
+            .nm-roi-inputs { background: var(--surface); border: 1px solid var(--border); border-radius: 22px; padding: 30px; display: flex; flex-direction: column; gap: 26px; }
+            .nm-roi-field-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+            .nm-roi-field-head label { font-size: 14px; font-weight: 500; color: var(--text-muted); line-height: 1.4; }
+            .nm-roi-out { font-family: var(--font-display); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--text); flex-shrink: 0; }
+            .nm-roi-slider { -webkit-appearance: none; appearance: none; width: 100%; height: 6px; border-radius: 999px; background: var(--bg-muted); outline: none; cursor: pointer; }
+            .nm-roi-slider::-webkit-slider-runnable-track { height: 6px; border-radius: 999px; background: linear-gradient(90deg, var(--secondary-500), var(--accent-500)) no-repeat; background-size: var(--fill, 30%) 100%; background-color: var(--bg-muted); }
+            .nm-roi-slider::-moz-range-track { height: 6px; border-radius: 999px; background: var(--bg-muted); }
+            .nm-roi-slider::-moz-range-progress { height: 6px; border-radius: 999px; background: linear-gradient(90deg, var(--secondary-500), var(--accent-500)); }
+            .nm-roi-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 22px; height: 22px; margin-top: -8px; border-radius: 50%; background: var(--surface); border: 2px solid var(--secondary-500); box-shadow: 0 4px 12px -2px rgba(0,123,255,0.4); transition: transform 120ms ease; }
+            .nm-roi-slider::-webkit-slider-thumb:active { transform: scale(1.15); }
+            .nm-roi-slider::-moz-range-thumb { width: 20px; height: 20px; border-radius: 50%; background: var(--surface); border: 2px solid var(--secondary-500); box-shadow: 0 4px 12px -2px rgba(0,123,255,0.4); cursor: pointer; }
+            .nm-roi-slider:focus-visible { outline: 2px solid var(--secondary-500); outline-offset: 4px; }
+            .nm-roi-assumption { font-size: 12.5px; line-height: 1.55; color: var(--text-subtle); margin: 4px 0 0; }
+            .nm-roi-assumption strong { color: var(--text-muted); font-weight: 600; }
 
-        <!-- ════════════ 8. WHY NOT CHATGPT / GENERIC BOT — comparison table ════════════ -->
-        <section id="compare" class="py-24" style="background: var(--bg-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+            .nm-roi-result { position: relative; }
+            .nm-roi-result-glow { position: absolute; inset: -30px; z-index: 0; background: radial-gradient(60% 70% at 70% 25%, rgba(0,209,178,0.18), transparent 70%), radial-gradient(55% 60% at 25% 90%, rgba(0,123,255,0.18), transparent 70%); filter: blur(20px); }
+            .nm-roi-result-card { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 8px; background: var(--surface); border: 1px solid var(--border); border-radius: 22px; padding: 34px 30px; box-shadow: 0 28px 70px -24px rgba(15,23,42,0.2); }
+            .dark .nm-roi-result-card { box-shadow: 0 28px 70px -24px rgba(0,0,0,0.5); }
+            .nm-roi-result-row { display: flex; flex-direction: column; gap: 4px; }
+            .nm-roi-result-label { font-size: 12.5px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-subtle); }
+            .nm-roi-result-waste { font-family: var(--font-display); font-weight: 700; font-size: clamp(30px, 5vw, 40px); line-height: 1; letter-spacing: -0.02em; color: var(--text-muted); }
+            .nm-roi-result-divider { height: 1px; background: var(--border); margin: 18px 0; }
+            .nm-roi-result-save { font-family: var(--font-display); font-weight: 800; font-size: clamp(40px, 7vw, 60px); line-height: 1; letter-spacing: -0.03em; background: linear-gradient(135deg, var(--secondary-500), var(--accent-500)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+            .nm-roi-result-foot { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+            .nm-roi-result-hours { font-size: 13.5px; color: var(--text-muted); }
+            .nm-roi-disclaimer { position: relative; z-index: 1; text-align: center; font-size: 11.5px; color: var(--text-subtle); margin: 14px 0 0; }
+        </style>
+        <script>
+            (function () {
+                var root = document.querySelector('[data-roi]');
+                if (!root) return;
+                var staff = document.getElementById('roi-staff');
+                var mins  = document.getElementById('roi-mins');
+                var rate  = document.getElementById('roi-rate');
+                var staffOut = document.getElementById('roi-staff-out');
+                var minsOut  = document.getElementById('roi-mins-out');
+                var rateOut  = document.getElementById('roi-rate-out');
+                var wasteEl = document.getElementById('roi-waste');
+                var saveEl  = document.getElementById('roi-save');
+                var hoursEl = document.getElementById('roi-hours');
+                var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                var DAYS = 230, DEFLECT = 0.70;
+
+                function fmtMoney(n) { return '$' + Math.round(n).toLocaleString('en-AU'); }
+                function fmtNum(n) { return Math.round(n).toLocaleString('en-AU'); }
+
+                function setFill(el) {
+                    var min = +el.min, max = +el.max, v = +el.value;
+                    el.style.setProperty('--fill', ((v - min) / (max - min) * 100) + '%');
+                }
+
+                // Animated count-up between current displayed value and target.
+                function animateValue(el, target, formatter) {
+                    var start = parseFloat(el.dataset.value) || 0;
+                    el.dataset.value = target;
+                    if (reduce) { el.textContent = formatter(target); return; }
+                    var t0 = null, dur = 550;
+                    if (el._raf) cancelAnimationFrame(el._raf);
+                    function tick(ts) {
+                        if (t0 === null) t0 = ts;
+                        var p = Math.min((ts - t0) / dur, 1);
+                        var eased = 1 - Math.pow(1 - p, 3);
+                        el.textContent = formatter(start + (target - start) * eased);
+                        if (p < 1) el._raf = requestAnimationFrame(tick);
+                    }
+                    el._raf = requestAnimationFrame(tick);
+                }
+
+                function compute() {
+                    var s = +staff.value, m = +mins.value, r = +rate.value;
+                    staffOut.textContent = s;
+                    minsOut.textContent = m;
+                    rateOut.textContent = '$' + r;
+                    [staff, mins, rate].forEach(setFill);
+                    var hoursPerYear = s * (m / 60) * DAYS;
+                    var waste = hoursPerYear * r;
+                    var save = waste * DEFLECT;
+                    animateValue(wasteEl, waste, fmtMoney);
+                    animateValue(saveEl, save, fmtMoney);
+                    hoursEl.textContent = fmtNum(hoursPerYear * DEFLECT) + ' hours/year handed back to your team';
+                }
+
+                [staff, mins, rate].forEach(function (el) { el.addEventListener('input', compute); });
+                // First reveal triggers the count-up from zero when scrolled into view.
+                function init() { [staff, mins, rate].forEach(setFill); compute(); }
+                if ('IntersectionObserver' in window) {
+                    var io = new IntersectionObserver(function (entries) {
+                        entries.forEach(function (e) { if (e.isIntersecting) { init(); io.disconnect(); } });
+                    }, { threshold: 0.3 });
+                    io.observe(root);
+                } else { init(); }
+            })();
+        </script>
+
+        <!-- ════════════ INDUSTRY SOLUTIONS ════════════ -->
+        <section id="solutions" class="py-24" style="background: var(--bg);">
             <div class="nm-container">
                 <div class="nm-section-header">
-                    <span class="eyebrow"><span class="dot"></span> The honest contrast</span>
+                    <span class="eyebrow"><span class="dot"></span> Built for your industry</span>
                     <h2 class="nm-section-headline">
-                        Why not just use ChatGPT<br />
-                        <span class="muted">or a generic chatbot?</span>
+                        Your work, your words,<br />
+                        <span class="muted">your AI workforce.</span>
                     </h2>
                     <p class="nm-section-sub">
-                        Both can hold a conversation. Only one knows your business, does the work, and proves it.
+                        Same platform, tuned to how your industry actually operates. Pick yours to see the problems we solve.
                     </p>
                 </div>
 
-                <div class="nm-compare-wrap">
-                    <table class="nm-compare" aria-label="NeoMind AI employees compared with a generic chatbot or ChatGPT">
-                        <thead>
-                            <tr>
-                                <th scope="col" class="nm-compare-rowhead"><span class="nm-compare-hidelabel">Capability</span></th>
-                                <th scope="col">Generic chatbot / ChatGPT</th>
-                                <th scope="col" class="nm-compare-us">NeoMind AI employees</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">Knows your business</th>
-                                <td class="nm-compare-gen"><span class="nm-compare-dash" aria-hidden="true"></span>Pasted context at best</td>
-                                <td class="nm-compare-us"><span class="nm-compare-tick" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Grounded in your Brain, cited</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Makes things up</th>
-                                <td class="nm-compare-gen"><span class="nm-compare-dash" aria-hidden="true"></span>Often</td>
-                                <td class="nm-compare-us"><span class="nm-compare-tick" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Refuses when it doesn&rsquo;t know</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Does the work</th>
-                                <td class="nm-compare-gen"><span class="nm-compare-dash" aria-hidden="true"></span>Replies only</td>
-                                <td class="nm-compare-us"><span class="nm-compare-tick" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Books, captures, escalates, updates CRM</td>
-                            </tr>
-                            <tr class="nm-compare-key">
-                                <th scope="row">Can you measure it</th>
-                                <td class="nm-compare-gen"><span class="nm-compare-dash" aria-hidden="true"></span>No</td>
-                                <td class="nm-compare-us"><span class="nm-compare-tick" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Objectives + KPIs + scorecards per employee</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Connects to your stack</th>
-                                <td class="nm-compare-gen"><span class="nm-compare-dash" aria-hidden="true"></span>No</td>
-                                <td class="nm-compare-us"><span class="nm-compare-tick" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Webhooks, calendar, CRM</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Data residency</th>
-                                <td class="nm-compare-gen"><span class="nm-compare-dash" aria-hidden="true"></span>US-centric</td>
-                                <td class="nm-compare-us"><span class="nm-compare-tick" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Hosted in Sydney — stays in Australia</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="nm-solutions-grid">
+                    <a href="/au/solutions/trades-and-home-services/" class="nm-solution-card" data-cta="solution-trades">
+                        <span class="nm-solution-icon" style="--s: var(--secondary-500); --sbg: var(--secondary-50); --sfg: var(--secondary-700);">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.1 2.1-2.4-.6-.6-2.4z"/></svg>
+                        </span>
+                        <h3 class="nm-solution-name">Trades &amp; home services</h3>
+                        <p class="nm-solution-body">Never miss an after-hours job. Quote, qualify and book straight into the calendar &mdash; on the website and the phone.</p>
+                        <span class="nm-solution-link">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+                    </a>
+                    <a href="/au/solutions/professional-services/" class="nm-solution-card" data-cta="solution-prof">
+                        <span class="nm-solution-icon" style="--s: var(--primary-500); --sbg: var(--primary-50); --sfg: var(--primary-700);">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                        </span>
+                        <h3 class="nm-solution-name">Professional services</h3>
+                        <p class="nm-solution-body">Triage enquiries, qualify by matter type, and free fee-earners from FAQ email &mdash; while staff self-serve policy internally.</p>
+                        <span class="nm-solution-link">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+                    </a>
+                    <a href="/au/solutions/healthcare/" class="nm-solution-card" data-cta="solution-health">
+                        <span class="nm-solution-icon" style="--s: var(--accent-500); --sbg: var(--accent-50); --sfg: var(--accent-700);">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        </span>
+                        <h3 class="nm-solution-name">Healthcare &amp; clinics</h3>
+                        <p class="nm-solution-body">Answer patient questions, handle booking and reschedules, and escalate the urgent ones to a human by your rules.</p>
+                        <span class="nm-solution-link">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+                    </a>
+                    <a href="/au/solutions/manufacturing/" class="nm-solution-card" data-cta="solution-mfg">
+                        <span class="nm-solution-icon" style="--s: var(--secondary-500); --sbg: var(--secondary-50); --sfg: var(--secondary-700);">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20h20M4 20V9l5 3V9l5 3V4l5 3v13"/></svg>
+                        </span>
+                        <h3 class="nm-solution-name">Manufacturing</h3>
+                        <p class="nm-solution-body">Put specs, SOPs and safety docs one question away on the floor &mdash; and qualify distributor enquiries on the website.</p>
+                        <span class="nm-solution-link">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+                    </a>
+                    <a href="/au/solutions/education/" class="nm-solution-card" data-cta="solution-edu">
+                        <span class="nm-solution-icon" style="--s: var(--primary-500); --sbg: var(--primary-50); --sfg: var(--primary-700);">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg>
+                        </span>
+                        <h3 class="nm-solution-name">Education</h3>
+                        <p class="nm-solution-body">Answer enrolment and course questions around the clock, and let staff self-serve policy, dates and procedures.</p>
+                        <span class="nm-solution-link">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+                    </a>
+                    <a href="/au/solutions/recruitment/" class="nm-solution-card" data-cta="solution-rec">
+                        <span class="nm-solution-icon" style="--s: var(--accent-500); --sbg: var(--accent-50); --sfg: var(--accent-700);">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 11l-3 3-2-2"/></svg>
+                        </span>
+                        <h3 class="nm-solution-name">Recruitment</h3>
+                        <p class="nm-solution-body">Screen and qualify candidates 24/7, answer role questions, and route the strong fits to a consultant with context.</p>
+                        <span class="nm-solution-link">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+                    </a>
+                </div>
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="/au/solutions/" class="nm-textlink">
+                        All industries
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                    </a>
                 </div>
             </div>
         </section>
 
         <style>
-            .nm-compare-wrap { max-width: 920px; margin: 0 auto; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 18px; }
-            .nm-compare { width: 100%; border-collapse: separate; border-spacing: 0; min-width: 620px; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; font-size: 14.5px; }
-            .nm-compare thead th { text-align: left; padding: 18px 22px; font-family: var(--font-display); font-weight: 700; font-size: 14px; letter-spacing: -0.01em; color: var(--text-muted); background: var(--bg-muted); border-bottom: 1px solid var(--border); vertical-align: bottom; }
-            .nm-compare thead th.nm-compare-us { color: var(--text); }
-            .nm-compare-hidelabel { color: var(--text-subtle); font-weight: 600; }
-            .nm-compare tbody th { text-align: left; padding: 16px 22px; font-weight: 600; color: var(--text); width: 34%; border-bottom: 1px solid var(--border); vertical-align: top; }
-            .nm-compare tbody td { padding: 16px 22px; color: var(--text-muted); border-bottom: 1px solid var(--border); vertical-align: top; }
-            .nm-compare tbody tr:last-child th, .nm-compare tbody tr:last-child td { border-bottom: 0; }
-            .nm-compare td.nm-compare-us, .nm-compare th.nm-compare-us { background: linear-gradient(180deg, rgba(0,209,178,0.06), rgba(0,123,255,0.05)); color: var(--text); font-weight: 500; }
-            .dark .nm-compare td.nm-compare-us, .dark .nm-compare th.nm-compare-us { background: linear-gradient(180deg, rgba(0,209,178,0.1), rgba(0,123,255,0.08)); }
-            .nm-compare-tick { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 5px; margin-right: 9px; vertical-align: -3px; background: var(--accent-500); color: white; }
-            .nm-compare thead th.nm-compare-us { border-left: 1px solid var(--accent-200, rgba(0,209,178,0.28)); border-right: 1px solid var(--accent-200, rgba(0,209,178,0.28)); }
-            .nm-compare tbody td.nm-compare-us { border-left: 1px solid var(--accent-200, rgba(0,209,178,0.28)); border-right: 1px solid var(--accent-200, rgba(0,209,178,0.28)); }
-            .nm-compare td.nm-compare-gen { color: var(--text-subtle); }
-            .nm-compare-dash { display: inline-block; width: 10px; height: 2px; border-radius: 2px; margin-right: 11px; vertical-align: 4px; background: var(--border-strong); }
-            /* Clip the section so the scrollable table wrap doesn't bleed horizontal scrollWidth to the document */
-            @media (max-width: 640px) { #compare { overflow-x: clip; } }
-            @media (max-width: 640px) { .nm-live-foot .mono { display: none; } }
+            .nm-solutions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+            @media (max-width: 900px) { .nm-solutions-grid { grid-template-columns: repeat(2, 1fr); } }
+            @media (max-width: 560px) { .nm-solutions-grid { grid-template-columns: 1fr; } }
+            .nm-solution-card { position: relative; display: flex; flex-direction: column; padding: 26px 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; text-decoration: none; transition: transform 0.28s cubic-bezier(0.4,0,0.2,1), box-shadow 0.28s ease, border-color 0.28s ease; overflow: clip; }
+            .nm-solution-card::before { content: ''; position: absolute; top: 0; right: 0; width: 140px; height: 140px; background: radial-gradient(circle at top right, color-mix(in oklab, var(--s) 16%, transparent), transparent 65%); opacity: 0; transition: opacity 0.28s ease; pointer-events: none; }
+            .nm-solution-card:hover { transform: translateY(-3px); box-shadow: 0 22px 48px -20px rgba(15,23,42,0.2); border-color: var(--border-strong); }
+            .nm-solution-card:hover::before { opacity: 1; }
+            .nm-solution-icon { width: 46px; height: 46px; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; background: var(--sbg); color: var(--sfg); margin-bottom: 18px; }
+            .nm-solution-name { font-family: var(--font-display); font-weight: 700; font-size: 18px; letter-spacing: -0.015em; color: var(--text); margin: 0 0 8px; }
+            .nm-solution-body { font-size: 13.5px; line-height: 1.55; color: var(--text-muted); margin: 0 0 18px; flex: 1; }
+            .nm-solution-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--text); }
+            .nm-solution-link svg { transition: transform 0.22s ease; }
+            .nm-solution-card:hover .nm-solution-link svg { transform: translateX(3px); }
         </style>
 
-        <!-- HOW IT WORKS — agency `#process` rail+nodes pattern -->
-        <section id="how" class="py-24" style="background: var(--bg);">
+        <!-- ════════════ PROOF / CASE STUDIES ════════════ -->
+        <section id="proof" class="py-24" style="background: var(--bg-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
             <div class="nm-container">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: flex-start;" class="nm-how-head">
-                    <div>
-                        <span class="eyebrow"><span class="dot"></span> Live in 60 minutes</span>
-                        <h2 class="nm-section-headline" style="margin-top: 14px; margin-bottom: 0;">
-                            Hire your first AI employee<br />
-                            <span class="muted">in an hour.</span>
-                        </h2>
-                    </div>
-                    <div>
-                        <p class="nm-section-sub" style="font-size: 17px; line-height: 1.65; max-width: 50ch;">
-                            Most tools take weeks to scope, train, and deploy. NeoMind ships in four short steps &mdash; your knowledge, your objective, your brand, live by the end of the hour.
-                        </p>
-                    </div>
-                </div>
-
-                <div style="margin-top: 80px; position: relative;">
-                    <div class="nm-process-rail-bg" aria-hidden="true"></div>
-                    <div class="nm-process-rail-fg" aria-hidden="true"></div>
-                    <div class="nm-process-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; position: relative;">
-                        <div class="nm-process-step">
-                            <div class="nm-process-node"><span class="nm-process-node-inner"></span></div>
-                            <div class="nm-process-num">01 · Upload</div>
-                            <h4 class="nm-process-title">Upload your docs</h4>
-                            <p class="nm-process-body">Your website URL, PDFs, handbooks, FAQs. We chunk and embed them automatically &mdash; no schema work.</p>
-                        </div>
-                        <div class="nm-process-step">
-                            <div class="nm-process-node"><span class="nm-process-node-inner"></span></div>
-                            <div class="nm-process-num">02 · Set</div>
-                            <h4 class="nm-process-title">Set the objective &amp; tone</h4>
-                            <p class="nm-process-body">Give the employee a goal to work toward, pick its voice, and set your escalation rules.</p>
-                        </div>
-                        <div class="nm-process-step">
-                            <div class="nm-process-node"><span class="nm-process-node-inner"></span></div>
-                            <div class="nm-process-num">03 · Connect</div>
-                            <h4 class="nm-process-title">Embed / connect</h4>
-                            <p class="nm-process-body">Simon embeds with one line of code. Maeve wires telephony same-day. Connect your calendar, webhooks and email.</p>
-                        </div>
-                        <div class="nm-process-step">
-                            <div class="nm-process-node"><span class="nm-process-node-inner"></span></div>
-                            <div class="nm-process-num">04 · Measure</div>
-                            <h4 class="nm-process-title">Watch the scorecard &amp; refine</h4>
-                            <p class="nm-process-body">Read real conversations, watch the KPIs, expand the Brain. Improvements land across every employee instantly.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SOVEREIGNTY -->
-        <section id="security" class="py-24" style="background: var(--bg-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-            <div class="nm-container">
-                <div class="nm-section-header">
-                    <span class="eyebrow"><span class="dot"></span> Trust &amp; security</span>
+                <div class="nm-section-header" style="max-width: 720px;">
+                    <span class="eyebrow"><span class="dot"></span> In the wild</span>
                     <h2 class="nm-section-headline">
-                        Grounded, private, and<br />
-                        <span class="muted">hosted in Australia.</span>
+                        Real businesses,<br />
+                        <span class="muted">real outcomes.</span>
                     </h2>
                     <p class="nm-section-sub">
-                        Hosted in Sydney on Azure Australia East &mdash; your data never leaves Australia. Your knowledge and conversations are yours, read for retrieval, never used to train shared models. Encrypted in transit and at rest, Privacy Act 1988 aligned.
+                        NeoMind is already running live pilots with Australian businesses. We publish results when they&rsquo;re cleared &mdash; never invented.
                     </p>
                 </div>
-                <!-- [add 2FA/SSO/uptime once shipped] — do NOT claim 2FA, SSO or an uptime SLA until they ship per the go-live programme. -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="nm-trust-card">
-                        <div class="nm-trust-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M2 12h20"/></svg>
-                        </div>
-                        <h3 class="nm-trust-title">Hosted in Sydney &mdash; data stays onshore</h3>
-                        <p class="nm-trust-body"><strong>Hosted in Sydney (Azure Australia East). Your data never leaves Australia. Privacy Act 1988 aligned.</strong> US and EU regions are rolling out for international teams.</p>
-                    </div>
-                    <div class="nm-trust-card">
-                        <div class="nm-trust-icon" style="background: var(--primary-50); color: var(--primary-700);">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-                        </div>
-                        <h3 class="nm-trust-title">Never trained on your data</h3>
-                        <p class="nm-trust-body">Retrieval only &mdash; your knowledge base is read to answer, never used to train shared models. Conversations belong to you.</p>
-                    </div>
-                    <div class="nm-trust-card">
-                        <div class="nm-trust-icon" style="background: var(--accent-50); color: var(--accent-700);">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-                        </div>
-                        <h3 class="nm-trust-title">Grounded &amp; cited</h3>
-                        <p class="nm-trust-body">Every answer traces to a source document. When the answer isn&rsquo;t in your knowledge, the employee refuses to invent one.</p>
-                    </div>
-                    <div class="nm-trust-card">
-                        <div class="nm-trust-icon" style="background: var(--secondary-50); color: var(--secondary-700);">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-                        </div>
-                        <h3 class="nm-trust-title">Security</h3>
-                        <p class="nm-trust-body">TLS 1.3 in transit, encryption at rest, credentials in Key Vault. Additional security controls available on request — contact us.</p>
-                    </div>
+
+                <!-- Logo band — real client logos drop in here once permissions are cleared -->
+                <div class="nm-proof-logos" aria-label="Pilot customers">
+                    <a href="/au/customers/vascali/" class="nm-proof-logo nm-proof-logo--real" aria-label="Vascali — read the story">Vascali</a>
+                    <div class="nm-proof-logo nm-proof-logo--placeholder">Your logo here</div>
+                    <div class="nm-proof-logo nm-proof-logo--placeholder">Your logo here</div>
+                    <div class="nm-proof-logo nm-proof-logo--placeholder">Your logo here</div>
                 </div>
-                <p style="text-align: center; margin-top: 40px; font-size: 13px; color: var(--text-subtle);">
-                    Built by Neomeric, an Australian AI company, since 2015.
+
+                <!-- Case-study cards — first card is a REAL deployment story (Vascali); the rest stay honest placeholders for before/after results. -->
+                <div class="nm-proof-cases">
+                    <a class="nm-proof-case nm-proof-case--real" href="/au/customers/vascali/">
+                        <div class="nm-proof-case-tag">Customer story &middot; Manufacturing &amp; Export</div>
+                        <div class="nm-proof-case-logo" aria-label="Vascali logo placeholder">Vascali</div>
+                        <p class="nm-proof-case-body">A 30-country soap exporter put NeoMind&rsquo;s AI employee Simon on inquiry duty &mdash; answering OEM, private-label and quotation questions around the clock, grounded in its own catalogue.</p>
+                        <span class="nm-proof-case-link">Read the story
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </span>
+                    </a>
+                    <article class="nm-proof-case nm-proof-case--placeholder">
+                        <div class="nm-proof-case-tag">Case study &middot; coming soon</div>
+                        <div class="nm-proof-case-metric">
+                            <span class="nm-proof-before">Before</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                            <span class="nm-proof-after">After</span>
+                        </div>
+                        <p class="nm-proof-case-body">A second cleared pilot result will live here &mdash; with the customer&rsquo;s name and permission.</p>
+                    </article>
+                    <article class="nm-proof-case nm-proof-case--placeholder">
+                        <div class="nm-proof-case-tag">Case study &middot; coming soon</div>
+                        <div class="nm-proof-case-metric">
+                            <span class="nm-proof-before">Before</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                            <span class="nm-proof-after">After</span>
+                        </div>
+                        <p class="nm-proof-case-body">A third real outcome &mdash; published only once the numbers and the logo are cleared by the customer.</p>
+                    </article>
+                </div>
+                <p style="text-align: center; margin-top: 32px; font-size: 13px; color: var(--text-subtle);">
+                    We lead with capability, not borrowed credibility. Pilot results are published as customers clear them.
                 </p>
+
+                <!-- Trust strip — grounded/private/your-region; full detail on /platform/security/ -->
+                <div class="nm-trust-strip">
+                    <span class="nm-trust-pill">Hosted in Sydney (Azure Australia East) &middot; data never leaves Australia</span>
+                    <span class="nm-trust-pill">Privacy Act 1988 aligned</span>
+                    <span class="nm-trust-pill">Never trained on your data</span>
+                    <span class="nm-trust-pill">Grounded &amp; cited &mdash; refuses when it doesn&rsquo;t know</span>
+                    <span class="nm-trust-pill">TLS 1.3 &middot; encrypted at rest &middot; Key Vault</span>
+                </div>
+                <div style="text-align: center; margin-top: 28px; display: flex; flex-direction: column; align-items: center; gap: 14px;">
+                    <a href="/au/platform/security/" class="nm-textlink">
+                        Security &amp; trust
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                    </a>
+                    <p style="margin: 0; font-size: 13px; color: var(--text-subtle);">
+                        Built by Neomeric, an Australian AI company, since 2015.
+                    </p>
+                </div>
             </div>
         </section>
 
-        <!-- ════════════ 11. PRICING — STUB (model TBD; no Solo/Duo/Squad, no real numbers) ════════════ -->
-        <section id="pricing" class="py-24" style="background: var(--bg);">
+        <style>
+            .nm-trust-strip { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 880px; margin: 40px auto 0; }
+            .nm-trust-pill { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; font-size: 13px; font-weight: 500; color: var(--text-muted); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; }
+            .nm-trust-pill::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--accent-500); flex-shrink: 0; }
+            .nm-proof-logos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 880px; margin: 0 auto 40px; }
+            @media (max-width: 640px) { .nm-proof-logos { grid-template-columns: repeat(2, 1fr); } }
+            .nm-proof-logo { display: flex; align-items: center; justify-content: center; height: 72px; border-radius: 14px; font-size: 13px; font-weight: 500; color: var(--text-subtle); }
+            .nm-proof-logo--placeholder { background: var(--surface); border: 1px dashed var(--border-strong); }
+            /* Vascali real entry — neutral wordmark slot (logo file pending), clickable through to the story. */
+            .nm-proof-logo--real { background: var(--surface); border: 1px solid var(--border); color: var(--text-muted); font-family: var(--font-display); font-weight: 700; letter-spacing: -0.01em; text-decoration: none; transition: border-color 220ms, color 220ms, transform 220ms; }
+            .nm-proof-logo--real:hover { border-color: var(--border-strong); color: var(--text); transform: translateY(-2px); }
+            .nm-proof-cases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+            @media (max-width: 880px) { .nm-proof-cases { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; } }
+            .nm-proof-case { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 26px 24px; }
+            .nm-proof-case--placeholder { border-style: dashed; }
+            .nm-proof-case-tag { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 18px; }
+            .nm-proof-case-metric { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; color: var(--text-subtle); }
+            .nm-proof-before, .nm-proof-after { font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: -0.01em; padding: 6px 14px; border-radius: 10px; background: var(--bg-muted); }
+            .nm-proof-after { color: var(--accent-700); background: var(--accent-50); }
+            .dark .nm-proof-after { color: var(--accent-300, #5eead4); background: rgba(0,209,178,0.14); }
+            .nm-proof-case-body { font-size: 13.5px; line-height: 1.55; color: var(--text-muted); margin: 0; }
+            /* Real Vascali deployment-story card — a logo slot + blurb + link, NO before/after metric (deployment story). */
+            .nm-proof-case--real { display: flex; flex-direction: column; text-decoration: none; transition: transform 280ms cubic-bezier(0.4,0,0.2,1), box-shadow 280ms cubic-bezier(0.4,0,0.2,1), border-color 280ms; }
+            .nm-proof-case--real:hover { transform: translateY(-3px); box-shadow: 0 22px 48px -16px rgba(15,23,42,0.18); border-color: var(--border-strong); }
+            .nm-proof-case-logo { display: inline-flex; align-self: flex-start; align-items: center; justify-content: center; min-width: 96px; height: 40px; padding: 0 16px; margin-bottom: 14px; font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: -0.01em; color: var(--text-muted); background: var(--bg-muted); border: 1px dashed var(--border-strong); border-radius: 10px; }
+            .nm-proof-case--real .nm-proof-case-body { margin-bottom: 16px; }
+            .nm-proof-case-link { margin-top: auto; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--text); }
+            .nm-proof-case--real:hover .nm-proof-case-link .arrow { transform: translateX(3px); }
+            .nm-proof-case-link .arrow { transition: transform 220ms cubic-bezier(0.4,0,0.2,1); }
+        </style>
+
+        <!-- ════════════ VISION ════════════ -->
+        <section id="vision" class="py-24" style="background: var(--bg); overflow: clip; position: relative;">
+            <div class="nm-vision-ambient" aria-hidden="true"></div>
+            <div class="nm-container" style="position: relative; z-index: 1;">
+                <div class="nm-vision">
+                    <span class="eyebrow" style="justify-content: center;"><span class="dot"></span> The vision</span>
+                    <h2 class="nm-vision-headline">
+                        Every company will have <span class="grad-text">digital employees.</span><br class="nm-hide-sm" />
+                        NeoMind is the platform that powers them.
+                    </h2>
+                    <p class="nm-vision-sub">
+                        The org chart is about to change. The businesses that win won&rsquo;t just use AI &mdash; they&rsquo;ll <strong>employ</strong> it: roles, objectives, scorecards, one shared memory. We&rsquo;re building the platform to make that ordinary.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .nm-vision-ambient { position: absolute; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(50% 60% at 50% 50%, rgba(0,123,255,0.08), transparent 70%), radial-gradient(40% 50% at 18% 30%, rgba(156,125,185,0.07), transparent 70%), radial-gradient(40% 50% at 82% 70%, rgba(0,209,178,0.07), transparent 70%); }
+            .nm-vision { max-width: 860px; margin: 0 auto; text-align: center; }
+            .nm-vision-headline { font-family: var(--font-display); font-weight: 700; font-size: clamp(30px, 4.4vw, 52px); line-height: 1.08; letter-spacing: -0.025em; margin: 16px 0 22px; text-wrap: balance; color: var(--text); }
+            .nm-vision-sub { font-size: 18px; line-height: 1.65; color: var(--text-muted); max-width: 60ch; margin: 0 auto; }
+            .nm-vision-sub strong { color: var(--text); font-weight: 600; }
+        </style>
+
+        <!-- ════════════ PRICING TEASER — compact; full tiers live on /pricing/ ════════════ -->
+        <section id="pricing" class="py-24" style="background: var(--bg-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
             <div class="nm-container">
-                <div class="nm-section-header">
+                <div class="nm-section-header" style="margin-bottom: 36px;">
                     <span class="eyebrow"><span class="dot"></span> Pricing</span>
                     <h2 class="nm-section-headline">
-                        Simple pricing,<br />
-                        <span class="muted">per AI employee.</span>
+                        Hire your AI workforce.<br />
+                        <span class="muted">From one employee to the whole squad.</span>
                     </h2>
+                    <p class="nm-section-sub">
+                        Simple plans, no procurement call. Pay only for what you use beyond the included allowance &mdash; 14-day money-back, cancel any time.
+                    </p>
                 </div>
 
-                <div class="nm-price-stub" aria-label="Pricing — coming soon">
-                    <div class="nm-price-stub-glow" aria-hidden="true"></div>
-                    <div class="nm-price-stub-inner">
-                        <span class="nm-price-stub-tag">Pricing</span>
-                        <div class="nm-price-stub-amount">
-                            <span class="nm-price-stub-from">from</span>
-                            <span class="nm-price-stub-num">$XX</span>
-                            <span class="nm-price-stub-per">AUD / mo &middot; per AI employee</span>
-                        </div>
-                        <p class="nm-price-stub-sub">14-day money-back. No credit card to start. Add employees as your team grows.</p>
-                        <!-- [pricing model TBD — Haseeb to confirm. Per-employee / usage tiers under design. No Solo/Duo/Squad. Currency: USD on / (intl), EUR on /es/, AUD on /au/.] -->
-                        <a href="https://app.neomindhub.com/signup" class="btn btn-primary" data-cta="pricing-start-trial" style="margin-top: 8px;">
-                            Start free trial
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                <div class="nm-price-teaser">
+                    <div class="nm-price-teaser-tiers">
+                        <div class="nm-price-teaser-tier"><span class="nm-price-teaser-name">Solo</span><span class="nm-price-teaser-note">One employee</span></div>
+                        <div class="nm-price-teaser-tier nm-price-teaser-tier--pop"><span class="nm-price-teaser-flag">Most popular</span><span class="nm-price-teaser-name">Duo</span><span class="nm-price-teaser-note">Any two</span></div>
+                        <div class="nm-price-teaser-tier"><span class="nm-price-teaser-name">Squad</span><span class="nm-price-teaser-note">All three + voice</span></div>
+                    </div>
+                    <div class="nm-price-teaser-foot">
+                        <span class="nm-price-teaser-from">Plans from <strong>$99 AUD</strong>/mo</span>
+                        <a href="/au/pricing/" class="nm-textlink">
+                            See all plans
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
                         </a>
                     </div>
                 </div>
@@ -1908,16 +2100,17 @@
         </section>
 
         <style>
-            .nm-price-stub { position: relative; overflow: clip; max-width: 620px; margin: 0 auto; }
-            .nm-price-stub-glow { position: absolute; inset: -40px; z-index: 0; background: radial-gradient(60% 70% at 50% 0%, rgba(0,123,255,0.16), transparent 70%), radial-gradient(60% 70% at 50% 100%, rgba(0,209,178,0.14), transparent 70%); filter: blur(20px); }
-            .nm-price-stub-inner { position: relative; z-index: 1; text-align: center; background: var(--surface); border: 1px solid var(--border); border-radius: 24px; padding: 44px 36px; box-shadow: 0 28px 70px -24px rgba(15,23,42,0.2), 0 8px 22px -10px rgba(15,23,42,0.08); }
-            .dark .nm-price-stub-inner { box-shadow: 0 28px 70px -24px rgba(0,0,0,0.5); }
-            .nm-price-stub-tag { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-subtle); padding: 5px 12px; border: 1px solid var(--border); border-radius: 999px; margin-bottom: 24px; }
-            .nm-price-stub-amount { display: flex; flex-direction: column; align-items: center; gap: 4px; margin-bottom: 18px; }
-            .nm-price-stub-from { font-size: 14px; font-weight: 500; color: var(--text-subtle); }
-            .nm-price-stub-num { font-family: var(--font-display); font-weight: 800; font-size: clamp(56px, 9vw, 76px); line-height: 1; letter-spacing: -0.03em; background: linear-gradient(135deg, var(--primary-500), var(--secondary-500), var(--accent-500)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-            .nm-price-stub-per { font-size: 14px; font-weight: 500; color: var(--text-muted); }
-            .nm-price-stub-sub { font-size: 14.5px; line-height: 1.6; color: var(--text-muted); max-width: 42ch; margin: 0 auto 28px; }
+            .nm-price-teaser { max-width: 880px; margin: 0 auto; }
+            .nm-price-teaser-tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+            @media (max-width: 620px) { .nm-price-teaser-tiers { grid-template-columns: 1fr; } }
+            .nm-price-teaser-tier { position: relative; display: flex; flex-direction: column; gap: 4px; padding: 22px 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; }
+            .nm-price-teaser-tier--pop { border-color: color-mix(in oklab, var(--secondary-500) 42%, var(--border)); box-shadow: 0 16px 40px -22px rgba(0,123,255,0.45); }
+            .nm-price-teaser-flag { position: absolute; top: -11px; left: 24px; font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 11px; border-radius: 999px; color: white; background: linear-gradient(135deg, var(--secondary-500), var(--accent-500)); }
+            .nm-price-teaser-name { font-family: var(--font-display); font-weight: 700; font-size: 20px; letter-spacing: -0.015em; color: var(--text); }
+            .nm-price-teaser-note { font-size: 13px; color: var(--text-subtle); }
+            .nm-price-teaser-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 18px; margin-top: 28px; }
+            .nm-price-teaser-from { font-size: 14.5px; color: var(--text-muted); }
+            .nm-price-teaser-from strong { color: var(--text); font-weight: 700; }
         </style>
 
         <!-- FAQ — agency `.nm-faq-*` accordion pattern, 2-col layout -->

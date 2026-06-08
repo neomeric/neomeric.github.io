@@ -21,6 +21,11 @@ class FooterSection extends HTMLElement {
     // Legal pages are root-only; all locales link to /privacy.html etc.
     const legalBase = "/";
 
+    // Company-column base: au + intl have their own company/customers/contact
+    // pages (au under /au/, intl under /), so they use L.path. es has no
+    // localized company pages yet, so it falls back to the root (intl) pages.
+    const companyBase = (L.code === "es") ? "/" : L.path;
+
     // Footer column headings + link labels resolve from the locale; English
     // fallback keeps intl working if the locale table fails to load.
     const f = Object.assign(
@@ -62,10 +67,13 @@ class FooterSection extends HTMLElement {
         : "") +
       "<li><a href=\"" + L.path + "#faq\">" + f.faq + "</a></li>" +
       "</ul></div>" +
+      // Company links are locale-prefixed via companyBase so au resolves to
+      // /au/company/, /au/customers/, /au/contact/ (those AU twins exist); intl
+      // to /company/ etc.; es falls back to the root pages.
       "<div><h4>" + f.company + "</h4><ul>" +
-      "<li><a href=\"/company/\">" + f.about + "</a></li>" +
-      "<li><a href=\"/customers/\">" + f.customers + "</a></li>" +
-      "<li><a href=\"/contact/\">" + f.contact + "</a></li>" +
+      "<li><a href=\"" + companyBase + "company/\">" + f.about + "</a></li>" +
+      "<li><a href=\"" + companyBase + "customers/\">" + f.customers + "</a></li>" +
+      "<li><a href=\"" + companyBase + "contact/\">" + f.contact + "</a></li>" +
       "</ul></div>" +
       "<div><h4>" + f.account + "</h4><ul>" +
       "<li><a href=\"https://app.neomindhub.com/signup\">" + f.startTrial + "</a></li>" +

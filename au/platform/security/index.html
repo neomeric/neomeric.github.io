@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en-AU" class="scroll-smooth">
+
+<head>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent','default',{
+        ad_storage:'denied', analytics_storage:'denied',
+        ad_user_data:'denied', ad_personalization:'denied',
+        functionality_storage:'granted', security_storage:'granted',
+        wait_for_update: 500
+      });
+      try { var c=document.cookie.match(/(?:^|; )nm_consent=([^;]+)/);
+        if(c){ var v=decodeURIComponent(c[1]);
+          if(v==='granted'){ gtag('consent','update',{ad_storage:'granted',analytics_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'}); }
+        }
+      } catch(e){}
+    </script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NHDLXJCG');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Security &amp; Trust | NeoMind</title>
+    <meta name="description"
+        content="NeoMind is hosted in Sydney (Azure Australia East) — your data never leaves Australia. Privacy Act 1988 aligned, tenant isolation, encryption in transit and at rest, you own your data, never trains shared models. Certifications underway.">
+    <link rel="canonical" href="https://neomindhub.com/au/platform/security/">
+    <link rel="alternate" hreflang="en"        href="https://neomindhub.com/platform/security/" />
+    <link rel="alternate" hreflang="en-au"     href="https://neomindhub.com/au/platform/security/" />
+    <link rel="alternate" hreflang="x-default" href="https://neomindhub.com/platform/security/" />
+    <meta property="og:title" content="Security &amp; Trust">
+    <meta property="og:description" content="Hosted in Sydney (Azure Australia East) — your data never leaves Australia. Privacy Act 1988 aligned, tenant isolation, encryption in transit and at rest, you own your data. Certifications underway.">
+    <meta property="og:url" content="https://neomindhub.com/au/platform/security/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://neomindhub.com/images/logo1.png">
+    <meta property="og:site_name" content="NeoMind">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Security &amp; Trust">
+    <meta name="twitter:description" content="Hosted in Sydney (Azure Australia East) — your data never leaves Australia. Privacy Act 1988 aligned, tenant isolation, encryption in transit and at rest, you own your data. Certifications underway.">
+    <meta name="twitter:image" content="https://neomindhub.com/images/logo1.png">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/neomeric-tokens.css">
+    <link rel="stylesheet" href="/css/content.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="/js/locales.js"></script>
+    <script>window.NM_LOCALE = "au";</script>
+    <script src="/components/navbar-section.js" type="module"></script>
+    <script src="/components/footer-section.js" type="module"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://neomindhub.com/au/" },
+        { "@type": "ListItem", "position": 2, "name": "Platform", "item": "https://neomindhub.com/au/platform/" },
+        { "@type": "ListItem", "position": 3, "name": "Security & Trust", "item": "https://neomindhub.com/au/platform/security/" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Security & Trust",
+      "description": "NeoMind is hosted in Sydney (Azure Australia East) — your data never leaves Australia. Privacy Act 1988 aligned, with tenant isolation, encryption in transit and at rest, you own your data, and it never trains shared models. Certifications are underway.",
+      "inLanguage": "en-AU",
+      "url": "https://neomindhub.com/au/platform/security/",
+      "isPartOf": { "@type": "WebSite", "name": "NeoMind", "url": "https://neomindhub.com/" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Neomeric Pty Ltd",
+        "logo": { "@type": "ImageObject", "url": "https://neomindhub.com/images/logo1.png" }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where is my data hosted?",
+          "acceptedAnswer": { "@type": "Answer", "text": "In Australia. NeoMind runs in Microsoft Azure's Australia East region (Sydney), and your knowledge and conversations stay onshore — your data never leaves Australia. Our handling is aligned with the Australian Privacy Principles under the Privacy Act 1988." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data used to train AI models?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Your knowledge isn't used to train models that are shared with other customers. It stays inside your own tenant and powers only your employees." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data isolated from other customers?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Each customer's knowledge and conversations are isolated to their own tenant, so one customer's data is never visible to another." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I delete my data?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. You own your knowledge and can update or delete sources whenever you like, and request deletion of your data. You stay in control of what the Brain holds." }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you SOC 2 or ISO 27001 certified?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Formal certification is underway. We build to those controls today — encryption, isolation, access control and retention — and we'll publish certifications when the independent audits complete, rather than claim them before then." }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* ── Scoped to this Platform page (no shared-file edits) ── */
+        .pf-hero { padding: 84px 0 56px; background: var(--bg-muted); border-bottom: 1px solid var(--border); position: relative; overflow: clip; }
+        @media (max-width: 768px) { .pf-hero { padding: 64px 0 44px; } }
+        .pf-hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
+        @media (max-width: 920px) { .pf-hero-grid { grid-template-columns: 1fr; gap: 40px; } }
+        .pf-hero h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(38px, 5vw, 62px); line-height: 1.03; letter-spacing: -0.03em; margin: 18px 0 20px; text-wrap: balance; color: var(--text); }
+        .pf-hero-lede { font-size: 19px; line-height: 1.6; color: var(--text-muted); max-width: 56ch; margin: 0 0 30px; }
+        .pf-hero-ambient { position: absolute; inset: 0; z-index: 0; pointer-events: none; background:
+            radial-gradient(40% 50% at 80% 16%, rgba(0,123,255,0.13), transparent 70%),
+            radial-gradient(36% 44% at 6% 90%, rgba(0,209,178,0.10), transparent 70%); }
+        .pf-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+        .btn-gradient { background: var(--gradient-brand); color: white; background-size: 200% 100%; box-shadow: 0 8px 24px rgba(0,123,255,0.22); }
+        .btn-gradient:hover { background-position: right center; transform: translateY(-1px); box-shadow: 0 12px 32px rgba(0,123,255,0.32); }
+        .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border-strong); }
+        .btn-ghost:hover { border-color: var(--text); transform: translateY(-1px); }
+
+        /* Signature: animated shield with check-marks lighting up */
+        .pf-shield-wrap { position: relative; display: flex; align-items: center; justify-content: center; padding: 16px; }
+        .pf-shield { position: relative; width: min(300px, 80%); }
+        .pf-shield-svg { width: 100%; height: auto; display: block; filter: drop-shadow(0 24px 50px rgba(0,123,255,0.28)); }
+        .pf-shield-ring { transform-origin: center; }
+        .pf-shield[data-revealed] .pf-shield-ring { animation: pf-ring 3.2s ease-out infinite; }
+        @keyframes pf-ring { 0% { opacity: 0.5; r: 96px; } 100% { opacity: 0; r: 130px; } }
+        .pf-tick { opacity: 0; }
+        .pf-shield[data-revealed] .pf-tick { animation: pf-tick-in 500ms ease forwards; }
+        .pf-shield[data-revealed] .pf-tick:nth-of-type(1) { animation-delay: 200ms; }
+        .pf-shield[data-revealed] .pf-tick:nth-of-type(2) { animation-delay: 360ms; }
+        .pf-shield[data-revealed] .pf-tick:nth-of-type(3) { animation-delay: 520ms; }
+        @keyframes pf-tick-in { from { opacity: 0; transform: scale(0.6); } to { opacity: 1; transform: scale(1); } }
+        .pf-shield-chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 18px; }
+        .pf-shield-chip { font-size: 11.5px; font-weight: 600; padding: 5px 12px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--text-muted); }
+
+        .pf-section { padding: 84px 0; background: var(--bg); }
+        .pf-section.alt { background: var(--bg-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .pf-head { max-width: 720px; margin: 0 0 44px; }
+
+        /* Posture cards */
+        .pf-posture { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        @media (max-width: 920px) { .pf-posture { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 560px) { .pf-posture { grid-template-columns: 1fr; } }
+        .pf-pcard { padding: 26px; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; }
+        .pf-pcard-ico { width: 46px; height: 46px; border-radius: 13px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 16px; background: var(--secondary-50); color: var(--secondary-700); }
+        .pf-pcard h3 { font-family: var(--font-display); font-weight: 700; font-size: 18px; letter-spacing: -0.015em; color: var(--text); margin: 0 0 8px; }
+        .pf-pcard p { font-size: 14px; line-height: 1.6; color: var(--text-muted); margin: 0; }
+
+        /* Certifications band */
+        .pf-cert { display: flex; align-items: flex-start; gap: 20px; padding: 28px; background: var(--surface); border: 1px solid var(--border); border-radius: 22px; }
+        .pf-cert-ico { width: 50px; height: 50px; border-radius: 14px; display: inline-flex; align-items: center; justify-content: center; background: var(--primary-50); color: var(--primary-700); flex-shrink: 0; }
+        .pf-cert-body h3 { font-family: var(--font-display); font-weight: 700; font-size: 20px; color: var(--text); margin: 0 0 8px; }
+        .pf-cert-body p { font-size: 14.5px; line-height: 1.6; color: var(--text-muted); margin: 0 0 14px; }
+        .pf-cert-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+        .pf-cert-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 600; padding: 6px 13px; border-radius: 999px; background: var(--bg-muted); color: var(--text-muted); border: 1px solid var(--border); }
+        .pf-cert-tag .pf-prog { width: 7px; height: 7px; border-radius: 50%; background: #f59e0b; }
+
+        .pf-faq-wrap { max-width: 760px; margin: 0 auto; }
+
+        .pf-reveal { opacity: 0; transform: translateY(18px); transition: opacity 620ms ease, transform 620ms cubic-bezier(0.16,1,0.3,1); }
+        .pf-reveal.is-in { opacity: 1; transform: translateY(0); }
+
+        @media (prefers-reduced-motion: reduce) {
+            .pf-reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+            .pf-tick { opacity: 1 !important; }
+            .pf-shield[data-revealed] .pf-shield-ring { animation: none !important; }
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300 text-gray-900 dark:text-white">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHDLXJCG" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <a href="#main"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-gray-900 focus:rounded-lg focus:shadow-lg">Skip to content</a>
+
+    <navbar-section data-locale="au"></navbar-section>
+
+    <main id="main">
+        <!-- Hero with animated shield -->
+        <section class="pf-hero">
+            <div class="pf-hero-ambient" aria-hidden="true"></div>
+            <div class="nm-container">
+                <nav class="nm-breadcrumb" aria-label="Breadcrumb">
+                    <a href="/au/">Home</a>
+                    <span class="sep" aria-hidden="true">/</span>
+                    <a href="/au/platform/">Platform</a>
+                    <span class="sep" aria-hidden="true">/</span>
+                    <span aria-current="page">Security &amp; Trust</span>
+                </nav>
+                <div class="pf-hero-grid">
+                    <div>
+                        <span class="eyebrow"><span class="dot"></span> The trust</span>
+                        <h1>Hosted in Sydney. <span class="text-gradient-brand">Your data never leaves Australia.</span></h1>
+                        <p class="pf-hero-lede">
+                            NeoMind runs in Microsoft Azure's Australia East region (Sydney) and your knowledge stays
+                            onshore &mdash; aligned with the Privacy Act 1988. We treat your knowledge the way it
+                            deserves to be treated: isolated to your own tenant, encrypted in transit and at rest, never
+                            used to train models shared with anyone else, and yours to update or delete whenever you
+                            choose.
+                        </p>
+                        <div class="pf-actions">
+                            <a href="https://app.neomindhub.com/signup" class="btn btn-gradient" data-cta="sec-hero-start">
+                                Start free
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="/au/contact/" class="btn btn-ghost" data-cta="sec-hero-contact">Talk to us</a>
+                        </div>
+                    </div>
+
+                    <!-- Signature animated shield -->
+                    <div class="pf-shield-wrap pf-reveal">
+                        <div class="pf-shield" data-pf-shield role="img"
+                            aria-label="A security shield with three confirmed protections: isolation, encryption and ownership.">
+                            <svg class="pf-shield-svg" viewBox="0 0 240 240" fill="none" aria-hidden="true">
+                                <defs>
+                                    <linearGradient id="shieldGrad" x1="0" y1="0" x2="1" y2="1">
+                                        <stop offset="0" stop-color="var(--secondary-500)"/>
+                                        <stop offset="0.55" stop-color="var(--primary-500)"/>
+                                        <stop offset="1" stop-color="var(--accent-500)"/>
+                                    </linearGradient>
+                                </defs>
+                                <circle class="pf-shield-ring" cx="120" cy="120" r="96" fill="none" stroke="var(--secondary-500)" stroke-width="1.5" opacity="0"/>
+                                <path d="M120 36 L186 62 V120 C186 164 156 188 120 204 C84 188 54 164 54 120 V62 Z" fill="url(#shieldGrad)" opacity="0.95"/>
+                                <path d="M120 36 L186 62 V120 C186 164 156 188 120 204 C84 188 54 164 54 120 V62 Z" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+                                <g class="pf-tick" transform="translate(120 92)"><circle r="15" fill="rgba(255,255,255,0.95)"/><path d="M-6 0 l4 4 l8 -8" fill="none" stroke="var(--secondary-700)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+                                <g class="pf-tick" transform="translate(98 130)"><circle r="13" fill="rgba(255,255,255,0.95)"/><path d="M-5 0 l3.5 3.5 l7 -7" fill="none" stroke="var(--primary-700)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></g>
+                                <g class="pf-tick" transform="translate(142 130)"><circle r="13" fill="rgba(255,255,255,0.95)"/><path d="M-5 0 l3.5 3.5 l7 -7" fill="none" stroke="var(--accent-700)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="pf-shield-chips pf-reveal" style="margin-top: 28px;">
+                    <span class="pf-shield-chip">Hosted in Sydney (Azure Australia East)</span>
+                    <span class="pf-shield-chip">Privacy Act 1988 aligned</span>
+                    <span class="pf-shield-chip">Tenant isolation</span>
+                    <span class="pf-shield-chip">Encryption in transit &amp; at rest</span>
+                    <span class="pf-shield-chip">You own your data</span>
+                    <span class="pf-shield-chip">Never trained on shared models</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Posture cards (real only) -->
+        <section class="pf-section">
+            <div class="nm-container">
+                <div class="pf-head pf-reveal">
+                    <span class="eyebrow"><span class="dot"></span> Our posture</span>
+                    <h2 class="nm-section-headline">What we actually do<br /><span class="muted">to protect your knowledge.</span></h2>
+                    <p class="nm-section-sub">
+                        No security theatre &mdash; just the controls that matter, stated plainly.
+                    </p>
+                </div>
+                <div class="pf-posture pf-reveal">
+                    <div class="pf-pcard">
+                        <span class="pf-pcard-ico" style="background: var(--primary-50); color: var(--primary-700);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="11" r="3"/><path d="M12 22s7-5.2 7-11a7 7 0 0 0-14 0c0 5.8 7 11 7 11z"/></svg></span>
+                        <h3>Data hosted in Australia</h3>
+                        <p>NeoMind runs in Microsoft Azure's Australia East region (Sydney). Your knowledge and conversations stay onshore &mdash; your data never leaves Australia.</p>
+                    </div>
+                    <div class="pf-pcard">
+                        <span class="pf-pcard-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+                        <h3>Tenant isolation</h3>
+                        <p>Each customer's knowledge and conversations live in their own tenant. One customer's data is never visible to another.</p>
+                    </div>
+                    <div class="pf-pcard">
+                        <span class="pf-pcard-ico" style="background: var(--accent-50); color: var(--accent-700);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
+                        <h3>Encryption</h3>
+                        <p>Your data is encrypted in transit and at rest, so it's protected both as it moves and where it's stored.</p>
+                    </div>
+                    <div class="pf-pcard">
+                        <span class="pf-pcard-ico" style="background: var(--primary-50); color: var(--primary-700);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+                        <h3>You own your data</h3>
+                        <p>Your knowledge is yours. It isn't used to train models shared with other customers &mdash; it powers only your own employees.</p>
+                    </div>
+                    <div class="pf-pcard">
+                        <span class="pf-pcard-ico" style="background: var(--secondary-50); color: var(--secondary-700);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+                        <h3>Retention &amp; deletion</h3>
+                        <p>You stay in control of what the Brain holds. Update or delete sources whenever you like, and request deletion of your data.</p>
+                    </div>
+                    <div class="pf-pcard">
+                        <span class="pf-pcard-ico" style="background: var(--accent-50); color: var(--accent-700);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 11l-3 3-1.5-1.5"/></svg></span>
+                        <h3>Access controls</h3>
+                        <p>Owners decide who in their organisation can manage the Brain, agents and settings &mdash; access is scoped, not open to all.</p>
+                    </div>
+                    <div class="pf-pcard">
+                        <span class="pf-pcard-ico" style="background: var(--primary-50); color: var(--primary-700);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span>
+                        <h3>Model transparency</h3>
+                        <p>Answers are grounded in your knowledge and cite their source, and guardrails keep employees inside scope &mdash; so you can see how a reply was reached.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications — underway, honest -->
+        <section class="pf-section alt">
+            <div class="nm-container" style="max-width: 920px;">
+                <div class="pf-cert pf-reveal">
+                    <span class="pf-cert-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M9 14l-1.5 7L12 19l4.5 2L15 14"/></svg></span>
+                    <div class="pf-cert-body">
+                        <h3>Certifications &mdash; underway</h3>
+                        <p>
+                            We build to recognised security controls today &mdash; encryption, isolation, access
+                            control and retention. Formal certification runs through independent audits that take time,
+                            so we won't claim a badge we don't yet hold. We'll publish certifications when those audits
+                            complete. If you need our current posture for a procurement or vendor review,
+                            <a href="/au/contact/" style="color: var(--primary-700); text-decoration: underline; text-underline-offset: 2px;">get in touch</a>.
+                        </p>
+                        <p style="font-size: 14.5px; line-height: 1.6; color: var(--text-muted); margin: 0 0 14px;">
+                            For Australian customers, our data handling is aligned with the Australian Privacy Principles
+                            under the <strong>Privacy Act 1988</strong>, and your data is hosted onshore in Azure
+                            Australia East.
+                        </p>
+                        <div class="pf-cert-tags">
+                            <span class="pf-cert-tag"><span class="pf-prog" aria-hidden="true"></span> SOC 2 &middot; in progress</span>
+                            <span class="pf-cert-tag"><span class="pf-prog" aria-hidden="true"></span> ISO 27001 &middot; in progress</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The bright line (safety) -->
+        <section class="pf-section">
+            <div class="nm-container" style="max-width: 760px;">
+                <div class="pf-head pf-reveal" style="margin-bottom: 0;">
+                    <span class="eyebrow"><span class="dot"></span> Safe by design</span>
+                    <h2 class="nm-section-headline">Helpful, never<br /><span class="muted">reckless.</span></h2>
+                    <p class="nm-section-sub" style="margin-top: 14px;">
+                        Security isn't only about data. Your employees stay inside the guardrails you set: they ground
+                        answers in your knowledge, they don't invent, and they don't make binding commitments on your
+                        behalf. When a conversation needs human judgement, the employee escalates to a person. The
+                        bright line between routine work and human judgement is what makes deploying an AI employee
+                        safe &mdash; and it's measured, so you can see it being held. See how on
+                        <a href="/au/platform/measurable/" style="color: var(--primary-700); text-decoration: underline; text-underline-offset: 2px;">Measurable</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="pf-section alt">
+            <div class="nm-container">
+                <div class="pf-faq-wrap">
+                    <div class="pf-head pf-reveal" style="margin-bottom: 28px;">
+                        <span class="eyebrow"><span class="dot"></span> Questions</span>
+                        <h2 class="nm-section-headline" style="font-size: clamp(30px, 4vw, 46px);">About security</h2>
+                    </div>
+                    <div class="nm-faq-list pf-reveal" id="nm-faq-list">
+                        <div class="nm-faq-item open">
+                            <button class="nm-faq-q" aria-expanded="true" type="button">
+                                <span class="nm-faq-q-text">Where is my data hosted?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a"><p>In Australia. NeoMind runs in Microsoft Azure's Australia East region (Sydney), and your knowledge and conversations stay onshore &mdash; your data never leaves Australia. Our handling is aligned with the Australian Privacy Principles under the Privacy Act 1988.</p></div>
+                        </div>
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">Is my data used to train AI models?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a"><p>No. Your knowledge isn't used to train models that are shared with other customers. It stays inside your own tenant and powers only your employees.</p></div>
+                        </div>
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">Is my data isolated from other customers?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a"><p>Yes. Each customer's knowledge and conversations are isolated to their own tenant, so one customer's data is never visible to another.</p></div>
+                        </div>
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">Can I delete my data?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a"><p>Yes. You own your knowledge and can update or delete sources whenever you like, and request deletion of your data. You stay in control of what the Brain holds.</p></div>
+                        </div>
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">Are you SOC 2 or ISO 27001 certified?</span>
+                                <span class="nm-faq-toggle">+</span>
+                            </button>
+                            <div class="nm-faq-a"><p>Formal certification is underway. We build to those controls today &mdash; encryption, isolation, access control and retention &mdash; and we'll publish certifications when the independent audits complete, rather than claim them before then.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA band -->
+        <section style="background: var(--bg); padding: 80px 0;">
+            <div class="nm-container" style="max-width: 920px;">
+                <div class="nm-cta-band">
+                    <div aria-hidden="true" style="position: absolute; inset: 0; background: radial-gradient(60% 80% at 30% 30%, rgba(255,255,255,0.18), transparent 60%);"></div>
+                    <div aria-hidden="true" style="position: absolute; top: -100px; right: -100px; width: 360px; height: 360px; border-radius: 50%; background: rgba(255,255,255,0.06);"></div>
+                    <div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; gap: 48px; flex-wrap: wrap;">
+                        <div style="max-width: 40ch;">
+                            <span style="display: inline-block; padding: 5px 12px; background: rgba(255,255,255,0.18); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 9999px; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 20px;">Get started</span>
+                            <h2 style="font-family: var(--font-display); font-weight: 700; font-size: clamp(32px, 4.2vw, 52px); line-height: 1.05; letter-spacing: -0.025em; margin: 0 0 18px; text-wrap: balance;">
+                                Deploy an AI workforce you can trust.
+                            </h2>
+                            <p style="font-size: 18px; line-height: 1.55; opacity: 0.92; margin: 0; max-width: 46ch;">
+                                Your data isolated, encrypted and yours. See our <a href="/au/pricing/" style="color: white; text-decoration: underline;">plans</a> or
+                                <a href="/au/contact/" style="color: white; text-decoration: underline;">talk to us</a>.
+                            </p>
+                        </div>
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                            <a href="https://app.neomindhub.com/signup" class="btn" style="background: white; color: var(--gray-900); padding: 16px 28px; font-size: 15px;" data-cta="sec-cta-signup">
+                                Start free
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="/au/platform/" class="btn" style="background: rgba(255,255,255,0.12); color: white; border: 1px solid rgba(255,255,255,0.28); padding: 16px 28px; font-size: 15px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);" data-cta="sec-cta-platform">
+                                Back to Platform
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer-section data-locale="au"></footer-section>
+
+    <button id="darkModeToggle" type="button" aria-label="Toggle dark mode"
+        class="fixed bottom-6 right-6 p-3 bg-gray-800 dark:bg-white rounded-full shadow-lg z-50 hover:scale-105 transition-transform">
+        <svg class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+        </svg>
+    </button>
+
+    <script>
+        (function () {
+            var html = document.documentElement;
+            if (localStorage.getItem('darkMode') === 'true') html.classList.add('dark');
+            var btn = document.getElementById('darkModeToggle');
+            if (btn) btn.addEventListener('click', function () {
+                html.classList.toggle('dark');
+                localStorage.setItem('darkMode', html.classList.contains('dark'));
+            });
+        })();
+        (function () {
+            document.querySelectorAll('#nm-faq-list .nm-faq-q').forEach(function (q) {
+                q.addEventListener('click', function () {
+                    var item = q.closest('.nm-faq-item');
+                    var open = item.classList.toggle('open');
+                    q.setAttribute('aria-expanded', open ? 'true' : 'false');
+                });
+            });
+        })();
+        (function () {
+            var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            var reveals = document.querySelectorAll('.pf-reveal');
+            var shield = document.querySelector('[data-pf-shield]');
+            function showAll() {
+                reveals.forEach(function (el) { el.classList.add('is-in'); });
+                if (shield) shield.setAttribute('data-revealed', '');
+            }
+            if (reduce || !('IntersectionObserver' in window)) { showAll(); return; }
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('is-in');
+                        io.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.18 });
+            reveals.forEach(function (el) { io.observe(el); });
+            if (shield) {
+                var io2 = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) { if (e.isIntersecting) { shield.setAttribute('data-revealed', ''); io2.disconnect(); } });
+                }, { threshold: 0.3 });
+                io2.observe(shield);
+            }
+        })();
+    </script>
+<script src="/js/cookie-consent.js" defer></script>
+</body>
+
+</html>

@@ -49,31 +49,26 @@ class NavbarSection extends HTMLElement {
       return "<option value=\"" + code + "\"" + selected + ">" + loc.switcherLabel + "</option>";
     }).join("");
 
-    // Nav links. intl now routes to dedicated hub PAGES (the full content build
-    // landed): Platform / AI Employees / Solutions / Pricing / Resources,
-    // each an absolute page link (no #anchors). Compare folds under Resources.
-    // Company/About is no longer a top-level nav item — it lives in the footer.
-    // au/es keep their existing scroll-anchor + gated-hub behaviour unchanged,
-    // because their localized hub pages don't exist yet. The same link set drives
-    // both the desktop ul and the mobile panel.
+    // Nav links. intl + au now route to dedicated hub PAGES (the full content
+    // build landed for both): Platform / AI Employees / Solutions / Pricing /
+    // Resources, each a locale-prefixed page link (no #anchors). Compare folds
+    // under Resources. Company/About is no longer a top-level nav item — it
+    // lives in the footer. es keeps its limited scroll-anchor nav because its
+    // localized hub pages don't exist yet (es only has homepage + pricing). The
+    // same link set drives both the desktop ul and the mobile panel.
     let navItems;
-    if (L.code === "intl") {
+    if (L.code === "intl" || L.code === "au") {
       navItems =
-        "<li><a href=\"/platform/\">" + nav.platform + "</a></li>" +
-        "<li><a href=\"/employees/\">" + nav.employees + "</a></li>" +
-        "<li><a href=\"/solutions/\">" + nav.solutions + "</a></li>" +
-        "<li><a href=\"/pricing/\">" + nav.pricing + "</a></li>" +
-        "<li><a href=\"/resources/\">" + nav.resources + "</a></li>";
+        "<li><a href=\"" + L.path + "platform/\">" + nav.platform + "</a></li>" +
+        "<li><a href=\"" + L.path + "employees/\">" + nav.employees + "</a></li>" +
+        "<li><a href=\"" + L.path + "solutions/\">" + nav.solutions + "</a></li>" +
+        "<li><a href=\"" + L.path + "pricing/\">" + nav.pricing + "</a></li>" +
+        "<li><a href=\"" + L.path + "resources/\">" + nav.resources + "</a></li>";
     } else {
-      const gated = (L.code === "au");
-      const gatedLinks = gated
-        ? "<li><a href=\"" + L.path + "resources/\">" + nav.resources + "</a></li>" +
-          "<li><a href=\"" + L.path + "compare/\">" + nav.compare + "</a></li>"
-        : "";
+      // es: limited nav — homepage scroll-anchors + pricing only.
       navItems =
         "<li><a href=\"" + L.path + "#measurable\">" + nav.product + "</a></li>" +
-        "<li><a href=\"" + L.path + "#pricing\">" + nav.pricing + "</a></li>" +
-        gatedLinks;
+        "<li><a href=\"" + L.path + "pricing/\">" + nav.pricing + "</a></li>";
     }
 
     const markup =
