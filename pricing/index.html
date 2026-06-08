@@ -341,7 +341,7 @@
                     </p>
                 </div>
 
-                <div class="nm-price-grid nm-reveal">
+                <div class="nm-price-grid">
                     <!-- SOLO — per-pick selector (Simon / Hugo / Maeve) -->
                     <div class="nm-price-card" data-tier="solo">
                         <div class="nm-price-tier">Solo</div>
@@ -399,7 +399,7 @@
                             <li><span class="nm-price-tick"></span><span><strong>1,500</strong> website chats / mo</span></li>
                             <li><span class="nm-price-tick"></span><span><strong>200</strong> phone calls / mo</span></li>
                             <li><span class="nm-price-tick"></span><span><strong>2,000</strong> staff queries / mo</span></li>
-                            <li><span class="nm-price-tick"></span><span>Twilio + Calendar (Slack live, Teams soon)</span></li>
+                            <li><span class="nm-price-tick"></span><span>Phone calls + Calendar (Slack live, Teams soon)</span></li>
                             <li><span class="nm-price-tick"></span><span>Priority support</span></li>
                         </ul>
                         <div class="nm-price-overage"><strong>$327</strong> if hired individually &mdash; Squad is $299, ~10% off.</div>
@@ -440,7 +440,7 @@
                     <div class="nm-price-ent-glow nm-price-ent-glow--2" aria-hidden="true"></div>
                     <div class="nm-price-ent-copy">
                         <div class="nm-price-ent-tag">Enterprise</div>
-                        <h2 class="nm-price-ent-title">For larger organisations</h2>
+                        <h2 class="nm-price-ent-title">For larger organizations</h2>
                         <p class="nm-price-ent-body">Custom usage envelopes, bespoke integrations, private cloud or on-premise, customer-managed encryption keys, a dedicated account manager, and security evidence (SOC 2 / ISO underway). Scoped to your environment.</p>
                     </div>
                     <a href="/contact/?subject=NeoMind%3A%20Enterprise%20Enquiry&amp;source=pricing-enterprise" class="nm-price-ent-cta" data-cta="pricing-page-enterprise">
@@ -515,8 +515,8 @@
                                 <tr class="row-group"><td colspan="5">Actions &amp; integrations</td></tr>
                                 <tr class="row-feat"><th scope="row">Calendar booking</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
                                 <tr class="row-feat"><th scope="row">Lead capture &amp; routing</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
-                                <tr class="row-feat"><th scope="row">Webhooks / CRM</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
-                                <tr class="row-feat"><th scope="row">Voice via Twilio</th><td class="val"><span style="font-size:12.5px;">Maeve picks</span></td><td class="val"><span style="font-size:12.5px;">Maeve picks</span></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-feat"><th scope="row">CRM &amp; your tools</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
+                                <tr class="row-feat"><th scope="row">Phone calls (voice)</th><td class="val"><span style="font-size:12.5px;">Maeve picks</span></td><td class="val"><span style="font-size:12.5px;">Maeve picks</span></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
                                 <tr class="row-feat"><th scope="row">Slack <span style="color:var(--text-subtle);font-weight:400;">(live for Hugo)</span></th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
                                 <tr class="row-feat"><th scope="row">Microsoft Teams</th><td class="val"><span class="nm-compare-soon">Coming soon</span></td><td class="val"><span class="nm-compare-soon">Coming soon</span></td><td class="val"><span class="nm-compare-soon">Coming soon</span></td><td class="val"><span class="nm-compare-soon">Coming soon</span></td></tr>
                                 <tr class="row-feat"><th scope="row">Human escalation</th><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td><td class="val" data-yes></td></tr>
@@ -531,7 +531,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <p class="nm-compare-note">Every tick reflects a capability live today. Microsoft Teams and SSO / 2FA are on the roadmap and labelled honestly. Overage stays flat per unit &mdash; 10&cent;/chat (Simon), 50&cent;/call (Maeve), 5&cent;/query (Hugo) &mdash; with a hard cap you set. See how we stack up on the <a href="/compare/">comparison hub</a>.</p>
+                    <p class="nm-compare-note">Every tick reflects a capability live today. Microsoft Teams and SSO / 2FA are on the roadmap and labeled honestly. Overage stays flat per unit &mdash; 10&cent;/chat (Simon), 50&cent;/call (Maeve), 5&cent;/query (Hugo) &mdash; with a hard cap you set. See how we stack up on the <a href="/compare/">comparison hub</a>.</p>
                 </div>
             </div>
         </section>
@@ -670,7 +670,7 @@
                 localStorage.setItem('darkMode', html.classList.contains('dark'));
             });
         })();
-        // FAQ accordion (same behaviour as the homepage).
+        // FAQ accordion (same behavior as the homepage).
         (function () {
             document.querySelectorAll('#nm-faq-list .nm-faq-q').forEach(function (btn) {
                 btn.addEventListener('click', function () {
