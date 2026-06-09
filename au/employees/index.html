@@ -199,6 +199,9 @@
         .emp-agent-name { font-size: 14px; font-weight: 600; color: var(--text); }
         .emp-agent-scope { font-size: 12.5px; color: var(--text-subtle); margin-left: auto; }
         .emp-agent--add { background: transparent; border-style: dashed; color: var(--text-subtle); font-size: 13px; justify-content: center; font-weight: 500; }
+        .emp-mind-foot { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border); display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--text); text-decoration: none; }
+        .emp-mind-foot .arrow { transition: transform 220ms cubic-bezier(0.4,0,0.2,1); }
+        .emp-mind-foot:hover .arrow { transform: translateX(3px); }
         /* Brain bus under the three minds */
         .emp-brainbus { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; margin-top: 28px; padding: 16px 22px; border-radius: 16px; background: linear-gradient(135deg, rgba(156,125,185,0.08), rgba(0,123,255,0.06) 55%, rgba(0,209,178,0.07)); border: 1px solid var(--border); text-align: center; }
         .emp-brainbus-ic { flex-shrink: 0; width: 34px; height: 34px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; color: white; background: linear-gradient(135deg, var(--primary-500), var(--secondary-500) 55%, var(--accent-500)); box-shadow: 0 8px 20px -8px rgba(0,123,255,0.5); }
@@ -272,67 +275,106 @@
                     Each mind is a fixed archetype. Under each you configure the agents your business needs &mdash; each its own persona, skills, knowledge scope and scorecard.
                 </p>
 
-                <div class="emp-roster" data-roster>
-                    <!-- Simon -->
-                    <a href="/au/employees/simon/" class="emp-card" style="--clr: var(--secondary-500); --clr-bg: var(--secondary-50); --clr-fg: var(--secondary-700);">
-                        <span class="emp-card-icon" style="background: var(--secondary-50); color: var(--secondary-700);">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/></svg>
-                        </span>
-                        <h3 class="emp-card-name">Simon</h3>
-                        <span class="emp-card-role">Website &middot; customer-facing</span>
-                        <p class="emp-card-blurb">
-                            Answers buyer questions on every page, qualifies and captures leads, books appointments and
-                            escalates to a human when needed &mdash; grounded in your knowledge, with citations and no
-                            invented answers.
-                        </p>
-                        <span class="emp-card-foot">Meet Simon <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-                    </a>
+                <!-- Agent fan -- one mind, many agents, all on one Brain -->
+                <div class="emp-minds">
+                    <!-- Simon -> agents -->
+                    <div class="emp-mind">
+                        <div class="emp-mind-head">
+                            <span class="emp-mind-ic" style="background: var(--secondary-50); color: var(--secondary-700);" aria-hidden="true">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/></svg>
+                            </span>
+                            <span>
+                                <span class="emp-mind-kind">Website mind</span>
+                                <h3 class="emp-mind-name"><a href="/au/employees/simon/" style="color: inherit; text-decoration: none;">Simon</a></h3>
+                            </span>
+                        </div>
+                        <p class="emp-mind-lead">The customer-facing mind. Deploy a different Simon agent on each part of your site.</p>
+                        <div class="emp-mind-arrow" aria-hidden="true">Agents</div>
+                        <div class="emp-agent-list">
+                            <div class="emp-agent" style="--clr: var(--secondary-500);">
+                                <span class="emp-agent-dot" aria-hidden="true"></span>
+                                <span class="emp-agent-name">Sales Simon</span>
+                                <span class="emp-agent-scope">pricing pages</span>
+                            </div>
+                            <div class="emp-agent" style="--clr: var(--secondary-500);">
+                                <span class="emp-agent-dot" aria-hidden="true"></span>
+                                <span class="emp-agent-name">Support Simon</span>
+                                <span class="emp-agent-scope">help centre</span>
+                            </div>
+                            <div class="emp-agent emp-agent--add">+ more agents, each its own scope &amp; scorecard</div>
+                        </div>
+                        <a href="/au/employees/simon/" class="emp-mind-foot">Meet Simon <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+                    </div>
 
-                    <!-- Hugo -->
-                    <a href="/au/employees/hugo/" class="emp-card" style="--clr: var(--primary-500); --clr-bg: var(--primary-50); --clr-fg: var(--primary-700);">
-                        <span class="emp-card-icon" style="background: var(--primary-50); color: var(--primary-700);">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                        </span>
-                        <h3 class="emp-card-name">Hugo</h3>
-                        <span class="emp-card-role">Internal &middot; your company&rsquo;s memory</span>
-                        <p class="emp-card-blurb">
-                            The AI employee that lives <em>inside</em> your business. Staff ask about leave, expenses,
-                            policy and onboarding and get an instant, grounded answer &mdash; natively in Slack today
-                            (Microsoft Teams coming soon) or their dashboard. When someone resigns, their answers
-                            don&rsquo;t leave with them.
-                        </p>
-                        <span class="emp-card-foot">Meet Hugo <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-                    </a>
+                    <!-- Hugo -> agents -->
+                    <div class="emp-mind">
+                        <div class="emp-mind-head">
+                            <span class="emp-mind-ic" style="background: var(--primary-50); color: var(--primary-700);" aria-hidden="true">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </span>
+                            <span>
+                                <span class="emp-mind-kind">Internal mind</span>
+                                <h3 class="emp-mind-name"><a href="/au/employees/hugo/" style="color: inherit; text-decoration: none;">Hugo</a></h3>
+                            </span>
+                        </div>
+                        <p class="emp-mind-lead">The company-memory mind. Give each team its own Hugo, scoped to that team&rsquo;s knowledge.</p>
+                        <div class="emp-mind-arrow" aria-hidden="true">Agents</div>
+                        <div class="emp-agent-list">
+                            <div class="emp-agent" style="--clr: var(--primary-500);">
+                                <span class="emp-agent-dot" aria-hidden="true"></span>
+                                <span class="emp-agent-name">HR Hugo</span>
+                                <span class="emp-agent-scope">people team</span>
+                            </div>
+                            <div class="emp-agent" style="--clr: var(--primary-500);">
+                                <span class="emp-agent-dot" aria-hidden="true"></span>
+                                <span class="emp-agent-name">IT Hugo</span>
+                                <span class="emp-agent-scope">tech &amp; access</span>
+                            </div>
+                            <div class="emp-agent emp-agent--add">+ Ops, Finance &mdash; one per team</div>
+                        </div>
+                        <a href="/au/employees/hugo/" class="emp-mind-foot">Meet Hugo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+                    </div>
 
-                    <!-- Maeve -->
-                    <a href="/au/employees/maeve/" class="emp-card" style="--clr: var(--accent-500); --clr-bg: var(--accent-50); --clr-fg: var(--accent-700);">
-                        <span class="emp-card-icon" style="background: var(--accent-50); color: var(--accent-700);">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                        </span>
-                        <h3 class="emp-card-name">Maeve</h3>
-                        <span class="emp-card-role">Phone &middot; voice</span>
-                        <p class="emp-card-blurb">
-                            Answers your phone 24/7 with a natural, realistic voice. She qualifies callers, books jobs,
-                            answers from your knowledge and routes urgent calls to the right person &mdash; so no call goes
-                            to voicemail after hours.
-                        </p>
-                        <span class="emp-card-foot">Meet Maeve <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-                    </a>
+                    <!-- Maeve -> agents -->
+                    <div class="emp-mind">
+                        <div class="emp-mind-head">
+                            <span class="emp-mind-ic" style="background: var(--accent-50); color: var(--accent-700);" aria-hidden="true">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </span>
+                            <span>
+                                <span class="emp-mind-kind">Voice mind</span>
+                                <h3 class="emp-mind-name"><a href="/au/employees/maeve/" style="color: inherit; text-decoration: none;">Maeve</a></h3>
+                            </span>
+                        </div>
+                        <p class="emp-mind-lead">The phone mind. Run a separate Maeve agent per line &mdash; each its own number and persona.</p>
+                        <div class="emp-mind-arrow" aria-hidden="true">Agents</div>
+                        <div class="emp-agent-list">
+                            <div class="emp-agent" style="--clr: var(--accent-500);">
+                                <span class="emp-agent-dot" aria-hidden="true"></span>
+                                <span class="emp-agent-name">Bookings Maeve</span>
+                                <span class="emp-agent-scope">main line</span>
+                            </div>
+                            <div class="emp-agent" style="--clr: var(--accent-500);">
+                                <span class="emp-agent-dot" aria-hidden="true"></span>
+                                <span class="emp-agent-name">After-hours Maeve</span>
+                                <span class="emp-agent-scope">overflow line</span>
+                            </div>
+                            <div class="emp-agent emp-agent--add">+ a line for each branch or team</div>
+                        </div>
+                        <a href="/au/employees/maeve/" class="emp-mind-foot">Meet Maeve <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+                    </div>
+                </div>
 
-                    <!-- Custom agents -->
-                    <a href="/au/employees/build-your-own/" class="emp-card" style="--clr: var(--primary-500); --clr-bg: var(--primary-50); --clr-fg: var(--primary-700);">
-                        <span class="emp-card-icon" style="background: var(--bg-muted); color: var(--text-muted); border: 1px dashed var(--border-strong);">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
-                        </span>
-                        <h3 class="emp-card-name">Custom agents</h3>
-                        <span class="emp-card-role">Configure &middot; under the three minds</span>
-                        <p class="emp-card-blurb">
-                            Need a role the defaults don&rsquo;t cover? Configure your own agent &mdash; give it a persona, skills,
-                            a knowledge scope and an access policy &mdash; always as a Simon, Maeve or Hugo. Each one is its own
-                            measurable employee.
-                        </p>
-                        <span class="emp-card-foot">Configure agents <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-                    </a>
+                <!-- Brain bus -- all agents feed from one Brain -->
+                <div class="emp-brainbus">
+                    <span class="emp-brainbus-ic" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 0 0-3 3 3 3 0 0 0-1 5.8A2.5 2.5 0 0 0 12 19a2.5 2.5 0 0 0 4-4.2A3 3 0 0 0 15 8a3 3 0 0 0-3-3z"/><path d="M12 5v14M9 8h.01M16 13.8h.01M8 13.8h.01"/></svg>
+                    </span>
+                    <span class="emp-brainbus-text">
+                        <strong>Every agent &mdash; across every mind &mdash; reads from one Brain.</strong> Update a fact once
+                        and the whole workforce answers with it, while each agent stays
+                        <a href="/au/platform/measurable/">scored independently</a> on its own objective. <a href="/au/platform/brain/">How the Brain works &rarr;</a>
+                    </span>
                 </div>
 
             </div>
@@ -434,25 +476,6 @@
                 html.classList.toggle('dark');
                 localStorage.setItem('darkMode', html.classList.contains('dark'));
             });
-        })();
-        // Roster cards reveal on scroll (subtle, reduced-motion safe).
-        (function () {
-            var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            var cards = Array.prototype.slice.call(document.querySelectorAll('[data-roster] .emp-card'));
-            if (reduce || !('IntersectionObserver' in window)) {
-                cards.forEach(function (c) { c.setAttribute('data-revealed', ''); });
-                return;
-            }
-            var io = new IntersectionObserver(function (entries) {
-                entries.forEach(function (e) {
-                    if (e.isIntersecting) {
-                        var i = cards.indexOf(e.target);
-                        setTimeout(function () { e.target.setAttribute('data-revealed', ''); }, i > -1 ? i * 90 : 0);
-                        io.unobserve(e.target);
-                    }
-                });
-            }, { threshold: 0.2 });
-            cards.forEach(function (c) { io.observe(c); });
         })();
         // "One mind, many agents" — stagger the agent rows in on scroll (reduced-motion safe).
         (function () {

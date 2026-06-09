@@ -162,6 +162,32 @@
         .emp-card-foot { margin-top: auto; display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--text); padding-top: 18px; border-top: 1px solid var(--border); }
         .emp-card:hover .emp-card-foot .arrow { transform: translateX(3px); }
         .emp-card-foot .arrow { transition: transform 220ms cubic-bezier(0.4,0,0.2,1); }
+        .emp-minds { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 40px; }
+        @media (max-width: 920px) { .emp-minds { grid-template-columns: 1fr; } }
+        .emp-mind { display: flex; flex-direction: column; padding: 26px; background: var(--surface); border: 1px solid var(--border); border-radius: 22px; box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset; }
+        .emp-mind-head { display: flex; align-items: center; gap: 13px; }
+        .emp-mind-ic { flex-shrink: 0; width: 44px; height: 44px; border-radius: 13px; display: inline-flex; align-items: center; justify-content: center; }
+        .emp-mind-name { font-family: var(--font-display); font-weight: 700; font-size: 20px; letter-spacing: -0.015em; color: var(--text); margin: 0; line-height: 1.1; }
+        .emp-mind-kind { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-subtle); }
+        .emp-mind-lead { font-size: 14px; line-height: 1.55; color: var(--text-muted); margin: 16px 0 18px; }
+        .emp-mind-arrow { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 14px; }
+        .emp-mind-arrow::before { content: ''; flex: 1; height: 1px; background: var(--border); }
+        .emp-mind-arrow::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+        .emp-agent-list { display: flex; flex-direction: column; gap: 10px; margin-top: auto; }
+        .emp-agent { display: flex; align-items: center; gap: 11px; padding: 11px 14px; border-radius: 13px; background: var(--bg-muted); border: 1px solid var(--border); opacity: 0; transform: translateY(8px); }
+        .emp-agent[data-revealed] { opacity: 1; transform: translateY(0); transition: opacity 460ms ease, transform 460ms cubic-bezier(0.16,1,0.3,1); }
+        .emp-agent-dot { flex-shrink: 0; width: 9px; height: 9px; border-radius: 50%; background: var(--clr, var(--primary-500)); box-shadow: 0 0 0 4px color-mix(in oklab, var(--clr, var(--primary-500)) 16%, transparent); }
+        .emp-agent-name { font-size: 14px; font-weight: 600; color: var(--text); }
+        .emp-agent-scope { font-size: 12.5px; color: var(--text-subtle); margin-left: auto; }
+        .emp-agent--add { background: transparent; border-style: dashed; color: var(--text-subtle); font-size: 13px; justify-content: center; font-weight: 500; }
+        .emp-mind-foot { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border); display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--text); text-decoration: none; }
+        .emp-mind-foot .arrow { transition: transform 220ms cubic-bezier(0.4,0,0.2,1); }
+        .emp-mind-foot:hover .arrow { transform: translateX(3px); }
+        /* Brain bus under the three minds */
+        .emp-brainbus { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; margin-top: 28px; padding: 16px 22px; border-radius: 16px; background: linear-gradient(135deg, rgba(156,125,185,0.08), rgba(0,123,255,0.06) 55%, rgba(0,209,178,0.07)); border: 1px solid var(--border); text-align: center; }
+        .emp-brainbus-ic { flex-shrink: 0; width: 34px; height: 34px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; color: white; background: linear-gradient(135deg, var(--primary-500), var(--secondary-500) 55%, var(--accent-500)); box-shadow: 0 8px 20px -8px rgba(0,123,255,0.5); }
+        .emp-brainbus-text { font-size: 14px; line-height: 1.5; color: var(--text-muted); }
+        .emp-brainbus-text strong { color: var(--text); font-weight: 600; }
 
         /* Tira de por-qué-un-Brain */
         .emp-why { background: var(--bg-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
@@ -235,66 +261,106 @@
                     Cada mente es un tipo fijo. Bajo cada una configuras los agentes que tu empresa necesita &mdash; cada uno con su persona, habilidades, ámbito de conocimiento y cuadro de mando.
                 </p>
 
-                <div class="emp-roster" data-roster>
-                    <!-- Simon -->
-                    <a href="/es/employees/simon/" class="emp-card" style="--clr: var(--secondary-500); --clr-bg: var(--secondary-50); --clr-fg: var(--secondary-700);">
-                        <span class="emp-card-icon" style="background: var(--secondary-50); color: var(--secondary-700);">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/></svg>
-                        </span>
-                        <h3 class="emp-card-name">Simon</h3>
-                        <span class="emp-card-role">Web &middot; de cara al cliente</span>
-                        <p class="emp-card-blurb">
-                            Responde las preguntas del comprador en cada página, cualifica y capta leads, reserva citas y
-                            pasa con una persona cuando hace falta &mdash; basado en tu conocimiento, con citas y sin
-                            inventarse respuestas.
-                        </p>
-                        <span class="emp-card-foot">Conoce a Simon <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-                    </a>
+                <!-- Agent fan -- one mind, many agents, all on one Brain -->
+                <div class="emp-minds">
+                    <!-- Simon -> agents -->
+                    <div class="emp-mind">
+                        <div class="emp-mind-head">
+                            <span class="emp-mind-ic" style="background: var(--secondary-50); color: var(--secondary-700);" aria-hidden="true">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/></svg>
+                            </span>
+                            <span>
+                                <span class="emp-mind-kind">Mente web</span>
+                                <h3 class="emp-mind-name"><a href="/es/employees/simon/" style="color: inherit; text-decoration: none;">Simon</a></h3>
+                            </span>
+                        </div>
+                        <p class="emp-mind-lead">La mente de cara al cliente. Despliega un Simon distinto en cada parte de tu web.</p>
+                        <div class="emp-mind-arrow" aria-hidden="true">Agentes</div>
+                        <div class="emp-agent-list">
+                            <div class="emp-agent" style="--clr: var(--secondary-500);">
+                                <span class="emp-agent-dot" aria-hidden="true"></span>
+                                <span class="emp-agent-name">Simon de ventas</span>
+                                <span class="emp-agent-scope">p&aacute;ginas de precios</span>
+                            </div>
+                            <div class="emp-agent" style="--clr: var(--secondary-500);">
+                                <span class="emp-agent-dot" aria-hidden="true"></span>
+                                <span class="emp-agent-name">Simon de soporte</span>
+                                <span class="emp-agent-scope">centro de ayuda</span>
+                            </div>
+                            <div class="emp-agent emp-agent--add">+ m&aacute;s agentes, cada uno con su &aacute;mbito y cuadro de mando</div>
+                        </div>
+                        <a href="/es/employees/simon/" class="emp-mind-foot">Conoce a Simon <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+                    </div>
 
-                    <!-- Hugo -->
-                    <a href="/es/employees/hugo/" class="emp-card" style="--clr: var(--primary-500); --clr-bg: var(--primary-50); --clr-fg: var(--primary-700);">
-                        <span class="emp-card-icon" style="background: var(--primary-50); color: var(--primary-700);">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                        </span>
-                        <h3 class="emp-card-name">Hugo</h3>
-                        <span class="emp-card-role">Interno &middot; la memoria de tu empresa</span>
-                        <p class="emp-card-blurb">
-                            El empleado de IA que vive <em>dentro</em> de tu empresa. Tu equipo pregunta por vacaciones, gastos,
-                            normativa y onboarding y recibe al instante una respuesta basada en tus fuentes &mdash; en Slack,
-                            Microsoft Teams o su panel. Cuando alguien se va, sus respuestas no se van con él.
-                        </p>
-                        <span class="emp-card-foot">Conoce a Hugo <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-                    </a>
+                    <!-- Hugo -> agents -->
+                    <div class="emp-mind">
+                        <div class="emp-mind-head">
+                            <span class="emp-mind-ic" style="background: var(--primary-50); color: var(--primary-700);" aria-hidden="true">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </span>
+                            <span>
+                                <span class="emp-mind-kind">Mente interna</span>
+                                <h3 class="emp-mind-name"><a href="/es/employees/hugo/" style="color: inherit; text-decoration: none;">Hugo</a></h3>
+                            </span>
+                        </div>
+                        <p class="emp-mind-lead">La mente que es la memoria de la empresa. Dale a cada equipo su propio Hugo, acotado al conocimiento de ese equipo.</p>
+                        <div class="emp-mind-arrow" aria-hidden="true">Agentes</div>
+                        <div class="emp-agent-list">
+                            <div class="emp-agent" style="--clr: var(--primary-500);">
+                                <span class="emp-agent-dot" aria-hidden="true"></span>
+                                <span class="emp-agent-name">Hugo de RR.&nbsp;HH.</span>
+                                <span class="emp-agent-scope">equipo de personas</span>
+                            </div>
+                            <div class="emp-agent" style="--clr: var(--primary-500);">
+                                <span class="emp-agent-dot" aria-hidden="true"></span>
+                                <span class="emp-agent-name">Hugo de IT</span>
+                                <span class="emp-agent-scope">tecnolog&iacute;a y accesos</span>
+                            </div>
+                            <div class="emp-agent emp-agent--add">+ Operaciones, Finanzas &mdash; uno por equipo</div>
+                        </div>
+                        <a href="/es/employees/hugo/" class="emp-mind-foot">Conoce a Hugo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+                    </div>
 
-                    <!-- Maeve -->
-                    <a href="/es/employees/maeve/" class="emp-card" style="--clr: var(--accent-500); --clr-bg: var(--accent-50); --clr-fg: var(--accent-700);">
-                        <span class="emp-card-icon" style="background: var(--accent-50); color: var(--accent-700);">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                        </span>
-                        <h3 class="emp-card-name">Maeve</h3>
-                        <span class="emp-card-role">Teléfono &middot; voz</span>
-                        <p class="emp-card-blurb">
-                            Atiende tu teléfono 24/7 con una voz natural y realista. Cualifica a quien llama, reserva trabajos,
-                            responde a partir de tu conocimiento y pasa las llamadas urgentes a la persona adecuada &mdash; para que
-                            ninguna llamada acabe en el buzón fuera de horario.
-                        </p>
-                        <span class="emp-card-foot">Conoce a Maeve <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-                    </a>
+                    <!-- Maeve -> agents -->
+                    <div class="emp-mind">
+                        <div class="emp-mind-head">
+                            <span class="emp-mind-ic" style="background: var(--accent-50); color: var(--accent-700);" aria-hidden="true">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </span>
+                            <span>
+                                <span class="emp-mind-kind">Mente de voz</span>
+                                <h3 class="emp-mind-name"><a href="/es/employees/maeve/" style="color: inherit; text-decoration: none;">Maeve</a></h3>
+                            </span>
+                        </div>
+                        <p class="emp-mind-lead">La mente del tel&eacute;fono. Pon un Maeve por l&iacute;nea &mdash; cada uno con su n&uacute;mero y su persona.</p>
+                        <div class="emp-mind-arrow" aria-hidden="true">Agentes</div>
+                        <div class="emp-agent-list">
+                            <div class="emp-agent" style="--clr: var(--accent-500);">
+                                <span class="emp-agent-dot" aria-hidden="true"></span>
+                                <span class="emp-agent-name">Maeve de reservas</span>
+                                <span class="emp-agent-scope">l&iacute;nea principal</span>
+                            </div>
+                            <div class="emp-agent" style="--clr: var(--accent-500);">
+                                <span class="emp-agent-dot" aria-hidden="true"></span>
+                                <span class="emp-agent-name">Maeve fuera de horario</span>
+                                <span class="emp-agent-scope">l&iacute;nea de desbordamiento</span>
+                            </div>
+                            <div class="emp-agent emp-agent--add">+ una l&iacute;nea por sede o equipo</div>
+                        </div>
+                        <a href="/es/employees/maeve/" class="emp-mind-foot">Conoce a Maeve <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+                    </div>
+                </div>
 
-                    <!-- Agentes personalizados -->
-                    <a href="/es/employees/build-your-own/" class="emp-card" style="--clr: var(--primary-500); --clr-bg: var(--primary-50); --clr-fg: var(--primary-700);">
-                        <span class="emp-card-icon" style="background: var(--bg-muted); color: var(--text-muted); border: 1px dashed var(--border-strong);">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
-                        </span>
-                        <h3 class="emp-card-name">Agentes personalizados</h3>
-                        <span class="emp-card-role">Configura &middot; bajo las tres mentes</span>
-                        <p class="emp-card-blurb">
-                            ¿Necesitas un rol que los predeterminados no cubren? Configura tu propio agente &mdash; dale una persona,
-                            habilidades, un ámbito de conocimiento y una política de acceso &mdash; siempre como un Simon, una Maeve
-                            o un Hugo. Cada uno es su propio empleado medible.
-                        </p>
-                        <span class="emp-card-foot">Configura agentes <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-                    </a>
+                <!-- Brain bus -- all agents feed from one Brain -->
+                <div class="emp-brainbus">
+                    <span class="emp-brainbus-ic" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 0 0-3 3 3 3 0 0 0-1 5.8A2.5 2.5 0 0 0 12 19a2.5 2.5 0 0 0 4-4.2A3 3 0 0 0 15 8a3 3 0 0 0-3-3z"/><path d="M12 5v14M9 8h.01M16 13.8h.01M8 13.8h.01"/></svg>
+                    </span>
+                    <span class="emp-brainbus-text">
+                        <strong>Cada agente &mdash; de cualquier mente &mdash; lee del mismo Brain.</strong> Actualiza un dato una vez
+                        y toda la plantilla responde con &eacute;l, mientras cada agente se mantiene
+                        <a href="/es/platform/measurable/">puntuado de forma independiente</a> seg&uacute;n su objetivo. <a href="/es/platform/brain/">C&oacute;mo funciona el Brain &rarr;</a>
+                    </span>
                 </div>
 
             </div>
@@ -394,23 +460,26 @@
                 localStorage.setItem('darkMode', html.classList.contains('dark'));
             });
         })();
+        // one mind, many agents -- stagger the agent rows in on scroll (reduced-motion safe)
         (function () {
+            var section = document.querySelector('[data-agents]');
+            if (!section) return;
             var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            var cards = Array.prototype.slice.call(document.querySelectorAll('[data-roster] .emp-card'));
+            var rows = Array.prototype.slice.call(section.querySelectorAll('.emp-agent'));
             if (reduce || !('IntersectionObserver' in window)) {
-                cards.forEach(function (c) { c.setAttribute('data-revealed', ''); });
+                rows.forEach(function (r) { r.setAttribute('data-revealed', ''); });
                 return;
             }
             var io = new IntersectionObserver(function (entries) {
                 entries.forEach(function (e) {
-                    if (e.isIntersecting) {
-                        var i = cards.indexOf(e.target);
-                        setTimeout(function () { e.target.setAttribute('data-revealed', ''); }, i > -1 ? i * 90 : 0);
-                        io.unobserve(e.target);
-                    }
+                    if (!e.isIntersecting) return;
+                    rows.forEach(function (r, i) {
+                        setTimeout(function () { r.setAttribute('data-revealed', ''); }, i * 70);
+                    });
+                    io.disconnect();
                 });
-            }, { threshold: 0.2 });
-            cards.forEach(function (c) { io.observe(c); });
+            }, { threshold: 0.25 });
+            io.observe(section);
         })();
     </script>
 <script src="/js/cookie-consent.js" defer></script>
