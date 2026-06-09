@@ -71,6 +71,11 @@ class FooterSection extends HTMLElement {
       "<li><a href=\"" + companyBase + "company/\">" + f.about + "</a></li>" +
       "<li><a href=\"" + companyBase + "customers/\">" + f.customers + "</a></li>" +
       "<li><a href=\"" + companyBase + "contact/\">" + f.contact + "</a></li>" +
+      // Partner Program — INTERNATIONAL ONLY. The Authorized Partner Program is
+      // USD/international-only (the agreement excludes AU/NZ/EU/UK), and the page
+      // exists only at the root /partners/ (no /au/ or /es/ twin). So we render
+      // this link solely on the intl footer and hardcode the root path.
+      (L.code === "intl" ? "<li><a href=\"/partners/\">Partner Program</a></li>" : "") +
       "</ul></div>" +
       "<div><h4>" + f.account + "</h4><ul>" +
       "<li><a href=\"https://app.neomindhub.com/signup\">" + f.startTrial + "</a></li>" +

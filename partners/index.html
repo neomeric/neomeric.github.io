@@ -31,8 +31,8 @@
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Unlisted: noindex keeps this off search engines while allowing direct access -->
-    <meta name="robots" content="noindex,nofollow">
+    <!-- Linked from the international footer — indexable. -->
+    <meta name="robots" content="index,follow">
     <title>NeoMind Authorized Partner Program — Become a Partner</title>
     <meta name="description"
         content="Offer AI employees and business automation to your customers. Sell, bill, onboard, and support on the NeoMind platform at partner pricing — and build recurring revenue.">
@@ -412,9 +412,37 @@
             background: radial-gradient(circle, rgba(156,125,185,0.2), transparent 65%);
         }
 
-        /* nm-form styles are reused from contact page (same CSS file via content.css
-           which defines .nm-form, .nm-field, .nm-input, .nm-textarea, .nm-form-submit
-           via the shared stylesheet). We supplement with a dark-adapted variant below. */
+        /* Base form styles. NOTE: .nm-field/.nm-input/.nm-textarea/.nm-form-submit
+           are NOT shared in content.css — each page that has a form defines them
+           locally (see contact/index.html). Defining them here is what gives the
+           form its input boxes, stacked labels, and a visible gradient submit
+           button. The .pp-form rules further down only adapt colours for the
+           light card on the dark apply section. */
+        .nm-field { margin-bottom: 18px; }
+        .nm-field label { display: block; font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 7px; }
+        .nm-field label .req { color: var(--accent-700); }
+        .nm-input, .nm-textarea {
+            width: 100%; font-family: var(--font-sans); font-size: 14.5px; color: var(--text);
+            background: var(--bg-muted); border: 1px solid var(--border-strong); border-radius: 12px;
+            padding: 12px 14px; transition: border-color 180ms ease, box-shadow 180ms ease;
+        }
+        .nm-input::placeholder, .nm-textarea::placeholder { color: var(--text-subtle); }
+        .nm-input:focus, .nm-textarea:focus { outline: none; border-color: var(--secondary-500); box-shadow: 0 0 0 3px rgba(0,123,255,0.14); }
+        .nm-textarea { resize: vertical; min-height: 124px; line-height: 1.5; }
+        .nm-form-submit {
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%;
+            margin-top: 4px; padding: 14px 22px; border: none; cursor: pointer; border-radius: 999px;
+            font-family: var(--font-sans); font-weight: 600; font-size: 15px; color: #fff;
+            background: var(--gradient-brand); box-shadow: 0 8px 22px rgba(0,123,255,0.24);
+            transition: transform 200ms ease, box-shadow 200ms ease;
+        }
+        .nm-form-submit:hover { transform: translateY(-1px); box-shadow: 0 12px 30px rgba(0,123,255,0.34); }
+        .nm-form-submit svg { transition: transform 200ms ease; }
+        .nm-form-submit:hover svg { transform: translateX(3px); }
+        .nm-form-note { font-size: 12px; color: var(--text-subtle); line-height: 1.5; margin: 14px 0 0; text-align: center; }
+        .nm-form-status { font-size: 13.5px; line-height: 1.5; margin: 14px 0 0; padding: 12px 14px; border-radius: 12px; background: var(--accent-50); color: var(--accent-700); border: 1px solid color-mix(in oklab, var(--accent-700) 20%, transparent); }
+        .nm-form-status[hidden] { display: none; }
+
         .pp-form {
             background: rgba(255,255,255,0.96); border-radius: var(--radius-2xl);
             padding: 34px 32px 28px; box-shadow: 0 28px 64px -30px rgba(0,0,0,0.5);
@@ -573,10 +601,10 @@
                     <div class="pp-earn-card pp-earn-card--accent nm-reveal">
                         <div class="pp-earn-num">1 &middot; Recurring platform margin</div>
                         <h3 class="pp-earn-h">Buy wholesale. Sell at list.</h3>
-                        <p class="pp-earn-p">Buy at your partner discount, sell at list price (RRP) or higher, and keep the difference every month.</p>
+                        <p class="pp-earn-p">Buy NeoMind at your partner discount, sell at the recommended retail price (or higher), and keep the difference &mdash; every month, for every customer.</p>
                         <div class="pp-earn-example">
-                            <strong>Worked example</strong><br>
-                            NeoMind Squad lists at $299/mo. At the 30% Strategic discount you pay $209.30 and keep <strong>$89.70/mo per customer</strong>, recurring.
+                            <strong>Recurring, not one-off.</strong><br>
+                            Your margin lands every month for every active customer &mdash; and it grows as you move up the partner tiers.
                         </div>
                     </div>
 
@@ -608,49 +636,43 @@
                     <p class="pp-section-sub">Your discount grows with the active, paid subscription revenue you manage &mdash; not pipeline or trials.</p>
                 </div>
 
-                <div class="pp-tiers-wrap nm-reveal" role="region" aria-label="Partner tier discounts">
+                <div class="pp-tiers-wrap nm-reveal" role="region" aria-label="Partner tiers">
                     <table class="pp-tiers-table">
-                        <caption class="sr-only">Partner tiers and discount rates by monthly managed revenue</caption>
+                        <caption class="sr-only">Partner tiers and what each one unlocks. Exact thresholds and margins are confirmed on your discovery call.</caption>
                         <thead>
                             <tr>
-                                <th scope="col">Active monthly revenue managed (USD)</th>
                                 <th scope="col">Tier</th>
-                                <th scope="col">Discount</th>
+                                <th scope="col">What it unlocks</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>$0 &ndash; $999 / mo</td>
-                                <td><span class="pp-tier-badge pp-tier-badge--authorized">Authorised Partner</span></td>
-                                <td><span class="pp-tier-discount">15%</span></td>
+                                <td><span class="pp-tier-badge pp-tier-badge--authorized">Authorized Partner</span></td>
+                                <td>Your starting tier &mdash; earn partner margin from your very first customer.</td>
                             </tr>
                             <tr>
-                                <td>$1,000 &ndash; $4,999 / mo</td>
                                 <td><span class="pp-tier-badge pp-tier-badge--growth">Growth Partner</span></td>
-                                <td><span class="pp-tier-discount">20%</span></td>
+                                <td>A better margin &mdash; and your program fee is waived from here up.</td>
                             </tr>
                             <tr>
-                                <td>$5,000 &ndash; $14,999 / mo</td>
                                 <td><span class="pp-tier-badge pp-tier-badge--scale">Scale Partner</span></td>
-                                <td><span class="pp-tier-discount">25%</span></td>
+                                <td>Your margin steps up again as your managed revenue grows.</td>
                             </tr>
                             <tr>
-                                <td>$15,000+ / mo</td>
                                 <td><span class="pp-tier-badge pp-tier-badge--strategic">Strategic Partner</span></td>
-                                <td><span class="pp-tier-discount">30%</span></td>
+                                <td>Our best standard partner margin.</td>
                             </tr>
                             <tr>
-                                <td>$50,000+ / mo</td>
                                 <td><span class="pp-tier-badge pp-tier-badge--custom">Strategic Plus</span></td>
-                                <td><span class="pp-tier-discount">Custom</span></td>
+                                <td>Custom terms for our largest partners.</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
                 <p class="pp-tiers-note nm-reveal">
-                    Plans (USD/mo): Solo $79 &middot; Duo $149 &middot; Squad $299.<br>
-                    A small Program Fee ($500/yr or $50/mo) keeps the program to committed partners and is waived once you reach Growth.
+                    Tiers are based on the active, paid subscription revenue you manage &mdash; we confirm your starting tier and exact margin on your discovery call.<br>
+                    What your customers pay (USD/mo): Solo $79 &middot; Duo $149 &middot; Squad $299. A small program fee keeps the program to committed partners and is waived once you reach the Growth tier.
                 </p>
             </div>
         </section>
@@ -710,7 +732,7 @@
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
                         </span>
                         <h3 class="pp-enable-h">Escalation support</h3>
-                        <p class="pp-enable-p">Direct line to Neomeric&rsquo;s technical team for complex issues you can&rsquo;t resolve first-line.</p>
+                        <p class="pp-enable-p">Direct line to the NeoMind technical team for complex issues you can&rsquo;t resolve first-line.</p>
                     </div>
                 </div>
             </div>
@@ -736,7 +758,7 @@
                     </div>
                     <div class="pp-step nm-reveal">
                         <h3 class="pp-step-h">E-sign</h3>
-                        <p class="pp-step-p">Review and sign the Authorised Partner Agreement digitally &mdash; no paperwork.</p>
+                        <p class="pp-step-p">Review and sign the Authorized Partner Agreement digitally &mdash; no paperwork.</p>
                     </div>
                     <div class="pp-step nm-reveal">
                         <h3 class="pp-step-h">Activate</h3>
@@ -922,7 +944,7 @@
                                 <span class="nm-faq-toggle" aria-hidden="true">+</span>
                             </button>
                             <div class="nm-faq-a">
-                                <p>You do. You sell, bill the customer directly, onboard, and provide first-line support. You own the commercial relationship; Neomeric provides the platform and technical escalation.</p>
+                                <p>You do. You sell, bill the customer directly, onboard, and provide first-line support. You own the commercial relationship; NeoMind provides the platform and technical escalation.</p>
                             </div>
                         </div>
 
@@ -952,7 +974,7 @@
                                 <span class="nm-faq-toggle" aria-hidden="true">+</span>
                             </button>
                             <div class="nm-faq-a">
-                                <p>You provide first-line support. Neomeric handles technical escalation &mdash; platform bugs, infrastructure, security, and roadmap. Customer &rarr; Partner &rarr; Neomeric.</p>
+                                <p>You provide first-line support. NeoMind handles technical escalation &mdash; platform bugs, infrastructure, security, and roadmap. Customer &rarr; Partner &rarr; NeoMind.</p>
                             </div>
                         </div>
 

@@ -1094,4 +1094,13 @@
     <priority>0.4</priority>
   </url>
 
+  <!-- Authorized Partner Program — INTERNATIONAL ONLY (USD; no au/es twin). -->
+  <url>
+    <loc>https://neomindhub.com/partners/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://neomindhub.com/partners/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neomindhub.com/partners/"/>
+  </url>
+
 </urlset>
