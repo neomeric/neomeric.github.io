@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <!-- Consent Mode v2 default (before GTM) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent','default',{
+        ad_storage:'denied', analytics_storage:'denied',
+        ad_user_data:'denied', ad_personalization:'denied',
+        functionality_storage:'granted', security_storage:'granted',
+        wait_for_update: 500
+      });
+      // Re-apply a previously saved choice on load so returning visitors keep their setting
+      try { var c=document.cookie.match(/(?:^|; )nm_consent=([^;]+)/);
+        if(c){ var v=decodeURIComponent(c[1]);
+          if(v==='granted'){ gtag('consent','update',{ad_storage:'granted',analytics_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'}); }
+        }
+      } catch(e){}
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NHDLXJCG');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Unlisted: noindex keeps this off search engines while allowing direct access -->
+    <meta name="robots" content="noindex,nofollow">
+    <title>NeoMind Authorized Partner Program — Become a Partner</title>
+    <meta name="description"
+        content="Offer AI employees and business automation to your customers. Sell, bill, onboard, and support on the NeoMind platform at partner pricing — and build recurring revenue.">
+    <!-- International-only: en + x-default only. No en-au or es alternates by policy. -->
+    <link rel="canonical" href="https://neomindhub.com/partners/">
+    <link rel="alternate" hreflang="en"        href="https://neomindhub.com/partners/" />
+    <link rel="alternate" hreflang="x-default" href="https://neomindhub.com/partners/" />
+    <meta property="og:title" content="NeoMind Authorized Partner Program — Become a Partner">
+    <meta property="og:description" content="Offer AI employees and business automation to your customers. Sell, bill, onboard, and support on the NeoMind platform at partner pricing — and build recurring revenue.">
+    <meta property="og:url" content="https://neomindhub.com/partners/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://neomindhub.com/images/logo1.png">
+    <meta property="og:site_name" content="NeoMind">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NeoMind Authorized Partner Program — Become a Partner">
+    <meta name="twitter:description" content="Offer AI employees and business automation to your customers. Sell, bill, onboard, and support on the NeoMind platform at partner pricing.">
+    <meta name="twitter:image" content="https://neomindhub.com/images/logo1.png">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/neomeric-tokens.css">
+    <link rel="stylesheet" href="/css/content.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Locale data must load synchronously before any component connectedCallback runs -->
+    <script src="/js/locales.js"></script>
+    <script>window.NM_LOCALE = "intl";</script>
+    <script src="/components/navbar-section.js" type="module"></script>
+    <script src="/components/footer-section.js" type="module"></script>
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://neomindhub.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Partner Program", "item": "https://neomindhub.com/partners/" }
+      ]
+    }
+    </script>
+
+    <style>
+        /* ════════════════════════════════════════════════════════
+           Partners page — scoped styles built on design tokens.
+           No hardcoded hex values where a token exists.
+           ════════════════════════════════════════════════════════ */
+
+        /* ── Hero ── */
+        .pp-hero {
+            position: relative; overflow: clip;
+            background: var(--bg-muted); border-bottom: 1px solid var(--border);
+        }
+        .pp-hero-halo {
+            position: absolute; inset: -10% -10% auto -10%; height: 520px;
+            pointer-events: none;
+            background:
+                radial-gradient(50% 60% at 28% 25%, rgba(156,125,185,0.22), transparent 60%),
+                radial-gradient(46% 60% at 75% 18%, rgba(0,209,178,0.16), transparent 60%),
+                radial-gradient(38% 50% at 55% 45%, rgba(0,123,255,0.1), transparent 60%);
+            filter: blur(6px);
+        }
+        .pp-hero-inner {
+            position: relative; padding: 44px 0 68px; max-width: 760px;
+        }
+        .pp-hero-h1 {
+            font-family: var(--font-display); font-weight: 700;
+            font-size: clamp(36px, 5.5vw, 60px); line-height: 1.03;
+            letter-spacing: -0.03em; color: var(--text);
+            margin: 16px 0 20px; text-wrap: balance;
+        }
+        .pp-hero-lede {
+            font-size: clamp(16px, 2vw, 19px); line-height: 1.65;
+            color: var(--text-muted); max-width: 58ch; margin: 0 0 32px;
+        }
+        .pp-hero-ctas {
+            display: flex; gap: 12px; flex-wrap: wrap; align-items: center;
+        }
+        .pp-btn-primary {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 15px 28px; border-radius: var(--radius-pill);
+            background: var(--gradient-brand); color: white;
+            font-family: var(--font-sans); font-weight: 600; font-size: 15px;
+            text-decoration: none; transition: transform 220ms var(--ease-standard), box-shadow 220ms var(--ease-standard);
+            box-shadow: 0 8px 22px rgba(0,123,255,0.24);
+        }
+        .pp-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(0,123,255,0.36); }
+        .pp-btn-primary svg { transition: transform 220ms var(--ease-standard); }
+        .pp-btn-primary:hover svg { transform: translateX(3px); }
+        .pp-btn-ghost {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 15px 28px; border-radius: var(--radius-pill);
+            background: var(--surface); color: var(--text);
+            border: 1px solid var(--border-strong);
+            font-family: var(--font-sans); font-weight: 600; font-size: 15px;
+            text-decoration: none; transition: border-color 220ms, color 220ms, transform 220ms;
+        }
+        .pp-btn-ghost:hover { border-color: var(--secondary-500); color: var(--secondary-700); transform: translateY(-1px); }
+        .pp-hero-meta {
+            font-size: 13px; color: var(--text-subtle); margin-top: 18px;
+            display: flex; align-items: center; gap: 7px;
+        }
+        .pp-hero-meta::before {
+            content: ''; display: inline-block; width: 18px; height: 1px;
+            background: var(--border-strong); flex-shrink: 0;
+        }
+
+        /* ── Shared section rhythm ── */
+        .pp-section { padding: 80px 0; }
+        .pp-section--muted { background: var(--bg-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .pp-section--dark {
+            background: linear-gradient(135deg, #001833 0%, #003166 55%, #004999 100%);
+            color: white; position: relative; overflow: clip;
+        }
+        .pp-section-head {
+            text-align: center; max-width: 680px; margin: 0 auto 48px;
+        }
+        .pp-section-head .eyebrow { justify-content: center; }
+        .pp-section-h2 {
+            font-family: var(--font-display); font-weight: 700;
+            font-size: clamp(28px, 3.8vw, 46px); line-height: 1.08;
+            letter-spacing: -0.03em; color: var(--text);
+            margin: 14px 0 14px; text-wrap: balance;
+        }
+        .pp-section-h2--light { color: white; }
+        .pp-section-sub {
+            font-size: 17px; line-height: 1.65; color: var(--text-muted);
+            max-width: 56ch; margin: 0 auto;
+        }
+        .pp-section-sub--light { color: rgba(255,255,255,0.82); }
+
+        /* ── Pillars (3-col grid) ── */
+        .pp-pillars {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+            max-width: 1080px; margin: 0 auto 40px;
+        }
+        @media (max-width: 860px) { .pp-pillars { grid-template-columns: 1fr; max-width: 480px; } }
+        .pp-pillar {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius-2xl); padding: 32px 28px;
+            transition: transform 280ms var(--ease-standard), box-shadow 280ms var(--ease-standard), border-color 280ms;
+        }
+        .pp-pillar:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--border-strong);
+        }
+        .pp-pillar-ic {
+            width: 46px; height: 46px; border-radius: var(--radius-lg);
+            display: inline-flex; align-items: center; justify-content: center;
+            background: var(--accent-50); color: var(--accent-700);
+            margin-bottom: 18px;
+        }
+        .pp-pillar-h {
+            font-family: var(--font-display); font-weight: 700; font-size: 20px;
+            letter-spacing: -0.02em; color: var(--text); margin: 0 0 10px;
+        }
+        .pp-pillar-p {
+            font-size: 14.5px; line-height: 1.65; color: var(--text-muted); margin: 0;
+        }
+
+        /* ── Feature chips strip ── */
+        .pp-chips {
+            display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+            max-width: 700px; margin: 0 auto;
+        }
+        .pp-chip {
+            display: inline-flex; align-items: center; gap: 7px;
+            padding: 9px 16px; border-radius: var(--radius-pill);
+            background: var(--surface); border: 1px solid var(--border);
+            font-size: 13px; font-weight: 500; color: var(--text-muted);
+            transition: border-color 200ms, color 200ms;
+        }
+        .pp-chip svg { color: var(--accent-700); flex-shrink: 0; }
+        .pp-chip:hover { border-color: var(--secondary-400); color: var(--text); }
+
+        /* ── Earn section — 2-col earn cards ── */
+        .pp-earn-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+            max-width: 1000px; margin: 0 auto;
+        }
+        @media (max-width: 760px) { .pp-earn-grid { grid-template-columns: 1fr; max-width: 520px; } }
+        .pp-earn-card {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius-2xl); padding: 34px 30px;
+            display: flex; flex-direction: column; gap: 16px;
+            transition: transform 280ms var(--ease-standard), box-shadow 280ms var(--ease-standard);
+        }
+        .pp-earn-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+        .pp-earn-card--accent {
+            background: linear-gradient(150deg, rgba(0,209,178,0.07) 0%, rgba(0,123,255,0.05) 100%);
+            border-color: color-mix(in oklab, var(--accent-500) 25%, transparent);
+        }
+        .pp-earn-num {
+            font-family: var(--font-display); font-weight: 700; font-size: 13px;
+            letter-spacing: 0.1em; text-transform: uppercase; color: var(--secondary-700);
+        }
+        .pp-earn-h {
+            font-family: var(--font-display); font-weight: 700; font-size: 22px;
+            letter-spacing: -0.02em; color: var(--text); margin: 0;
+        }
+        .pp-earn-p {
+            font-size: 14.5px; line-height: 1.65; color: var(--text-muted); margin: 0;
+        }
+        .pp-earn-example {
+            background: var(--bg-muted); border-radius: var(--radius-lg);
+            padding: 14px 16px; font-size: 13px; line-height: 1.6;
+            color: var(--text-muted); border-left: 3px solid var(--accent-500);
+        }
+        .pp-earn-example strong { color: var(--text); font-weight: 600; }
+        .pp-earn-services {
+            list-style: none; padding: 0; margin: 0;
+            display: flex; flex-direction: column; gap: 8px;
+        }
+        .pp-earn-services li {
+            display: flex; align-items: center; gap: 9px;
+            font-size: 14px; color: var(--text-muted);
+        }
+        .pp-earn-services li::before {
+            content: ''; flex-shrink: 0; width: 7px; height: 7px;
+            border-radius: 50%; background: var(--accent-500);
+        }
+
+        /* ── Tiers table ── */
+        .pp-tiers-wrap {
+            max-width: 860px; margin: 0 auto 24px;
+            border: 1px solid var(--border); border-radius: var(--radius-2xl);
+            background: var(--surface); overflow: hidden;
+        }
+        .pp-tiers-table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+        .pp-tiers-table thead tr { background: var(--bg-muted); }
+        .pp-tiers-table th {
+            padding: 14px 22px; text-align: left;
+            font-family: var(--font-display); font-weight: 700; font-size: 12.5px;
+            letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-subtle);
+            border-bottom: 1px solid var(--border);
+        }
+        .pp-tiers-table td {
+            padding: 16px 22px; border-bottom: 1px solid var(--border);
+            color: var(--text-muted); vertical-align: middle;
+        }
+        .pp-tiers-table tbody tr:last-child td { border-bottom: none; }
+        .pp-tiers-table td:first-child { color: var(--text); font-weight: 500; }
+        .pp-tier-badge {
+            display: inline-block; font-size: 11.5px; font-weight: 700;
+            letter-spacing: 0.04em; padding: 4px 12px; border-radius: var(--radius-pill);
+            white-space: nowrap;
+        }
+        .pp-tier-badge--authorized { background: var(--primary-50); color: var(--primary-700); }
+        .pp-tier-badge--growth     { background: var(--accent-50); color: var(--accent-700); }
+        .pp-tier-badge--scale      { background: var(--secondary-50, #e6f2ff); color: var(--secondary-700); }
+        .pp-tier-badge--strategic  { background: linear-gradient(135deg, var(--secondary-600), var(--accent-500)); color: white; }
+        .pp-tier-badge--custom     { background: var(--gray-800); color: white; }
+        .pp-tier-discount {
+            font-family: var(--font-display); font-weight: 700;
+            font-size: 16px; color: var(--text);
+        }
+        .pp-tiers-note {
+            max-width: 860px; margin: 0 auto; font-size: 13px; color: var(--text-subtle);
+            line-height: 1.6; text-align: center;
+        }
+        @media (max-width: 640px) {
+            .pp-tiers-table th, .pp-tiers-table td { padding: 13px 14px; font-size: 13.5px; }
+        }
+
+        /* ── Enablement cards (2x3 grid) ── */
+        .pp-enable-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+            max-width: 960px; margin: 0 auto;
+        }
+        @media (max-width: 820px) { .pp-enable-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 520px) { .pp-enable-grid { grid-template-columns: 1fr; max-width: 420px; } }
+        .pp-enable-card {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius-xl); padding: 26px 22px;
+            transition: transform 260ms var(--ease-standard), border-color 260ms;
+        }
+        .pp-enable-card:hover { transform: translateY(-3px); border-color: var(--border-strong); }
+        .pp-enable-ic {
+            width: 40px; height: 40px; border-radius: var(--radius-md);
+            display: inline-flex; align-items: center; justify-content: center;
+            background: var(--secondary-50, #e6f2ff); color: var(--secondary-700);
+            margin-bottom: 14px;
+        }
+        .pp-enable-h {
+            font-family: var(--font-display); font-weight: 700; font-size: 16px;
+            letter-spacing: -0.015em; color: var(--text); margin: 0 0 7px;
+        }
+        .pp-enable-p {
+            font-size: 13.5px; line-height: 1.6; color: var(--text-muted); margin: 0;
+        }
+
+        /* ── How it works — numbered steps ── */
+        .pp-steps {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+            max-width: 1060px; margin: 0 auto;
+            counter-reset: pp-step;
+        }
+        @media (max-width: 820px) { .pp-steps { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px) { .pp-steps { grid-template-columns: 1fr; max-width: 420px; } }
+        .pp-step {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius-2xl); padding: 28px 24px;
+            counter-increment: pp-step; position: relative;
+        }
+        .pp-step::before {
+            content: counter(pp-step);
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 38px; height: 38px; border-radius: var(--radius-lg);
+            font-family: var(--font-display); font-weight: 700; font-size: 15px;
+            color: white; background: var(--gradient-brand);
+            box-shadow: 0 6px 16px -6px rgba(0,123,255,0.5);
+            margin-bottom: 16px;
+        }
+        .pp-step-h {
+            font-family: var(--font-display); font-weight: 700; font-size: 17px;
+            letter-spacing: -0.015em; color: var(--text); margin: 0 0 8px;
+        }
+        .pp-step-p {
+            font-size: 14px; line-height: 1.6; color: var(--text-muted); margin: 0;
+        }
+
+        /* ── Who it's for — chips ── */
+        .pp-who-grid {
+            display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
+            max-width: 880px; margin: 0 auto;
+        }
+        .pp-who-chip {
+            display: inline-flex; align-items: center; gap: 9px;
+            padding: 12px 20px; border-radius: var(--radius-pill);
+            background: var(--surface); border: 1px solid var(--border);
+            font-family: var(--font-sans); font-size: 14.5px; font-weight: 500;
+            color: var(--text-muted);
+            transition: border-color 200ms, color 200ms, background 200ms, transform 200ms;
+        }
+        .pp-who-chip svg { color: var(--secondary-500); flex-shrink: 0; }
+        .pp-who-chip:hover {
+            border-color: var(--secondary-400); color: var(--secondary-700);
+            background: var(--secondary-50, #e6f2ff); transform: translateY(-2px);
+        }
+
+        /* ── Apply form section ── */
+        .pp-apply-grid {
+            display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 52px;
+            align-items: start; max-width: 1040px; margin: 0 auto;
+        }
+        @media (max-width: 860px) { .pp-apply-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+        .pp-apply-copy-h {
+            font-family: var(--font-display); font-weight: 700;
+            font-size: clamp(26px, 3.2vw, 38px); line-height: 1.1;
+            letter-spacing: -0.025em; color: white; margin: 16px 0 16px;
+            text-wrap: balance;
+        }
+        .pp-apply-copy-p {
+            font-size: 16px; line-height: 1.65; color: rgba(255,255,255,0.82);
+            margin: 0 0 28px; max-width: 48ch;
+        }
+        .pp-apply-eligibility {
+            font-size: 13px; line-height: 1.6; color: rgba(255,255,255,0.6);
+            background: rgba(255,255,255,0.07); border-radius: var(--radius-lg);
+            padding: 14px 16px; border: 1px solid rgba(255,255,255,0.12);
+        }
+        .pp-apply-eligibility strong { color: rgba(255,255,255,0.85); font-weight: 600; }
+        .pp-apply-glow {
+            position: absolute; pointer-events: none; border-radius: 50%;
+        }
+        .pp-apply-glow--1 {
+            top: -80px; right: -60px; width: 340px; height: 340px;
+            background: radial-gradient(circle, rgba(0,209,178,0.18), transparent 65%);
+        }
+        .pp-apply-glow--2 {
+            bottom: -100px; left: -40px; width: 280px; height: 280px;
+            background: radial-gradient(circle, rgba(156,125,185,0.2), transparent 65%);
+        }
+
+        /* nm-form styles are reused from contact page (same CSS file via content.css
+           which defines .nm-form, .nm-field, .nm-input, .nm-textarea, .nm-form-submit
+           via the shared stylesheet). We supplement with a dark-adapted variant below. */
+        .pp-form {
+            background: rgba(255,255,255,0.96); border-radius: var(--radius-2xl);
+            padding: 34px 32px 28px; box-shadow: 0 28px 64px -30px rgba(0,0,0,0.5);
+        }
+        @media (max-width: 560px) { .pp-form { padding: 26px 22px; } }
+        .pp-form .nm-field label { color: var(--gray-800); }
+        .pp-form .nm-input, .pp-form .nm-textarea, .pp-form select.nm-input {
+            background: var(--gray-50); color: var(--gray-800);
+            border-color: var(--gray-300);
+        }
+        .pp-form .nm-input:focus, .pp-form .nm-textarea:focus, .pp-form select.nm-input:focus {
+            border-color: var(--secondary-500); box-shadow: 0 0 0 3px rgba(0,123,255,0.14);
+            outline: none;
+        }
+        .pp-form select.nm-input {
+            appearance: none; -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat; background-position: right 12px center;
+            padding-right: 38px;
+        }
+        .pp-form-consent {
+            display: flex; align-items: flex-start; gap: 10px;
+            font-size: 13px; color: var(--gray-600); line-height: 1.5; cursor: pointer;
+        }
+        .pp-form-consent input[type="checkbox"] {
+            width: 16px; height: 16px; accent-color: var(--secondary-500);
+            flex-shrink: 0; margin-top: 1px; cursor: pointer;
+        }
+        .pp-form-ok {
+            margin-top: 14px; padding: 12px 14px; border-radius: var(--radius-lg);
+            background: var(--accent-50); color: var(--accent-700);
+            border: 1px solid color-mix(in oklab, var(--accent-700) 20%, transparent);
+            font-size: 13.5px; line-height: 1.5;
+        }
+        .pp-form-ok[hidden] { display: none; }
+        .pp-form-note {
+            font-size: 12px; color: var(--gray-500); text-align: center;
+            margin: 14px 0 0; line-height: 1.5;
+        }
+
+        /* ── FAQ ── */
+        .pp-faq-wrap { max-width: 820px; margin: 0 auto; }
+
+        /* ── Scroll-reveal (same implementation as pricing + contact pages) ── */
+        .nm-reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .nm-reveal.is-in { opacity: 1; transform: none; }
+        @media (prefers-reduced-motion: reduce) {
+            .nm-reveal { opacity: 1; transform: none; transition: none; }
+            .pp-pillar, .pp-earn-card, .pp-enable-card, .pp-step, .pp-who-chip { transition: none; }
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300 text-gray-900 dark:text-white">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHDLXJCG" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <a href="#main"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-gray-900 focus:rounded-lg focus:shadow-lg">Skip to content</a>
+
+    <navbar-section data-locale="intl"></navbar-section>
+
+    <main id="main">
+
+        <!-- ══════════════════════ HERO ══════════════════════ -->
+        <section class="pp-hero">
+            <div class="pp-hero-halo" aria-hidden="true"></div>
+            <div class="nm-container">
+                <!-- Breadcrumb -->
+                <nav class="nm-breadcrumb" aria-label="Breadcrumb">
+                    <a href="/">Home</a>
+                    <span class="sep" aria-hidden="true">/</span>
+                    <span aria-current="page">Partner Program</span>
+                </nav>
+
+                <div class="pp-hero-inner">
+                    <span class="eyebrow"><span class="dot"></span> Authorized Partner Program</span>
+                    <h1 class="pp-hero-h1">Sell AI employees.<br>Build recurring revenue.</h1>
+                    <p class="pp-hero-lede">
+                        Offer AI employees and business automation to your customers &mdash; and build recurring revenue on a platform you don&rsquo;t have to build. You sell, bill, onboard, and support; NeoMind provides the platform at partner pricing.
+                    </p>
+                    <div class="pp-hero-ctas">
+                        <a href="#apply" class="pp-btn-primary" data-cta="partners-hero-apply">
+                            Apply to join
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="#how" class="pp-btn-ghost" data-cta="partners-hero-how">See how it works</a>
+                    </div>
+                    <p class="pp-hero-meta">One line &mdash; you sell and support, we power it.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════ PILLARS ══════════════════════ -->
+        <section class="pp-section" style="background: var(--bg);">
+            <div class="nm-container">
+                <div class="pp-section-head nm-reveal">
+                    <span class="eyebrow"><span class="dot"></span> The model</span>
+                    <h2 class="pp-section-h2">A modern AI platform &mdash; without building the technology.</h2>
+                    <p class="pp-section-sub">A clean division of responsibility. You own the customer; we own the platform.</p>
+                </div>
+
+                <div class="pp-pillars">
+                    <div class="pp-pillar nm-reveal">
+                        <span class="pp-pillar-ic" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </span>
+                        <h3 class="pp-pillar-h">You sell &amp; own it</h3>
+                        <p class="pp-pillar-p">You own the commercial relationship: find, sell, bill, onboard, and support your customers directly.</p>
+                    </div>
+
+                    <div class="pp-pillar nm-reveal">
+                        <span class="pp-pillar-ic" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        </span>
+                        <h3 class="pp-pillar-h">You deliver</h3>
+                        <p class="pp-pillar-p">Onboard, configure, and train customers; provide first-line support and run renewals.</p>
+                    </div>
+
+                    <div class="pp-pillar nm-reveal">
+                        <span class="pp-pillar-ic" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                        </span>
+                        <h3 class="pp-pillar-h">We power it</h3>
+                        <p class="pp-pillar-p">NeoMind provides the platform, hosting, AI functionality, security, updates, and technical escalation.</p>
+                    </div>
+                </div>
+
+                <!-- Feature chips -->
+                <div class="pp-chips nm-reveal">
+                    <span class="pp-chip">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                        Revenue, not projects
+                    </span>
+                    <span class="pp-chip">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41 13.42 20.6a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><circle cx="7" cy="7" r="1.4"/></svg>
+                        Own the customer
+                    </span>
+                    <span class="pp-chip">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                        Margins that scale
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════ EARN ══════════════════════ -->
+        <section id="earn" class="pp-section pp-section--muted">
+            <div class="nm-container">
+                <div class="pp-section-head nm-reveal">
+                    <span class="eyebrow"><span class="dot"></span> How you earn</span>
+                    <h2 class="pp-section-h2">The subscription margin is just the floor.</h2>
+                    <p class="pp-section-sub">Two compounding revenue lines &mdash; one recurring, one uncapped.</p>
+                </div>
+
+                <div class="pp-earn-grid">
+                    <div class="pp-earn-card pp-earn-card--accent nm-reveal">
+                        <div class="pp-earn-num">1 &middot; Recurring platform margin</div>
+                        <h3 class="pp-earn-h">Buy wholesale. Sell at list.</h3>
+                        <p class="pp-earn-p">Buy at your partner discount, sell at list price (RRP) or higher, and keep the difference every month.</p>
+                        <div class="pp-earn-example">
+                            <strong>Worked example</strong><br>
+                            NeoMind Squad lists at $299/mo. At the 30% Strategic discount you pay $209.30 and keep <strong>$89.70/mo per customer</strong>, recurring.
+                        </div>
+                    </div>
+
+                    <div class="pp-earn-card nm-reveal">
+                        <div class="pp-earn-num">2 &middot; Your own services (priced by you, uncapped)</div>
+                        <h3 class="pp-earn-h">Services on top.</h3>
+                        <p class="pp-earn-p">Layer your own professional services &mdash; you set the price, you keep it all.</p>
+                        <ul class="pp-earn-services">
+                            <li>Onboarding &amp; setup</li>
+                            <li>Training &amp; workshops</li>
+                            <li>Integration &amp; workflow setup</li>
+                            <li>Managed support &amp; success</li>
+                            <li>Consulting &amp; change management</li>
+                            <li>Industry-specific configuration</li>
+                            <li>Knowledge preparation</li>
+                            <li>Ongoing optimisation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════ TIERS ══════════════════════ -->
+        <section id="tiers" class="pp-section" style="background: var(--bg);">
+            <div class="nm-container">
+                <div class="pp-section-head nm-reveal">
+                    <span class="eyebrow"><span class="dot"></span> Partner tiers</span>
+                    <h2 class="pp-section-h2">A program that rewards you as you scale.</h2>
+                    <p class="pp-section-sub">Your discount grows with the active, paid subscription revenue you manage &mdash; not pipeline or trials.</p>
+                </div>
+
+                <div class="pp-tiers-wrap nm-reveal" role="region" aria-label="Partner tier discounts">
+                    <table class="pp-tiers-table">
+                        <caption class="sr-only">Partner tiers and discount rates by monthly managed revenue</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Active monthly revenue managed (USD)</th>
+                                <th scope="col">Tier</th>
+                                <th scope="col">Discount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>$0 &ndash; $999 / mo</td>
+                                <td><span class="pp-tier-badge pp-tier-badge--authorized">Authorised Partner</span></td>
+                                <td><span class="pp-tier-discount">15%</span></td>
+                            </tr>
+                            <tr>
+                                <td>$1,000 &ndash; $4,999 / mo</td>
+                                <td><span class="pp-tier-badge pp-tier-badge--growth">Growth Partner</span></td>
+                                <td><span class="pp-tier-discount">20%</span></td>
+                            </tr>
+                            <tr>
+                                <td>$5,000 &ndash; $14,999 / mo</td>
+                                <td><span class="pp-tier-badge pp-tier-badge--scale">Scale Partner</span></td>
+                                <td><span class="pp-tier-discount">25%</span></td>
+                            </tr>
+                            <tr>
+                                <td>$15,000+ / mo</td>
+                                <td><span class="pp-tier-badge pp-tier-badge--strategic">Strategic Partner</span></td>
+                                <td><span class="pp-tier-discount">30%</span></td>
+                            </tr>
+                            <tr>
+                                <td>$50,000+ / mo</td>
+                                <td><span class="pp-tier-badge pp-tier-badge--custom">Strategic Plus</span></td>
+                                <td><span class="pp-tier-discount">Custom</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="pp-tiers-note nm-reveal">
+                    Plans (USD/mo): Solo $79 &middot; Duo $149 &middot; Squad $299.<br>
+                    A small Program Fee ($500/yr or $50/mo) keeps the program to committed partners and is waived once you reach Growth.
+                </p>
+            </div>
+        </section>
+
+        <!-- ══════════════════════ ENABLEMENT ══════════════════════ -->
+        <section id="enablement" class="pp-section pp-section--muted">
+            <div class="nm-container">
+                <div class="pp-section-head nm-reveal">
+                    <span class="eyebrow"><span class="dot"></span> Enablement kit</span>
+                    <h2 class="pp-section-h2">Everything you need to sell with confidence.</h2>
+                    <p class="pp-section-sub">From your first demo to your first renewal &mdash; we&rsquo;ve got the assets ready.</p>
+                </div>
+
+                <div class="pp-enable-grid">
+                    <div class="pp-enable-card nm-reveal">
+                        <span class="pp-enable-ic" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                        </span>
+                        <h3 class="pp-enable-h">Demo workspace</h3>
+                        <p class="pp-enable-p">A live NeoMind environment pre-loaded so you can run customer demos from day one.</p>
+                    </div>
+
+                    <div class="pp-enable-card nm-reveal">
+                        <span class="pp-enable-ic" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                        </span>
+                        <h3 class="pp-enable-h">Sales kit</h3>
+                        <p class="pp-enable-p">Deck, pricing guide, and demo script. Pick it up, personalise it, and sell.</p>
+                    </div>
+
+                    <div class="pp-enable-card nm-reveal">
+                        <span class="pp-enable-ic" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                        </span>
+                        <h3 class="pp-enable-h">Proposal &amp; onboarding templates</h3>
+                        <p class="pp-enable-p">Structured templates to scope, quote, and onboard customers without reinventing the wheel.</p>
+                    </div>
+
+                    <div class="pp-enable-card nm-reveal">
+                        <span class="pp-enable-ic" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        </span>
+                        <h3 class="pp-enable-h">Approved messaging</h3>
+                        <p class="pp-enable-p">Vetted copy and talking points so every conversation is on-brand and accurate.</p>
+                    </div>
+
+                    <div class="pp-enable-card nm-reveal">
+                        <span class="pp-enable-ic" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </span>
+                        <h3 class="pp-enable-h">Customer trials</h3>
+                        <p class="pp-enable-p">Time-limited trial access to let prospects experience the platform before committing.</p>
+                    </div>
+
+                    <div class="pp-enable-card nm-reveal">
+                        <span class="pp-enable-ic" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        </span>
+                        <h3 class="pp-enable-h">Escalation support</h3>
+                        <p class="pp-enable-p">Direct line to Neomeric&rsquo;s technical team for complex issues you can&rsquo;t resolve first-line.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════ HOW IT WORKS ══════════════════════ -->
+        <section id="how" class="pp-section" style="background: var(--bg);">
+            <div class="nm-container">
+                <div class="pp-section-head nm-reveal">
+                    <span class="eyebrow"><span class="dot"></span> Process</span>
+                    <h2 class="pp-section-h2">Fully digital &mdash; with one short call to make sure it fits.</h2>
+                    <p class="pp-section-sub">From application to active partner in days, not weeks.</p>
+                </div>
+
+                <div class="pp-steps">
+                    <div class="pp-step nm-reveal">
+                        <h3 class="pp-step-h">Apply online</h3>
+                        <p class="pp-step-p">Tell us about your business and customers. The application takes about five minutes.</p>
+                    </div>
+                    <div class="pp-step nm-reveal">
+                        <h3 class="pp-step-h">Discovery call</h3>
+                        <p class="pp-step-p">Confirm fit, answer questions, and set your starting tier. One short call.</p>
+                    </div>
+                    <div class="pp-step nm-reveal">
+                        <h3 class="pp-step-h">E-sign</h3>
+                        <p class="pp-step-p">Review and sign the Authorised Partner Agreement digitally &mdash; no paperwork.</p>
+                    </div>
+                    <div class="pp-step nm-reveal">
+                        <h3 class="pp-step-h">Activate</h3>
+                        <p class="pp-step-p">Set up your Program Fee and receive your demo workspace and enablement kit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════ WHO IT'S FOR ══════════════════════ -->
+        <section id="who" class="pp-section pp-section--muted">
+            <div class="nm-container">
+                <div class="pp-section-head nm-reveal">
+                    <span class="eyebrow"><span class="dot"></span> Who it&rsquo;s for</span>
+                    <h2 class="pp-section-h2">Built for partners with business customers.</h2>
+                    <p class="pp-section-sub">If you advise, implement, or manage technology for businesses, this is built for you.</p>
+                </div>
+
+                <div class="pp-who-grid nm-reveal" role="list">
+                    <span class="pp-who-chip" role="listitem">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                        IT consultants
+                    </span>
+                    <span class="pp-who-chip" role="listitem">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        Digital transformation consultants
+                    </span>
+                    <span class="pp-who-chip" role="listitem">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                        AI consultants
+                    </span>
+                    <span class="pp-who-chip" role="listitem">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                        Marketing &amp; automation agencies
+                    </span>
+                    <span class="pp-who-chip" role="listitem">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        Business advisors
+                    </span>
+                    <span class="pp-who-chip" role="listitem">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41 13.42 20.6a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><circle cx="7" cy="7" r="1.4"/></svg>
+                        Software resellers
+                    </span>
+                    <span class="pp-who-chip" role="listitem">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
+                        Managed service providers
+                    </span>
+                    <span class="pp-who-chip" role="listitem">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                        Industry specialists
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════ APPLY ══════════════════════ -->
+        <section id="apply" class="pp-section pp-section--dark">
+            <div class="pp-apply-glow pp-apply-glow--1" aria-hidden="true"></div>
+            <div class="pp-apply-glow pp-apply-glow--2" aria-hidden="true"></div>
+            <div class="nm-container" style="position: relative;">
+                <div class="pp-apply-grid">
+                    <!-- Copy side -->
+                    <div class="nm-reveal">
+                        <span class="eyebrow" style="color: var(--accent-300, #5eead4);">
+                            <span class="dot" style="background: var(--accent-500); box-shadow: 0 0 0 4px rgba(0,209,178,0.2);"></span>
+                            Apply now
+                        </span>
+                        <h2 class="pp-apply-copy-h">Let&rsquo;s talk about partnering on NeoMind.</h2>
+                        <p class="pp-apply-copy-p">Apply online &mdash; we review and follow up to book a short discovery call.</p>
+                        <div class="pp-apply-eligibility">
+                            <strong>Eligibility note:</strong> Open to business (B2B) partners in approved international markets. Not currently open in Australia, New Zealand, the EU, or the UK.
+                        </div>
+                    </div>
+
+                    <!-- Form side
+                         Same mailto: mechanism as contact/index.html — opens the visitor's mail
+                         client pre-filled to partners@neomeric.com. A real POST endpoint can
+                         replace the JS handler below at any time (see DEV NOTE in the handler). -->
+                    <div class="nm-reveal">
+                        <form class="pp-form" id="pp-apply-form"
+                              action="mailto:partners@neomeric.com" method="post" enctype="text/plain"
+                              novalidate aria-label="Partner program application">
+
+                            <div class="nm-field">
+                                <label for="pf-company">Company name <span class="req" aria-hidden="true" style="color: var(--accent-700);">*</span></label>
+                                <input class="nm-input" type="text" id="pf-company" name="company"
+                                       autocomplete="organization" placeholder="Acme Solutions Ltd" required>
+                            </div>
+
+                            <div class="nm-field">
+                                <label for="pf-website">Website</label>
+                                <input class="nm-input" type="url" id="pf-website" name="website"
+                                       autocomplete="url" placeholder="https://yoursite.com">
+                            </div>
+
+                            <div class="nm-field">
+                                <label for="pf-name">Your name <span class="req" aria-hidden="true" style="color: var(--accent-700);">*</span></label>
+                                <input class="nm-input" type="text" id="pf-name" name="name"
+                                       autocomplete="name" placeholder="Jane Smith" required>
+                            </div>
+
+                            <div class="nm-field">
+                                <label for="pf-email">Work email <span class="req" aria-hidden="true" style="color: var(--accent-700);">*</span></label>
+                                <input class="nm-input" type="email" id="pf-email" name="email"
+                                       autocomplete="email" placeholder="jane@yoursite.com" required>
+                            </div>
+
+                            <div class="nm-field">
+                                <label for="pf-country">Country (where you operate) <span class="req" aria-hidden="true" style="color: var(--accent-700);">*</span></label>
+                                <input class="nm-input" type="text" id="pf-country" name="country"
+                                       autocomplete="country-name" placeholder="e.g. United States" required>
+                            </div>
+
+                            <div class="nm-field">
+                                <label for="pf-type">Partner type</label>
+                                <select class="nm-input" id="pf-type" name="type">
+                                    <option value="">Select your type&hellip;</option>
+                                    <option value="IT consultant">IT consultant</option>
+                                    <option value="Marketing or automation agency">Marketing or automation agency</option>
+                                    <option value="AI consultant">AI consultant</option>
+                                    <option value="Digital transformation consultant">Digital transformation consultant</option>
+                                    <option value="Business advisor">Business advisor</option>
+                                    <option value="Software reseller">Software reseller</option>
+                                    <option value="Managed service provider">Managed service provider</option>
+                                    <option value="Industry specialist">Industry specialist</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="nm-field">
+                                <label for="pf-note">Anything you&rsquo;d like us to know? <span style="font-weight: 400; color: var(--gray-500);">(optional)</span></label>
+                                <textarea class="nm-textarea" id="pf-note" name="note"
+                                          placeholder="Tell us about your customer base, how you currently work, or any questions you have."
+                                          style="min-height: 100px;"></textarea>
+                            </div>
+
+                            <div class="nm-field" style="margin-bottom: 22px;">
+                                <label class="pp-form-consent">
+                                    <input type="checkbox" id="pf-consent" name="consent" required>
+                                    <span>I agree to be contacted about the NeoMind Partner Program. <span style="color: var(--accent-700);">*</span></span>
+                                </label>
+                            </div>
+
+                            <button class="nm-form-submit" type="submit" data-cta="partners-apply-submit">
+                                Request a call
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg>
+                            </button>
+
+                            <p class="pp-form-ok" id="pp-form-ok" role="status" aria-live="polite" hidden>
+                                Opening your email app to send your application to partners@neomeric.com. If nothing opens, email us directly at <a href="mailto:partners@neomeric.com" style="color: var(--accent-700); font-weight: 600;">partners@neomeric.com</a>.
+                            </p>
+                            <p class="pp-form-note">We&rsquo;ll only use your details to review your application and get in touch.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════ FAQ ══════════════════════ -->
+        <section id="faq" class="pp-section" style="background: var(--bg);">
+            <div class="nm-container">
+                <div class="pp-section-head nm-reveal" style="max-width: 820px; text-align: left; margin-left: 0; margin-right: 0;">
+                    <span class="eyebrow"><span class="dot"></span> Partner program questions</span>
+                    <h2 class="pp-section-h2" style="text-align: left;">Common questions, direct answers.</h2>
+                </div>
+
+                <div class="pp-faq-wrap nm-reveal">
+                    <div class="nm-faq-list" id="pp-faq-list">
+
+                        <div class="nm-faq-item open">
+                            <button class="nm-faq-q" aria-expanded="true" type="button">
+                                <span class="nm-faq-q-text">How do I make money?</span>
+                                <span class="nm-faq-toggle" aria-hidden="true">+</span>
+                            </button>
+                            <div class="nm-faq-a">
+                                <p>You buy NeoMind at a partner discount and sell at list price or higher, keeping the margin. You can also charge for setup, training, consulting, and managed support.</p>
+                            </div>
+                        </div>
+
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">Who owns the customer?</span>
+                                <span class="nm-faq-toggle" aria-hidden="true">+</span>
+                            </button>
+                            <div class="nm-faq-a">
+                                <p>You do. You sell, bill the customer directly, onboard, and provide first-line support. You own the commercial relationship; Neomeric provides the platform and technical escalation.</p>
+                            </div>
+                        </div>
+
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">Is there a fee to join?</span>
+                                <span class="nm-faq-toggle" aria-hidden="true">+</span>
+                            </button>
+                            <div class="nm-faq-a">
+                                <p>There&rsquo;s a small program fee that keeps the program to committed partners and covers your demo workspace and enablement &mdash; and it&rsquo;s waived as you grow. We&rsquo;ll cover the details on your discovery call.</p>
+                            </div>
+                        </div>
+
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">How do the discount tiers work?</span>
+                                <span class="nm-faq-toggle" aria-hidden="true">+</span>
+                            </button>
+                            <div class="nm-faq-a">
+                                <p>There are four partner tiers, and your discount grows with the active customer revenue you manage. We&rsquo;ll walk you through the specifics on your call.</p>
+                            </div>
+                        </div>
+
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">Who supports the customers?</span>
+                                <span class="nm-faq-toggle" aria-hidden="true">+</span>
+                            </button>
+                            <div class="nm-faq-a">
+                                <p>You provide first-line support. Neomeric handles technical escalation &mdash; platform bugs, infrastructure, security, and roadmap. Customer &rarr; Partner &rarr; Neomeric.</p>
+                            </div>
+                        </div>
+
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">Is NeoMind secure?</span>
+                                <span class="nm-faq-toggle" aria-hidden="true">+</span>
+                            </button>
+                            <div class="nm-faq-a">
+                                <p>It&rsquo;s hosted on enterprise Azure infrastructure, encrypted in transit and at rest, and it never trains on customer data.</p>
+                            </div>
+                        </div>
+
+                        <div class="nm-faq-item">
+                            <button class="nm-faq-q" aria-expanded="false" type="button">
+                                <span class="nm-faq-q-text">How long until I&rsquo;m up and running?</span>
+                                <span class="nm-faq-toggle" aria-hidden="true">+</span>
+                            </button>
+                            <div class="nm-faq-a">
+                                <p>Onboarding is digital with one discovery call. Once approved and signed, you get your demo workspace and enablement kit straight away.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════ CTA BAND ══════════════════════ -->
+        <section style="background: var(--bg-muted); padding: 80px 0; border-top: 1px solid var(--border);">
+            <div class="nm-container" style="max-width: 920px;">
+                <div class="nm-cta-band">
+                    <div aria-hidden="true" style="position: absolute; inset: 0; background: radial-gradient(60% 80% at 30% 30%, rgba(255,255,255,0.18), transparent 60%);"></div>
+                    <div aria-hidden="true" style="position: absolute; top: -100px; right: -100px; width: 360px; height: 360px; border-radius: 50%; background: rgba(255,255,255,0.06);"></div>
+                    <div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; gap: 48px; flex-wrap: wrap;">
+                        <div style="max-width: 38ch;">
+                            <span style="display: inline-block; padding: 5px 12px; background: rgba(255,255,255,0.18); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 9999px; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 20px;">Ready to partner?</span>
+                            <h2 style="font-family: var(--font-display); font-weight: 700; font-size: clamp(32px, 4.2vw, 52px); line-height: 1.05; letter-spacing: -0.025em; margin: 0 0 18px; text-wrap: balance;">
+                                Your customers need AI teammates.
+                            </h2>
+                            <p style="font-size: 18px; line-height: 1.55; opacity: 0.92; margin: 0; max-width: 46ch;">
+                                Start earning recurring revenue by offering AI employees on the NeoMind platform. Apply online and we&rsquo;ll be in touch.
+                            </p>
+                        </div>
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                            <a href="#apply" class="btn" style="background: white; color: var(--gray-900); padding: 16px 28px; font-size: 15px;" data-cta="partners-cta-apply">
+                                Apply to join
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="arrow" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="mailto:partners@neomeric.com" class="btn" style="background: rgba(255,255,255,0.12); color: white; border: 1px solid rgba(255,255,255,0.28); padding: 16px 28px; font-size: 15px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);" data-cta="partners-cta-email">
+                                Email us directly
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer-section data-locale="intl"></footer-section>
+
+    <button id="darkModeToggle" type="button" aria-label="Toggle dark mode"
+        class="fixed bottom-6 right-6 p-3 bg-gray-800 dark:bg-white rounded-full shadow-lg z-50 hover:scale-105 transition-transform">
+        <svg class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+        </svg>
+    </button>
+
+    <script>
+        // Dark-mode parity with the rest of the site (shares `darkMode` localStorage key).
+        (function () {
+            var html = document.documentElement;
+            if (localStorage.getItem('darkMode') === 'true') html.classList.add('dark');
+            var btn = document.getElementById('darkModeToggle');
+            if (btn) btn.addEventListener('click', function () {
+                html.classList.toggle('dark');
+                localStorage.setItem('darkMode', html.classList.contains('dark'));
+            });
+        })();
+
+        // Scroll-reveal — same IntersectionObserver pattern as pricing + contact pages.
+        (function () {
+            var els = document.querySelectorAll('.nm-reveal');
+            if (!('IntersectionObserver' in window)) {
+                els.forEach(function (el) { el.classList.add('is-in'); });
+            } else {
+                var io = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) {
+                        if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+                    });
+                }, { threshold: 0.1 });
+                els.forEach(function (el) { io.observe(el); });
+            }
+        })();
+
+        // FAQ accordion — same behavior as pricing page.
+        (function () {
+            document.querySelectorAll('#pp-faq-list .nm-faq-q').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    var item = btn.closest('.nm-faq-item');
+                    var open = item.classList.toggle('open');
+                    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                });
+            });
+        })();
+
+        // Partner application form — mailto fallback.
+        // DEV NOTE: this opens the visitor's email client pre-filled to partners@neomeric.com.
+        // To replace with a real endpoint: swap window.location.href = 'mailto:...' for a
+        // fetch() POST to your backend and show the pp-form-ok message on .then() success.
+        (function () {
+            var form = document.getElementById('pp-apply-form');
+            var okEl  = document.getElementById('pp-form-ok');
+            if (!form) return;
+
+            form.addEventListener('submit', function (ev) {
+                // Native required-field validation first.
+                if (!form.checkValidity()) {
+                    form.reportValidity();
+                    return;
+                }
+
+                // Consent checkbox explicit check (belt-and-braces).
+                var consent = form.querySelector('#pf-consent');
+                if (consent && !consent.checked) {
+                    consent.setCustomValidity('Please confirm you agree to be contacted.');
+                    form.reportValidity();
+                    return;
+                }
+                if (consent) consent.setCustomValidity('');
+
+                ev.preventDefault();
+
+                var company  = (form.querySelector('#pf-company').value  || '').trim();
+                var website  = (form.querySelector('#pf-website').value  || '').trim();
+                var name     = (form.querySelector('#pf-name').value     || '').trim();
+                var email    = (form.querySelector('#pf-email').value    || '').trim();
+                var country  = (form.querySelector('#pf-country').value  || '').trim();
+                var type     = (form.querySelector('#pf-type').value     || '').trim();
+                var note     = (form.querySelector('#pf-note').value     || '').trim();
+
+                var subject = 'Partner enquiry — ' + company;
+                var lines = [
+                    'Company: '  + company,
+                    'Website: '  + (website || '(not provided)'),
+                    'Name: '     + name,
+                    'Email: '    + email,
+                    'Country: '  + country,
+                    'Type: '     + (type || '(not selected)'),
+                    '',
+                    'Note:',
+                    note || '(none)'
+                ].join('%0D%0A');
+
+                window.location.href =
+                    'mailto:partners@neomeric.com'
+                    + '?subject=' + encodeURIComponent(subject)
+                    + '&body='   + lines;
+
+                if (okEl) {
+                    okEl.hidden = false;
+                    okEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+                form.reset();
+            });
+        })();
+    </script>
+    <script src="/js/cookie-consent.js" defer></script>
+</body>
+
+</html>
