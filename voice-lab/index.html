@@ -82,8 +82,11 @@
   <p class="sub">Talk to both. Same brain, same persona — different voice engine. Interrupt her mid-sentence, ask the same question twice, listen for the human-ness.</p>
 
   <div class="lang-toggle">
-    <button id="lang-en" class="on">English</button>
-    <button id="lang-es">Español</button>
+    <button data-lang="en" class="on">English</button>
+    <button data-lang="es">Español</button>
+    <button data-lang="ar">العربية</button>
+    <button data-lang="id">Bahasa</button>
+    <button data-lang="ur">اردو</button>
   </div>
 
   <div class="cards">
@@ -105,7 +108,7 @@
     </div>
   </div>
 
-  <p class="hint"><b>Judging tip:</b> ignore response speed — B runs from a US region for this test, so only compare how <b>human</b> each voice sounds: warmth, breath, intonation, how she handles being interrupted. <b>Español:</b> flip the toggle and she greets and runs the whole call in Spanish (A = voz Ximena castellana, B = la misma Marin hablando español); you can also just start speaking Spanish mid-call and she'll follow.</p>
+  <p class="hint"><b>Judging tip:</b> ignore response speed — B runs from a US region for this test, so only compare how <b>human</b> each voice sounds: warmth, breath, intonation, how she handles being interrupted. <b>Español:</b> flip the toggle and she greets and runs the whole call in Spanish (A = voz Ximena castellana, B = la misma Marin hablando español); you can also just start speaking Spanish mid-call and she'll follow. <b>العربية / Bahasa / اردو:</b> evaluation languages on B only — Gulf-register Arabic, Indonesian, and Urdu, same voice throughout.</p>
 
 <script>
 const API_BASE = 'https://neomind-staging-au-api.azurewebsites.net';
@@ -235,18 +238,28 @@ class LabSession {
     this.stopBtn.style.display = 'none';
     if (active === this) active = null;
     document.querySelectorAll('.talk').forEach((b) => (b.disabled = false));
+    setLang(labLang); // re-apply language gating (A stays off for ar/id/ur)
   }
 }
 
-const langEn = document.getElementById('lang-en');
-const langEs = document.getElementById('lang-es');
+// ar/id/ur run ONLY on the native engine — A's premium per-language voice
+// library has no voice for them (that's B's multi-language advantage).
+const EXTENDED_LANGS = ['ar', 'id', 'ur'];
+const A_TAG_DEFAULT = document.querySelector('.card.a .tag').textContent;
 function setLang(l) {
   labLang = l;
-  langEn.classList.toggle('on', l === 'en');
-  langEs.classList.toggle('on', l === 'es');
+  document.querySelectorAll('.lang-toggle button').forEach((b) =>
+    b.classList.toggle('on', b.dataset.lang === l));
+  const aCard = document.querySelector('.card.a');
+  const aBtn = aCard.querySelector('.talk');
+  const extended = EXTENDED_LANGS.includes(l);
+  aBtn.disabled = extended || !!active;
+  aCard.querySelector('.tag').textContent = extended
+    ? 'Not available on A — its premium voice library is per-language and has no voice for this one. Native B speaks it with the same voice.'
+    : A_TAG_DEFAULT;
 }
-langEn.addEventListener('click', () => setLang('en'));
-langEs.addEventListener('click', () => setLang('es'));
+document.querySelectorAll('.lang-toggle button').forEach((b) =>
+  b.addEventListener('click', () => setLang(b.dataset.lang)));
 
 document.querySelectorAll('.card').forEach((card) => {
   const variant = card.querySelector('.talk').dataset.variant;
