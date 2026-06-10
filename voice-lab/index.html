@@ -32,8 +32,15 @@
   }
   h1 { font-size: 28px; font-weight: 650; margin-bottom: 8px; text-align: center; }
   .sub { color: var(--ink-dim); max-width: 520px; text-align: center; margin-bottom: 36px; }
-  .cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; width: 100%; max-width: 1100px; }
-  @media (max-width: 920px) { .cards { grid-template-columns: 1fr; max-width: 420px; } }
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%; max-width: 760px; }
+  @media (max-width: 640px) { .cards { grid-template-columns: 1fr; } }
+  .lang-toggle { display: flex; gap: 8px; margin-bottom: 26px; }
+  .lang-toggle button {
+    appearance: none; cursor: pointer; font-size: 14px; font-weight: 600;
+    background: var(--surface); color: var(--ink-dim);
+    border: 1px solid #2a3142; border-radius: 99px; padding: 8px 20px;
+  }
+  .lang-toggle button.on { color: var(--ink); border-color: var(--accent); background: var(--surface-2); }
   .card {
     background: var(--surface); border: 1px solid #232a3b; border-radius: var(--radius);
     padding: 26px 24px; display: flex; flex-direction: column; gap: 14px;
@@ -74,6 +81,11 @@
   <h1>Maeve Voice Lab</h1>
   <p class="sub">Talk to both. Same brain, same persona — different voice engine. Interrupt her mid-sentence, ask the same question twice, listen for the human-ness.</p>
 
+  <div class="lang-toggle">
+    <button id="lang-en" class="on">English</button>
+    <button id="lang-es">Español</button>
+  </div>
+
   <div class="cards">
     <div class="card a">
       <h2><span>A</span> — Today's Maeve</h2>
@@ -85,30 +97,15 @@
     </div>
     <div class="card b">
       <h2><span>B</span> — Candidate</h2>
-      <div class="tag">Native speech-to-speech “Marin” — emotion comes from the conversation itself.</div>
+      <div class="tag">Native speech-to-speech “Marin” — emotion comes from the conversation itself. In English she aims for an Australian accent; in Spanish she speaks natively.</div>
       <button class="talk" data-variant="b">Start talking to B</button>
-      <button class="stop">End call</button>
-      <div class="status">Idle</div>
-      <div class="transcript"></div>
-    </div>
-    <div class="card c">
-      <h2><span>C</span> — Candidate, Aussie</h2>
-      <div class="tag">Same engine as B, directed to speak with a natural Australian accent. Try different base voices — some hold the accent better.</div>
-      <select id="c-voice" style="background:var(--surface-2);color:var(--ink);border:1px solid #2a3142;border-radius:8px;padding:9px 12px;font-size:14px;">
-        <option value="marin" selected>Voice: Marin (warm)</option>
-        <option value="cedar">Voice: Cedar (professional)</option>
-        <option value="sage">Voice: Sage</option>
-        <option value="shimmer">Voice: Shimmer</option>
-        <option value="coral">Voice: Coral</option>
-      </select>
-      <button class="talk" data-variant="c">Start talking to C</button>
       <button class="stop">End call</button>
       <div class="status">Idle</div>
       <div class="transcript"></div>
     </div>
   </div>
 
-  <p class="hint"><b>Judging tip:</b> ignore response speed — B runs from a US region for this test, so only compare how <b>human</b> each voice sounds: warmth, breath, intonation, how she handles being interrupted.</p>
+  <p class="hint"><b>Judging tip:</b> ignore response speed — B runs from a US region for this test, so only compare how <b>human</b> each voice sounds: warmth, breath, intonation, how she handles being interrupted. <b>Español:</b> flip the toggle and she greets and runs the whole call in Spanish (A = voz Ximena castellana, B = la misma Marin hablando español); you can also just start speaking Spanish mid-call and she'll follow.</p>
 
 <script>
 const API_BASE = 'https://neomind-staging-au-api.azurewebsites.net';
@@ -116,10 +113,10 @@ const VOICE_WS = 'wss://neomind-staging-au-voice.azurewebsites.net/voice/v1/echo
 const SAMPLE_RATE = 24000;
 
 const AUTH_BY_VARIANT = {
-  a: { provider: 'voice-live', model: 'gpt-realtime' }, // Dragon HD Ava (prod config)
-  b: { provider: 'realtime' },                          // native S2S marin
-  c: { provider: 'realtime', accent: 'au' },            // marin, directed Aussie accent
+  a: { provider: 'voice-live', model: 'gpt-realtime' }, // Dragon HD (prod config; Ava en / Ximena es)
+  b: { provider: 'realtime', accent: 'au' },            // native S2S marin (Aussie-directed in English)
 };
+let labLang = 'en'; // 'en' | 'es' — sent as `locale` so the session OPENS in that language
 
 const WORKLET_SRC = `
 class CaptureProcessor extends AudioWorkletProcessor {
@@ -181,10 +178,7 @@ class LabSession {
       this.ws.addEventListener('error', () => { clearTimeout(t); rej(new Error('socket error')); }, { once: true });
     });
     const auth = Object.assign({ type: 'auth', demoToken: token }, AUTH_BY_VARIANT[this.variant]);
-    if (this.variant === 'c') {
-      const sel = document.getElementById('c-voice');
-      if (sel && sel.value) auth.voice = sel.value;
-    }
+    if (labLang === 'es') auth.locale = 'es';
     this.ws.send(JSON.stringify(auth));
     this.ws.addEventListener('message', (ev) => this.onEvent(ev));
     this.ws.addEventListener('close', () => this.teardown('Call ended'));
@@ -243,6 +237,16 @@ class LabSession {
     document.querySelectorAll('.talk').forEach((b) => (b.disabled = false));
   }
 }
+
+const langEn = document.getElementById('lang-en');
+const langEs = document.getElementById('lang-es');
+function setLang(l) {
+  labLang = l;
+  langEn.classList.toggle('on', l === 'en');
+  langEs.classList.toggle('on', l === 'es');
+}
+langEn.addEventListener('click', () => setLang('en'));
+langEs.addEventListener('click', () => setLang('es'));
 
 document.querySelectorAll('.card').forEach((card) => {
   const variant = card.querySelector('.talk').dataset.variant;
