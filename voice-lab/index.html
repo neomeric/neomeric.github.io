@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Maeve Voice Lab — private ear test</title>
+<style>
+  :root {
+    --bg: #0b0d12;
+    --surface: #141823;
+    --surface-2: #1b2130;
+    --ink: #e8ebf2;
+    --ink-dim: #8b93a7;
+    --accent: #6ea8fe;
+    --accent-b: #b489ff;
+    --ok: #4ade80;
+    --warn: #fbbf24;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    min-height: 100vh; display: flex; flex-direction: column; align-items: center;
+    padding: 48px 20px;
+  }
+  .badge {
+    font-size: 12px; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--ink-dim); border: 1px solid #2a3142; border-radius: 99px;
+    padding: 4px 14px; margin-bottom: 18px;
+  }
+  h1 { font-size: 28px; font-weight: 650; margin-bottom: 8px; text-align: center; }
+  .sub { color: var(--ink-dim); max-width: 520px; text-align: center; margin-bottom: 36px; }
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%; max-width: 760px; }
+  @media (max-width: 640px) { .cards { grid-template-columns: 1fr; } }
+  .card {
+    background: var(--surface); border: 1px solid #232a3b; border-radius: var(--radius);
+    padding: 26px 24px; display: flex; flex-direction: column; gap: 14px;
+  }
+  .card h2 { font-size: 17px; font-weight: 600; }
+  .card .tag { font-size: 13px; color: var(--ink-dim); min-height: 40px; }
+  .card.a h2 span { color: var(--accent); }
+  .card.b h2 span { color: var(--accent-b); }
+  button.talk {
+    appearance: none; border: 0; border-radius: 10px; cursor: pointer;
+    padding: 13px 18px; font-size: 15px; font-weight: 600; color: #0b0d12;
+    transition: transform .06s ease, opacity .15s ease;
+  }
+  button.talk:active { transform: scale(.985); }
+  .a button.talk { background: var(--accent); }
+  .b button.talk { background: var(--accent-b); }
+  button.talk[disabled] { opacity: .35; cursor: default; }
+  button.stop {
+    appearance: none; background: transparent; border: 1px solid #2a3142;
+    color: var(--ink-dim); border-radius: 10px; padding: 10px 16px; font-size: 14px;
+    cursor: pointer; display: none;
+  }
+  .status { font-size: 13px; color: var(--ink-dim); min-height: 20px; }
+  .status.live { color: var(--ok); }
+  .transcript {
+    background: var(--surface-2); border-radius: 10px; padding: 12px 14px;
+    font-size: 13px; color: var(--ink-dim); height: 120px; overflow-y: auto;
+    white-space: pre-wrap; display: none;
+  }
+  .hint { margin-top: 34px; color: var(--ink-dim); font-size: 13px; max-width: 560px; text-align: center; }
+  .hint b { color: var(--ink); font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="badge">Private · Staging · Not indexed</div>
+  <h1>Maeve Voice Lab</h1>
+  <p class="sub">Talk to both. Same brain, same persona — different voice engine. Interrupt her mid-sentence, ask the same question twice, listen for the human-ness.</p>
+
+  <div class="cards">
+    <div class="card a">
+      <h2><span>A</span> — Today's Maeve</h2>
+      <div class="tag">Azure Dragon HD “Ava”, tuned delivery — what production runs now.</div>
+      <button class="talk" data-variant="a">Start talking to A</button>
+      <button class="stop">End call</button>
+      <div class="status">Idle</div>
+      <div class="transcript"></div>
+    </div>
+    <div class="card b">
+      <h2><span>B</span> — Candidate</h2>
+      <div class="tag">Native speech-to-speech “Marin” — emotion comes from the conversation itself.</div>
+      <button class="talk" data-variant="b">Start talking to B</button>
+      <button class="stop">End call</button>
+      <div class="status">Idle</div>
+      <div class="transcript"></div>
+    </div>
+  </div>
+
+  <p class="hint"><b>Judging tip:</b> ignore response speed — B runs from a US region for this test, so only compare how <b>human</b> each voice sounds: warmth, breath, intonation, how she handles being interrupted.</p>
+
+<script>
+const API_BASE = 'https://neomind-staging-au-api.azurewebsites.net';
+const VOICE_WS = 'wss://neomind-staging-au-voice.azurewebsites.net/voice/v1/echo';
+const SAMPLE_RATE = 24000;
+
+const AUTH_BY_VARIANT = {
+  a: { provider: 'voice-live', model: 'gpt-realtime' }, // Dragon HD Ava (prod config)
+  b: { provider: 'realtime' },                          // native S2S marin
+};
+
+const WORKLET_SRC = `
+class CaptureProcessor extends AudioWorkletProcessor {
+  constructor() { super(); this._buf = new Float32Array(0); }
+  process(inputs) {
+    const ch = inputs[0] && inputs[0][0]; if (!ch) return true;
+    const m = new Float32Array(this._buf.length + ch.length);
+    m.set(this._buf, 0); m.set(ch, this._buf.length);
+    const F = 1200; let o = 0;
+    while (m.length - o >= F) { this.port.postMessage(m.subarray(o, o + F).slice()); o += F; }
+    this._buf = m.slice(o); return true;
+  }
+}
+registerProcessor('capture-processor', CaptureProcessor);`;
+
+function f32ToPcm16(f) { const o = new Int16Array(f.length); for (let i = 0; i < f.length; i++) { const s = Math.max(-1, Math.min(1, f[i])); o[i] = s < 0 ? s * 0x8000 : s * 0x7fff; } return o; }
+function pcm16ToF32(i16) { const o = new Float32Array(i16.length); for (let i = 0; i < i16.length; i++) o[i] = i16[i] / 0x8000; return o; }
+function bufToB64(buf) { const u = new Uint8Array(buf); let s = ''; for (let i = 0; i < u.length; i++) s += String.fromCharCode(u[i]); return btoa(s); }
+function b64ToI16(b64) { const bin = atob(b64); const ab = new ArrayBuffer(bin.length); const u = new Uint8Array(ab); for (let i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i); return new Int16Array(ab); }
+
+let active = null; // only one live session at a time
+
+class LabSession {
+  constructor(card, variant) {
+    this.card = card; this.variant = variant;
+    this.statusEl = card.querySelector('.status');
+    this.transcriptEl = card.querySelector('.transcript');
+    this.talkBtn = card.querySelector('.talk');
+    this.stopBtn = card.querySelector('.stop');
+    this.scheduled = []; this.playCursor = 0;
+  }
+  status(s, live) { this.statusEl.textContent = s; this.statusEl.classList.toggle('live', !!live); }
+  line(role, text) {
+    this.transcriptEl.style.display = 'block';
+    this.transcriptEl.textContent += (role === 'maeve' ? 'Maeve: ' : 'You: ') + text + '\n';
+    this.transcriptEl.scrollTop = this.transcriptEl.scrollHeight;
+  }
+  async start() {
+    this.status('Getting token…');
+    const r = await fetch(API_BASE + '/demo/voice-token', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: 'Voice Lab', email: 'haseeb@neomeric.com', businessName: 'Neomeric' }),
+    });
+    if (!r.ok) throw new Error('token failed (' + r.status + ')');
+    const { token } = await r.json();
+
+    this.status('Microphone…');
+    this.mic = await navigator.mediaDevices.getUserMedia({ audio: { channelCount: 1, noiseSuppression: true, echoCancellation: true, autoGainControl: true } });
+    this.ctx = new AudioContext({ sampleRate: SAMPLE_RATE });
+    if (this.ctx.state === 'suspended') await this.ctx.resume().catch(() => {});
+    this.workletUrl = URL.createObjectURL(new Blob([WORKLET_SRC], { type: 'application/javascript' }));
+    await this.ctx.audioWorklet.addModule(this.workletUrl);
+
+    this.status('Connecting…');
+    this.ws = new WebSocket(VOICE_WS);
+    await new Promise((res, rej) => {
+      const t = setTimeout(() => rej(new Error('connect timeout')), 20000);
+      this.ws.addEventListener('open', () => { clearTimeout(t); res(); }, { once: true });
+      this.ws.addEventListener('error', () => { clearTimeout(t); rej(new Error('socket error')); }, { once: true });
+    });
+    this.ws.send(JSON.stringify(Object.assign({ type: 'auth', demoToken: token }, AUTH_BY_VARIANT[this.variant])));
+    this.ws.addEventListener('message', (ev) => this.onEvent(ev));
+    this.ws.addEventListener('close', () => this.teardown('Call ended'));
+
+    const src = this.ctx.createMediaStreamSource(this.mic);
+    this.cap = new AudioWorkletNode(this.ctx, 'capture-processor', { numberOfInputs: 1, numberOfOutputs: 0 });
+    this.cap.port.onmessage = (e) => {
+      if (!this.ws || this.ws.readyState !== 1) return;
+      this.ws.send(JSON.stringify({ type: 'input_audio_buffer.append', audio: bufToB64(f32ToPcm16(e.data).buffer) }));
+    };
+    src.connect(this.cap);
+    this.playCursor = this.ctx.currentTime;
+    this.status('Connected — she speaks first', true);
+    this.talkBtn.style.display = 'none';
+    this.stopBtn.style.display = 'block';
+  }
+  onEvent(ev) {
+    let m; try { m = JSON.parse(ev.data); } catch { return; }
+    const t = m.type;
+    if (t === 'input_audio_buffer.speech_started') { this.flush(); return; }
+    if ((t === 'response.audio.delta' || t === 'response.output_audio.delta') && m.delta) { this.enqueue(m.delta); return; }
+    if (t === 'response.audio_transcript.done' && m.transcript) { this.line('maeve', m.transcript); return; }
+    if (t === 'conversation.item.input_audio_transcription.completed' && m.transcript) { this.line('you', m.transcript); return; }
+    if (t === 'error') this.status('Error: ' + (m.message || (m.error && m.error.message) || '?'));
+  }
+  enqueue(b64) {
+    if (!this.ctx) return;
+    if (this.ctx.state === 'suspended') this.ctx.resume().catch(() => {});
+    const f32 = pcm16ToF32(b64ToI16(b64));
+    const buf = this.ctx.createBuffer(1, f32.length, SAMPLE_RATE);
+    buf.copyToChannel(f32, 0);
+    const n = this.ctx.createBufferSource();
+    n.buffer = buf; n.connect(this.ctx.destination);
+    const at = Math.max(this.ctx.currentTime, this.playCursor);
+    n.start(at); this.playCursor = at + buf.duration;
+    this.scheduled.push(n);
+    n.onended = () => { const i = this.scheduled.indexOf(n); if (i >= 0) this.scheduled.splice(i, 1); };
+  }
+  flush() {
+    this.scheduled.forEach((n) => { try { n.stop(); } catch {} });
+    this.scheduled = [];
+    if (this.ctx) this.playCursor = this.ctx.currentTime;
+  }
+  stop() { if (this.ws && this.ws.readyState === 1) this.ws.close(1000, 'user'); else this.teardown('Idle'); }
+  teardown(label) {
+    this.flush();
+    if (this.cap) { try { this.cap.disconnect(); } catch {} this.cap = null; }
+    if (this.mic) { this.mic.getTracks().forEach((t) => t.stop()); this.mic = null; }
+    if (this.ctx) { this.ctx.close().catch(() => {}); this.ctx = null; }
+    if (this.workletUrl) { URL.revokeObjectURL(this.workletUrl); this.workletUrl = null; }
+    this.ws = null;
+    this.status(label);
+    this.talkBtn.style.display = 'block';
+    this.stopBtn.style.display = 'none';
+    if (active === this) active = null;
+    document.querySelectorAll('.talk').forEach((b) => (b.disabled = false));
+  }
+}
+
+document.querySelectorAll('.card').forEach((card) => {
+  const variant = card.querySelector('.talk').dataset.variant;
+  const session = new LabSession(card, variant);
+  card.querySelector('.talk').addEventListener('click', async () => {
+    if (active) return;
+    active = session;
+    document.querySelectorAll('.talk').forEach((b) => (b.disabled = true));
+    try { await session.start(); } catch (e) { session.teardown('Failed: ' + e.message); }
+  });
+  card.querySelector('.stop').addEventListener('click', () => session.stop());
+});
+</script>
+</body>
+</html>
