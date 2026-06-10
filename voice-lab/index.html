@@ -93,7 +93,14 @@
     </div>
     <div class="card c">
       <h2><span>C</span> — Candidate, Aussie</h2>
-      <div class="tag">Same engine as B, directed to speak with a natural Australian accent.</div>
+      <div class="tag">Same engine as B, directed to speak with a natural Australian accent. Try different base voices — some hold the accent better.</div>
+      <select id="c-voice" style="background:var(--surface-2);color:var(--ink);border:1px solid #2a3142;border-radius:8px;padding:9px 12px;font-size:14px;">
+        <option value="marin" selected>Voice: Marin (warm)</option>
+        <option value="cedar">Voice: Cedar (professional)</option>
+        <option value="sage">Voice: Sage</option>
+        <option value="shimmer">Voice: Shimmer</option>
+        <option value="coral">Voice: Coral</option>
+      </select>
       <button class="talk" data-variant="c">Start talking to C</button>
       <button class="stop">End call</button>
       <div class="status">Idle</div>
@@ -173,7 +180,12 @@ class LabSession {
       this.ws.addEventListener('open', () => { clearTimeout(t); res(); }, { once: true });
       this.ws.addEventListener('error', () => { clearTimeout(t); rej(new Error('socket error')); }, { once: true });
     });
-    this.ws.send(JSON.stringify(Object.assign({ type: 'auth', demoToken: token }, AUTH_BY_VARIANT[this.variant])));
+    const auth = Object.assign({ type: 'auth', demoToken: token }, AUTH_BY_VARIANT[this.variant]);
+    if (this.variant === 'c') {
+      const sel = document.getElementById('c-voice');
+      if (sel && sel.value) auth.voice = sel.value;
+    }
+    this.ws.send(JSON.stringify(auth));
     this.ws.addEventListener('message', (ev) => this.onEvent(ev));
     this.ws.addEventListener('close', () => this.teardown('Call ended'));
 
