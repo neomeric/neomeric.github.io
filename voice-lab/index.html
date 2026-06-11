@@ -181,7 +181,10 @@ class LabSession {
       this.ws.addEventListener('error', () => { clearTimeout(t); rej(new Error('socket error')); }, { once: true });
     });
     const auth = Object.assign({ type: 'auth', demoToken: token }, AUTH_BY_VARIANT[this.variant]);
-    if (labLang === 'es') auth.locale = 'es';
+    // Send the chosen language as `locale` for ANY non-English language so
+    // the session opens in it (es / ar / id / ur). The voice service only
+    // honours ar/id/ur on the realtime engine behind the lab gate.
+    if (labLang !== 'en') auth.locale = labLang;
     this.ws.send(JSON.stringify(auth));
     this.ws.addEventListener('message', (ev) => this.onEvent(ev));
     this.ws.addEventListener('close', () => this.teardown('Call ended'));
