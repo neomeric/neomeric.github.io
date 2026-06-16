@@ -32,8 +32,8 @@
   }
   h1 { font-size: 28px; font-weight: 650; margin-bottom: 8px; text-align: center; }
   .sub { color: var(--ink-dim); max-width: 520px; text-align: center; margin-bottom: 36px; }
-  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%; max-width: 760px; }
-  @media (max-width: 640px) { .cards { grid-template-columns: 1fr; } }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 100%; max-width: 1080px; }
+  @media (max-width: 900px) { .cards { grid-template-columns: 1fr; max-width: 520px; } }
   .lang-toggle { display: flex; gap: 8px; margin-bottom: 26px; }
   .lang-toggle button {
     appearance: none; cursor: pointer; font-size: 14px; font-weight: 600;
@@ -79,7 +79,7 @@
 <body>
   <div class="badge">Private · Staging · Not indexed</div>
   <h1>Maeve Voice Lab</h1>
-  <p class="sub">Talk to both. Same brain, same persona — different voice engine. Interrupt her mid-sentence, ask the same question twice, listen for the human-ness.</p>
+  <p class="sub">Talk to all three. Same brain, same persona — different voice engine. Interrupt her mid-sentence, ask the same question twice, listen for the human-ness.</p>
 
   <div class="lang-toggle">
     <button data-lang="en" class="on">English</button>
@@ -106,6 +106,14 @@
       <div class="status">Idle</div>
       <div class="transcript"></div>
     </div>
+    <div class="card c">
+      <h2><span>C</span> — Rime</h2>
+      <div class="tag">Rime “coda” voice — a TTS built on real call-centre conversations. Same brain, same turn-taking as B; only the voice differs. English & Spanish.</div>
+      <button class="talk" data-variant="c">Start talking to C</button>
+      <button class="stop">End call</button>
+      <div class="status">Idle</div>
+      <div class="transcript"></div>
+    </div>
   </div>
 
   <p class="hint"><b>Judging tip:</b> ignore response speed — B runs from a US region for this test, so only compare how <b>human</b> each voice sounds: warmth, breath, intonation, how she handles being interrupted. <b>Español:</b> flip the toggle and she greets and runs the whole call in Spanish (A = voz Ximena castellana, B = la misma Marin hablando español); you can also just start speaking Spanish mid-call and she'll follow. <b>العربية / Bahasa / اردو:</b> evaluation languages on B only — Gulf-register Arabic, Indonesian, and Urdu, same voice throughout.</p>
@@ -118,6 +126,7 @@ const SAMPLE_RATE = 24000;
 const AUTH_BY_VARIANT = {
   a: { provider: 'voice-live', model: 'gpt-realtime' }, // Dragon HD (prod config; Ava en / Ximena es)
   b: { provider: 'realtime', accent: 'au' },            // native S2S marin (Aussie-directed in English)
+  c: { provider: 'rime', accent: 'au' },                // realtime brain (text) → Rime coda voice
 };
 let labLang = 'en'; // 'en' | 'es' — sent as `locale` so the session OPENS in that language
 
@@ -248,18 +257,31 @@ class LabSession {
 // ar/id/ur run ONLY on the native engine — A's premium per-language voice
 // library has no voice for them (that's B's multi-language advantage).
 const EXTENDED_LANGS = ['ar', 'id', 'ur'];
-const A_TAG_DEFAULT = document.querySelector('.card.a .tag').textContent;
+// A (Dragon HD) and C (Rime coda) are both per-language voice libraries with
+// no voice for ar/id/ur — only native B covers those. Gate both off there.
+const PER_LANGUAGE_VARIANTS = [
+  {
+    sel: '.card.a',
+    note: 'Not available on A — its premium voice library is per-language and has no voice for this one. Native B speaks it with the same voice.',
+  },
+  {
+    sel: '.card.c',
+    note: 'Not available on C — Rime’s coda voices cover English & Spanish, not this language. Native B speaks it with the same voice.',
+  },
+];
+const TAG_DEFAULTS = PER_LANGUAGE_VARIANTS.map(
+  (v) => document.querySelector(v.sel + ' .tag').textContent,
+);
 function setLang(l) {
   labLang = l;
   document.querySelectorAll('.lang-toggle button').forEach((b) =>
     b.classList.toggle('on', b.dataset.lang === l));
-  const aCard = document.querySelector('.card.a');
-  const aBtn = aCard.querySelector('.talk');
   const extended = EXTENDED_LANGS.includes(l);
-  aBtn.disabled = extended || !!active;
-  aCard.querySelector('.tag').textContent = extended
-    ? 'Not available on A — its premium voice library is per-language and has no voice for this one. Native B speaks it with the same voice.'
-    : A_TAG_DEFAULT;
+  PER_LANGUAGE_VARIANTS.forEach((v, i) => {
+    const card = document.querySelector(v.sel);
+    card.querySelector('.talk').disabled = extended || !!active;
+    card.querySelector('.tag').textContent = extended ? v.note : TAG_DEFAULTS[i];
+  });
 }
 document.querySelectorAll('.lang-toggle button').forEach((b) =>
   b.addEventListener('click', () => setLang(b.dataset.lang)));
