@@ -41,6 +41,16 @@
     border: 1px solid #2a3142; border-radius: 99px; padding: 8px 20px;
   }
   .lang-toggle button.on { color: var(--ink); border-color: var(--accent); background: var(--surface-2); }
+  /* Card C Spanish accent picker — only shown when Español is active. */
+  .es-accent { display: none; gap: 6px; align-items: center; flex-wrap: wrap; }
+  .es-accent.show { display: flex; }
+  .es-accent .lbl { font-size: 12px; color: var(--ink-dim); margin-right: 2px; }
+  .es-accent button {
+    appearance: none; cursor: pointer; font-size: 12.5px; font-weight: 600;
+    background: var(--surface-2); color: var(--ink-dim);
+    border: 1px solid #2a3142; border-radius: 99px; padding: 5px 12px;
+  }
+  .es-accent button.on { color: var(--ink); border-color: var(--ok); }
   .card {
     background: var(--surface); border: 1px solid #232a3b; border-radius: var(--radius);
     padding: 26px 24px; display: flex; flex-direction: column; gap: 14px;
@@ -109,6 +119,11 @@
     <div class="card c">
       <h2><span>C</span> — Rime</h2>
       <div class="tag">Rime “coda” voice — a TTS built on real call-centre conversations. Same brain, same turn-taking as B; only the voice differs. English & Spanish.</div>
+      <div class="es-accent" id="esAccent">
+        <span class="lbl">Spanish accent:</span>
+        <button data-es="castilian" class="on">🇪🇸 España</button>
+        <button data-es="colombian">🇨🇴 Colombia</button>
+      </div>
       <button class="talk" data-variant="c">Start talking to C</button>
       <button class="stop">End call</button>
       <div class="status">Idle</div>
@@ -129,6 +144,7 @@ const AUTH_BY_VARIANT = {
   c: { provider: 'rime', accent: 'au' },                // realtime brain (text) → Rime coda voice
 };
 let labLang = 'en'; // 'en' | 'es' — sent as `locale` so the session OPENS in that language
+let esVoice = 'castilian'; // Card C Spanish: 'castilian' (Spain) | 'colombian' (LatAm)
 
 const WORKLET_SRC = `
 class CaptureProcessor extends AudioWorkletProcessor {
@@ -194,6 +210,8 @@ class LabSession {
     // the session opens in it (es / ar / id / ur). The voice service only
     // honours ar/id/ur on the realtime engine behind the lab gate.
     if (labLang !== 'en') auth.locale = labLang;
+    // Card C only: pick the Spanish Rime voice (Spain vs Colombia) for es calls.
+    if (this.variant === 'c' && labLang === 'es') auth.rimeEsVoice = esVoice;
     this.ws.send(JSON.stringify(auth));
     this.ws.addEventListener('message', (ev) => this.onEvent(ev));
     this.ws.addEventListener('close', () => this.teardown('Call ended'));
@@ -282,7 +300,17 @@ function setLang(l) {
     card.querySelector('.talk').disabled = extended || !!active;
     card.querySelector('.tag').textContent = extended ? v.note : TAG_DEFAULTS[i];
   });
+  // The Spain/Colombia picker only matters for Card C Spanish calls.
+  document.getElementById('esAccent').classList.toggle('show', l === 'es');
 }
+
+document.querySelectorAll('#esAccent button').forEach((b) =>
+  b.addEventListener('click', () => {
+    esVoice = b.dataset.es;
+    document
+      .querySelectorAll('#esAccent button')
+      .forEach((x) => x.classList.toggle('on', x === b));
+  }));
 document.querySelectorAll('.lang-toggle button').forEach((b) =>
   b.addEventListener('click', () => setLang(b.dataset.lang)));
 
